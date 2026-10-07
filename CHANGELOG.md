@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.0.0-alpha.3
+
+- Fix first-time draft Release lookup: authenticated paginated listing and stable Release ID reads/publication; published-only tag lookup is never used for drafts.
+- Add creation/list-failure/draft-state-change regressions;11 Python checks. Derive binary build metadata from actual export presets, raising iOS to30003/Windows3.0.0.3.
+- alpha.2 was never published; its source tag is retained unchanged and empty failed draft removed. All alpha.2 gameplay/UI fixes are included.
+
+
 ## 3.0.0-alpha.2 — gameplay UX and release provenance
 
 - Retain all42 UI fixes and the1510 original checks; add collection search,

@@ -2,8 +2,17 @@
 """Publish only a complete draft; never overwrite assets of a public release."""
 import hashlib, json, os, pathlib, subprocess
 
-def call(*args):
-    return subprocess.run(['gh', *args], capture_output=True, text=True)
+def call(*args, input_text=None):
+    return subprocess.run(['gh', *args], input=input_text, capture_output=True, text=True)
+
+def find_release(repo, tag):
+    # GET /releases/tags/:tag does not return unpublished drafts. List authenticated
+    # releases, then use the stable release ID for all draft reads/publication.
+    result = call('api', 'repos/'+repo+'/releases?per_page=100', '--paginate', '--slurp')
+    assert result.returncode == 0, 'release list failed'
+    rows = [r for page in json.loads(result.stdout) for r in page if r['tag_name'] == tag]
+    assert len(rows) <= 1, 'duplicate release tag'
+    return rows[0] if rows else None
 
 def verify_assets(assets, files):
     assert {a['name'] for a in assets} == {p.name for p in files}, 'release asset set differs'
@@ -22,16 +31,13 @@ def publish():
     assert {p.name for p in files} == {'GemSurvivorCrystalField-v3-unsigned.ipa',
         'GemSurvivorCrystalField-v3-Windows.zip', 'SHA256SUMS.txt',
         'RELEASE_MANIFEST.json', 'IOS_UNSIGNED_README.md'}
-    endpoint = 'repos/'+repo+'/releases/tags/'+tag
-    existing = call('api', endpoint)
-    if existing.returncode:
-        assert 'HTTP 404' in existing.stderr, 'release lookup failed'
+    release = find_release(repo, tag)
+    if release is None:
         created = call('release', 'create', tag, '--repo', repo, '--verify-tag', '--draft', '--prerelease',
                        '--title', 'Gem Survivor Crystal Field v3 — '+tag, '--notes-file', 'docs/RELEASE_NOTES.md')
         assert created.returncode == 0, 'draft creation failed'
-        existing = call('api', endpoint)
-        assert existing.returncode == 0, 'draft lookup failed'
-    release = json.loads(existing.stdout)
+        release = find_release(repo, tag)
+        assert release is not None, 'draft list lookup failed'
     if not release['draft']:
         # A retry may inspect an already completed publication, never mutate it.
         verify_assets(release['assets'], files)
@@ -39,10 +45,14 @@ def publish():
         return
     uploaded = call('release', 'upload', tag, *[str(p) for p in files], '--repo', repo, '--clobber')
     assert uploaded.returncode == 0, 'draft asset upload failed; draft retained for retry'
+    endpoint = 'repos/'+repo+'/releases/'+str(release['id'])
     checked = call('api', endpoint)
     assert checked.returncode == 0, 'draft verification lookup failed'
-    verify_assets(json.loads(checked.stdout)['assets'], files)
-    published = call('release', 'edit', tag, '--repo', repo, '--draft=false', '--prerelease')
+    checked_release = json.loads(checked.stdout)
+    assert checked_release['draft'] and checked_release['tag_name'] == tag, 'draft identity/state differs'
+    verify_assets(checked_release['assets'], files)
+    published = call('api', endpoint, '--method', 'PATCH', '--input', '-',
+                     input_text=json.dumps({'draft': False, 'prerelease': True}))
     assert published.returncode == 0, 'publication failed; verified draft retained for retry'
     print(json.dumps({'ok': True, 'version': tag, 'complete_assets': len(files)}))
 

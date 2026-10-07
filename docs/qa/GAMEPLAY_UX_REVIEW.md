@@ -112,3 +112,5 @@ rectangle errors0. Images inspected include dense player/boss telegraphs, growth
 comparisons and detailed Japanese collection entries; automated geometry is not
 a human judgment of every screen's readability. Logical Safe Area/focus/keyboard
 checks do not certify a physical OS keyboard or installation.
+
+High release issue discovered in actual tag workflow: published-only tag lookup did not return newly created draft. Publication safely stopped; authenticated paginated listing/Release-ID verification/publication now tested. Alpha.3 rebuild contains all these gameplay/UI fixes; previous alpha.2 tag is retained but was never a public Release.

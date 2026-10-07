@@ -29,7 +29,7 @@ Expected assets: unsigned IPA, Windows ZIP, SHA256SUMS.txt, RELEASE_MANIFEST.jso
 IOS_UNSIGNED_README.md. Public independent verification is executable:
 
 ```
-python tools/verify_published_release.py v3.0.0-alpha.2 /tmp/alpha2-public
+python tools/verify_published_release.py v3.0.0-alpha.3 /tmp/alpha2-public
 ```
 
 This downloads all five actual public browser asset URLs, checks API size/digest,
@@ -43,3 +43,18 @@ commit solely to record its own hash.
 
 Physical installation requires user signing. No certificate/profile/team secret.
 No TestFlight/App Store/device-install or human-playtest PASS is inferred.
+
+## alpha.3 release recovery
+
+Actual main3cae956 had all four required workflows green;tag build37703164950
+produced validated Windows and unsigned arm64 IPA. Publication stopped at draft
+lookup: GitHub's published-only `GET /releases/tags/:tag` returns404 for a draft.
+No incomplete public Release was created. Empty draft406253234 was removed;
+alpha.2 tag still points to3cae956 and is not moved. Source now uses authenticated
+paginated release listing and stable Release ID for draft validation/publication.
+First-creation regression reproduces that API contract;11 Python checks PASS.
+App build metadata is read from actual export presets instead of hardcoded values.
+New alpha.3 /iOS30003 /Windows3.0.0.3 is rebuilt on its new final source SHA;
+alpha.2 artifacts are never substituted. Gameplay source/1766 assertions are
+unchanged by this release-only repair. Final required CI/public verification must
+be executed again at the new SHA; evidence is reported at delivery/manifest.

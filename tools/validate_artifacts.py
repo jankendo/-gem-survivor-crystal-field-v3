@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate actual release archives. Does not claim installability or signatures."""
 import argparse,zipfile,plistlib,hashlib,pathlib,struct,subprocess,tempfile,json
+from release_metadata import export_metadata
 p=argparse.ArgumentParser();p.add_argument('kind',choices=['ios','windows']);p.add_argument('archive');args=p.parse_args()
 archive=pathlib.Path(args.archive)
 with zipfile.ZipFile(archive) as z:
@@ -21,8 +22,9 @@ with zipfile.ZipFile(archive) as z:
   plist=plistlib.loads(z.read(prefix+'Info.plist'))
   assert plist['CFBundleIdentifier']=='com.jankendo14.gemsurvivor'
   assert plist.get('CFBundleDisplayName',plist.get('CFBundleName'))=='Gem Survivor Crystal Field v3'
-  assert plist['CFBundleShortVersionString']=='3.0.0'
-  assert plist['CFBundleVersion']=='30002','unexpected current app build'
+  expected=export_metadata('ios')
+  assert plist['CFBundleShortVersionString']==expected['app_version']
+  assert plist['CFBundleVersion']==expected['app_build'],'unexpected current app build'
   executable=prefix+plist['CFBundleExecutable'];assert executable in names
   b=z.read(executable)
   # Mach-O thin arm64 or universal header containing arm64.
