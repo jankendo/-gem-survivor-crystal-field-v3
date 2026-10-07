@@ -101,7 +101,8 @@ func result() -> void:
  if sources.is_empty(): text+="まだダメージ記録はありません。\n"
  else:
   text+="主な攻撃: "+strings.damage_name(str(sources[0]))+"\n"
-  text+="敵へのダメージ %.0f / ボスへのダメージ %.0f / DPS %.1f\n" % [r.damage.normal_damage,r.damage.boss_damage,r.damage.total()/maxf(1,r.state.tick/60.0)]
+  text+="通常敵 %.0f / ボス %.0f / 戦闘DPS %.1f\n" % [r.damage.normal_damage,r.damage.boss_damage,(r.damage.normal_damage+r.damage.boss_damage)/maxf(1,r.state.tick/60.0)]
+  text+="採掘ダメージ %.0f（以下の割合は採掘も含む総量）\n" % r.damage.field_damage
   for source in sources: text+="%s: %.0f（%.1f%%）\n" % [strings.damage_name(str(source)),r.damage.totals[source],100*float(r.damage.totals[source])/maxf(1,r.damage.total())]
  text+="\n完成した進化: "
  for id in p.evolutions.values(): text+=strings.name("evolutions",str(id))+" / "

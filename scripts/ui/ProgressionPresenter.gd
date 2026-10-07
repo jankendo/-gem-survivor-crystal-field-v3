@@ -34,6 +34,7 @@ func choices() -> void:
     var old: Dictionary=StatResolver.new().resolve(c[1],r.state,ui.app.db,false)
     # Preview uses a cold cloned state; the live state/RNG is never changed.
     var preview := RunState.new()
+    preview.player.stats=r.state.player.stats.duplicate()
     preview.player.character=r.state.player.character
     preview.player.blessing=r.state.player.blessing
     preview.player.evolved=r.state.player.evolved

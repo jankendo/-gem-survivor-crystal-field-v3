@@ -159,6 +159,21 @@ func run(t: TestContext,tree: SceneTree) -> void:
  var before_feedback: int=app.run.signature()
  ui.feedback.observe()
  t.equal(app.run.signature(),before_feedback,"presentation feedback cannot mutate gameplay")
+ app.run.state.player.stats.meta_damage=1.0
+ app.run.state.progression.weapons.magic_bolt=1
+ app.run.state.progression.choices=[["weapons","magic_bolt"]]
+ app.run.state.phase="LEVEL_UP"; ui.sync_phase()
+ var content: String=ui.view.node("LevelUpPanel","Choice0").get_node("CardMargin/CardText").text
+ var values: PackedStringArray=content.get_slice("\n",2).get_slice(" / ",0).trim_prefix("攻撃 ").split(" → ")
+ t.check(values.size()==2 and float(values[1])>float(values[0]),"meta damage cannot make upgrade preview appear weaker")
+ var preview_damage: float=float(values[1])
+ ui.choose(0)
+ var actual: float=app.run.weapons.stats[app.run.weapons.ids.find("magic_bolt")].damage
+ t.check(absf(preview_damage-actual)<.051,"growth damage preview matches committed weapon runtime including meta")
+ app.run.damage.normal_damage=120; app.run.damage.boss_damage=60; app.run.damage.field_damage=300
+ app.run.damage.totals={"weapon:magic_bolt":180,"field:mining":300}; app.run.state.tick=600
+ ui.menu.result()
+ t.check(ui.view.node("ResultScreen","Info").text.contains("戦闘DPS 18.0"),"combat DPS excludes crystal mining HP")
  var font: Font=app.ui.theme.default_font
  t.check(font.has_char("結".unicode_at(0)),"Japanese font available for selected system font")
  app.queue_free()
