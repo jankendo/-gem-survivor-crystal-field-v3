@@ -120,6 +120,21 @@ func capture() -> void:
  await shot("boss-low-hp")
  r.enemies.warning[slot]=0
  await shot("boss-attack")
+ # Simultaneous worst visual fixture: boss +599 enemies, exact loot/projectiles,
+ # frozen cosmetics and touch/HUD. No claim of a natural human run.
+ r.enemies.warning[slot]=60
+ for i in range(599):
+  r.enemies.spawn(i%r.db.enemy_defs.size(),r.map.safe_position(r.state.player.position+Vector2(50+i%350,0).rotated(i*2.4)),r.db.enemy_defs[i%r.db.enemy_defs.size()])
+ r.gems=PickupWorld.new()
+ for i in range(1000): r.gems.add(r.map.safe_position(r.state.player.position+Vector2(50+i%350,0).rotated(i*2.4)),1,r.map)
+ r.projectiles=ProjectileWorld.new()
+ for i in range(500): r.projectiles.add(r.state.player.position+Vector2(50+i%350,0).rotated(i),Vector2.RIGHT,5,"weapon:magic_bolt")
+ r.damage.presentation.clear()
+ for i in range(90): r.damage.presentation.emit(r.state.player.position+Vector2(20+i%60,0).rotated(i*2.4),1)
+ app.renderer.effects.submitted_tick=-1
+ app.renderer.effects.present(r.damage.presentation,r.state.tick,false)
+ assert(r.enemies.count==600 and r.gems.count==1000 and r.projectiles.count==500)
+ await shot("boss-dense")
  r.state.boss_stage=3
  r.state.progression.bosses=3
  r.state.phase="CLEAR"

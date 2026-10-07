@@ -1,7 +1,10 @@
 extends RefCounted
 class_name UIStrings
 var db: GameDatabase
+const CATEGORIES: Dictionary={"ranged":"遠距離","area":"範囲","melee":"近接","deploy":"設置","poison":"毒","knockback":"押し出し","explosion":"爆発","summon":"召喚","crystal":"結晶","gem":"Gem回収","laser":"光線","lightning":"雷","":""}
 func _init(database: GameDatabase) -> void: db=database
+func category(id: String) -> String:
+ return CATEGORIES.get(id,"特殊")
 func name(kind: String,id: String) -> String:
  var d=db.table(kind).get(id,{})
  if not d is Dictionary: return "未登録"
@@ -14,7 +17,8 @@ func condition(c: Dictionary) -> String:
  var value := number(c.get("value",c.get("count",c.get("seconds",c.get("cost",1)))))
  var terrain: String = {"star_plain":"星原","mine_chamber":"鉱床部屋","danger_den":"危険巣","crystal_corridor":"結晶廊下","relic_vault":"遺物庫","safe_room":"安全な部屋"}.get(c.get("terrain",""),"指定の地形")
  match type:
-  "initial","currency_sink": return "購入で永久解放"
+  "initial": return "初期解放"
+  "currency_sink": return "購入で永久解放"
   "currency": return "クリスタル貨 "+value+"以上を所持"
   "weapon_level": return name("weapons",str(c.get("weapon","")))+"をLv"+number(c.get("level",1))+"に成長"
   "weapon_kills": return name("weapons",str(c.get("weapon","")))+"で"+value+"体撃破"

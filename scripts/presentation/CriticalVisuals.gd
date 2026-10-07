@@ -6,6 +6,19 @@ var low_hp:=false
 func _draw() -> void:
  if renderer==null: return
  var snapshot:=renderer.snapshot
+ # Boss locator corners remain visible when cosmetic fills cover the sprite.
+ for b in range(snapshot.boss_count):
+  var i:=snapshot.boss_indices[b]
+  for corner in range(4):
+   var sx:=-1 if corner%2==0 else 1
+   var sy:=-1 if corner<2 else 1
+   var p:=snapshot.positions[i]+Vector2(sx,sy)*(snapshot.sizes[i]*.5+4)
+   var h:=p-Vector2(sx*12,0)
+   var v:=p-Vector2(0,sy*12)
+   draw_line(p,h,Color(.02,.03,.05),7)
+   draw_line(p,v,Color(.02,.03,.05),7)
+   draw_line(p,h,Color(1,.85,1),3)
+   draw_line(p,v,Color(1,.85,1),3)
  for n in range(snapshot.warnings.size()):
   var p:=snapshot.warnings[n]
   if snapshot.warning_boss[n]:

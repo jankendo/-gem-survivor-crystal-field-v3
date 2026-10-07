@@ -33,7 +33,7 @@ func relationships(kind: String,id: String,state: RunState=null) -> String:
 func equipment(kind: String,id: String,state: RunState=null) -> String:
  var d: Dictionary=db.table(kind).get(id,{})
  if d.is_empty(): return "情報がありません。"
- var text:=strings.name(kind,id)+"\n"+("武器" if kind=="weapons" else "パッシブ")+" — "+str(d.get("description_ja",""))
+ var text:=strings.name(kind,id)+"\n"+("武器・"+strings.category(str(d.category)) if kind=="weapons" else "パッシブ")+" — "+str(d.get("description_ja",""))
  var level:=int(state.progression.get(kind).get(id,0)) if state!=null else 0
  text+="\n現在Lv%d / 最大%d" % [level,int(d.max_level)] if state!=null else "\n最大Lv%d" % int(d.max_level)
  if kind=="weapons":

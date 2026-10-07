@@ -29,7 +29,7 @@ func choices() -> void:
     button.tooltip_text=label.text
     button.accessibility_name=label.text
     continue
-   content+=("武器" if c[0]=="weapons" else "パッシブ")+" / "+("新規" if before==0 else "強化")+" Lv%d → %d（最大%d）\n" % [before,before+1,d.max_level]
+   content+=("武器・"+strings.category(str(d.category)) if c[0]=="weapons" else "パッシブ")+" / "+("新規" if before==0 else "強化")+" Lv%d → %d（最大%d）\n" % [before,before+1,d.max_level]
    if c[0]=="weapons":
     var old: Dictionary=StatResolver.new().resolve(c[1],r.state,ui.app.db,false)
     var preview:=BuildDetails.new(ui.app.db).preview(r.state,c[0],c[1])

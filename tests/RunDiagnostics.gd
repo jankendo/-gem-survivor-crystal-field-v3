@@ -7,22 +7,17 @@ var levels: Array=[]
 var bosses: Array=[]
 var input_segments: Array=[]
 var last_direction:=Vector2(99,99)
-var last_signature:=0
 var last_evolution_count:=0
 var last_warp:=false
 var selection_us: Array=[]
 var previous_choice_tick:=-1000
 var consecutive_choices:=0
-var damage_taken:=0.0
-var hit_count:=0
-var boss_hit_count:=0
 var boss_active_ticks:=0
 var dodge_ticks:=0
 var opportunity_ticks:=0
-var previous_hp:=0.0
-var evolving_at:=0
+var last_phase:="RUNNING"
 func _init(controller: RunController) -> void:
- run=controller; previous_hp=run.state.player.hp
+ run=controller
 func input(direction: Vector2) -> void:
  if direction!=last_direction:
   input_segments.append([run.state.tick,direction.x,direction.y]);last_direction=direction
@@ -34,10 +29,9 @@ func selected(choice: Array,elapsed_us: int) -> void:
  selection_us.append(elapsed_us)
 func observe() -> void:
  var s:=run.state
- if s.player.hp<previous_hp:
-  damage_taken+=previous_hp-s.player.hp;hit_count+=1
-  if s.last_damage_source.begins_with("boss:"): boss_hit_count+=1
- previous_hp=s.player.hp
+ if s.phase!=last_phase and s.phase in ["CLEAR","RESULT"]:
+  timeline.append({"phase":s.phase,"tick":s.tick,"field_tick":s.field_tick,"death_source":s.last_damage_source})
+ last_phase=s.phase
  var id:=run.enemies.boss_id
  if run.enemies.alive(id):
   var slot:=run.enemies.slot(id)

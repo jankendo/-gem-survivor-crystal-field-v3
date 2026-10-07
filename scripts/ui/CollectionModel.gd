@@ -13,6 +13,7 @@ var page:=0
 const PAGE_SIZE:=8
 func _init(database: GameDatabase) -> void:
  db=database
+ var strings:=UIStrings.new(db)
  for k in range(KINDS.size()):
   var kind:=KINDS[k]
   var definitions: Dictionary=db.table(kind)
@@ -22,7 +23,7 @@ func _init(database: GameDatabase) -> void:
   for id in definitions:
    var d: Dictionary=definitions[id]
    var name:=str(d.get("name_ja",d.get("display_name_ja",id)))
-   entries.append({"kind":kind,"id":str(id),"name":name,"definition":d,"search":(name+" "+str(d.get("description_ja",""))+" "+LABELS[k]+" "+str(d.get("tags",[]))+" "+str(d.get("category",""))).to_lower(),"owned":false,"ratio":0.0})
+   entries.append({"kind":kind,"id":str(id),"name":name,"definition":d,"search":(name+" "+str(d.get("description_ja",""))+" "+LABELS[k]+" "+strings.category(str(d.get("category","")))+" "+str(d.get("tags",[]))+" "+str(d.get("category",""))).to_lower(),"owned":false,"ratio":0.0})
 func update(save: Dictionary) -> void:
  var conditions:=ConditionSystem.new()
  for entry in entries:
