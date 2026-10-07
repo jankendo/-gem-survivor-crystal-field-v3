@@ -1,0 +1,39 @@
+{
+  "repository": "jankendo/-gem-survivor-crystal-field-v3",
+  "release_url": "https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.1",
+  "tag": "v3.0.0-alpha.1",
+  "tag_runtime_commit": "de85d2ad3e098170b2049d1b36e80c410f609f35",
+  "required_main_runs": {
+    "Fast CI": 37575517674,
+    "Balance": 37575517744,
+    "Performance": 37575517806,
+    "Build Windows and iOS Release": 37575517734
+  },
+  "tag_build_and_publish_run": 37575792348,
+  "conclusions": "all successful, read from GitHub",
+  "windows_artifact": 11462019166,
+  "ios_artifact": 11462922422,
+  "windows_sha256": "60f4abadc96640f4fa57ea48ec86efa2063be39483835e1a6cec151304bfe5e6",
+  "ios_sha256": "36540c48cced830cb07bcbfa4acf01760f2fcb15e4c0d60312dd6fc5861696e2",
+  "independent_IPA_validation": "Downloaded split artifact ZIPs, integrity checked, joined; full IPA validator passed and SHA matched Release asset digest",
+  "tests": {
+    "assertions": 473,
+    "suites": 10,
+    "data_tables": 67,
+    "balance_scenarios": 310,
+    "utility_gate": true,
+    "normal_HP_autoplay_CLEAR_seconds": {
+      "balanced": 923.783333333333,
+      "close_range": 976.75
+    }
+  },
+  "not_verified": [
+    "human enjoyment/playtest",
+    "interactive Windows play",
+    "physical iPhone/iPad installation/touch/safe area",
+    "sustained thermal/Low Power Mode/battery",
+    "cumulative native allocations",
+    "all source v2 tests ported"
+  ],
+  "exact_repository_name": "requested URL404; REST and GraphQL rename denied by integration"
+}

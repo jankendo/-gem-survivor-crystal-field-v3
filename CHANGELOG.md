@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0-alpha.1 — preview (publish only after immutable CI gates)
+## 3.0.0-alpha.1 — published preview, 2026-10-07
 
 - Rebuilt simulation with fixed ticks, authoritative generation-checked enemy SoA, shared packed spatial index, central status/damage ownership and active archetype weapons.
 - Retained source definitions/assets and test references with SHA inventories.
@@ -19,3 +19,4 @@
 - Alpha publishing requires successful Fast/Balance/Performance/native Release workflows on its immutable main commit. Repository rename permission and human/device gates remain explicitly unverified.
 - Centralized periodic status damage before AI, fixed authoritative deploy pull, imported the original desktop save directory read-only and clarified boss death causes.
 - Added measured weapon-utility gates,473 assertions and body-aware normal-HP close-build autoplay.
+- Published alpha only after all four main workflows succeeded; tag rebuilt Windows and unsigned IPA, revalidated archives and attached binary assets plus checksums. Downloaded IPA SHA matches the published asset digest.

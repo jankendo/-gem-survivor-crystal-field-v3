@@ -6,6 +6,8 @@
 
 **公開alphaです。人間実機の品質ゲートは未達です。** 全履歴を維持してGitHubへpushし、Fast CI・Balance・Performance・Windows/iOS Release buildを実行しています。実際のWindows ZIPとunsigned arm64 IPAを生成・検証済みです。
 
+[v3.0.0-alpha.1 download / Release](https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.1) にWindows ZIP、unsigned IPA、SHA256SUMSと署名READMEがあります。実機未検証事項はRelease notesを確認してください。
+
 現在アクセス可能なPUBLIC repositoryは [jankendo/-gem-survivor-crystal-field-v3](https://github.com/jankendo/-gem-survivor-crystal-field-v3) です。先頭にハイフンがあります。指定されたハイフンなしURLは404で、認証済みintegrationによるrepository rename/createは403です。v2へwriteしていません。
 
 探索 → 撃破 → ジェム → 成長 → Evolution / Combo → 危険報酬 → Boss。5/10/15分にボス、15分ボス撃破でCLEAR。その後終了またはEndlessを継続できます。
