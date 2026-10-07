@@ -16,3 +16,11 @@ Record tester/device/build SHA/seed/difficulty, chosen loadout, route, death rea
 - Want another run after the result screen.
 
 Capture representative weak/median/strong builds, both Standard and Ultra, keyboard/mouse and touch. Automated benchmarks cannot certify these judgments.
+
+### UI/UX follow-up — NOT YET VERIFIED ON REAL DEVICE
+
+Verify100/115/125% text; native focus and Japanese font on Windows; VoiceOver/
+Narrator; iOS notch/home area with virtual keyboard open/closed and Done; no
+unexpected movement after phone interruptions; touch-target comfort while dense
+combat/boss warnings are visible. Rate first-run understanding and mobile/PC
+choice efficiency as human observations, never substitute automated screenshots.

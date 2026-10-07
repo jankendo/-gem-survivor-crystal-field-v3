@@ -20,3 +20,20 @@ The original fac61d1 history is retained. This is a published working alpha; the
 No known Critical or fixable High remains after current regressions. External repository-name and human/device High gates remain unverified and are not marked PASS. Per the continuation instruction, a clearly labeled alpha prerelease may be published only after all four required workflows succeed on its immutable main commit; this does not declare the full completion gate met.
 
 Additional review fixes: deploy pull now changes authoritative enemy impulses; periodic poison/reset is owned by StatusSystem and status deaths drain before AI, so a lethally poisoned boss cannot attack. Legacy desktop saves are read-only imported from the original product directory. Boss contact/telegraph death causes are distinct.473 assertions in10 suites cover these regressions.
+
+## UI/UX follow-up review — runtime0de0694
+
+Full audit/state matrix/performance evidence: UI_UX_AUDIT.md, UI_STATE_MATRIX.md,
+UI_PERFORMANCE.md. All41 tracked implementation findings repaired (2Critical,
+18High,20Medium,1Low at discovery). Fixable **UI code** Critical/High remaining0;
+this does not close the pre-existing external repository-name/human playtest gates.
+
+UX: explicit start goal, selection differences, disabled conditions and results;
+UI: cached Containers, native focus, width-first Japanese layout, modal single owner;
+Mobile: point-based Safe Area,48pt actions, keyboard-aware seed entry and neutral
+joystick; Accessibility: contrast/name/focus/shape/type scaling; QA:1,508 assertions,
+16 viewport entries,63 actual Linux render fixtures, normal-HP clear/endless/result
+flow; Performance:30Hz critical/5Hz contextual and lifecycle boss lookup.
+No known fixable Critical/High emerged in the final engineering walkthrough.
+Physical iOS keyboard/VoiceOver/gesture feel, Narrator, novice understanding/fun and
+sustained GPU/thermal measurements remain NOT YET VERIFIED ON REAL DEVICE.

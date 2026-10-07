@@ -25,3 +25,20 @@ Status: **PUBLISHED WORKING ALPHA; requested final completion gate NOT FULLY MET
 Actions and artifacts: https://github.com/jankendo/-gem-survivor-crystal-field-v3/actions . Measurements are Linux headless CPU, not real iPhone results. See SENIOR_REVIEW.md, MANUAL_PLAYTEST.md and IOS_REAL_DEVICE_CHECKLIST.md for unresolved High/Medium items.
 
 Published IPA independently downloaded/reassembled and validated: SHA25636540c48cced830cb07bcbfa4acf01760f2fcb15e4c0d60312dd6fc5861696e2 matches the Release asset digest. The alpha tag remains immutable; later documentation commits do not alter the released runtime. Full validation provenance: `evidence/alpha-release-verified.json`.
+
+## UI/UX audit gate (runtime0de0694)
+
+- Local parser/import and67-table validation PASS;1,508 assertions /14 suites PASS.
+- Native mouse/key/touch-event and layout checks execute;16 requested viewport
+  entries include all panels/HUD, long Japanese, full equipment and125% type.
+- Actual Linux X11/OpenGL screenshots are scripted fixtures at844×390,1280×720,
+  1024×768. They are not screenshots from Windows/iPhone or a human session.
+- Normal-HP seeded UI autoplay reaches three bosses/CLEAR, continues Endless,
+  finishes once, settles once and returns to Title. No HP/population overrides.
+-41 tracked code/UI findings repaired; fixable UI Critical/High0. Physical-device
+  Touch/SafeArea/Accessibility/human UX gates remain NOT YET VERIFIED ON REAL DEVICE.
+- Immutablealpha.1 predates these UI fixes. Current main Actions binaries contain
+  them; do not present the old tag as the new UI release.
+
+See UI_UX_AUDIT.md for remaining2Medium/1Low limitations and their rationale.
+Final GitHub workflow/HEAD verification is reported separately from local tests.

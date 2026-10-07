@@ -16,3 +16,8 @@ Record iPhone/iPad model, iOS version, signed local build SHA, seed, battery %, 
 - User signing through Xcode/AltStore/Sideloadly; unsigned archive alone cannot install.
 
 Use OS/GPU profiling on actual hardware. Headless, simulator and llvmpipe measurements do not substitute for this gate.
+
+UI audit follow-up: NOT YET VERIFIED ON REAL DEVICE. Verify virtual keyboard
+reported height/animation and numeric Done; Start/Back remain reachable during
+seed entry; no auto keyboard on optional seed screen; VoiceOver focus/order;
+125% typography; cancellation on backgrounding and multi-touch near action buttons.

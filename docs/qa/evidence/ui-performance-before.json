@@ -1,0 +1,41 @@
+{
+  "enemy_count": 600,
+  "gem_count": 1000,
+  "limitation": "Linux headless CPU-only: explicit process calls and real renderer preparation; no GPU drawing, thermal or real-device measurements. Simulation is frozen to isolate UI cost.",
+  "node_count": 119,
+  "ok": true,
+  "projectile_count": 500,
+  "samples": [
+    {
+      "mean_us": 2.90222222222222,
+      "mode": "UI_only",
+      "p95_us": 11,
+      "p99_us": 29,
+      "render_fps": 30
+    },
+    {
+      "mean_us": 1078.33555555556,
+      "mode": "render_preparation_and_UI",
+      "p95_us": 1333,
+      "p99_us": 1688,
+      "render_fps": 30
+    },
+    {
+      "mean_us": 2.38888888888889,
+      "mode": "UI_only",
+      "p95_us": 11,
+      "p99_us": 14,
+      "render_fps": 60
+    },
+    {
+      "mean_us": 1111.41888888889,
+      "mode": "render_preparation_and_UI",
+      "p95_us": 1396,
+      "p99_us": 1935,
+      "render_fps": 60
+    }
+  ],
+  "stable_node_count": true,
+  "measurement_commit": "9dcae358a8aa5c9fe5ce2d60e599d89c4c212a6f",
+  "method": "Detached baseline; exact six-render-frame HUD cadence reproduced for UI-only, not skipped; same hardware/engine/counts."
+}

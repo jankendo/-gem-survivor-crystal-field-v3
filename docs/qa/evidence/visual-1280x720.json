@@ -1,0 +1,1662 @@
+{
+  "screens": [
+    {
+      "errors": [],
+      "file": "title.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 231.0)",
+          "name": "TitleScreen",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 215.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 191.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 409.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 524.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 556.0), S: (752.0, 104.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Start",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Shop",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Collection",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Settings",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "title",
+      "size": "(1280, 720)",
+      "view": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "file": "character.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 255.0)",
+          "name": "CharacterSelect",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 239.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 215.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(40.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 385.0)]"
+        },
+        {
+          "minimum": "(40.0, 203.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 203.0)]"
+        },
+        {
+          "minimum": "(1.0, 147.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 147.0)]"
+        },
+        {
+          "minimum": "(40.0, 48.0)",
+          "name": "Selector",
+          "rect": "[P: (264.0, 262.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(56.0, 160.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 500.0), S: (752.0, 160.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Previous",
+          "rect": "[P: (264.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Next",
+          "rect": "[P: (644.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Blessing",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Start",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "character",
+      "size": "(1280, 720)",
+      "view": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "file": "blessing.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 199.0)",
+          "name": "BlessingSelect",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 183.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 159.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(40.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 441.0)]"
+        },
+        {
+          "minimum": "(40.0, 143.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 143.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(40.0, 48.0)",
+          "name": "Selector",
+          "rect": "[P: (264.0, 202.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(56.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 556.0), S: (752.0, 104.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Previous",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Next",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Select",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "blessing",
+      "size": "(1280, 720)",
+      "view": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "file": "run-setup.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(120.0, 143.0)",
+          "name": "RunSetup",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(96.0, 127.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(72.0, 103.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(72.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 497.0)]"
+        },
+        {
+          "minimum": "(72.0, 148.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 148.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(71.1875, 48.0)",
+          "name": "Seed",
+          "rect": "[P: (264.0, 172.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "SeedHelp",
+          "rect": "[P: (264.0, 228.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Start",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "run-setup",
+      "size": "(1280, 720)",
+      "view": "RunSetup"
+    },
+    {
+      "errors": [],
+      "file": "shop.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 231.0)",
+          "name": "ShopScreen",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 215.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 191.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(40.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 409.0)]"
+        },
+        {
+          "minimum": "(40.0, 203.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 203.0)]"
+        },
+        {
+          "minimum": "(1.0, 147.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 147.0)]"
+        },
+        {
+          "minimum": "(40.0, 48.0)",
+          "name": "Selector",
+          "rect": "[P: (264.0, 262.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 524.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 556.0), S: (752.0, 104.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Previous",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Next",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Buy",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "shop",
+      "size": "(1280, 720)",
+      "view": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "file": "settings.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 287.0)",
+          "name": "SettingsScreen",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 271.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 247.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 353.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 468.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 160.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 500.0), S: (752.0, 160.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Profile",
+          "rect": "[P: (264.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "FPS",
+          "rect": "[P: (644.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Fullscreen",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Scale",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "settings",
+      "size": "(1280, 720)",
+      "view": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "file": "collection.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "CollectionScreen",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(9.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 3057.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (744.0, 3057.0)]"
+        },
+        {
+          "minimum": "(1.0, 3057.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (744.0, 3057.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Mode",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "collection",
+      "size": "(1280, 720)",
+      "view": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "file": "gameplay-early.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(0.0, 0.0)",
+          "name": "HUD",
+          "rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]"
+        },
+        {
+          "minimum": "(97.0, 83.0)",
+          "name": "Top",
+          "rect": "[P: (12.0, 12.0), S: (620.0, 83.0)]"
+        },
+        {
+          "minimum": "(73.0, 67.0)",
+          "name": "Rows",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 67.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Stats",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 27.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "HP",
+          "rect": "[P: (24.0, 49.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(73.0, 24.0)",
+          "name": "EXP",
+          "rect": "[P: (24.0, 63.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Goal",
+          "rect": "[P: (12.0, 103.0), S: (620.0, 42.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Notification",
+          "rect": "[P: (12.0, 640.0), S: (828.0, 64.0)]"
+        },
+        {
+          "minimum": "(307.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (848.0, 604.0), S: (420.0, 104.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (848.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(102.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (991.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(93.0, 48.0)",
+          "name": "Speed",
+          "rect": "[P: (1134.0, 604.0), S: (134.0, 48.0)]"
+        },
+        {
+          "minimum": "(96.0, 48.0)",
+          "name": "Warp",
+          "rect": "[P: (848.0, 660.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Mine",
+          "rect": "[P: (991.0, 660.0), S: (135.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "gameplay-early",
+      "size": "(1280, 720)",
+      "view": "HUD"
+    },
+    {
+      "errors": [],
+      "file": "gameplay-dense.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(0.0, 0.0)",
+          "name": "HUD",
+          "rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]"
+        },
+        {
+          "minimum": "(97.0, 83.0)",
+          "name": "Top",
+          "rect": "[P: (12.0, 12.0), S: (620.0, 83.0)]"
+        },
+        {
+          "minimum": "(73.0, 67.0)",
+          "name": "Rows",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 67.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Stats",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 27.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "HP",
+          "rect": "[P: (24.0, 49.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(73.0, 24.0)",
+          "name": "EXP",
+          "rect": "[P: (24.0, 63.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Goal",
+          "rect": "[P: (12.0, 103.0), S: (620.0, 42.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Notification",
+          "rect": "[P: (12.0, 640.0), S: (828.0, 64.0)]"
+        },
+        {
+          "minimum": "(317.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (848.0, 604.0), S: (420.0, 104.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (848.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(112.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (991.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(93.0, 48.0)",
+          "name": "Speed",
+          "rect": "[P: (1134.0, 604.0), S: (134.0, 48.0)]"
+        },
+        {
+          "minimum": "(96.0, 48.0)",
+          "name": "Warp",
+          "rect": "[P: (848.0, 660.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Mine",
+          "rect": "[P: (991.0, 660.0), S: (135.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "gameplay-dense",
+      "size": "(1280, 720)",
+      "view": "HUD"
+    },
+    {
+      "errors": [],
+      "file": "gameplay-dense-ultra.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(0.0, 0.0)",
+          "name": "HUD",
+          "rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]"
+        },
+        {
+          "minimum": "(97.0, 83.0)",
+          "name": "Top",
+          "rect": "[P: (12.0, 12.0), S: (620.0, 83.0)]"
+        },
+        {
+          "minimum": "(73.0, 67.0)",
+          "name": "Rows",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 67.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Stats",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 27.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "HP",
+          "rect": "[P: (24.0, 49.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(73.0, 24.0)",
+          "name": "EXP",
+          "rect": "[P: (24.0, 63.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Goal",
+          "rect": "[P: (12.0, 103.0), S: (620.0, 42.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Notification",
+          "rect": "[P: (12.0, 640.0), S: (828.0, 64.0)]"
+        },
+        {
+          "minimum": "(317.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (848.0, 604.0), S: (420.0, 104.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (848.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(112.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (991.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(93.0, 48.0)",
+          "name": "Speed",
+          "rect": "[P: (1134.0, 604.0), S: (134.0, 48.0)]"
+        },
+        {
+          "minimum": "(96.0, 48.0)",
+          "name": "Warp",
+          "rect": "[P: (848.0, 660.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Mine",
+          "rect": "[P: (991.0, 660.0), S: (135.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "gameplay-dense-ultra",
+      "size": "(1280, 720)",
+      "view": "HUD"
+    },
+    {
+      "errors": [],
+      "file": "equipment.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(232.0, 175.0)",
+          "name": "EquipmentPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(208.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(184.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(184.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(184.0, 139.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 139.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(184.0, 104.0)",
+          "name": "Slots",
+          "rect": "[P: (264.0, 142.0), S: (752.0, 104.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot0",
+          "rect": "[P: (264.0, 142.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot1",
+          "rect": "[P: (391.0, 142.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot2",
+          "rect": "[P: (518.0, 142.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot3",
+          "rect": "[P: (645.0, 142.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot4",
+          "rect": "[P: (772.0, 142.0), S: (118.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot5",
+          "rect": "[P: (898.0, 142.0), S: (118.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot6",
+          "rect": "[P: (264.0, 198.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot7",
+          "rect": "[P: (391.0, 198.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot8",
+          "rect": "[P: (518.0, 198.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot9",
+          "rect": "[P: (645.0, 198.0), S: (119.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot10",
+          "rect": "[P: (772.0, 198.0), S: (118.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Slot11",
+          "rect": "[P: (898.0, 198.0), S: (118.0, 48.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (264.0, 612.0), S: (376.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "equipment",
+      "size": "(1280, 720)",
+      "view": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "file": "pause.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 287.0)",
+          "name": "PauseMenu",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 271.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 247.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 353.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 468.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 160.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 500.0), S: (752.0, 160.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Resume",
+          "rect": "[P: (264.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Seed",
+          "rect": "[P: (644.0, 500.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Settings",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "End",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Home",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "pause",
+      "size": "(1280, 720)",
+      "view": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "file": "confirmation.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "ConfirmPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 27.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Confirm",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Cancel",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "confirmation",
+      "size": "(1280, 720)",
+      "view": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "file": "level-up.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 231.0)",
+          "name": "LevelUpPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 215.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 191.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(32.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 409.0)]"
+        },
+        {
+          "minimum": "(24.0, 495.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 72.0), S: (744.0, 495.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 72.0), S: (744.0, 27.0)]"
+        },
+        {
+          "minimum": "(24.0, 148.0)",
+          "name": "Choice0",
+          "rect": "[P: (264.0, 107.0), S: (744.0, 148.0)]"
+        },
+        {
+          "minimum": "(1.0, 132.0)",
+          "name": "CardMargin",
+          "rect": "[P: (276.0, 427.0), S: (720.0, 132.0)]"
+        },
+        {
+          "minimum": "(1.0, 132.0)",
+          "name": "CardText",
+          "rect": "[P: (276.0, 427.0), S: (720.0, 132.0)]"
+        },
+        {
+          "minimum": "(24.0, 148.0)",
+          "name": "Choice1",
+          "rect": "[P: (264.0, 263.0), S: (744.0, 148.0)]"
+        },
+        {
+          "minimum": "(24.0, 148.0)",
+          "name": "Choice2",
+          "rect": "[P: (264.0, 419.0), S: (744.0, 148.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 524.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 556.0), S: (752.0, 104.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Reroll",
+          "rect": "[P: (264.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Banish",
+          "rect": "[P: (644.0, 556.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Skip",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "level-up",
+      "size": "(1280, 720)",
+      "view": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "file": "contract.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "ContractPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 87.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 87.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Accept",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Decline",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "contract",
+      "size": "(1280, 720)",
+      "view": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "file": "warp-entry.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "WarpPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Enter",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Back",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "warp-entry",
+      "size": "(1280, 720)",
+      "view": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "file": "warp.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(0.0, 0.0)",
+          "name": "HUD",
+          "rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]"
+        },
+        {
+          "minimum": "(97.0, 83.0)",
+          "name": "Top",
+          "rect": "[P: (12.0, 12.0), S: (620.0, 83.0)]"
+        },
+        {
+          "minimum": "(73.0, 67.0)",
+          "name": "Rows",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 67.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Stats",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 27.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "HP",
+          "rect": "[P: (24.0, 49.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(73.0, 24.0)",
+          "name": "EXP",
+          "rect": "[P: (24.0, 63.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Goal",
+          "rect": "[P: (12.0, 103.0), S: (620.0, 42.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Notification",
+          "rect": "[P: (12.0, 640.0), S: (828.0, 64.0)]"
+        },
+        {
+          "minimum": "(316.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (848.0, 604.0), S: (420.0, 104.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (848.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(112.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (991.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(93.0, 48.0)",
+          "name": "Speed",
+          "rect": "[P: (1134.0, 604.0), S: (134.0, 48.0)]"
+        },
+        {
+          "minimum": "(95.0, 48.0)",
+          "name": "Warp",
+          "rect": "[P: (848.0, 660.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(96.0, 48.0)",
+          "name": "Mine",
+          "rect": "[P: (991.0, 660.0), S: (135.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "warp",
+      "size": "(1280, 720)",
+      "view": "HUD"
+    },
+    {
+      "errors": [],
+      "file": "boss.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(0.0, 0.0)",
+          "name": "HUD",
+          "rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]"
+        },
+        {
+          "minimum": "(97.0, 123.0)",
+          "name": "Top",
+          "rect": "[P: (12.0, 12.0), S: (620.0, 123.0)]"
+        },
+        {
+          "minimum": "(73.0, 107.0)",
+          "name": "Rows",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 107.0)]"
+        },
+        {
+          "minimum": "(1.0, 27.0)",
+          "name": "Stats",
+          "rect": "[P: (24.0, 20.0), S: (596.0, 27.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "HP",
+          "rect": "[P: (24.0, 49.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(73.0, 24.0)",
+          "name": "EXP",
+          "rect": "[P: (24.0, 63.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Boss",
+          "rect": "[P: (24.0, 89.0), S: (596.0, 24.0)]"
+        },
+        {
+          "minimum": "(4.0, 12.0)",
+          "name": "BossHP",
+          "rect": "[P: (24.0, 115.0), S: (596.0, 12.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Goal",
+          "rect": "[P: (12.0, 143.0), S: (620.0, 42.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Notification",
+          "rect": "[P: (12.0, 640.0), S: (828.0, 64.0)]"
+        },
+        {
+          "minimum": "(299.0, 104.0)",
+          "name": "Actions",
+          "rect": "[P: (848.0, 604.0), S: (420.0, 104.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Pause",
+          "rect": "[P: (848.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(112.0, 48.0)",
+          "name": "Equipment",
+          "rect": "[P: (991.0, 604.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(93.0, 48.0)",
+          "name": "Speed",
+          "rect": "[P: (1134.0, 604.0), S: (134.0, 48.0)]"
+        },
+        {
+          "minimum": "(77.0, 48.0)",
+          "name": "Warp",
+          "rect": "[P: (848.0, 660.0), S: (135.0, 48.0)]"
+        },
+        {
+          "minimum": "(78.0, 48.0)",
+          "name": "Mine",
+          "rect": "[P: (991.0, 660.0), S: (135.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "boss",
+      "size": "(1280, 720)",
+      "view": "HUD"
+    },
+    {
+      "errors": [],
+      "file": "clear.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "RewardPanel",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "End",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Continue",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "clear",
+      "size": "(1280, 720)",
+      "view": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "file": "result.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "ResultScreen",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 327.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 327.0)]"
+        },
+        {
+          "minimum": "(1.0, 327.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 327.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Retry",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Home",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "result",
+      "size": "(1280, 720)",
+      "view": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "file": "save-error.png",
+      "fixture": "scripted real renderer state fixture, not human/physical-device playtest",
+      "geometry": [
+        {
+          "minimum": "(104.0, 175.0)",
+          "name": "SystemDialog",
+          "rect": "[P: (240.0, 40.0), S: (800.0, 640.0)]"
+        },
+        {
+          "minimum": "(80.0, 159.0)",
+          "name": "Margin",
+          "rect": "[P: (252.0, 48.0), S: (776.0, 624.0)]"
+        },
+        {
+          "minimum": "(56.0, 135.0)",
+          "name": "Layout",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 600.0)]"
+        },
+        {
+          "minimum": "(1.0, 39.0)",
+          "name": "Title",
+          "rect": "[P: (264.0, 60.0), S: (752.0, 39.0)]"
+        },
+        {
+          "minimum": "(1.0, 0.0)",
+          "name": "Scroll",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 465.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Body",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 57.0)",
+          "name": "Info",
+          "rect": "[P: (264.0, 107.0), S: (752.0, 57.0)]"
+        },
+        {
+          "minimum": "(1.0, 24.0)",
+          "name": "Reason",
+          "rect": "[P: (264.0, 580.0), S: (752.0, 24.0)]"
+        },
+        {
+          "minimum": "(56.0, 48.0)",
+          "name": "Actions",
+          "rect": "[P: (264.0, 612.0), S: (752.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Retry",
+          "rect": "[P: (264.0, 612.0), S: (372.0, 48.0)]"
+        },
+        {
+          "minimum": "(24.0, 48.0)",
+          "name": "Close",
+          "rect": "[P: (644.0, 612.0), S: (372.0, 48.0)]"
+        }
+      ],
+      "safe_rect": "[P: (12.0, 12.0), S: (1256.0, 696.0)]",
+      "screen": "save-error",
+      "size": "(1280, 720)",
+      "view": "SystemDialog"
+    }
+  ],
+  "runtime_commit": "0de06945182dd38674438680ad170f83ad93e753",
+  "environment": "Linux X11/Xvfb/OpenGL llvmpipe; scripted frozen fixtures; synthetic safe area, not physical device"
+}

@@ -6,3 +6,4 @@ test-output/
 *.log
 *.pck
 *.ipa
+docs/qa/evidence/ui-screenshots/**/*.png.import

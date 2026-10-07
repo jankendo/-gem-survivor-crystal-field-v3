@@ -1,0 +1,2117 @@
+{
+  "matrix": [
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 720)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 720)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1366, 768)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 768)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1600, 900)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1600, 900)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1920, 1080)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1920, 1080)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(2560, 1440)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(2560, 1440)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1280, 800)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1280, 800)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "desktop fixture",
+      "resolution": "(1024, 768)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(844, 390)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(844, 390)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(852, 393)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(852, 393)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(874, 402)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(874, 402)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "phone safe-area fixture",
+      "resolution": "(932, 430)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(932, 430)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1024, 768)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1024, 768)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1080, 810)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1080, 810)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1180, 820)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1180, 820)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1194, 834)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1194, 834)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "TitleScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "CharacterSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "BlessingSelect"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "RunSetup"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "ShopScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "CollectionScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "SettingsScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "PauseMenu"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "LevelUpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "ContractPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "RewardPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "ResultScreen"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "EquipmentPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "ConfirmPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "WarpPanel"
+    },
+    {
+      "errors": [],
+      "platform": "tablet safe-area fixture",
+      "resolution": "(1366, 1024)",
+      "screen": "SystemDialog"
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "TitleScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "CharacterSelect",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "LevelUpPanel",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "PauseMenu",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "ResultScreen",
+      "text_scale": 1.25
+    },
+    {
+      "errors": [],
+      "resolution": "(1366, 1024)",
+      "screen": "HUD",
+      "text_scale": 1.25
+    }
+  ],
+  "audited_runtime_commit": "0de06945182dd38674438680ad170f83ad93e753"
+}
