@@ -60,5 +60,14 @@
   },
   "resonance_damage_mult": 1.1,
   "rift_spawn_ticks": 180,
-  "gem_pickup_damage": 3
+  "gem_pickup_damage": 3,
+  "gimmick_effects": {
+    "lightning_damage": 30,
+    "lightning_radius": 250,
+    "explosive_damage": 30,
+    "explosive_radius": 200,
+    "reflect_damage": 20,
+    "reflect_shots": 4,
+    "reflect_speed": 500
+  }
 }

@@ -93,6 +93,7 @@ func record_gimmick(run: RunController,i: int) -> void:
 func mine(run: RunController,i: int,amount: float,source: String) -> void:
  if not active[i]: return
  var cfg := run.db.config()
+ var effect: Dictionary=cfg.gimmick_effects
  run.damage.apply_field(self,i,amount,source)
  if hp[i] <= 0:
   active[i] = 0
@@ -108,13 +109,13 @@ func mine(run: RunController,i: int,amount: float,source: String) -> void:
    var available: Array = run.db.table("rune_contracts").keys()
    var rng = run.state.rng.stream_rng("contract",crystals)
    run.pending_contract = available[rng.next_int(available.size())]
-   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],250*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
-   for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],30*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:lightning")
+   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],float(effect.lightning_radius)*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
+   for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],float(effect.lightning_damage)*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:lightning")
   if kinds[i]=="explosive_vein":
-   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],200*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
-   for n in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[n],30*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:explosion")
+   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],float(effect.explosive_radius)*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
+   for n in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[n],float(effect.explosive_damage)*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:explosion")
   if kinds[i]=="reflect_crystal":
-   for shot in range(4): run.projectiles.add(positions[i],Vector2.RIGHT.rotated(shot*TAU/4)*500,20,"field:reflect",1,2)
+   for shot in range(int(effect.reflect_shots)): run.projectiles.add(positions[i],Vector2.RIGHT.rotated(shot*TAU/int(effect.reflect_shots))*float(effect.reflect_speed),float(effect.reflect_damage),"field:reflect",1,2)
   if run.state.player.stats.get("char_crystal_poison",false):
    run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],200,scratch)
    for n in range(scratch.count):
