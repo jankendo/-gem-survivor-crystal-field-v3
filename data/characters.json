@@ -249,7 +249,7 @@
     "display_locked_ja": "洞窟地図師ユナ",
     "initial_weapon": "compass_star",
     "role_ja": "探索支援",
-    "trait_ja": "探索範囲+50%、探索報酬+20%",
+    "trait_ja": "探索コンパス範囲+50%、探索報酬+20%",
     "weakness_ja": "最大HP-10",
     "modifiers": {
       "hp_flat": -10,
@@ -385,8 +385,8 @@
     "secret_hint_ja": "未踏の部屋を一度の旅で深く巡る",
     "initial_weapon": "void_mirror",
     "role_ja": "未探索特化",
-    "trait_ja": "未探索部屋でダメージ+35%",
-    "weakness_ja": "探索済み部屋で攻撃力-10%",
+    "trait_ja": "新しい部屋の共鳴中はダメージ+35%",
+    "weakness_ja": "共鳴がない間は攻撃力-10%",
     "modifiers": {
       "unexplored_damage_mult": 1.35,
       "explored_damage_mult": 0.9,

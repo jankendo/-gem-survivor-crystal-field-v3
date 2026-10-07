@@ -27,7 +27,7 @@ func move(state: RunState, enemies: EnemyWorld, map: WorldGenerator, db: GameDat
     enemies.warning[i] = int(db.config().boss_warning_ticks)
     enemies.attack_target[i] = state.player.position
    if enemies.warning[i] == 1 and enemies.attack_target[i].distance_to(state.player.position) < float(db.config().boss_attack_radius):
-    damage.apply_player(state, enemies.damage[i], "boss")
+    damage.apply_player(state, enemies.damage[i], "boss:telegraph")
    if enemies.warning[i] > 0: speed = 0
   enemies.velocities[i] = direction * speed+enemies.impulses[i]
   enemies.impulses[i]*=.85
@@ -39,5 +39,5 @@ func contact(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, damage
   if not enemies.alive(id): continue
   var i := enemies.slot(id)
   if enemies.hp[i] > 0 and enemies.contact[i] == 0 and enemies.positions[i].distance_to(state.player.position) < enemies.radius[i] + 14:
-   damage.apply_player(state,enemies.damage[i],"boss" if enemies.flags[i]&1 else "enemy")
+   damage.apply_player(state,enemies.damage[i],"boss:contact" if enemies.flags[i]&1 else "enemy")
    enemies.contact[i] = int(db.config().contact_ticks)

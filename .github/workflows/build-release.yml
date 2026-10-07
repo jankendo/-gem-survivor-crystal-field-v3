@@ -202,3 +202,38 @@ jobs:
             IOS_UNSIGNED_README.md
           if-no-files-found: error
           compression-level: 0
+
+  publish-alpha-preview:
+    if: github.ref == 'refs/tags/v3.0.0-alpha.1'
+    needs: [windows-release, ios-unsigned-release]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify immutable main quality gates
+        run: python tools/release_gate.py "$GITHUB_SHA"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: GemSurvivor*
+          path: release-artifacts
+          merge-multiple: true
+      - name: Validate release binaries and publish alpha
+        shell: bash
+        run: |
+          set -euo pipefail
+          WINDOWS="$(find release-artifacts -name 'GemSurvivorCrystalField-v3-Windows.zip' -print -quit)"
+          IPA="$(find release-artifacts -name 'GemSurvivorCrystalField-v3-unsigned.ipa' -print -quit)"
+          python tools/validate_artifacts.py windows "$WINDOWS"
+          python tools/validate_artifacts.py ios "$IPA"
+          mkdir -p release-upload
+          cp "$WINDOWS" "$IPA" IOS_UNSIGNED_README.md release-upload/
+          cat "$(dirname "$WINDOWS")/SHA256SUMS-Windows.txt" "$(dirname "$IPA")/SHA256SUMS-iOS.txt" > release-upload/SHA256SUMS.txt
+          gh release create v3.0.0-alpha.1 release-upload/* --verify-tag --prerelease \
+            --title "Gem Survivor Crystal Field v3 — alpha.1" --notes-file docs/RELEASE_ALPHA_1.md

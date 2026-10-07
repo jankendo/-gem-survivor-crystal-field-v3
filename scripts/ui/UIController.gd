@@ -269,4 +269,4 @@ func show_collection() -> void:
  panels.ShopScreen.get_node("Scroll/Body/Info").text = text
 
 func source_name(id: String) -> String:
- return {"enemy":"敵との接触","boss":"ボスの攻撃","field:mining":"結晶採掘","field:lightning":"雷導結晶","field:meteor":"予告された流星","status:poison":"毒状態"}.get(id,id)
+ return {"enemy":"敵との接触","boss":"ボスの攻撃","boss:contact":"ボスとの接触","boss:telegraph":"ボスの予告攻撃","self:overclock":"技拡張の反動","field:mining":"結晶採掘","field:lightning":"雷導結晶","field:meteor":"予告された流星","status:poison":"毒状態"}.get(id,id)

@@ -59,7 +59,7 @@ func apply_player(state: RunState, amount: float, source: String) -> void:
  if state.player.invulnerability > 0: return
  amount*=float(state.player.stats.get("char_incoming",1))
  var reduction := float(state.player.stats.get("contract_incoming",1))*maxf(.58,1-float(state.player.stats.get("armor",0)))
- if source=="boss": reduction *= maxf(.6,1-float(state.player.stats.get("boss_armor",0)))
+ if source.begins_with("boss"): reduction *= maxf(.6,1-float(state.player.stats.get("boss_armor",0)))
  reduction *= maxf(.7,1-float(state.player.stats.get("context_armor",0)))
  state.player.hp = maxf(0, state.player.hp - amount*reduction)
  state.player.invulnerability = 36
