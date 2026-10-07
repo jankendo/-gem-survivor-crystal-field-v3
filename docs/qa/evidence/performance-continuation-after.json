@@ -1,0 +1,49 @@
+{
+  "allocation_proxy": {
+    "enemy_capacity_growth": 0,
+    "spatial_capacity_growth": 0
+  },
+  "cpu_fixture_frame": {
+    "max_ms": 12.328,
+    "mean_ms": 6.33963636363636,
+    "p95_ms": 7.115,
+    "p99_ms": 8.775
+  },
+  "enemy_count": 600,
+  "enemy_update": {
+    "max_ms": 1.338,
+    "mean_ms": 0.764022727272727,
+    "p95_ms": 0.95,
+    "p99_ms": 1.179
+  },
+  "gem_count": 1000,
+  "note": "Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured.",
+  "ok": true,
+  "projectile_count": 500,
+  "render_preparation": {
+    "max_ms": 6.393,
+    "mean_ms": 0.363177272727273,
+    "p95_ms": 0.43,
+    "p99_ms": 0.692
+  },
+  "samples": 220,
+  "seed": 60606,
+  "simulation": {
+    "max_ms": 8.799,
+    "mean_ms": 5.97645909090909,
+    "p95_ms": 6.782,
+    "p99_ms": 8.033
+  },
+  "spatial_update": {
+    "max_ms": 3.772,
+    "mean_ms": 2.26042727272727,
+    "p95_ms": 2.572,
+    "p99_ms": 3.177
+  },
+  "weapon_update": {
+    "max_ms": 4.933,
+    "mean_ms": 2.4161,
+    "p95_ms": 2.854,
+    "p99_ms": 3.568
+  }
+}

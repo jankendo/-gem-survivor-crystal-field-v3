@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fail immediately on engine diagnostics, even when Godot would exit zero."""
 import os,subprocess,sys,re,threading
-p=subprocess.Popen([os.environ.get('GODOT','godot'),*sys.argv[1:]],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
+p=subprocess.Popen([os.environ.get('GODOT','godot'),*sys.argv[1:]],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding="utf-8",errors="replace",bufsize=1)
 expired=False
 def timeout():
  global expired

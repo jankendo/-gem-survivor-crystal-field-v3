@@ -31,6 +31,8 @@ var capacity := 0
 var free_count := 0
 var reused := 0
 var allocations := 0
+# Conservative lifetime bound, updated only at spawn; never shrinks on removal.
+var maximum_radius := 0.0
 
 func _init(initial_capacity: int = 600) -> void:
  reserve(initial_capacity)
@@ -78,6 +80,7 @@ func spawn(type_id: int, pos: Vector2, definition: Dictionary, health_scale: flo
  hp[i] = float(definition.get("hp", 4)) * health_scale
  max_hp[i] = hp[i]
  radius[i] = float(definition.get("radius", 18))
+ maximum_radius = maxf(maximum_radius,radius[i])
  speed[i] = float(definition.get("speed", 68))
  damage[i] = float(definition.get("damage", 8))
  xp[i] = int(definition.get("exp", 5))

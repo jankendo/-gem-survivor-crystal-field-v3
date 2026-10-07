@@ -20,7 +20,7 @@ def walk(v,path):
   for i,x in enumerate(v): walk(x,path+f'[{i}]')
 tables={}
 for p in (root/'data').glob('*.json'):
- try: tables[p.stem]=json.loads(p.read_text(),object_pairs_hook=unique)
+ try: tables[p.stem]=json.loads(p.read_text(encoding="utf-8"),object_pairs_hook=unique)
  except Exception as e: errors.append(str(p)+': '+str(e))
 for k,v in tables.items(): walk(v,k)
 for id,d in tables['evolutions'].items():

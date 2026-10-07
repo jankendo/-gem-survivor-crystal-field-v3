@@ -7,6 +7,7 @@ on:
     tags: ["v*"]
 
 env:
+  PYTHONUTF8: "1"
   GODOT_VERSION: "4.7-stable"
   TEMPLATE_VERSION: "4.7.stable"
   PROJECT_NAME: "GemSurvivor"

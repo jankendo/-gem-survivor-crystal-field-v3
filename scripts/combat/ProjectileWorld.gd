@@ -55,7 +55,8 @@ func tick(enemies: EnemyWorld, spatial: SpatialWorld, damage_system: DamageSyste
   previous[i] = positions[i]
   positions[i] += velocities[i] / 60.0
   life[i] -= 1
-  spatial.query_segment(SpatialWorld.ENEMY, previous[i], positions[i], 85, scratch)
+  var width := minf(85,enemies.maximum_radius+5.01)
+  spatial.query_segment(SpatialWorld.ENEMY, previous[i], positions[i], width, scratch)
   var hit := false
   for query_index in range(scratch.count):
    var id := scratch.ids[query_index]
