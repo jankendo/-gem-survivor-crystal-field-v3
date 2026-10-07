@@ -63,6 +63,9 @@ func interact(run: RunController) -> bool:
    if not options.is_empty():
     var choice: Array=options[run.state.rng.next_int(options.size())]
     LoadoutSystem.new().apply(choice,run.state,run.db)
+    var rare_chance := float(run.state.player.stats.get("rare_reward",0))+float(run.state.player.stats.get("contract_rare",0))
+    if choice[0]=="weapons": rare_chance+=float(run.state.player.stats.get("weapon_core",0))
+    if rare_chance>0 and run.state.rng.chance(clampf(rare_chance,0,1)): LoadoutSystem.new().apply(choice,run.state,run.db)
     var drops: Dictionary=run.state.progression.metrics.field_drop_count
     var core: String="weapon_core" if choice[0]=="weapons" else "passive_core"
     drops[core]=int(drops.get(core,0))+1
@@ -100,13 +103,18 @@ func mine(run: RunController,i: int,amount: float,source: String) -> void:
   var reward := float(cfg.mining_reward)
   reward *= (1+float(run.state.player.stats.get("mining_reward",0)))*float(run.state.player.stats.get("contract_crystal",1))
   run.gems.add(positions[i],roundi(reward),run.map)
-  run.state.progression.currency += roundi(10*(1+float(run.state.player.stats.get("field_reward",0))))
+  run.state.progression.currency += roundi(10*(1+float(run.state.player.stats.get("field_reward",0)))*(float(run.state.player.stats.get("char_danger_reward",1)) if run.map.kinds[i]=="risk" else 1))
   if kinds[i]=="lightning_crystal":
    var available: Array = run.db.table("rune_contracts").keys()
    var rng = run.state.rng.stream_rng("contract",crystals)
    run.pending_contract = available[rng.next_int(available.size())]
-   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],250,scratch)
-   for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],30,"field:lightning")
+   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],250*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
+   for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],30*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:lightning")
+  if kinds[i]=="explosive_vein":
+   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],200*float(run.state.player.stats.get("char_gimmick_area",1)),scratch)
+   for n in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[n],30*float(run.state.player.stats.get("char_gimmick_damage",1)),"field:explosion")
+  if kinds[i]=="reflect_crystal":
+   for shot in range(4): run.projectiles.add(positions[i],Vector2.RIGHT.rotated(shot*TAU/4)*500,20,"field:reflect",1,2)
   if run.state.player.stats.get("char_crystal_poison",false):
    run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],200,scratch)
    for n in range(scratch.count):

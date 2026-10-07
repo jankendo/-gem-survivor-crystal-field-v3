@@ -30,13 +30,16 @@ func tick(run, direction: Vector2) -> void:
  if context_room < 0:
   move_mult += float(stat.get("corridor_move",0))
   player.stats.context_damage = float(stat.get("corridor_damage",0))
-  player.stats.context_armor = float(stat.get("corridor_armor",0))
+  player.stats.context_armor = float(stat.get("corridor_armor",0))+float(stat.get("char_corridor_armor",0))
   player.stats.context_area = 0
  else:
-  move_mult += float(stat.get("room_move",0))
+  move_mult += float(stat.get("room_move",0))+float(stat.get("char_open_move",0))
   player.stats.context_damage = 0
   player.stats.context_armor = 0
   player.stats.context_area = float(stat.get("room_area",0))
+ var character_damage := float(stat.get("char_unexplored_damage",1)) if state.progression.resonance>0 else float(stat.get("char_explored_damage",1))
+ if not run.field.event.is_empty(): character_damage*=float(stat.get("char_event_damage",1))
+ player.stats.context_damage=(1+float(player.stats.context_damage))*character_damage-1
  if player.hp < player.max_hp*.3: move_mult += float(stat.get("low_hp_move",0))
  if not state.progression.rooms.has(context_room): move_mult += float(stat.get("explore_move",0))
  player.position = run.map.move(player.position,direction.limit_length() * player.speed * move_mult / 60)

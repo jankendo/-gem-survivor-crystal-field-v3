@@ -10,6 +10,7 @@ var remaining := PackedInt32Array()
 var clocks := PackedInt32Array()
 var periods := PackedInt32Array()
 var mines := PackedByteArray()
+var slow_ticks := PackedInt32Array()
 var statuses := PackedInt32Array()
 var sources := PackedStringArray()
 var targets := PackedInt32Array()
@@ -28,6 +29,7 @@ func _init() -> void:
  clocks.resize(CAPACITY)
  periods.resize(CAPACITY)
  mines.resize(CAPACITY)
+ slow_ticks.resize(CAPACITY)
  statuses.resize(CAPACITY)
  sources.resize(CAPACITY)
  targets.resize(CAPACITY)
@@ -50,6 +52,7 @@ func add(pos: Vector2,radius: float,damage: float,source: String,target_count: i
  remaining[i]=int(modifiers.get("duration_ticks",180))
  periods[i]=int(modifiers.get("pulse_ticks",60))
  clocks[i]=30 if mines[i] else 1
+ slow_ticks[i]=int(definition.get("slow_ticks",90))
  statuses[i]=["","slow","shock","poison"].find(str(definition.status))
  if not mines[i]: amounts[i]/=maxi(1,remaining[i]/periods[i])
  dense[count]=i
@@ -76,7 +79,7 @@ func tick(enemies: EnemyWorld,spatial: SpatialWorld,damage: DamageSystem) -> voi
     if not enemies.alive(id) or enemies.hp[enemies.slot(id)]<=0: continue
     damage.apply(enemies,id,amounts[i],sources[i])
     var slot:=enemies.slot(id)
-    if statuses[i]==1: enemies.slow[slot]=90
+    if statuses[i]==1: enemies.slow[slot]=slow_ticks[i]
     elif statuses[i]==2: enemies.shock[slot]=90
     elif statuses[i]==3: enemies.poison[slot]=180
     hits+=1

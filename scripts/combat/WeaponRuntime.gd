@@ -25,6 +25,7 @@ func refresh(state: RunState, db: GameDatabase) -> void:
  for id in state.progression.weapons:
   ids.append(id)
   definitions.append(OverclockSystem.new().runtime(id,state,db))
+  definitions.back()["slow_ticks"]=roundi(90*float(state.player.stats.get("char_slow",1)))
   death_effects["weapon:"+id]=definitions.back().modifiers
   stats.append(resolver.resolve(id, state, db, false))
  cooldowns.resize(ids.size())
@@ -88,7 +89,7 @@ func tick(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, projectil
    modifiers.on_hit(enemies,id,origin,d,context,actual,state.progression.evolutions.has(ids[n]))
    var i := enemies.slot(id)
    match str(d.status):
-    "slow": enemies.slow[i] = 90
+    "slow": enemies.slow[i] = int(d.slow_ticks)
     "shock": enemies.shock[i] = 90
     "poison": enemies.poison[i] = 180+int(state.player.stats.get("poison_duration",0))
    hits += 1

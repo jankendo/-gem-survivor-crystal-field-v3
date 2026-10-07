@@ -5,7 +5,7 @@ func autoplay() -> void:
  var builds := {"balanced":["magic_bolt","thunder_chain","bomb_seed","laser_lance","might","cooldown","area","regen","armor","elite_hunter"],"close_range":["ice_orbit","blade_fan","poison_mist","sonic_wave","might","cooldown","area","regen","armor","magnet"]}
  var reports: Array = []
  for build in builds:
-  var run := RunController.new(db,60606,"noah",builds[build])
+  var run := RunController.new(db,60606,"mio" if build=="close_range" else "noah",builds[build])
   var scratch := QueryBuffer.new(600)
   var boss_times: Dictionary={}
   var start := Time.get_ticks_usec()
@@ -34,7 +34,7 @@ func autoplay() -> void:
     if run.enemies.flags[i]&1:
      var away: Vector2 = (run.state.player.position-run.enemies.positions[i]).normalized()
      if away==Vector2.ZERO: away=Vector2.RIGHT
-     destination = run.map.safe_position(run.enemies.positions[i]+away*(160.0 if build=="close_range" else 230.0))
+     destination = run.map.safe_position(run.enemies.positions[i]+away*(100.0 if build=="close_range" else 230.0))
      break
    var waypoint := run.map.pursuit_target(run.state.player.position,destination)
    var direction := (waypoint-run.state.player.position).normalized()

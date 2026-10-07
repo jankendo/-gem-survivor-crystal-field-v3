@@ -1,5 +1,6 @@
 extends Node2D
 class_name WorldRenderer
+var compass_direction := Vector2.ZERO
 var effects: EffectRenderer
 var terrain: StaticTerrain
 var field_positions := PackedVector2Array()
@@ -42,6 +43,14 @@ func present(run: RunController, size: Vector2) -> void:
  if danger_event: danger_position=run.map.rooms[run.field.event_room].get_center()
  camera_size = size
  player_position = run.state.player.position
+ compass_direction=Vector2.ZERO
+ var nearest := pow(650*float(run.state.player.stats.get("char_compass_range",1)),2)
+ for i in range(run.map.rooms.size()):
+  if run.state.progression.rooms.has(i): continue
+  var offset: Vector2=run.map.rooms[i].get_center()-player_position
+  if offset.length_squared()<nearest:
+   nearest=offset.length_squared()
+   compass_direction=offset.normalized()
  snapshot.capture(run.enemies)
  enemy_renderer.present(snapshot)
  gem_positions.clear()
@@ -70,6 +79,7 @@ func present(run: RunController, size: Vector2) -> void:
  position = size * .5 - player_position
  queue_redraw()
 func _draw() -> void:
+ if compass_direction!=Vector2.ZERO: draw_line(player_position+compass_direction*35,player_position+compass_direction*65,Color(.3,1,.8),4)
  if meteor_warning:
   draw_circle(meteor_position,70,Color(1,.3,.1,.2))
   draw_arc(meteor_position,70,0,TAU,48,Color(1,.45,.1),3)
