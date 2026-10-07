@@ -30,4 +30,15 @@ func run(t: TestContext, _tree: SceneTree) -> void:
  t.equal(recovery.writes,writes,"debounce")
  recovery.tick(.5)
  t.equal(recovery.writes,writes+1,"debounced save writes")
+ var db := GameDatabase.new()
+ recovery.data.profile.currency=10000
+ recovery.data.profile.metrics={}
+ t.check(not recovery.buy_item("weapons","laser_lance",db),"repository rejects unmet purchase prerequisite")
+ t.equal(recovery.data.profile.currency,10000,"rejected purchase leaves currency")
+ recovery.data.profile.metrics={"total_crystals":20}
+ var price:=ShopSystem.new().cost("weapons","laser_lance",db)
+ t.check(recovery.buy_item("weapons","laser_lance",db),"eligible purchase persists")
+ t.equal(recovery.data.profile.currency,10000-price,"source license cost charged")
+ t.check(not recovery.buy_item("weapons","laser_lance",db),"duplicate purchase rejected")
+ t.equal(SaveRepository.new(path,legacy).data.profile.currency,10000-price,"purchase survives reload")
  for p in [path,path+".bak",path+".tmp",legacy]: DirAccess.remove_absolute(ProjectSettings.globalize_path(p))

@@ -18,7 +18,10 @@ func met(save: Dictionary, c: Dictionary) -> bool:
   "terrain_time","terrain_kills","terrain_crystals","terrain_boss_defeat": return float(metrics.get(type,{}).get(c.get("terrain",""),0))>=target
   "gimmick_count": return int(metrics.get("gimmick_count",{}).get(c.get("gimmick",""),0))>=target
   "field_drop_count": return int(metrics.get("field_drop_count",{}).get(c.get("drop",""),0))>=target
-  "exploration_rank": return ["D","C","B","A","S","SS"].find(str(metrics.get("exploration_rank","D"))) >= ["D","C","B","A","S","SS"].find(str(c.get("rank",c.get("value","D"))))
+  "exploration_rank":
+   var ranks := ["D","C","B","A","S","SS"]
+   var required := ranks.find(str(c.get("rank",c.get("value","D"))))
+   return required>=0 and ranks.find(str(metrics.get("exploration_rank","D")))>=required
   "secret_ghost","secret_reaper","secret_collector": return bool(progress.get("secret_flags",{}).get(type.trim_prefix("secret_"),false))
   "secret_void_mapper": return int(metrics.get("rooms_in_run",0))>=12 and met(save,{"type":"exploration_rank","rank":"S"})
   "secret_abyss_merchant": return int(metrics.get("total_currency_earned",0))>=25000 and int(metrics.get("total_contracts",0))>=20

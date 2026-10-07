@@ -326,7 +326,7 @@
     }
   },
   "shrine_beam": {
-    "archetype": "beam",
+    "archetype": "deploy",
     "damage": 13.77,
     "cooldown": 2.3,
     "range": 650,
@@ -337,7 +337,10 @@
     "category": "deploy",
     "projectile_level_step": 3,
     "pierce": 0,
-    "modifiers": {}
+    "modifiers": {
+      "beam_length": 650,
+      "duration_ticks": 180
+    }
   },
   "thorn_seed": {
     "archetype": "deploy",
@@ -402,7 +405,8 @@
     "projectile_level_step": 3,
     "pierce": 0,
     "modifiers": {
-      "knockback": 180
+      "knockback": 180,
+      "corridor_damage": 1.6
     }
   },
   "void_mirror": {
@@ -423,7 +427,7 @@
     }
   },
   "magma_core": {
-    "archetype": "explosion",
+    "archetype": "deploy",
     "damage": 10.62,
     "cooldown": 2.72,
     "range": 620,
@@ -434,7 +438,9 @@
     "category": "explosion",
     "projectile_level_step": 3,
     "pierce": 0,
-    "modifiers": {}
+    "modifiers": {
+      "duration_ticks": 180
+    }
   },
   "compass_star": {
     "archetype": "projectile",
@@ -463,7 +469,8 @@
     "projectile_level_step": 3,
     "pierce": 0,
     "modifiers": {
-      "ward": 12
+      "ward": 12,
+      "forward_deploy": 60
     }
   },
   "gravity_anchor": {

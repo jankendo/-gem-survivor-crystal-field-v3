@@ -12,6 +12,7 @@ func run(t: TestContext,_tree: SceneTree) -> void:
  t.check(shop.available("weapons","wall_bounce_blaster",save,db),"specific gimmick condition")
  var c := ConditionSystem.new()
  t.check(not c.met(save,{"type":"unknown","value":0}),"unknown condition fails closed")
+ t.check(not c.met(save,{"type":"exploration_rank","rank":"INVALID"}),"invalid rank fails closed")
  t.check(c.met(save,{"type":"terrain_time","terrain":"danger_den","value":60}),"terrain time")
  t.check(not c.met(save,{"type":"terrain_kills","terrain":"mine_chamber","value":1}),"terrain isolation")
  var run := RunController.new(db,456)

@@ -69,7 +69,9 @@ func tick(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, projectil
    "beam": spatial.query_segment(SpatialWorld.ENEMY, origin, origin + (center-origin).normalized() * float(s.range), 30, scratch)
    "deploy":
     if context!=null:
-     context.deployments.add(center,hit_radius,hit_damage,"weapon:"+ids[n],int(s.targets),d)
+     var direction := (center-origin).normalized()
+     var placement: Vector2=origin if float(d.modifiers.get("beam_length",0))>0 else origin+direction*float(d.modifiers.forward_deploy) if d.modifiers.has("forward_deploy") else center
+     context.deployments.add(placement,hit_radius,hit_damage,"weapon:"+ids[n],int(s.targets),d,direction)
      continue
     spatial.query_circle(SpatialWorld.ENEMY,center,hit_radius,scratch)
    "explosion": spatial.query_circle(SpatialWorld.ENEMY, center, hit_radius, scratch)

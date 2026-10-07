@@ -1,6 +1,8 @@
 extends RefCounted
 class_name DeployWorld
 const CAPACITY := 128
+var directions := PackedVector2Array()
+var lengths := PackedFloat32Array()
 var positions := PackedVector2Array()
 var radii := PackedFloat32Array()
 var amounts := PackedFloat64Array()
@@ -17,6 +19,8 @@ var count := 0
 var free_count := CAPACITY
 var scratch := QueryBuffer.new(600)
 func _init() -> void:
+ directions.resize(CAPACITY)
+ lengths.resize(CAPACITY)
  positions.resize(CAPACITY)
  radii.resize(CAPACITY)
  amounts.resize(CAPACITY)
@@ -30,11 +34,13 @@ func _init() -> void:
  dense.resize(CAPACITY)
  free_slots.resize(CAPACITY)
  for i in range(CAPACITY): free_slots[i]=CAPACITY-1-i
-func add(pos: Vector2,radius: float,damage: float,source: String,target_count: int,definition: Dictionary) -> bool:
+func add(pos: Vector2,radius: float,damage: float,source: String,target_count: int,definition: Dictionary,direction: Vector2 = Vector2.RIGHT) -> bool:
  if free_count==0: return false
  free_count-=1
  var i:=free_slots[free_count]
  var modifiers: Dictionary=definition.get("modifiers",{})
+ directions[i]=direction.normalized()
+ lengths[i]=float(modifiers.get("beam_length",0))
  positions[i]=pos
  radii[i]=radius
  amounts[i]=damage
@@ -62,7 +68,8 @@ func tick(enemies: EnemyWorld,spatial: SpatialWorld,damage: DamageSystem) -> voi
   clocks[i]=maxi(0,clocks[i]-1)
   var explode := false
   if clocks[i]==0:
-   spatial.query_circle(SpatialWorld.ENEMY,positions[i],radii[i],scratch)
+   if lengths[i]>0: spatial.query_segment(SpatialWorld.ENEMY,positions[i],positions[i]+directions[i]*lengths[i],30,scratch)
+   else: spatial.query_circle(SpatialWorld.ENEMY,positions[i],radii[i],scratch)
    var hits:=0
    for k in range(scratch.count):
     var id:=scratch.ids[k]

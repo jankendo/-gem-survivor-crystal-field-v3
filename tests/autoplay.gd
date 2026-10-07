@@ -64,8 +64,9 @@ func autoplay() -> void:
     if not run.enemies.alive(id) and not boss_times[id].has("TTK_seconds"): boss_times[id].TTK_seconds=(run.state.field_tick-int(boss_times[id].spawn_tick))/60.0
   reports.append({"boss_timings":boss_times.values(),"build":build,"seed":60606,"phase":run.state.phase,"seconds":run.state.field_tick/60.0,"HP":run.state.player.hp,"last_damage_source":run.state.last_damage_source,"level":run.state.progression.level,"kills":run.state.progression.kills,"bosses":run.state.progression.bosses,"weapons":run.state.progression.weapons,"evolutions":run.state.progression.evolutions,"damage":run.damage.totals,"signature":run.signature(),"wall_seconds":(Time.get_ticks_usec()-start)/1e6})
   print("autoplay finished ",build)
- var report := {"ok":true,"runs":reports,"note":"Deterministic scripted autoplayer with normal HP and progression. Clearing is measured, not assumed; this does not certify human fun."}
+ var gate_ok: bool = reports.size()==builds.size() and reports[0].phase=="CLEAR"
+ var report := {"ok":gate_ok,"runs":reports,"note":"Deterministic scripted autoplayer with normal HP and progression. Clearing is measured, not assumed; this does not certify human fun."}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://test-output"))
  FileAccess.open("res://test-output/autoplay.json",FileAccess.WRITE).store_string(JSON.stringify(report,"  "))
  print(JSON.stringify(report))
- quit()
+ quit(0 if gate_ok else 1)

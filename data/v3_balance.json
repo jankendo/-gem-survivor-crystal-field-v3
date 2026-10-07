@@ -13,8 +13,8 @@
   "enemy_hp_per_minute": 0.09,
   "boss_reference_dps": [
     30,
-    75,
-    630
+    225,
+    435
   ],
   "boss_ttk_seconds": 32,
   "boss_warning_ticks": 60,
