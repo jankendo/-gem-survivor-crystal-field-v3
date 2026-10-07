@@ -8,7 +8,7 @@ The seeded world has 25 connected rooms and orthogonal corridors. Safe, mining, 
 
 Bosses appear at 5, 10 and 15 minutes. The third boss produces CLEAR; players end and settle or continue Endless, including 30-minute bosses. Bosses lock telegraph targets before attacks; movement can evade them. HP derives from reference build DPS × target TTK and linear Endless pressure rather than multiplying exponential curves.
 
-Every original weapon ID remains available through an archetype definition. The archetypes are shared behavioral foundations; exact v2 special strategies are not all reproduced. Projectile grows count/piercing, chain selects a group, beam covers a segment, orbit/aura defend nearby space, deploy/explosion punish clusters, melee trades reach for coverage. Evolution preserves original recipe IDs. Combos retain both weapons and use separate damage sources.
+Every original weapon ID remains available through an archetype definition. The archetypes are shared behavioral foundations; special strategies are mapped to v3 utilities and pooled deployables; exact v2 trajectory equivalence is not claimed. Projectile grows count/piercing, chain selects a group, beam covers a segment, orbit/aura defend nearby space, deploy/explosion punish clusters, melee trades reach for coverage. Evolution preserves original recipe IDs. Combos retain both weapons and use separate damage sources.
 
 Some v2 concepts are intentionally condensed: emergency_route becomes low-HP movement; safe_pocket gives a death-settlement bonus. Original data is recoverable from the source baseline. Detailed content parity requires the migration matrix; the current build must not be advertised as full v2 content parity.
 

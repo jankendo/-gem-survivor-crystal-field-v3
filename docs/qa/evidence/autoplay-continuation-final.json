@@ -1,0 +1,142 @@
+{
+  "note": "Deterministic scripted autoplayer with normal HP and progression. Clearing is measured, not assumed; this does not certify human fun.",
+  "ok": true,
+  "runs": [
+    {
+      "HP": 112.0,
+      "boss_timings": [
+        {
+          "HP": 960.0,
+          "TTK_seconds": 21.5,
+          "spawn_tick": 18000,
+          "stage": 1
+        },
+        {
+          "HP": 7200.0,
+          "TTK_seconds": 13.6666666666667,
+          "spawn_tick": 36000,
+          "stage": 2
+        },
+        {
+          "HP": 13920.0,
+          "TTK_seconds": 43.7333333333333,
+          "spawn_tick": 54000,
+          "stage": 3
+        }
+      ],
+      "bosses": 3,
+      "build": "balanced",
+      "damage": {
+        "combo:starburst_seed": 4255.30459687624,
+        "field:mining": 684.968391418457,
+        "weapon:bomb_seed": 6383.41470054871,
+        "weapon:laser_lance": 38478.8590934153,
+        "weapon:magic_bolt": 97981.452712948,
+        "weapon:thunder_chain": 43229.5983164626
+      },
+      "evolutions": {
+        "laser_lance": "aurora_lance",
+        "magic_bolt": "starbreaker_bolt",
+        "thunder_chain": "divine_chain"
+      },
+      "kills": 6623,
+      "last_damage_source": "",
+      "level": 90,
+      "overclocks": {
+        "magic_bolt": [
+          "meteor_swarm",
+          "supernova"
+        ],
+        "thunder_chain": [
+          "judgement_amp",
+          "thunder_field"
+        ]
+      },
+      "passives": {
+        "area": 5,
+        "armor": 5,
+        "cooldown": 5,
+        "elite_hunter": 5,
+        "might": 5,
+        "regen": 5
+      },
+      "phase": "CLEAR",
+      "seconds": 943.733333333333,
+      "seed": 60606,
+      "signature": 4269464334,
+      "wall_seconds": 74.05071,
+      "weapons": {
+        "bomb_seed": 8,
+        "laser_lance": 8,
+        "magic_bolt": 8,
+        "thunder_chain": 8
+      }
+    },
+    {
+      "HP": 96.8000000000049,
+      "boss_timings": [
+        {
+          "HP": 960.0,
+          "TTK_seconds": 10.5,
+          "spawn_tick": 18000,
+          "stage": 1
+        },
+        {
+          "HP": 7200.0,
+          "TTK_seconds": 57.1833333333333,
+          "spawn_tick": 36000,
+          "stage": 2
+        },
+        {
+          "HP": 13920.0,
+          "TTK_seconds": 74.3833333333333,
+          "spawn_tick": 54000,
+          "stage": 3
+        }
+      ],
+      "bosses": 3,
+      "build": "close_range",
+      "damage": {
+        "field:explosion": 46.3892,
+        "field:lightning": 60.0,
+        "field:mining": 725.0,
+        "status:poison": 4064.60685358305,
+        "weapon:blade_fan": 56304.2439477096,
+        "weapon:ice_orbit": 32629.0437436363,
+        "weapon:poison_mist": 44972.7496777376,
+        "weapon:sonic_wave": 20964.9320764169
+      },
+      "evolutions": {
+        "ice_orbit": "eternal_ice_ring"
+      },
+      "kills": 4778,
+      "last_damage_source": "enemy",
+      "level": 90,
+      "overclocks": {
+        "ice_orbit": [
+          "absolute_zero",
+          "glacier_expand"
+        ]
+      },
+      "passives": {
+        "area": 5,
+        "armor": 5,
+        "cooldown": 5,
+        "magnet": 5,
+        "might": 5,
+        "regen": 5
+      },
+      "phase": "CLEAR",
+      "seconds": 974.383333333333,
+      "seed": 60606,
+      "signature": 4041460491,
+      "wall_seconds": 58.761348,
+      "weapons": {
+        "blade_fan": 8,
+        "ice_orbit": 8,
+        "poison_mist": 8,
+        "sonic_wave": 8
+      }
+    }
+  ]
+}

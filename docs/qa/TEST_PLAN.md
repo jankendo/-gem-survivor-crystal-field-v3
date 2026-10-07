@@ -11,4 +11,4 @@
 
 Runner discovers `.gd` suites under `tests/suites` and filters `tags()`. No hand-maintained giant list is required. `tools/run_godot.py` treats SCRIPT ERROR/ERROR diagnostics as failure independently of engine exit code. Legacy tests in `reference/v2-tests` are migration evidence and are not counted as passing v3.
 
-Human gameplay, sustained physical iPhone, actual Windows execution and unsigned IPA execution must have separate evidence. Unexecuted gates are never marked PASS.
+Windows runner headless EXE/PCK smoke and macOS unsigned IPA structural checks have actual CI evidence. Human gameplay, sustained physical iPhone and unsigned IPA installation/execution still need separate evidence. Unexecuted gates are never marked PASS.
