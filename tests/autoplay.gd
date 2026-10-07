@@ -7,6 +7,7 @@ func autoplay() -> void:
  for build in builds:
   var run := RunController.new(db,60606,"noah",builds[build])
   var scratch := QueryBuffer.new(600)
+  var boss_times: Dictionary={}
   var start := Time.get_ticks_usec()
   while run.state.tick < 60000 and run.state.phase != "CLEAR" and run.state.phase != "RESULT":
    if run.state.phase=="CONTRACT":
@@ -54,7 +55,14 @@ func autoplay() -> void:
         direction=escape
    if run.state.tick%120==0: run.interact()
    run.pipeline.tick(run,direction)
-  reports.append({"build":build,"seed":60606,"phase":run.state.phase,"seconds":run.state.field_tick/60.0,"HP":run.state.player.hp,"last_damage_source":run.state.last_damage_source,"level":run.state.progression.level,"kills":run.state.progression.kills,"bosses":run.state.progression.bosses,"weapons":run.state.progression.weapons,"evolutions":run.state.progression.evolutions,"damage":run.damage.totals,"signature":run.signature(),"wall_seconds":(Time.get_ticks_usec()-start)/1e6})
+   for n in range(run.enemies.count):
+    var i:=run.enemies.dense[n]
+    if run.enemies.types[i]<0:
+     var id:=run.enemies.entity_id(i)
+     if not boss_times.has(id): boss_times[id]={"stage":-run.enemies.types[i],"spawn_tick":run.state.field_tick,"HP":run.enemies.max_hp[i]}
+   for id in boss_times:
+    if not run.enemies.alive(id) and not boss_times[id].has("TTK_seconds"): boss_times[id].TTK_seconds=(run.state.field_tick-int(boss_times[id].spawn_tick))/60.0
+  reports.append({"boss_timings":boss_times.values(),"build":build,"seed":60606,"phase":run.state.phase,"seconds":run.state.field_tick/60.0,"HP":run.state.player.hp,"last_damage_source":run.state.last_damage_source,"level":run.state.progression.level,"kills":run.state.progression.kills,"bosses":run.state.progression.bosses,"weapons":run.state.progression.weapons,"evolutions":run.state.progression.evolutions,"damage":run.damage.totals,"signature":run.signature(),"wall_seconds":(Time.get_ticks_usec()-start)/1e6})
   print("autoplay finished ",build)
  var report := {"ok":true,"runs":reports,"note":"Deterministic scripted autoplayer with normal HP and progression. Clearing is measured, not assumed; this does not certify human fun."}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://test-output"))
