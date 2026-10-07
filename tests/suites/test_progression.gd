@@ -39,3 +39,16 @@ func run(t: TestContext, _tree: SceneTree) -> void:
   run.pipeline.level.collect(50,run.state,db,run.unlocked)
   t.equal(run.state.phase,phase,"pickup cannot override terminal "+phase)
   t.check(run.state.progression.choices.is_empty(),"no terminal upgrade modal "+phase)
+ var capped:=RunController.new(db,456)
+ capped.state.progression.weapons={"magic_bolt":8}
+ capped.state.progression.passives={"might":5}
+ capped.unlocked=["magic_bolt","might"]
+ capped.state.progression.evolutions={"magic_bolt":"starbreaker_bolt"}
+ capped.state.phase="LEVEL_UP"
+ capped.state.progression.choices=OverclockSystem.new().candidates(capped.state,db).slice(0,3)
+ t.check(capped.pipeline.level.reroll(capped.state,db,capped.unlocked),"reroll retains overclock fallback")
+ t.check(not capped.state.progression.choices.is_empty(),"reroll does not create empty modal")
+ capped.state.progression.choices=[["overclock","magic_bolt","comet_orbit"]]
+ t.check(capped.pipeline.level.banish(capped.state),"banish last choice")
+ t.equal(capped.state.phase,"RUNNING","empty banish resumes simulation")
+ t.check(OverclockSystem.new().candidates(capped.state,db).is_empty(),"banished weapon cannot reappear as overclock")

@@ -3,6 +3,7 @@ class_name OverclockSystem
 func candidates(state: RunState,db: GameDatabase) -> Array:
  var result: Array=[]
  for weapon in state.progression.evolutions:
+  if state.progression.banished.has(weapon): continue
   if int(state.progression.overclocks.get(weapon,0))>=2: continue
   for variant in db.table("overclocks").get(state.progression.evolutions[weapon],[]):
    if not state.progression.named_overclocks.get(weapon,[]).has(variant.id): result.append(["overclock",weapon,variant.id])

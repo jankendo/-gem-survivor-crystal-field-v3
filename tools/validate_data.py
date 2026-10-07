@@ -31,6 +31,8 @@ for d in tables['weapon_combo_attacks']['combos']:
   if d[k] not in tables['weapons']: errors.append(d['id']+' invalid '+k)
 for id,d in tables['v3_weapons'].items():
  if id not in tables['weapons'] or d['cooldown']<=0 or d['damage']<0 or d['targets']<1: errors.append(id+' invalid runtime')
+for id,d in tables["characters"].items():
+ if d.get("initial_weapon") not in tables["v3_weapons"]: errors.append(id+" invalid starting weapon")
 for evolution,variants in tables["overclocks"].items():
  for variant in variants:
   if variant["id"] not in tables["v3_overclocks"]: errors.append("missing overclock "+variant["id"])

@@ -29,3 +29,18 @@ func run(t: TestContext,_tree: SceneTree) -> void:
  var enemy:=atlas.enemies.spawn(0,Vector2(20,0),{"hp":100,"radius":18})
  WeaponModifiers.new().on_hit(atlas.enemies,enemy,Vector2.ZERO,db.table("v3_weapons").sonic_wave,atlas)
  t.equal(atlas.enemies.impulses[atlas.enemies.slot(enemy)].x,275.0,"Atlas actual knockback")
+ var collector:=RunController.new(db,333,"collector")
+ t.equal(collector.weapons.ids,["coin_orbit"],"Collector has a functional gem-themed starting attack")
+ for character in db.table("characters"):
+  var signatures: Array=[]
+  for mode in [[30,1],[60,1],[30,2],[60,2]]:
+   var run:=RunController.new(db,334,character)
+   run.speed=mode[1]
+   run.state.player.hp=1e6
+   run.state.player.max_hp=1e6
+   var input:=func(tick: int) -> Vector2: return Vector2.RIGHT.rotated(tick*.002)
+   while run.state.tick<180:
+    run.advance(minf(1.0/mode[0],float(180-run.state.tick)/60/run.speed),input)
+    if run.state.phase=="LEVEL_UP": run.select(0)
+   signatures.append(run.signature())
+  t.check(signatures[0]==signatures[1] and signatures[0]==signatures[2] and signatures[0]==signatures[3],"character render/speed parity "+str(character))

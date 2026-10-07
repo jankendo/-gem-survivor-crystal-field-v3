@@ -36,9 +36,11 @@ func select(index: int, state: RunState, db: GameDatabase) -> void:
 func reroll(state: RunState, db: GameDatabase, unlocked: Array) -> bool:
  var p := state.progression
  if state.phase!="LEVEL_UP" or p.rerolls_used >= 1+int(state.player.stats.get("rerolls",0)): return false
+ var options := loadout.candidates(state,db,unlocked)
+ if options.is_empty(): options=OverclockSystem.new().candidates(state,db)
+ if options.is_empty(): return false
  p.rerolls_used += 1
  p.reward_roll += 1
- var options := loadout.candidates(state,db,unlocked)
  p.choices = state.rng.stream_rng("reward",str(p.level)+":"+str(p.reward_roll)).shuffled(options).slice(0,3)
  return true
 func banish(state: RunState) -> bool:
@@ -47,4 +49,5 @@ func banish(state: RunState) -> bool:
  p.banishes_used += 1
  var choice: Array = p.choices.pop_back()
  p.banished.append(choice[1])
+ if p.choices.is_empty(): state.phase="RUNNING"
  return true

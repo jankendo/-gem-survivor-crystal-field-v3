@@ -6,6 +6,8 @@ func validate(db: GameDatabase) -> Array[String]:
   var d: Dictionary = db.table("evolutions")[id]
   if not db.table("weapons").has(d.weapon): errors.append("evolution weapon " + id)
   if not db.table("passives").has(d.passive): errors.append("evolution passive " + id)
+ for id in db.table("characters"):
+  if not db.table("v3_weapons").has(db.table("characters")[id].get("initial_weapon","")): errors.append("character starting weapon "+id)
  var seen: Dictionary = {}
  for d in db.table("weapon_combo_attacks").get("combos", []):
   if seen.has(d.id): errors.append("duplicate combo " + d.id)

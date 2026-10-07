@@ -201,7 +201,7 @@
     "display_locked_ja": "？？？",
     "secret": true,
     "secret_hint_ja": "吸収の極致に到達する",
-    "initial_weapon": "",
+    "initial_weapon": "coin_orbit",
     "role_ja": "吸収ビルド",
     "trait_ja": "ジェム吸収で周囲にダメージ",
     "weakness_ja": "初期攻撃が弱い",
