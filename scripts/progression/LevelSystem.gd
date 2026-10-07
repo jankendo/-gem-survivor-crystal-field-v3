@@ -24,14 +24,15 @@ func offer(state: RunState, db: GameDatabase, unlocked: Array) -> void:
  if p.choices.is_empty():
   p.choices=OverclockSystem.new().candidates(state,db).slice(0,3)
  if not p.choices.is_empty(): state.phase = "LEVEL_UP"
-func select(index: int, state: RunState, db: GameDatabase) -> void:
- if index < 0 or index >= state.progression.choices.size(): return
+func select(index: int, state: RunState, db: GameDatabase) -> bool:
+ if state.phase != "LEVEL_UP" or index < 0 or index >= state.progression.choices.size(): return false
  var choice: Array = state.progression.choices[index]
- if choice[0] == "overclock": OverclockSystem.new().apply(choice,state,db)
- else: loadout.apply(choice, state, db)
+ var applied: bool=OverclockSystem.new().apply(choice,state,db) if choice[0]=="overclock" else loadout.apply(choice,state,db)
+ if not applied: return false
  state.progression.choices.clear()
  EvolutionSystem.new().refresh(state, db)
  state.phase = "RUNNING"
+ return true
 
 func reroll(state: RunState, db: GameDatabase, unlocked: Array) -> bool:
  var p := state.progression

@@ -1,28 +1,48 @@
 [gd_scene format=3]
 
 [node name="RewardPanel" type="PanelContainer"]
-custom_minimum_size = Vector2(0, 0)
+mouse_filter = 0
 
-[node name="Scroll" type="ScrollContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="."]
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="Body" type="VBoxContainer" parent="Scroll"]
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+
+[node name="Title" type="Label" parent="Margin/Layout"]
+text = "クリア — 結晶王を撃破"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 26
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/Layout"]
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+follow_focus = true
+
+[node name="Body" type="VBoxContainer" parent="Margin/Layout/Scroll"]
 size_flags_horizontal = 3
-theme_override_constants/separation = 12
 
-[node name="Title" type="Label" parent="Scroll/Body"]
-text = "CLEAR — 結晶王を撃破"
-theme_override_font_sizes/font_size = 28
-
-[node name="Info" type="Label" parent="Scroll/Body"]
+[node name="Info" type="Label" parent="Margin/Layout/Scroll/Body"]
 autowrap_mode = 2
 text = ""
 
-[node name="End" type="Button" parent="Scroll/Body"]
+[node name="Reason" type="Label" parent="Margin/Layout"]
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Actions" type="GridContainer" parent="Margin/Layout"]
+columns = 2
+
+[node name="End" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 clip_text = true
-custom_minimum_size = Vector2(0, 48)
 text = "報酬を受け取って終了"
 
-[node name="Continue" type="Button" parent="Scroll/Body"]
+[node name="Continue" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 clip_text = true
-custom_minimum_size = Vector2(0, 48)
-text = "ENDLESSへ進む"
+text = "エンドレスへ進む"

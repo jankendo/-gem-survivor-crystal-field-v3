@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[node name="PauseMenu" type="PanelContainer"]
+[node name="CollectionScreen" type="PanelContainer"]
 mouse_filter = 0
 
 [node name="Margin" type="MarginContainer" parent="."]
@@ -12,7 +12,7 @@ theme_override_constants/margin_bottom = 12
 [node name="Layout" type="VBoxContainer" parent="Margin"]
 
 [node name="Title" type="Label" parent="Margin/Layout"]
-text = "ポーズ"
+text = "図鑑・クエスト"
 autowrap_mode = 2
 theme_override_font_sizes/font_size = 26
 
@@ -35,38 +35,14 @@ theme_override_font_sizes/font_size = 16
 [node name="Actions" type="GridContainer" parent="Margin/Layout"]
 columns = 2
 
-[node name="Resume" type="Button" parent="Margin/Layout/Actions"]
+[node name="Mode" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
-text = "ランに戻る"
+text = "図鑑 / クエスト"
 
-[node name="Seed" type="Button" parent="Margin/Layout/Actions"]
+[node name="Back" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
-text = "シードをコピー"
-
-[node name="Equipment" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "装備を確認"
-
-[node name="Settings" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "設定"
-
-[node name="End" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "ランを終了"
-
-[node name="Home" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "終了してタイトルへ"
+text = "戻る"

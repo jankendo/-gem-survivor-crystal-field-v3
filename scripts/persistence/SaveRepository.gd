@@ -8,18 +8,29 @@ var dirty := false
 var elapsed := 0.0
 var writes := 0
 var last_error := OK
+var load_status := "new"
+var blocked_load := false
+var purchase_busy := false
 var migration := SaveMigration.new()
 func _init(target: String = PATH, legacy: String = LEGACY,legacy_directory: String = "") -> void:
  path = target
+ var corrupt_current := false
  for candidate in [path,path + ".bak",path + ".tmp"]:
   if not FileAccess.file_exists(candidate): continue
   var value = parse_file(candidate)
   if migration.valid(value):
-   data = value
+   data = migration.normalize(value)
    dirty = candidate != path
+   load_status = "recovered" if dirty else "loaded"
    break
+  if candidate == path: corrupt_current = true
  if data.is_empty():
   data = migration.defaults()
+  if corrupt_current:
+   blocked_load = true
+   load_status = "corrupt"
+   last_error = ERR_FILE_CORRUPT
+   return
   var candidates: Array[String]=[legacy]
   if not legacy_directory.is_empty(): candidates.append(legacy_directory.path_join("chrono_merge_tactics.save"))
   elif path==PATH and legacy==LEGACY and not OS.has_feature("mobile"):
@@ -28,18 +39,27 @@ func _init(target: String = PATH, legacy: String = LEGACY,legacy_directory: Stri
    if not FileAccess.file_exists(candidate): continue
    var old = parse_file(candidate)
    if old is Dictionary:
-    data = migration.migrate(old)
-    dirty = true
-    break
+    var imported := migration.migrate(old)
+    if migration.valid(imported):
+     data = migration.normalize(imported)
+     dirty = true
+     load_status = "imported"
+     break
    last_error=ERR_PARSE_ERROR
+   load_status = "import_error"
 func mark_dirty() -> void:
  dirty = true
  elapsed = 0
 func tick(delta: float) -> void:
  if not dirty: return
  elapsed += delta
- if elapsed >= 1.0: flush()
+ if elapsed >= 1.0:
+  elapsed = 0
+  flush()
 func flush() -> bool:
+ if blocked_load:
+  last_error = ERR_FILE_CORRUPT
+  return false
  if not dirty: return true
  if not migration.valid(data):
   last_error = ERR_INVALID_DATA
@@ -63,6 +83,7 @@ func flush() -> bool:
    if last_error != OK: return false
  last_error = DirAccess.rename_absolute(ProjectSettings.globalize_path(temp),absolute)
  if last_error != OK: return false
+ last_error = OK
  dirty = false
  writes += 1
  return true
@@ -85,14 +106,18 @@ func settle(run: RunController) -> void:
  mark_dirty()
  flush()
 func buy_item(kind: String,id: String, db: GameDatabase) -> bool:
+ if purchase_busy or blocked_load: return false
  var shop := ShopSystem.new()
  if not shop.available(kind,id,data,db): return false
  var cost := shop.cost(kind,id,db)
  if cost < 0 or data.progression.unlocked.has(id) or int(data.profile.currency) < cost: return false
+ var before := data.duplicate(true)
+ var was_dirty := dirty
+ purchase_busy = true
  data.profile.currency -= cost
  data.progression.unlocked.append(id)
  mark_dirty()
- return flush()
+ return finish_purchase(before,was_dirty)
 
 func parse_file(filename: String):
  var parser := JSON.new()
@@ -100,12 +125,25 @@ func parse_file(filename: String):
  return parser.data
 
 func buy_meta(id: String, definition: Dictionary) -> bool:
+ if purchase_busy or blocked_load: return false
  if not data.progression.has("meta"): data.progression.meta = {}
  var level := int(data.progression.meta.get(id,0))
  if level >= int(definition.max_level): return false
  var cost := int(definition.base_cost)+int(definition.cost_step)*level
  if int(data.profile.currency) < cost: return false
+ var before := data.duplicate(true)
+ var was_dirty := dirty
+ purchase_busy = true
  data.profile.currency -= cost
  data.progression.meta[id] = level+1
  mark_dirty()
- return flush()
+ return finish_purchase(before,was_dirty)
+
+func finish_purchase(before: Dictionary, was_dirty: bool) -> bool:
+ var success := flush()
+ if not success:
+  data = before
+  dirty = was_dirty
+  if FileAccess.file_exists(path+".tmp"): DirAccess.remove_absolute(ProjectSettings.globalize_path(path+".tmp"))
+ purchase_busy = false
+ return success

@@ -4,27 +4,40 @@ var direction := Vector2.ZERO
 var finger := -1
 var origin := Vector2.ZERO
 var current := Vector2.ZERO
+var enabled := false
+var safe_rect := Rect2()
+var blocked: Callable
+const RADIUS := 65.0
+const DEADZONE := .12
+func cancel() -> void:
+ finger = -1
+ direction = Vector2.ZERO
+ queue_redraw()
+func set_enabled(value: bool) -> void:
+ if enabled == value: return
+ enabled = value
+ if not enabled: cancel()
 func _input(event: InputEvent) -> void:
- var safe := SafeArea.new().logical_rect(get_viewport_rect().size,Vector2(DisplayServer.window_get_size()),DisplayServer.get_display_safe_area()) if OS.has_feature("ios") else Rect2(Vector2.ONE*16,get_viewport_rect().size-Vector2.ONE*32)
+ if not enabled: return
  if event is InputEventScreenTouch:
-  if event.pressed and finger < 0 and event.position.x < get_viewport_rect().size.x * .55 and safe.has_point(event.position):
+  if event.index == finger and (not event.pressed or event.canceled):
+   cancel()
+   return
+  if event.pressed and not event.canceled and finger < 0 and safe_rect.has_point(event.position) and event.position.x < get_viewport_rect().size.x*.55:
+   if blocked.is_valid() and blocked.call(event.position): return
    finger = event.index
    origin = event.position
    current = origin
-  elif not event.pressed and event.index == finger:
-   finger = -1
    direction = Vector2.ZERO
- if event is InputEventScreenDrag and event.index == finger:
+ elif event is InputEventScreenDrag and event.index == finger:
   current = event.position
-  direction = ((current-origin)/65).limit_length()
- queue_redraw()
+  var raw := (current-origin)/RADIUS
+  direction = Vector2.ZERO if raw.length()<=DEADZONE else raw.normalized()*minf(1,(raw.length()-DEADZONE)/(1-DEADZONE))
+  queue_redraw()
 func _draw() -> void:
- if finger < 0: return
- draw_circle(origin,65,Color(.1,.8,1,.12))
- draw_arc(origin,65,0,TAU,32,Color(.4,.9,1,.65),2)
- draw_circle(origin+direction*65,22,Color(.4,.9,1,.5))
-
+ if finger < 0 or not enabled: return
+ draw_circle(origin,RADIUS,Color(.1,.8,1,.12))
+ draw_arc(origin,RADIUS,0,TAU,32,Color(.4,.9,1,.65),2)
+ draw_circle(origin+direction*RADIUS,22,Color(.4,.9,1,.5))
 func _notification(what: int) -> void:
- if what==NOTIFICATION_APPLICATION_PAUSED or what==NOTIFICATION_WM_WINDOW_FOCUS_OUT:
-  finger = -1
-  direction = Vector2.ZERO
+ if what in [NOTIFICATION_APPLICATION_PAUSED,NOTIFICATION_WM_WINDOW_FOCUS_OUT]: cancel()

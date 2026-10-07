@@ -15,7 +15,7 @@ func choose(seed_value: int, visit: int, db: GameDatabase) -> String:
  for id in db.table("warp_rooms").type_weights: weighted.append({"id":id,"weight":db.table("warp_rooms").type_weights[id]})
  return str(child.weighted_choice(weighted).id)
 func enter(run, portal_index: int) -> bool:
- if active: return false
+ if active or run.state.phase != "RUNNING" or portal_index < 0 or portal_index >= run.map.portals.size(): return false
  visits += 1
  room_type = choose(run.state.seed_value,visits,run.db)
  stream = run.state.rng.stream_rng("warp",visits)
@@ -56,7 +56,7 @@ func leave(run) -> void:
  run.map = suspended.map
  for i in range(rewards.capacity):
   if rewards.active[i]: run.gems.add(suspended.position,rewards.values[i],run.map)
- run.state.player.position = suspended.position + Vector2(80,0)
+ run.state.player.position = run.map.safe_position(suspended.position + Vector2(80,0))
  run.state.rng = suspended.rng
  run.encounter.budget = suspended.budget
  run.encounter.threat = suspended.threat

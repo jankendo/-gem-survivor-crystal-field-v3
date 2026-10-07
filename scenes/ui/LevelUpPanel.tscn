@@ -1,48 +1,120 @@
 [gd_scene format=3]
 
 [node name="LevelUpPanel" type="PanelContainer"]
-custom_minimum_size = Vector2(0, 0)
+mouse_filter = 0
 
-[node name="Scroll" type="ScrollContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="."]
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="Body" type="VBoxContainer" parent="Scroll"]
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+
+[node name="Title" type="Label" parent="Margin/Layout"]
+text = "成長 — 1つ選択"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 26
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/Layout"]
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+follow_focus = true
+
+[node name="Body" type="VBoxContainer" parent="Margin/Layout/Scroll"]
 size_flags_horizontal = 3
-theme_override_constants/separation = 12
 
-[node name="Title" type="Label" parent="Scroll/Body"]
-text = "BUILD — 成長を選ぶ"
-theme_override_font_sizes/font_size = 28
-
-[node name="Info" type="Label" parent="Scroll/Body"]
+[node name="Info" type="Label" parent="Margin/Layout/Scroll/Body"]
 autowrap_mode = 2
 text = ""
 
-[node name="Choice0" type="Button" parent="Scroll/Body"]
-clip_text = true
-custom_minimum_size = Vector2(0, 48)
-text = "選択 1"
+[node name="Choice0" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,88)
+text = ""
 
-[node name="Choice1" type="Button" parent="Scroll/Body"]
-clip_text = true
-custom_minimum_size = Vector2(0, 48)
-text = "選択 2"
+[node name="CardMargin" type="MarginContainer" parent="Margin/Layout/Scroll/Body/Choice0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = -8.0
+mouse_filter = 2
 
-[node name="Choice2" type="Button" parent="Scroll/Body"]
-clip_text = true
-custom_minimum_size = Vector2(0, 48)
-text = "選択 3"
+[node name="CardText" type="Label" parent="Margin/Layout/Scroll/Body/Choice0/CardMargin"]
+autowrap_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
 
-[node name="Reroll" type="Button" parent="Scroll/Body"]
+[node name="Choice1" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,88)
+text = ""
+
+[node name="CardMargin" type="MarginContainer" parent="Margin/Layout/Scroll/Body/Choice1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = -8.0
+mouse_filter = 2
+
+[node name="CardText" type="Label" parent="Margin/Layout/Scroll/Body/Choice1/CardMargin"]
+autowrap_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Choice2" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,88)
+text = ""
+
+[node name="CardMargin" type="MarginContainer" parent="Margin/Layout/Scroll/Body/Choice2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = -8.0
+mouse_filter = 2
+
+[node name="CardText" type="Label" parent="Margin/Layout/Scroll/Body/Choice2/CardMargin"]
+autowrap_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Reason" type="Label" parent="Margin/Layout"]
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Actions" type="GridContainer" parent="Margin/Layout"]
+columns = 2
+
+[node name="Reroll" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 clip_text = true
-custom_minimum_size = Vector2(0, 48)
 text = "再抽選"
 
-[node name="Banish" type="Button" parent="Scroll/Body"]
+[node name="Banish" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 clip_text = true
-custom_minimum_size = Vector2(0, 48)
 text = "最後の候補を封印"
 
-[node name="Skip" type="Button" parent="Scroll/Body"]
-clip_text = true
+[node name="Skip" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
 text = "成長をスキップ"
+
+[node name="Pause" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text = "ポーズ"

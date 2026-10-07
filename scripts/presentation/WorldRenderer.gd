@@ -76,7 +76,7 @@ func present(run: RunController, size: Vector2) -> void:
  corridor_rects = run.map.corridors
  room_kinds = run.map.kinds
  portals = run.map.portals
- position = size * .5 - player_position
+ position = (size * .5 - player_position) * scale
  queue_redraw()
 func _draw() -> void:
  if compass_direction!=Vector2.ZERO: draw_line(player_position+compass_direction*35,player_position+compass_direction*65,Color(.3,1,.8),4)

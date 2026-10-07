@@ -2,6 +2,9 @@ extends RefCounted
 class_name DataValidator
 func validate(db: GameDatabase) -> Array[String]:
  var errors: Array[String] = []
+ for required in ["characters","weapons","passives","enemies","bosses","v3_balance","v3_weapons","blessings"]:
+  if db.table(required).is_empty(): errors.append("required table "+required)
+ if not errors.is_empty(): return errors
  for id in db.table("evolutions"):
   var d: Dictionary = db.table("evolutions")[id]
   if not db.table("weapons").has(d.weapon): errors.append("evolution weapon " + id)

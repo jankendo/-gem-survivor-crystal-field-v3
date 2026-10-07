@@ -17,5 +17,5 @@ func _draw() -> void:
   var center := rooms[n].get_center()
   if not discovered.has(n) and center.distance_to(player)>range_limit: continue
   var color := Color(.2,.7,.7,.8) if discovered.has(n) else Color(.25,.3,.4,.65)
-  draw_rect(Rect2(center*scale+size*.5-Vector2(8,8),Vector2(16,16)),color)
- draw_circle(player*scale+size*.5,4,Color(1,.85,.3))
+  draw_rect(Rect2((center-player)*scale+size*.5-Vector2(8,8),Vector2(16,16)),color)
+ draw_circle(size*.5,4,Color(1,.85,.3))

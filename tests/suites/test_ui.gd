@@ -1,7 +1,10 @@
 extends RefCounted
 func tags() -> Array: return ["smoke","UI","iOS","release"]
 func run(t: TestContext, tree: SceneTree) -> void:
+ tree.root.size = Vector2i(1280,720)
+ tree.root.content_scale_size = Vector2i(1280,720)
  var app = load("res://scenes/Main.tscn").instantiate()
+ app.save_path = "user://qa_ui_suite.save"
  tree.root.add_child(app)
  await tree.process_frame
  t.check(app.db.errors.is_empty(),"main database")
@@ -35,8 +38,9 @@ func run(t: TestContext, tree: SceneTree) -> void:
  t.check(rect.position.x >= 40 and rect.end.x <= 1240,"notch safe area")
  for name in app.controller.panels:
   var panel: Control = app.controller.panels[name]
-  for node in panel.get_node("Scroll/Body").get_children():
+  for node in app.controller.view.controls[name].values():
    if node is Button: t.check(node.custom_minimum_size.y >= 44,"44pt control "+name+"/"+node.name)
+ app.start_run("noah")
  var touch := InputEventScreenTouch.new()
  touch.index = 0
  touch.position = Vector2(150,220)

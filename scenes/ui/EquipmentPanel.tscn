@@ -1,0 +1,141 @@
+[gd_scene format=3]
+
+[node name="EquipmentPanel" type="PanelContainer"]
+mouse_filter = 0
+
+[node name="Margin" type="MarginContainer" parent="."]
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+
+[node name="Title" type="Label" parent="Margin/Layout"]
+text = "装備 — 武器6 / Passive6"
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 26
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/Layout"]
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+follow_focus = true
+
+[node name="Body" type="VBoxContainer" parent="Margin/Layout/Scroll"]
+size_flags_horizontal = 3
+
+[node name="Info" type="Label" parent="Margin/Layout/Scroll/Body"]
+autowrap_mode = 2
+text = ""
+
+[node name="Slots" type="GridContainer" parent="Margin/Layout/Scroll/Body"]
+columns = 6
+
+[node name="Slot0" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot1" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot2" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot3" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot4" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot5" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot6" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot7" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot8" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot9" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot10" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Slot11" type="Button" parent="Margin/Layout/Scroll/Body/Slots"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 3
+theme_override_font_sizes/font_size = 16
+text = "空き"
+
+[node name="Reason" type="Label" parent="Margin/Layout"]
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Actions" type="GridContainer" parent="Margin/Layout"]
+columns = 2
+
+[node name="Back" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+clip_text = true
+text = "戻る"

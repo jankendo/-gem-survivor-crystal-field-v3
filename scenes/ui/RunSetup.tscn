@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[node name="PauseMenu" type="PanelContainer"]
+[node name="RunSetup" type="PanelContainer"]
 mouse_filter = 0
 
 [node name="Margin" type="MarginContainer" parent="."]
@@ -12,7 +12,7 @@ theme_override_constants/margin_bottom = 12
 [node name="Layout" type="VBoxContainer" parent="Margin"]
 
 [node name="Title" type="Label" parent="Margin/Layout"]
-text = "ポーズ"
+text = "ランの準備"
 autowrap_mode = 2
 theme_override_font_sizes/font_size = 26
 
@@ -28,6 +28,16 @@ size_flags_horizontal = 3
 autowrap_mode = 2
 text = ""
 
+[node name="Seed" type="LineEdit" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,48)
+placeholder_text = "シード（空欄で自動生成）"
+max_length = 10
+virtual_keyboard_type = 2
+
+[node name="SeedHelp" type="Label" parent="Margin/Layout/Scroll/Body"]
+autowrap_mode = 2
+text = "1〜2147483647。コピーしたシードで同じ迷宮を再現できます。"
+
 [node name="Reason" type="Label" parent="Margin/Layout"]
 autowrap_mode = 2
 theme_override_font_sizes/font_size = 16
@@ -35,38 +45,14 @@ theme_override_font_sizes/font_size = 16
 [node name="Actions" type="GridContainer" parent="Margin/Layout"]
 columns = 2
 
-[node name="Resume" type="Button" parent="Margin/Layout/Actions"]
+[node name="Start" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
-text = "ランに戻る"
+text = "このビルドで出発"
 
-[node name="Seed" type="Button" parent="Margin/Layout/Actions"]
+[node name="Back" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
-text = "シードをコピー"
-
-[node name="Equipment" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "装備を確認"
-
-[node name="Settings" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "設定"
-
-[node name="End" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "ランを終了"
-
-[node name="Home" type="Button" parent="Margin/Layout/Actions"]
-custom_minimum_size = Vector2(0,48)
-size_flags_horizontal = 3
-clip_text = true
-text = "終了してタイトルへ"
+text = "戻る"

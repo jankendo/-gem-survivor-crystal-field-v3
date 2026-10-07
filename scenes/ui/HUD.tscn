@@ -1,23 +1,81 @@
 [gd_scene format=3]
-[node name="HUD" type="VBoxContainer"]
+
+[node name="HUD" type="Control"]
 mouse_filter = 2
-[node name="Stats" type="Label" parent="."]
-text = "HP / EXP"
-theme_override_font_sizes/font_size = 24
-[node name="Build" type="Label" parent="."]
-text = "BUILD"
+
+[node name="Top" type="PanelContainer" parent="."]
+mouse_filter = 2
+
+[node name="Rows" type="VBoxContainer" parent="Top"]
+theme_override_constants/separation = 2
+mouse_filter = 2
+
+[node name="Stats" type="Label" parent="Top/Rows"]
+text = "HP / Lv"
+autowrap_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="HP" type="ProgressBar" parent="Top/Rows"]
+custom_minimum_size = Vector2(0,12)
+mouse_filter = 2
+show_percentage = false
+
+[node name="EXP" type="Label" parent="Top/Rows"]
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Boss" type="Label" parent="Top/Rows"]
+autowrap_mode = 2
+visible = false
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="BossHP" type="ProgressBar" parent="Top/Rows"]
+visible = false
+custom_minimum_size = Vector2(0,12)
+mouse_filter = 2
+show_percentage = false
+
 [node name="Goal" type="Label" parent="."]
-text = "RISK — 探索して結晶を集める / 5・10・15分にボス"
-[node name="Actions" type="HBoxContainer" parent="."]
+mouse_filter = 2
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Notification" type="Label" parent="."]
+mouse_filter = 2
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Actions" type="GridContainer" parent="."]
+columns = 3
+
 [node name="Pause" type="Button" parent="Actions"]
-custom_minimum_size = Vector2(100, 48)
+focus_mode = 0
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 text = "ポーズ"
+
+[node name="Equipment" type="Button" parent="Actions"]
+focus_mode = 0
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+text = "装備"
+
 [node name="Speed" type="Button" parent="Actions"]
-custom_minimum_size = Vector2(100, 48)
-text = "1x / 2x"
+focus_mode = 0
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+text = "速度 1倍"
+
 [node name="Warp" type="Button" parent="Actions"]
-custom_minimum_size = Vector2(120, 48)
+focus_mode = 0
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 text = "ワープへ"
+
 [node name="Mine" type="Button" parent="Actions"]
-custom_minimum_size = Vector2(120, 48)
+focus_mode = 0
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
 text = "採掘 / イベント"

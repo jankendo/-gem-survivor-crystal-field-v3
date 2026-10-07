@@ -21,6 +21,8 @@ var pipeline := SimulationPipeline.new()
 var unlocked: Array = []
 var accumulator := 0.0
 var speed := 1
+var paused_phase := "RUNNING"
+var finished_reason := ""
 func _init(database: GameDatabase, seed_input: int = 60606, character: String = "noah", equipment: Array = []) -> void:
  db = database
  damage.spatial = spatial
@@ -50,12 +52,14 @@ func advance(render_delta: float, input_at_tick: Callable) -> void:
    break
   accumulator -= 1.0 / 60.0
   pipeline.tick(self,input_at_tick.call(state.tick))
-func select(index: int) -> void:
- pipeline.level.select(index,state,db)
+func select(index: int) -> bool:
+ if state.phase != "LEVEL_UP" or index < 0 or index >= state.progression.choices.size(): return false
+ if not pipeline.level.select(index,state,db): return false
  state.player.stats = PassiveSystem.new().resolve(state,db)
  weapons.refresh(state,db)
  combos.refresh(state,db)
  if not pending_contract.is_empty(): state.phase = "CONTRACT"
+ return true
 func continue_endless() -> void:
  if state.phase == "CLEAR":
   state.endless = true
@@ -64,3 +68,35 @@ func signature() -> int:
  return [state.tick,state.field_tick,state.phase,state.player.position,state.player.hp,state.player.invulnerability,state.player.stats,state.progression.exp,state.progression.level,state.progression.kills,state.progression.currency,state.progression.weapons,state.progression.passives,state.progression.evolutions,state.progression.overclocks,state.progression.named_overclocks,state.progression.rooms,state.progression.metrics,state.progression.terrain_ticks,state.progression.terrain_kills,state.progression.terrain_crystals,state.progression.terrain_bosses,state.progression.elite_kills,state.progression.gem_turret_charge,state.progression.skips,state.progression.banishes_bonus,enemies.positions,enemies.hp,enemies.generation,enemies.dense,enemies.count,enemies.contact,enemies.shock,enemies.poison,enemies.periodic,enemies.slow,enemies.action,enemies.warning,enemies.flags,enemies.impulses,gems.magnetized,gems.magnet_count,gems.positions,gems.values,gems.active,projectiles.positions,projectiles.velocities,projectiles.damage,projectiles.life,projectiles.homing,projectiles.bounces,projectiles.statuses,projectiles.seen_count,deployments.positions,deployments.directions,deployments.lengths,deployments.slow_ticks,deployments.pulls,deployments.knockbacks,deployments.amounts,deployments.remaining,deployments.clocks,deployments.count,projectiles.count,projectiles.remaining_hits,projectiles.seen_ids,weapons.cooldowns,combos.cooldowns,damage.totals,damage.overkill,field.positions,field.hp,field.active,field.event,field.events.deadline,field.events.danger_ticks,field.events.impact_tick,field.events.impact_position,state.rng.snapshot()].hash()
 
 func interact() -> void: pending_interact = true
+
+func pause() -> bool:
+ if state.phase not in ["RUNNING","LEVEL_UP","CONTRACT"]: return false
+ paused_phase = state.phase
+ state.phase = "PAUSED"
+ accumulator = 0
+ pending_interact = false
+ return true
+func resume() -> bool:
+ if state.phase != "PAUSED": return false
+ state.phase = paused_phase
+ accumulator = 0
+ return true
+func skip_choice() -> bool:
+ if state.phase != "LEVEL_UP" or state.progression.skips <= 0: return false
+ state.progression.skips -= 1
+ state.progression.choices.clear()
+ state.phase = "CONTRACT" if not pending_contract.is_empty() else "RUNNING"
+ return true
+func resolve_contract(accept: bool) -> bool:
+ if state.phase != "CONTRACT" or pending_contract.is_empty(): return false
+ if accept: contract.accept(self)
+ else:
+  pending_contract = ""
+  state.phase = "RUNNING"
+ return true
+func finish(reason: String = "終了") -> bool:
+ if state.phase == "RESULT": return false
+ finished_reason = "クリア" if state.phase == "CLEAR" else reason
+ pending_interact = false
+ state.phase = "RESULT"
+ return true
