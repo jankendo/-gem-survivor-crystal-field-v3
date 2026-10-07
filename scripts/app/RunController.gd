@@ -22,6 +22,7 @@ var accumulator := 0.0
 var speed := 1
 func _init(database: GameDatabase, seed_input: int = 60606, character: String = "noah", equipment: Array = []) -> void:
  db = database
+ damage.spatial = spatial
  state.seed_value = seed_input
  state.rng.set_seed_value(seed_input)
  map.generate(state.rng.stream_seed("map"))

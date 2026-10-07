@@ -83,7 +83,7 @@ func spawn(type_id: int, pos: Vector2, definition: Dictionary, health_scale: flo
  xp[i] = int(definition.get("exp", 5))
  types[i] = type_id
  behaviors[i] = ["", "charger", "shield", "healer", "reaper", "splitter"].find(str(definition.get("behavior", "")))
- flags[i] = (1 if boss else 0) | (2 if definition.get("elite", false) else 0)
+ flags[i] = (1 if boss or bool(definition.get("boss",false)) else 0) | (2 if definition.get("elite", false) else 0)
  contact[i] = 0
  shock[i] = 0
  poison[i] = 0

@@ -57,5 +57,6 @@
     "curse_spawn": 0.08,
     "curse_reward": 0.1,
     "pickup_heal": 1
-  }
+  },
+  "resonance_damage_mult": 1.1
 }

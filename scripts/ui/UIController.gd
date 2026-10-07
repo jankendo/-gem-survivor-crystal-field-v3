@@ -188,6 +188,20 @@ func update_hud() -> void:
  if text != last_hud:
   hud.get_node("Stats").text = text
   last_hud = text
+ var guidance := "RISK — 探索 / 5・10・15分にボス"
+ var sense := float(s.player.stats.get("indicator_range",0))
+ if sense>0 and app.run.field.positions.size()>0:
+  var nearest := -1
+  var distance := 600+sense
+  for i in range(app.run.field.positions.size()):
+   var d: float = app.run.field.positions[i].distance_to(s.player.position)
+   if app.run.field.active[i] and d<distance:
+    distance=d
+    nearest=i
+  if nearest>=0:
+   var direction: Vector2 = app.run.field.positions[nearest]-s.player.position
+   guidance += " / 報酬 "+("→" if direction.x>0 else "←")+" %dm" % int(distance)
+ if hud.get_node("Goal").text!=guidance: hud.get_node("Goal").text=guidance
  var build := "BUILD: "
  for id in s.progression.weapons: build += str(app.db.table("weapons")[id].name_ja)+" Lv"+str(s.progression.weapons[id])+"  "
  if hud.get_node("Build").text != build: hud.get_node("Build").text = build

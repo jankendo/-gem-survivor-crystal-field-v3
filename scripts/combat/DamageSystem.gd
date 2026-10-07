@@ -1,6 +1,7 @@
 extends RefCounted
 class_name DamageSystem
 # Actual HP loss is attributed once; overkill is tracked separately.
+var spatial: SpatialWorld
 var presentation := PresentationEvents.new()
 var normal_multiplier := 1.0
 var elite_multiplier := 1.0
@@ -32,6 +33,7 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
  if world.flags[i] & 1: boss_damage += actual
  else: normal_damage += actual
  if world.hp[i] <= 0:
+  if spatial!=null: spatial.deactivate_enemy(id)
   death_ids[death_count] = id
   death_count += 1
  return actual

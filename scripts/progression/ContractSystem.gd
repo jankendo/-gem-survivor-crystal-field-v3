@@ -26,9 +26,11 @@ func multipliers(state: RunState, db: GameDatabase) -> Dictionary:
   var incoming := float(d.get("damage_taken_mult",1))
   values.incoming *= lerpf(incoming,1,resist) if incoming > 1 else incoming
   values.elite *= float(d.get("elite_damage_mult",1))
-  values.normal *= float(d.get("normal_damage_mult",1))
+  var normal := float(d.get("normal_damage_mult",1))
+  values.normal *= lerpf(normal,1,resist) if normal<1 else normal
   values.gem *= float(d.get("gem_mult",1))
   values.currency *= float(d.get("score_mult",1))
   values.crystal *= float(d.get("crystal_reward_mult",1))
   values.rare += float(d.get("rare_reward_bonus",0))
+ values.currency *= 1+float(state.player.stats.get("contract_reward",0))
  return values

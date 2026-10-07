@@ -26,10 +26,12 @@ func tick(run, direction: Vector2) -> void:
   move_mult += float(stat.get("corridor_move",0))
   player.stats.context_damage = float(stat.get("corridor_damage",0))
   player.stats.context_armor = float(stat.get("corridor_armor",0))
+  player.stats.context_area = 0
  else:
   move_mult += float(stat.get("room_move",0))
   player.stats.context_damage = 0
   player.stats.context_armor = 0
+  player.stats.context_area = float(stat.get("room_area",0))
  if player.hp < player.max_hp*.3: move_mult += float(stat.get("low_hp_move",0))
  if not state.progression.rooms.has(context_room): move_mult += float(stat.get("explore_move",0))
  player.position = run.map.move(player.position,direction.limit_length() * player.speed * move_mult / 60)

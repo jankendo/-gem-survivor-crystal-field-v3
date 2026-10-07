@@ -34,7 +34,7 @@ func interact(run: RunController) -> bool:
   var i: int = id-100
   if not active[i]: continue
   if kinds[i]=="healing_spring":
-   run.state.player.hp = minf(run.state.player.max_hp,run.state.player.hp+30)
+   run.state.player.hp = minf(run.state.player.max_hp,run.state.player.hp+30*(1+float(run.state.player.stats.get("field_reward",0))))
    active[i] = 0
    return true
   if kinds[i]=="sealed_chest_pillar":
@@ -57,7 +57,7 @@ func interact(run: RunController) -> bool:
    var reward := float(cfg.mining_reward)
    reward *= (1+float(run.state.player.stats.get("mining_reward",0)))*float(run.state.player.stats.get("contract_crystal",1))
    run.gems.add(positions[i],roundi(reward),run.map)
-   run.state.progression.currency += 10
+   run.state.progression.currency += roundi(10*(1+float(run.state.player.stats.get("field_reward",0))))
    if kinds[i]=="lightning_crystal":
     var available: Array = run.db.table("rune_contracts").keys()
     var rng = run.state.rng.stream_rng("contract",crystals)

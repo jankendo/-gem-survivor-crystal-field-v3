@@ -9,6 +9,7 @@ var signature := 0
 var resolver := StatResolver.new()
 var scratch := QueryBuffer.new(600)
 var processed := 0
+var resonance_multiplier := 1.1
 var coverage_ticks := 0
 func refresh(state: RunState, db: GameDatabase) -> void:
  state.player.stats = PassiveSystem.new().resolve(state,db)
@@ -17,10 +18,11 @@ func refresh(state: RunState, db: GameDatabase) -> void:
  ids.clear()
  definitions.clear()
  stats.clear()
+ resonance_multiplier = float(db.config().get("resonance_damage_mult",1.1))
  for id in state.progression.weapons:
   ids.append(id)
   definitions.append(db.table("v3_weapons")[id])
-  stats.append(resolver.resolve(id, state, db))
+  stats.append(resolver.resolve(id, state, db, false))
  cooldowns.resize(ids.size())
  cooldowns.fill(0)
  signature = [state.progression.weapons,state.progression.passives,state.progression.evolutions,state.progression.overclocks,state.player.contracts].hash()
@@ -38,6 +40,9 @@ func tick(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, projectil
   var origin := state.player.position
   var hit_damage := float(s.damage)
   hit_damage *= 1+float(state.player.stats.get("context_damage",0))
+  if state.progression.resonance>0: hit_damage *= resonance_multiplier
+  var hit_radius := float(s.radius)*(1+float(state.player.stats.get("context_area",0)))
+  if str(d.status)=="poison": hit_radius *= 1+float(state.player.stats.get("poison_area",0))
   var center := enemies.positions[enemies.slot(target)]
   match str(d.archetype):
    "projectile", "summon":
@@ -45,9 +50,9 @@ func tick(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, projectil
     for shot in range(int(s.targets)):
      projectiles.add(origin, direction.rotated((shot - (int(s.targets)-1)*.5) * .13) * float(d.speed), hit_damage, "weapon:" + ids[n],int(d.get("pierce",0))+int(state.player.stats.get("pierce",0)))
    "beam": spatial.query_segment(SpatialWorld.ENEMY, origin, origin + (center-origin).normalized() * float(s.range), 30, scratch)
-   "explosion", "deploy": spatial.query_circle(SpatialWorld.ENEMY, center, s.radius, scratch)
+   "explosion", "deploy": spatial.query_circle(SpatialWorld.ENEMY, center, hit_radius, scratch)
    "chain": spatial.query_circle(SpatialWorld.ENEMY, center, minf(s.range, 280), scratch)
-   _: spatial.query_circle(SpatialWorld.ENEMY, origin, s.radius, scratch)
+   _: spatial.query_circle(SpatialWorld.ENEMY, origin, hit_radius, scratch)
   if str(d.archetype) == "projectile" or str(d.archetype) == "summon": continue
   var hits := 0
   for query_index in range(scratch.count):

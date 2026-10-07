@@ -5,6 +5,7 @@ var elapsed := 0
 var room_type := "normal"
 var suspended: Dictionary = {}
 var stream := RunRng.new()
+var wave_index := 0
 var visits := 0
 func choose(seed_value: int, visit: int, db: GameDatabase) -> String:
  var rng := RunRng.new()
@@ -27,25 +28,23 @@ func enter(run, portal_index: int) -> bool:
  run.map.kinds.append("risk")
  run.state.player.position = Vector2.ZERO
  run.state.rng = stream
- var type_data: Dictionary = run.db.table("warp_rooms").types[room_type]
- for wave in type_data.waves:
-  for entry in wave.enemies:
-   var index: int = run.db.enemy_index(entry.type)
-   if index < 0: continue
-   for n in range(int(entry.count)):
-    run.enemies.spawn(index, run.map.safe_position(Vector2(stream.range_float(-600,600),stream.range_float(-360,360))), run.db.enemy_defs[index],float(type_data.enemy_hp_multiplier))
+ wave_index = 0
+ spawn_wave(run)
  active = true
  elapsed = 0
  return portal_index >= 0
 func tick(run) -> void:
  if not active: return
  elapsed += 1
+ if run.enemies.count==0 and wave_index < run.db.table("warp_rooms").types[room_type].waves.size():
+  spawn_wave(run)
+  return
  if run.enemies.count == 0:
   var reward: Dictionary = run.db.table("warp_rooms").types[room_type].reward
   run.state.progression.currency += int(reward.score) / 10
   run.state.progression.exp += int(reward.exp)
   leave(run)
- elif elapsed >= int(run.db.config().warp_duration_ticks): leave(run)
+ elif elapsed >= int(run.db.config().warp_duration_ticks)*run.db.table("warp_rooms").types[room_type].waves.size(): leave(run)
 func leave(run) -> void:
  if not active: return
  var rewards: PickupWorld = run.gems
@@ -61,3 +60,17 @@ func leave(run) -> void:
  run.encounter.threat = suspended.threat
  suspended.clear()
  active = false
+
+func spawn_wave(run) -> void:
+ var type_data: Dictionary = run.db.table("warp_rooms").types[room_type]
+ var wave: Dictionary = type_data.waves[wave_index]
+ wave_index += 1
+ for entry in wave.enemies:
+  var index: int = run.db.enemy_index(entry.type)
+  if index < 0: continue
+  for n in range(int(entry.count)):
+   var id: int = run.enemies.spawn(index,run.map.spawn_position(run.state.player.position,300,600,stream),run.db.enemy_defs[index],float(type_data.enemy_hp_multiplier))
+   if id>=0:
+    var i: int = run.enemies.slot(id)
+    run.enemies.speed[i] *= float(type_data.enemy_speed_multiplier)
+    run.enemies.damage[i] *= float(type_data.enemy_damage_multiplier)

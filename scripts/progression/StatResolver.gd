@@ -1,7 +1,7 @@
 extends RefCounted
 class_name StatResolver
 # Fixed calculation order. Detailed breakdown is produced on demand, never per frame.
-func resolve(id: String, state: RunState, db: GameDatabase) -> Dictionary:
+func resolve(id: String, state: RunState, db: GameDatabase, include_temporary: bool = true) -> Dictionary:
  var d: Dictionary = db.table("v3_weapons")[id]
  var cfg := db.config()
  var level := int(state.progression.weapons.get(id, 1))
@@ -19,7 +19,7 @@ func resolve(id: String, state: RunState, db: GameDatabase) -> Dictionary:
  var evolved := categorized * (float(cfg.evolution_damage) if state.progression.evolutions.has(id) else 1.0)
  var synergy := evolved * float(db.table("blessings").get(state.player.blessing, {}).get("modifiers", {}).get("damage_mult", 1))
  for contract in state.player.contracts: synergy *= float(db.table("rune_contracts")[contract].get("damage_mult", 1))
- var temporary := synergy * (1.1 if state.progression.resonance > 0 else 1.0)
+ var temporary := synergy * (float(cfg.get("resonance_damage_mult",1.1)) if include_temporary and state.progression.resonance > 0 else 1.0)
  var final := temporary * pow(float(cfg.overclock_damage), int(state.progression.overclocks.get(id, 0)))
  var cooldown := float(d.cooldown) * maxf(.4, 1 - (level - 1) * float(cfg.weapon_level_cooldown)) * maxf(.675, 1 - -float(passive_stats.get("cooldown",0)))
  for contract in state.player.contracts: cooldown *= float(db.table("rune_contracts")[contract].get("cooldown_mult", 1))

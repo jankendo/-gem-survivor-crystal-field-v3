@@ -10,6 +10,8 @@ const LAYERS := 5
 const CELL_COUNT := SIDE * SIDE * LAYERS
 var cell_size := 128.0
 var heads := PackedInt32Array()
+var entry_active := PackedByteArray()
+var enemy_entries := PackedInt32Array()
 var next := PackedInt32Array()
 var ids := PackedInt64Array()
 var positions := PackedVector2Array()
@@ -21,6 +23,9 @@ var rebuilds := 0
 var bucket_allocations := 1
 var query_count := 0
 func _init() -> void:
+ enemy_entries.resize(600)
+ enemy_entries.fill(-1)
+ entry_active.resize(capacity)
  heads.resize(CELL_COUNT)
  heads.fill(-1)
  touched.resize(CELL_COUNT)
@@ -33,10 +38,12 @@ func begin_tick() -> void:
  for n in range(touched_count): heads[touched[n]] = -1
  touched_count = 0
  count = 0
+ enemy_entries.fill(-1)
  rebuilds += 1
 func insert(kind: int, id: int, pos: Vector2) -> void:
  if count == capacity:
   capacity *= 2
+  entry_active.resize(capacity)
   next.resize(capacity)
   ids.resize(capacity)
   positions.resize(capacity)
@@ -46,6 +53,8 @@ func insert(kind: int, id: int, pos: Vector2) -> void:
  if heads[h] == -1:
   touched[touched_count] = h
   touched_count += 1
+ entry_active[count] = 1
+ if kind==ENEMY and (id & EnemyWorld.SLOT_MASK)<600: enemy_entries[id & EnemyWorld.SLOT_MASK] = count
  ids[count] = id
  positions[count] = pos
  next[count] = heads[h]
@@ -67,7 +76,7 @@ func query(kind: int, rect: Rect2, a: Vector2, b: Vector2, radius: float, width:
    var n := heads[kind*SIDE*SIDE+y*SIDE+x]
    while n >= 0:
     var p := positions[n]
-    var valid := rect.has_point(p)
+    var valid := entry_active[n]!=0 and rect.has_point(p)
     if radius >= 0: valid = valid and a.distance_squared_to(p) <= radius*radius
     if width >= 0: valid = valid and p.distance_squared_to(Geometry2D.get_closest_point_to_segment(p,a,b)) <= width*width
     if valid: output.append(ids[n])
@@ -85,8 +94,14 @@ func query_nearest(kind: int, center: Vector2, radius: float, scratch: QueryBuff
    var n := heads[kind*SIDE*SIDE+y*SIDE+x]
    while n >= 0:
     var d := center.distance_squared_to(positions[n])
-    if d < distance or (d == distance and (best < 0 or ids[n] < best)):
+    if entry_active[n]!=0 and (d < distance or (d == distance and (best < 0 or ids[n] < best))):
      distance = d
      best = ids[n]
     n = next[n]
  return best
+
+func deactivate_enemy(id: int) -> void:
+ var i := id & EnemyWorld.SLOT_MASK
+ if i>=enemy_entries.size(): return
+ var entry := enemy_entries[i]
+ if entry>=0 and ids[entry]==id: entry_active[entry]=0
