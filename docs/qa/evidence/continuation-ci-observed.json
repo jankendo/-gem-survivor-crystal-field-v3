@@ -4,7 +4,7 @@
   "fast_run": 37575095088,
   "performance_run": 37575095063,
   "native_build_run": 37575095194,
-  "scope": "Downloaded Fast/Performance JSON and actual completed native build status; current main gates are checked separately before publishing",
+  "scope": "All four workflows succeeded at this runtime SHA; Fast/Performance/Balance JSON downloaded and inspected. Current-main gates are independently checked before publishing.",
   "fast": {
     "tests-all.json": {
       "assertions": 473,
@@ -228,5 +228,7 @@
         "p99_ms": 3.434
       }
     }
-  }
+  },
+  "balance_run": 37575095057,
+  "balance_artifact": 11462886320
 }

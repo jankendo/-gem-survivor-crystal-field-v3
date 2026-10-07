@@ -8,18 +8,21 @@
         {
           "HP": 960.0,
           "TTK_seconds": 21.5,
+          "player_hp_at_spawn": 100.0,
           "spawn_tick": 18000,
           "stage": 1
         },
         {
           "HP": 7200.0,
-          "TTK_seconds": 13.6666666666667,
+          "TTK_seconds": 11.55,
+          "player_hp_at_spawn": 100.0,
           "spawn_tick": 36000,
           "stage": 2
         },
         {
           "HP": 13920.0,
-          "TTK_seconds": 43.7333333333333,
+          "TTK_seconds": 23.7833333333333,
+          "player_hp_at_spawn": 112.0,
           "spawn_tick": 54000,
           "stage": 3
         }
@@ -27,21 +30,21 @@
       "bosses": 3,
       "build": "balanced",
       "damage": {
-        "combo:starburst_seed": 4255.30459687624,
-        "field:mining": 684.968391418457,
-        "weapon:bomb_seed": 6383.41470054871,
-        "weapon:laser_lance": 38478.8590934153,
-        "weapon:magic_bolt": 97981.452712948,
-        "weapon:thunder_chain": 43229.5983164626
+        "combo:starburst_seed": 3994.57478485944,
+        "field:mining": 680.0,
+        "weapon:bomb_seed": 4600.72699600994,
+        "weapon:laser_lance": 34347.8130545791,
+        "weapon:magic_bolt": 94045.1719249555,
+        "weapon:thunder_chain": 32442.8873052828
       },
       "evolutions": {
         "laser_lance": "aurora_lance",
         "magic_bolt": "starbreaker_bolt",
         "thunder_chain": "divine_chain"
       },
-      "kills": 6623,
+      "kills": 6058,
       "last_damage_source": "",
-      "level": 90,
+      "level": 84,
       "overclocks": {
         "magic_bolt": [
           "meteor_swarm",
@@ -61,10 +64,10 @@
         "regen": 5
       },
       "phase": "CLEAR",
-      "seconds": 943.733333333333,
+      "seconds": 923.783333333333,
       "seed": 60606,
-      "signature": 4269464334,
-      "wall_seconds": 74.05071,
+      "signature": 2298511865,
+      "wall_seconds": 87.864303,
       "weapons": {
         "bomb_seed": 8,
         "laser_lance": 8,
@@ -73,23 +76,26 @@
       }
     },
     {
-      "HP": 96.8000000000049,
+      "HP": 93.2500000000003,
       "boss_timings": [
         {
           "HP": 960.0,
-          "TTK_seconds": 10.5,
+          "TTK_seconds": 14.3,
+          "player_hp_at_spawn": 110.0,
           "spawn_tick": 18000,
           "stage": 1
         },
         {
           "HP": 7200.0,
-          "TTK_seconds": 57.1833333333333,
+          "TTK_seconds": 65.6166666666667,
+          "player_hp_at_spawn": 110.0,
           "spawn_tick": 36000,
           "stage": 2
         },
         {
           "HP": 13920.0,
-          "TTK_seconds": 74.3833333333333,
+          "TTK_seconds": 76.75,
+          "player_hp_at_spawn": 122.0,
           "spawn_tick": 54000,
           "stage": 3
         }
@@ -97,21 +103,20 @@
       "bosses": 3,
       "build": "close_range",
       "damage": {
-        "field:explosion": 46.3892,
-        "field:lightning": 60.0,
-        "field:mining": 725.0,
-        "status:poison": 4064.60685358305,
-        "weapon:blade_fan": 56304.2439477096,
-        "weapon:ice_orbit": 32629.0437436363,
-        "weapon:poison_mist": 44972.7496777376,
-        "weapon:sonic_wave": 20964.9320764169
+        "field:lightning": 179.9934192944,
+        "field:mining": 840.0,
+        "status:poison": 3640.51583091488,
+        "weapon:blade_fan": 52466.8085392933,
+        "weapon:ice_orbit": 36586.4017880754,
+        "weapon:poison_mist": 43448.4118880751,
+        "weapon:sonic_wave": 19118.0758334299
       },
       "evolutions": {
         "ice_orbit": "eternal_ice_ring"
       },
-      "kills": 4778,
-      "last_damage_source": "enemy",
-      "level": 90,
+      "kills": 4855,
+      "last_damage_source": "boss:telegraph",
+      "level": 92,
       "overclocks": {
         "ice_orbit": [
           "absolute_zero",
@@ -127,10 +132,10 @@
         "regen": 5
       },
       "phase": "CLEAR",
-      "seconds": 974.383333333333,
+      "seconds": 976.75,
       "seed": 60606,
-      "signature": 4041460491,
-      "wall_seconds": 58.761348,
+      "signature": 559502483,
+      "wall_seconds": 77.712646,
       "weapons": {
         "blade_fan": 8,
         "ice_orbit": 8,
