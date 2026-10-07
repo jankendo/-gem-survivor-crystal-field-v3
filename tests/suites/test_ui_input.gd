@@ -141,6 +141,8 @@ func run(t: TestContext,tree: SceneTree) -> void:
  for i in range(5): await tree.process_frame
  t.check(UILayoutInspector.new().inspect(app,"EquipmentPanel").is_empty(),"125% text equipment safe area")
  t.equal(app.get_child_count(),nodes,"settings typography retains stable node tree")
+ t.check(ui.view.node("EquipmentPanel","Slot0").text.contains("\n"),"equipment level is on its own visible line")
+ t.check(ui.view.node("EquipmentPanel","Slot0").size.y>=56,"two-line equipment retains readable touch target")
  app.saves.data.settings.ui_scale=scale; app.apply_profile()
  ui.end_run(); ui.home()
  ui.show_shop()

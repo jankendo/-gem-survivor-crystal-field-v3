@@ -79,6 +79,7 @@ func equipment() -> void:
   var ids: Array=p.weapons.keys() if i<6 else p.passives.keys()
   var index := i%6
   var button: Button=ui.view.node("EquipmentPanel","Slot"+str(i))
+  button.custom_minimum_size.y=56
   button.text="空き %d" % (index+1)
   button.tooltip_text="成長の候補から新しい装備を選べます。"
   if index<ids.size():
@@ -86,7 +87,7 @@ func equipment() -> void:
    var level := int((p.weapons if i<6 else p.passives)[id])
    var d: Dictionary=ui.app.db.table(kind)[id]
    var maxed: bool=level>=int(d.max_level)
-   button.text=("◆ " if p.evolutions.has(id) else "◇ ")+strings.name(kind,id)+(" 最大" if maxed else " Lv%d" % level)
+   button.text=("◆ " if p.evolutions.has(id) else "◇ ")+strings.name(kind,id)+("\n最大" if maxed else "\nLv%d" % level)
    button.tooltip_text=button.text+"\n"+str(d.get("description_ja",""))
  ui.view.text("EquipmentPanel","Info","武器%d / 6・パッシブ%d / 6。枠を押すと全文と進化条件を確認できます。" % [p.weapons.size(),p.passives.size()])
 func slot(index: int) -> void:
