@@ -1,0 +1,206 @@
+{
+  "samples": [
+    {
+      "wall_seconds": 1.014,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 2.015,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 3.015,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 4.015,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 5.016,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 6.016,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 7.016,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 8.017,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 9.017,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 10.017,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 11.018,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 12.022,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 13.022,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 14.022,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 15.023,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 16.024,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 17.024,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 18.025,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 19.025,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 20.025,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 21.026,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 22.026,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 23.027,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 24.028,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 25.028,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 26.029,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 27.029,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 28.029,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 29.03,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 30.034,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 31.034,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 32.034,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 33.035,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 34.035,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 35.036,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 36.036,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 37.036,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 38.037,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 39.037,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    },
+    {
+      "wall_seconds": 40.037,
+      "VmHWM_KiB": 111396,
+      "VmRSS_KiB": 111396
+    }
+  ],
+  "scope": "Actual Linux Godot /proc status for150s-equivalent follow-up; full30min /proc children unavailable on this kernel, corrected to ps parent discovery. Not iOS/native allocation total.",
+  "engine_exit": 0
+}

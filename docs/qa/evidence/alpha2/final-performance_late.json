@@ -1,0 +1,71 @@
+{
+  "allocation_proxy": {
+    "enemy_capacity_growth": 0,
+    "gem_capacity_growth": 0,
+    "projectile_query_buffer_growth": 0,
+    "projectile_query_buffer_reservations": 1,
+    "spatial_capacity_growth": 0
+  },
+  "cpu_fixture_frame": {
+    "max_ms": 12.806,
+    "mean_ms": 7.25584545454545,
+    "p95_ms": 11.714,
+    "p99_ms": 12.167
+  },
+  "enemy_count": 600,
+  "enemy_update": {
+    "max_ms": 3.794,
+    "mean_ms": 2.01019090909091,
+    "p95_ms": 2.335,
+    "p99_ms": 2.652
+  },
+  "engine_memory": {
+    "final_objects": 1583,
+    "final_static_bytes": 36370719,
+    "limit": "Godot live objects/static memory monitors, not cumulative heap allocation count",
+    "object_delta": 0,
+    "static_bytes_delta": 42828,
+    "warm_objects": 1583,
+    "warm_static_bytes": 36327891
+  },
+  "fixture_minimum_start_counts": {
+    "enemy": 600,
+    "gem": 1000,
+    "projectile": 500
+  },
+  "gem_capacity": 1024,
+  "gem_count": 1000,
+  "initial_projectile_count": 500,
+  "late_boss": true,
+  "maximum_enemy_radius": 70.0,
+  "note": "Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured.",
+  "ok": true,
+  "projectile_count": 456,
+  "real_generated_world": true,
+  "render_preparation": {
+    "max_ms": 1.39,
+    "mean_ms": 0.268654545454545,
+    "p95_ms": 0.301,
+    "p99_ms": 0.408
+  },
+  "samples": 220,
+  "seed": 60606,
+  "simulation": {
+    "max_ms": 12.549,
+    "mean_ms": 6.98719090909091,
+    "p95_ms": 11.461,
+    "p99_ms": 11.899
+  },
+  "spatial_update": {
+    "max_ms": 2.256,
+    "mean_ms": 1.84907727272727,
+    "p95_ms": 2.055,
+    "p99_ms": 2.16
+  },
+  "weapon_update": {
+    "max_ms": 7.232,
+    "mean_ms": 2.34398181818182,
+    "p95_ms": 6.54,
+    "p99_ms": 6.844
+  }
+}

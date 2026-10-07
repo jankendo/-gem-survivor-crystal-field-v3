@@ -2,7 +2,8 @@
 
 Baseline main: `9dcae358a8aa5c9fe5ce2d60e599d89c4c212a6f`.
 Authoritative existing checkout/history retained. Accessible public repository is
-`jankendo/-gem-survivor-crystal-field-v3`; requested hyphen-free name still404.
+`jankendo/-gem-survivor-crystal-field-v3`; the leading hyphen is intentional,
+confirmed by the owner for the alpha.2 mission. No rename is required.
 No v2 changes. File inventory/hashes: `evidence/ui-ux-baseline.json`.
 
 ## Baseline inventory and dependency trace
@@ -173,7 +174,7 @@ phase/EXP/contract state; cosmetic notifications are bounded and may expire safe
  and cross-screen guard; multi-touch/outside drag/cancel/disabled movement; selected
  reward once, atomic purchase once, scene disposal, disabled reasons and clear flow.
 - Normal HP/population seeded UI command autoplay:65 growth choices, contract,
- Warp enter37088/return37696ticks;3 bosses;CLEAR field933.25s, HP90;Endless → Finish
+ Warp enter37088/return37699ticks;3 bosses;CLEAR field933.25s, HP90;Endless → Finish
  → settledResult → Title. Shared QA input agent does not modifyHP/spawn/phase/RNG.
 - UI process CPU: baseline vs controlled repaired fixture; lifecycle-maintained
  boss lookup removed the measured repeated600-enemy scan. See[UI_PERFORMANCE.md](UI_PERFORMANCE.md).
@@ -203,13 +204,33 @@ human playtests or a claim that the game isfun.
 - MediumM1: physical iPhone/iPad/interactiveWindows sustained UX, safe-area platform
  conversion, VoiceOver/Narrator, touch latency and thermal transitions are
  NOT YET VERIFIED ON REAL DEVICE. Linux screenshots/synthetic metrics are labeled.
-- MediumM2: Collection/Quest is a scrollable textual encyclopedia with progress;
- search/filter and large-content human navigation evaluation remain future work.
+- Historical MediumM2 (resolved in alpha.2): Collection/Quest was a scrollable textual encyclopedia with progress;
+ search/filter/sort and shared detail restoration now exist. Large-content human
+ navigation speed remains unmeasured.
 - LowL1: selected equipment uses shape/text placeholders and full tap detail rather
  than a bespoke art-rich grid. Deliberate clarity/performance tradeoff.
 - Unlisted resolutions below the configured desktop minimum or portraitmobile are
  not certified by the landscape matrix; orientation is constrained in project/export.
-- Existing external exact-repository-name/rights/human release gates remain as
+- Existing rights/human release gates remain as
  documented inSeniorReview. This audit did not create/rename a repository or change
  the immutablealpha.1 binary.
+
+## alpha.2 follow-up
+
+Ten new tracked findings: High4, Medium5, Low1; all ten code defects/omissions
+repaired. They are listed in GAMEPLAY_UX_REVIEW.md. The prior42 repaired findings
+and their regression guarantees are retained. Search/filter/status/sort use157
+real definitions and8 reusable rows. One common DetailPanel presents collection
+and equipment data; root Safe Area/focus/Back are shared. Initial equipment is
+shown as unlocked. Quest percentages come from raw conditions, not rounded text.
+
+The extra panel joins the16-viewport automatic layout matrix. Native Linux X11
+OpenGL captures cover33 fixtures ×3 ratios =99 PNGs, including100/300/600 enemies,
+six weapons/combos,1000 Gems/500 projectiles,90 frozen cosmetic effects, Boss
+warning/attack/low HP, Warp, Ultra, search/zero/detail/Quest/125%/synthetic keyboard.
+The screenshots are renderer fixtures, not real-device or human play sessions.
+Actual images were inspected: phone first-row clipping was found and fixed;
+detail body scrolls while Back stays reachable; player halo and telegraph outlines
+draw above decoration. No pixel-difference score is used as a fun or visibility
+certificate. Native OS keyboard raster/animation remains unverified.
 

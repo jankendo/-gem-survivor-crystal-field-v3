@@ -1,0 +1,9 @@
+{
+  "samples": 103,
+  "sample_period_seconds": 5,
+  "monitor_wall_seconds": 510.1999841170036,
+  "first_VmRSS_KiB": 111292,
+  "last_VmRSS_KiB": 111428,
+  "peak_VmHWM_KiB": 111428,
+  "note": "Linux /proc memory, monitor started partway through long stress. Not startup-to-exit/native allocation measurement or iPhone memory."
+}

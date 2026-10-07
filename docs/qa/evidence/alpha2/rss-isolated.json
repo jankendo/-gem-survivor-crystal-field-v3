@@ -1,0 +1,6 @@
+{
+  "samples": [],
+  "sampling_seconds": 5,
+  "scope": "Failed full-run RSS sampling attempt: this kernel lacks /proc/PID/task/PID/children. No process RSS samples obtained. Corrected ps-based follow-up and full rerun are separate files.",
+  "engine_exit": 0
+}

@@ -13,3 +13,10 @@ Every original weapon ID remains available through an archetype definition. The 
 Some v2 concepts are intentionally condensed: emergency_route becomes low-HP movement; safe_pocket gives a death-settlement bonus. Original data is recoverable from the source baseline. Detailed content parity requires the migration matrix; the current build must not be advertised as full v2 content parity.
 
 The game remains silent. No borrowed music, sound or online service is added. Human judgments about fun, enemy visibility, decision quality and desire to replay remain a formal unexecuted quality gate.
+
+alpha.2 keeps the same loop and tuning data. The5/10-minute time conditions are
+checked once per simulated second even when no growth candidate remains. Corridor
+goals use the same connected-room pursuit logic as room goals. Neither fix depends
+on rendering FPS. Shared build details expose actual owned requirements;
+comparison cards omit duplicate explanation rather than reducing EXP or choices.
+See docs/qa/GAMEPLAY_UX_REVIEW.md for tempo and explicit autoplay limitations.

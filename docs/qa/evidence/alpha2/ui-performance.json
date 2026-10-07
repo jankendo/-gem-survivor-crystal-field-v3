@@ -1,0 +1,44 @@
+{
+  "UI_CPU_budget_ms": 1.0,
+  "cadence_note": "30 simulated seconds per FPS/mode plus1s warmup; critical<=30Hz, slow5Hz regardless render FPS. Counters include setup/warmup.",
+  "critical_calls": 3721,
+  "enemy_count": 600,
+  "formatted_HUD_changes": 249,
+  "gem_count": 1000,
+  "limitation": "Linux headless CPU-only: explicit process calls and real renderer preparation; no deferred Control sorting/GPU drawing, thermal or real-device measurements. Simulation is frozen to isolate UI process cost.",
+  "node_count": 301,
+  "ok": true,
+  "projectile_count": 500,
+  "samples": [
+    {
+      "mean_us": 8.47555555555556,
+      "mode": "UI_only",
+      "p95_us": 24,
+      "p99_us": 30,
+      "render_fps": 30
+    },
+    {
+      "mean_us": 1031.66555555556,
+      "mode": "render_preparation_and_UI",
+      "p95_us": 1106,
+      "p99_us": 1194,
+      "render_fps": 30
+    },
+    {
+      "mean_us": 4.57166666666667,
+      "mode": "UI_only",
+      "p95_us": 20,
+      "p99_us": 21,
+      "render_fps": 60
+    },
+    {
+      "mean_us": 1024.42722222222,
+      "mode": "render_preparation_and_UI",
+      "p95_us": 1104,
+      "p99_us": 1250,
+      "render_fps": 60
+    }
+  ],
+  "slow_calls": 620,
+  "stable_node_count": true
+}

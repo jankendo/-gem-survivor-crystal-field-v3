@@ -8,9 +8,9 @@
 
 **公開alphaです。人間実機の品質ゲートは未達です。** 全履歴を維持してGitHubへpushし、Fast CI・Balance・Performance・Windows/iOS Release buildを実行しています。実際のWindows ZIPとunsigned arm64 IPAを生成・検証済みです。
 
-[v3.0.0-alpha.1 download / Release](https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.1) にWindows ZIP、unsigned IPA、SHA256SUMSと署名READMEがあります。実機未検証事項はRelease notesを確認してください。**alpha.1は既存の不変タグです。今回のUI修正はmainと最新Actions成果物に含まれ、alpha.1のバイナリには含まれません。**
+[alpha.2 Release](https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.2) を今回の配布先とします。Windows ZIP、unsigned IPA、SHA256SUMS、source commit入りRELEASE_MANIFESTと署名READMEを同じSHAから生成します。公開は同じSHAの全必須CI成功後に限定します。alpha.1は以前の不変タグで、今回の変更を含みません。配布前は最新版として扱わないでください。
 
-現在アクセス可能なPUBLIC repositoryは [jankendo/-gem-survivor-crystal-field-v3](https://github.com/jankendo/-gem-survivor-crystal-field-v3) です。先頭にハイフンがあります。指定されたハイフンなしURLは404で、認証済みintegrationによるrepository rename/createは403です。v2へwriteしていません。
+正本のPUBLIC repositoryは [jankendo/-gem-survivor-crystal-field-v3](https://github.com/jankendo/-gem-survivor-crystal-field-v3) です。先頭のハイフンは正式名称です。v2へwriteしていません。
 
 探索 → 撃破 → ジェム → 成長 → Evolution / Combo → 危険報酬 → Boss。5/10/15分にボス、15分ボス撃破でCLEAR。その後終了またはEndlessを継続できます。
 
@@ -19,6 +19,8 @@ Windows: WASD / 矢印で移動、攻撃は自動。マウス／Enter／Spaceで
 v3は60Hz固定simulation、世代ID付き敵SoA、共有SpatialWorld、Status/Damage所有者、所持武器runtime、起動時GameDatabase、scene UI、v3 atomic saveを導入します。Ultraはworld解像度・装飾だけを変更します。v2由来の名称・アセット・レシピを保持していますが、特殊武器の追尾・反射・吸引・設置・採掘、20種類の名前付きOverclock、6イベント、17Questと購入条件を接続しました。詳細なv2との再設計差分はmigration資料を参照してください。
 
 UIは安定したScene tree・単一モーダル・48pt相当の操作対象を基準とし、文字100/115/125%と描画品質を独立設定できます。HP／ボス表示は最大30Hz、装備／目的／通知は5Hz。保存失敗時は購入をrollbackし、破損した保存データを上書きしません。詳細は[UI/UX監査](docs/qa/UI_UX_AUDIT.md)と[全画面状態matrix](docs/qa/UI_STATE_MATRIX.md)。
+
+図鑑・Questは名前／説明／分類の日本語部分検索、分類・解放状態フィルター、名前／解放／達成率順に対応。8件の行を再利用し、詳細から戻ると条件・ページ・スクロールを復元します。装備12枠から正式名称・実際の能力・次Lv・進化／連携条件を確認できます。成長候補も同じモデルを使用します。時間条件の進化と通路追跡を修正し、Player・攻撃予告を装飾より上の描画層へ移しました。
 
 Godot **4.7 stable** / GDScript / **gl_compatibility**。完全無音。外部著作物は追加していません。
 
@@ -32,6 +34,8 @@ python tools/run_godot.py --headless --path . --script res://tests/benchmark.gd 
 python tools/run_godot.py --headless --path . --script res://tests/benchmark.gd -- --mode=performance
 python tools/run_godot.py --headless --path . --script res://tests/ui_flow.gd
 python tools/run_godot.py --headless --path . --script res://tests/ui_performance.gd
+python tools/run_godot.py --timeout-seconds 1800 --headless --path . --script res://tests/gameplay_quality.gd -- --seed=60606
+python tools/run_godot.py --timeout-seconds 3600 --headless --path . --script res://tests/long_run.gd -- --ticks=108000
 "$GODOT" --path .
 ```
 

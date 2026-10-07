@@ -22,8 +22,9 @@ Loadingは同期初期化以外に非同期取引がないためN/A。不可視s
 | Blessing | 説明・解放状態 | select/back/selector | 確定/previewを分離 | 未解放select不可 | — | 必須DB不正はboot停止 | — | 循環、cancelで復元 | body scroll | input |
 | Run setup | ビルド・15分ゴール・seed | seed/start/back | 確定した選択 | 不正seedStart不可 | — | seed空は自動生成 | 不正整数理由 | 1/2147483647、0拒否 | wrap/scroll | regression |
 | Shop | 永久解放/永久強化・price/current | selector/buy/back | 商品を直接選択 | owned/max/locked理由 | 必要/所持/不足を明記 | 0は説明＋購入不可、多数selector | atomic失敗・rollback・復旧 | meta最大で購入不可 | 条件・進捗はscroll、receipt固定 | input/save/regression |
-| Collection | 解放と登録記録 | mode/back | 図鑑/Quest mode | 未解放を文字でも表示 | — | 登録0の案内、多数scroll | — | — | 全文scroll | UI/layout/native画像 |
-| Quest | 達成/進行/必要条件と現在数値 | mode/back | mode | 達成済み✓/未達○ | — | 0案内、多数scroll | — | current/target | 全文scroll | boundaries |
+| Collection | 157項目、日本語部分検索 | Search/Clear/分類/状態/順/8行/ページ/Back | フィルター保持 | 解放と未解放を文字でも表示 | — | 検索0の案内、8行再利用＋scroll | — | 先頭/末尾ページ無効 | 一覧省略＋詳細全文scroll | alpha2_ux/layout/native画像 |
+| Quest | 17項目、達成/進行/未達、達成率順 | 分類/状態/順/詳細/Back | 検索条件とscroll保持 | 達成済み✓/進行中/未達成 | — | 検索0、多数ページ | — | current/target/達成率 | 詳細全文scroll | alpha2_ux/conditions |
+| DetailPanel | 図鑑または装備の共通詳細 | Back初期focus、scroll | 元一覧を保持 | 装備Lv、進化/連携成立と未達を文字表示 | — | 欠落情報は説明 | — | 現在/最大/次Lv | 正式名称・効果・条件は省略なし | alpha2_ux/layout/cleanup |
 | Settings | saved/effective、即時反映 | quality/FPS/fullscreen/type/back | 現在値 | mobile fullscreen固定、理由 | — | — | 保存失敗はsystemへ | 30/60、100/115/125% | 画面再構築なしscroll | input/regression/layout |
 | GameplayHUD | HP/EXP/objective | pause/equipment/speed/warp/use | speed | warp距離・warp中・利用距離に短い理由 | — | 装備0/12、bossなしは非表示 | save systemが優先 | HP0/max・EXP・boss | critical info別panel、goal outline | native dense画像/性能 |
 | Equipment | 6武器+6passive・empty/occupied | 12枠、back | 進化◆/通常◇、tap全文 | 空き枠も説明可 | — | empty/full12、stable tree | iconは文字fallback | 最大Lv明記 | button省略＋tapで全文 | input/layout |
@@ -55,10 +56,10 @@ Accessibility10 / Consistency10 / Performance5。実機・人間未評価分は�
 | Blessing |18|13|13|14|9|8|9|5|89|previewと確定、locked説明、cancel保持。比較表はない |
 | Setup |19|14|14|14|9|8|9|5|92|目的・選択・seed範囲、invalid理由、重複start防止 |
 | Shop |19|14|14|14|9|8|9|5|92|永久/強化、current/target/cost/max、不足理由、atomic receipt。大量品のhuman調査なし |
-| Collection/Quest |17|13|13|14|8|8|9|5|87|empty/locked/progress/full text、focus/back。検索/filterは未実装 |
+| Collection/Quest |18|14|14|14|8|8|9|5|90|日本語検索・複合filter・達成率・詳細復帰。最小電話では一覧をscroll。IME操作感は実機未測定 |
 | Settings |18|14|14|14|9|8|9|5|91|保存値/有効値、type125%、immediate、stable nodes。実機override連携は未測定 |
 | GameplayHUD |19|14|14|14|9|8|9|5|92|HP/Boss優先、中央戦闘域維持、時刻依存cadence、dense/Ultra画像。実機crowding未測定 |
-| Equipment |18|14|13|14|9|8|9|5|90|12枠常時、max/evo shape、tap全文、48pt。長名はtapを要する |
+| Equipment/Detail |19|14|14|14|9|8|9|5|92|12枠常時、正式名称・実能力・次Lv・進化/連携条件を共有詳細へ分離。詳細はscroll。実機操作感は未測定 |
 | Pause |19|14|14|14|9|8|9|5|92|真のsimulation停止、入力neutral、元modal保持、seed、破壊confirm |
 | LevelUp |19|14|14|14|9|8|9|5|92|新規/強化差分・条件、最大拒否、footer可視、long text/focusscroll。電話ではcards縦scroll |
 | Contract |18|13|14|14|9|8|9|5|90|利益/危険、decline、1modal。効果を読むためscrollする場合あり |

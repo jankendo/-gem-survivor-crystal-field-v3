@@ -1,0 +1,37 @@
+{
+  "clear": true,
+  "contracts_resolved_through_UI": 1,
+  "levels_selected_through_UI": 64,
+  "normal_hp": true,
+  "normal_population": true,
+  "note": "Accelerated fixed-tick gameplay via shared QA input agent and real UI commands. Not human playtest; no HP/spawn/phase overrides.",
+  "ok": true,
+  "result": true,
+  "seed": 60606,
+  "timeline": [
+    "Boot → Title",
+    "Title → Shop → Back → Settings → Back → Collection → Back",
+    "Character → Setup → Gameplay",
+    {
+      "HP": 112.0,
+      "phase": "RUNNING",
+      "warp_entry_tick": 38368,
+      "wave": 1
+    },
+    {
+      "HP": 112.0,
+      "warp_return_tick": 39046
+    },
+    {
+      "CLEAR_tick": 58696,
+      "HP": 112.0,
+      "bosses": 3,
+      "field_seconds": 966.966666666667
+    },
+    "CLEAR → Continue Endless → Finish"
+  ],
+  "title_return": true,
+  "wall_seconds": 301.814083,
+  "warp_completed_or_timeout": true,
+  "warp_entered": true
+}

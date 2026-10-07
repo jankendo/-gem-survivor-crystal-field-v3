@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.0.0-alpha.2 — gameplay UX and release provenance
+
+- Retain all42 UI fixes and the1510 original checks; add collection search,
+  category/status filters, sorting, Quest raw progress and reusable paged rows.
+- Share accurate equipment/growth detail, restore list search/scroll, reserve
+  mobile keyboard space and keep Safe Area/focus/48pt action conventions.
+- Check time-gated evolution without requiring another growth choice; correct
+  corridor-target pursuit; render player/critical telegraphs above cosmetic FX.
+- Add exact accepted player/boss hit counters, six-build/three-seed diagnostics,
+  all27 starting-character checks and repeated run cleanup/endurance tests.
+- Preserve EXP, growth opportunities, Boss HP, simulation population and silence.
+- Replace alpha.1-only publishing with immutable version/SHA/hash manifests and
+  independent public Release re-download verification. alpha.1 is unchanged.
+- Publication requires successful Fast/Balance/Performance/native Windows and
+  iOS build on the same final main SHA. Human/device acceptance remains open.
+
 ## 3.0.0-alpha.1 — published preview, 2026-10-07
 
 - Rebuilt simulation with fixed ticks, authoritative generation-checked enemy SoA, shared packed spatial index, central status/damage ownership and active archetype weapons.

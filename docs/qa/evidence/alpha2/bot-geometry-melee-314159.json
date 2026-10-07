@@ -1,0 +1,105 @@
+{
+  "seed": 314159,
+  "build": "melee",
+  "phase": "CLEAR",
+  "clear": true,
+  "survival_seconds": 1044.05,
+  "HP": 97.1000000000005,
+  "final_level": 104,
+  "level_choices": 62,
+  "choices_per_minute": 3.56304774675542,
+  "consecutive_choices": 0,
+  "bosses": [
+    {
+      "HP_at_death": 110.0,
+      "HP_at_spawn": 110.0,
+      "TTK_seconds": 9.26666666666667,
+      "actual_damage": 960.0,
+      "damage_start": 0.0,
+      "dodging_ticks": 120,
+      "id": 1048651,
+      "last_hp": 6.65425876983209,
+      "last_position": [
+        2091.61206054688,
+        211.16064453125
+      ],
+      "max_hp": 960.0,
+      "opportunity_ticks": 511,
+      "phase": "telegraph/pursuit",
+      "spawn_tick": 18000,
+      "stage": 1
+    },
+    {
+      "HP_at_death": 122.0,
+      "HP_at_spawn": 122.0,
+      "TTK_seconds": 44.7833333333333,
+      "actual_damage": 7200.00000000001,
+      "damage_start": 960.0,
+      "dodging_ticks": 660,
+      "id": 4194395,
+      "last_hp": 63.0350452142575,
+      "last_position": [
+        1837.365234375,
+        1743.185546875
+      ],
+      "max_hp": 7200.0,
+      "opportunity_ticks": 1704,
+      "phase": "telegraph/pursuit",
+      "spawn_tick": 36000,
+      "stage": 2
+    },
+    {
+      "HP_at_death": 97.1000000000005,
+      "HP_at_spawn": 122.0,
+      "TTK_seconds": 144.05,
+      "actual_damage": 13920.0,
+      "damage_start": 8160.00000000001,
+      "dodging_ticks": 2160,
+      "id": 1048721,
+      "last_hp": 93.2752922159156,
+      "last_position": [
+        1851.76171875,
+        1590.61645507812
+      ],
+      "max_hp": 13920.0,
+      "opportunity_ticks": 4705,
+      "phase": "telegraph/pursuit",
+      "spawn_tick": 54000,
+      "stage": 3
+    }
+  ],
+  "damage_taken": 159.9,
+  "hit_count": 11,
+  "timeline": [
+    {
+      "boss_spawn": 18000,
+      "stage": 1
+    },
+    {
+      "boss_death": 18556,
+      "stage": 1
+    },
+    {
+      "boss_spawn": 36000,
+      "stage": 2
+    },
+    {
+      "boss_death": 38687,
+      "stage": 2
+    },
+    {
+      "evolution": 39426,
+      "evolutions": {
+        "ice_orbit": "eternal_ice_ring"
+      }
+    },
+    {
+      "boss_spawn": 54000,
+      "stage": 3
+    },
+    {
+      "boss_death": 62643,
+      "stage": 3
+    }
+  ]
+}

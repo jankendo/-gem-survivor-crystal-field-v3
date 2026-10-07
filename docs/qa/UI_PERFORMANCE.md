@@ -11,7 +11,7 @@ Harness: `tests/ui_performance.gd`; immutable JSON in `evidence/`.
 |30fps|UI process|2.90 /11 /29|11.21 /30 /102|
 |60fps|UI process|2.39 /11 /14|5.15 /20 /27|
 |30fps|Renderer preparation + UI process|1078.34 /1333 /1688|1155.15 /1446 /1735|
-|60fps|Renderer preparation + UI process|1111.42 /1396 /1935|1109.67 /1355 /1734|
+|60fps|Renderer preparation + UI process|1111.42 /1399 /1935|1109.67 /1355 /1734|
 
 The repaired UI does more useful work: real boss HP, contextual field actions,
 critical30Hz updates at both frame rates,5Hz objective/equipment/notification checks
@@ -48,3 +48,36 @@ at final snapshot; the fixture replenishes before each measured tick.
 Hosted and local hardware differ. These values neither replace a same-machine
 simulation comparison nor certify sustained60fps on iPhone. See latest Actions
 Performance artifact and `IOS_REAL_DEVICE_CHECKLIST.md`; no device metrics invented.
+
+## alpha.2 follow-up (same local machine, isolated CPU measurement)
+
+`evidence/alpha2/ui-performance.json`:600 enemies/500 projectiles/1000 Gems,
+six max weapons/passives; simulation frozen.301 nodes remain301 over all four
+measurement modes. New collection rows/detail controls are cold persistent nodes;
+search changes cached filtering and row text, not scene creation.
+
+| Cadence | CPU scope | Mean / p95 / p99 µs |
+|---|---|---:|
+|30fps|UI process|8.48 /24 /30|
+|60fps|UI process|4.57 /20 /21|
+|30fps|Renderer preparation + UI|1031.67 /1106 /1194|
+|60fps|Renderer preparation + UI|1024.43 /1104 /1250|
+
+Critical calls3721, slow620, actual formatted HUD changes249 including setup.
+No per-frame Control/Theme creation. This is below the1ms UI CPU gate. GPU drawing,
+native layout scheduling, keyboard animation and device latency are outside scope.
+CriticalVisuals adds one read-only final world layer; UI point size is unchanged
+in Ultra. Native99 image fixtures are separate visual evidence, not timing proof.
+
+Open stress at start1ae9eb5 versus final code, same60606 seed and replenished
+600/500/1000 fixture: simulation mean6.128 →5.927ms, p957.538 →6.393,
+p998.781 →6.883. This short comparison shows no measured major regression;
+it is not a statistically established optimization. Enemy/spatial/query capacity
+growth0, live-object delta0; one legitimate Gem pool growth remains. Generated
+world mean6.500/p959.851/p9910.660; late70-radius Boss6.987/11.461/11.899.
+One generated-world tick reached20.721ms; do not describe every tick as under16.67.
+JSONs in alpha2/ retain maxima and preparation/component timings.
+
+Long-duration and process RSS evidence are in LONG_RUN_STABILITY.md. CPU quota
+and concurrent workers matter: contended long timing is retained separately from
+isolated measurement, never silently discarded to improve a result.

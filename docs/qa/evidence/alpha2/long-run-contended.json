@@ -1,0 +1,115 @@
+{
+  "checkpoints": [
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 150.0,
+      "static_memory": 36083684.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 300.0,
+      "static_memory": 36132504.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 450.0,
+      "static_memory": 36176444.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 600.0,
+      "static_memory": 36241984.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 750.0,
+      "static_memory": 36242820.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 900.0,
+      "static_memory": 36340712.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 1050.0,
+      "static_memory": 36341572.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 1200.0,
+      "static_memory": 36342360.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 1350.0,
+      "static_memory": 36488804.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 1500.0,
+      "static_memory": 36489688.0
+    },
+    {
+      "enemy_capacity": 600,
+      "gem_capacity": 1024,
+      "objects": 1583.0,
+      "projectile_capacity": 4096,
+      "simulation_seconds": 1650.0,
+      "static_memory": 36490476.0
+    }
+  ],
+  "final_objects": 1583.0,
+  "minimum_load": {
+    "enemies": 600,
+    "gems": 1000,
+    "projectiles": 500
+  },
+  "note": "Continuous accelerated fixed-tick stress, late Endless/boss/combo/presentation event buffer. HP/phase are controlled stress fixture values; not normal run, GPU effects or real-time sustained device proof. Memory monitors are proxies, not cumulative native allocations.",
+  "object_delta": 0,
+  "ok": true,
+  "sample_stride_ticks": 6,
+  "simulation": {
+    "max_ms": 85.507,
+    "mean_ms": 9.51708594444444,
+    "p95_ms": 40.718,
+    "p99_ms": 49.014
+  },
+  "simulation_minutes": 30.0,
+  "static_memory_delta": 494234,
+  "ticks": 108000,
+  "wall_seconds": 1021.699974,
+  "warm_objects": 1583,
+  "warp_main_freeze_resume": true,
+  "warp_repetitions": 6
+}
