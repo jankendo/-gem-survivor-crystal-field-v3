@@ -1,5 +1,6 @@
 extends Node2D
 class_name WorldRenderer
+var critical: CriticalVisuals
 var compass_direction := Vector2.ZERO
 var effects: EffectRenderer
 var terrain: StaticTerrain
@@ -34,6 +35,10 @@ func _ready() -> void:
  effects = EffectRenderer.new()
  effects.z_index = 2
  add_child(effects)
+ critical=CriticalVisuals.new()
+ critical.z_index=3
+ critical.renderer=self
+ add_child(critical)
  player_texture = load("res://assets/generated/characters/noah.svg")
 func present(run: RunController, size: Vector2) -> void:
  effects.present(run.damage.presentation,run.state.tick,profile=="ios_ultra")
@@ -51,7 +56,10 @@ func present(run: RunController, size: Vector2) -> void:
   if offset.length_squared()<nearest:
    nearest=offset.length_squared()
    compass_direction=offset.normalized()
+ snapshot.warning_radius=float(run.db.config().boss_attack_radius)
  snapshot.capture(run.enemies)
+ critical.low_hp=run.state.player.hp<run.state.player.max_hp*.3
+ critical.queue_redraw()
  enemy_renderer.present(snapshot)
  gem_positions.clear()
  for i in range(run.gems.capacity):
@@ -97,13 +105,12 @@ func _draw() -> void:
   if deployed_positions[n]!=deployed_ends[n]: draw_line(deployed_positions[n],deployed_ends[n],Color(.6,.8,1),5)
  for p in projectile_positions:
   if p.distance_squared_to(player_position) < 900*900: draw_circle(p,4,Color(1,.85,.4))
- for p in snapshot.warnings:
-  draw_circle(p,snapshot.warning_radius,Color(1,.1,.2,.2))
-  draw_arc(p,snapshot.warning_radius,0,TAU,48,Color(1,.25,.2),3)
- draw_texture_rect(player_texture,Rect2(player_position-Vector2(22,22),Vector2(44,44)),false)
 
 func configure(db: GameDatabase) -> void:
  enemy_renderer.configure(db)
  for id in db.table("field_gimmicks"):
   var path: String=str(db.table("field_gimmicks")[id].get("generated_icon",""))
   if not path.is_empty() and ResourceLoader.exists(path): field_textures[id]=load(path)
+
+func _exit_tree() -> void:
+ if critical!=null: critical.renderer=null

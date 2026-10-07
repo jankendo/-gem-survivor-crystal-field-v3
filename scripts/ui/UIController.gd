@@ -12,6 +12,7 @@ var notices := UINotifications.new()
 var menu: MenuPresenter
 var progression: ProgressionPresenter
 var hud_presenter: HUDPresenter
+var collection: CollectionPresenter
 var feedback: GameplayFeedback
 var characters: Array = []
 var blessings: Array = []
@@ -32,6 +33,7 @@ func initialize(root) -> void:
  progression=ProgressionPresenter.new(self)
  hud_presenter=HUDPresenter.new(self)
  feedback=GameplayFeedback.new(self)
+ collection=CollectionPresenter.new(self)
  characters=app.db.table("characters").keys()
  blessings=app.db.table("blessings").keys()
  bind("TitleScreen","Start",show_character)
@@ -49,12 +51,12 @@ func initialize(root) -> void:
  bind("ShopScreen","Previous",cycle_shop.bind(-1))
  bind("ShopScreen","Next",cycle_shop.bind(1))
  bind("ShopScreen","Buy",buy_next)
- bind("CollectionScreen","Mode",func(): menu.collection_mode=not menu.collection_mode; menu.collection())
+ bind("CollectionScreen","Mode",func(): menu.collection_mode=not menu.collection_mode; collection.quests())
  bind("SettingsScreen","Profile",toggle_profile)
  bind("SettingsScreen","FPS",toggle_fps)
  bind("SettingsScreen","Fullscreen",toggle_fullscreen)
  bind("SettingsScreen","Scale",toggle_scale)
- for screen in ["CharacterSelect","RunSetup","BlessingSelect","ShopScreen","SettingsScreen","CollectionScreen","EquipmentPanel","WarpPanel"]: bind(screen,"Back",back)
+ for screen in ["CharacterSelect","RunSetup","BlessingSelect","ShopScreen","SettingsScreen","CollectionScreen","EquipmentPanel","DetailPanel","WarpPanel"]: bind(screen,"Back",back)
  bind("PauseMenu","Resume",pause_toggle)
  bind("PauseMenu","Seed",copy_seed)
  bind("PauseMenu","Equipment",show_equipment)
@@ -131,7 +133,9 @@ func back() -> void:
  if target=="HUD":
   if app.run!=null: app.run.resume()
   sync_phase()
- else: show_panel(target)
+ else:
+  show_panel(target)
+  if target=="CollectionScreen": collection.restore()
 func show_character() -> void:
  history=["TitleScreen"]
  show_panel("CharacterSelect")
@@ -209,7 +213,7 @@ func continue_endless() -> void:
 func sync_phase() -> void:
  if app.run==null or current=="SystemDialog": return
  var screen: String=PHASE_SCREEN.get(app.run.state.phase,"SystemDialog")
- if app.run.state.phase=="PAUSED" and current in ["SettingsScreen","EquipmentPanel","ConfirmPanel","WarpPanel","SystemDialog"]: return
+ if app.run.state.phase=="PAUSED" and current in ["SettingsScreen","EquipmentPanel","DetailPanel","ConfirmPanel","WarpPanel","SystemDialog"]: return
  if current==screen: return
  if screen=="HUD": show_hud(); return
  show_panel(screen)
@@ -383,6 +387,7 @@ func key(event: InputEventKey) -> bool:
 func source_name(id: String) -> String: return menu.strings.damage_name(id)
 
 func dispose() -> void:
+ if collection!=null: collection.ui=null
  if menu!=null: menu.ui=null
  if progression!=null: progression.ui=null
  if hud_presenter!=null: hud_presenter.ui=null

@@ -32,19 +32,7 @@ func choices() -> void:
    content+=("武器" if c[0]=="weapons" else "パッシブ")+" / "+("新規" if before==0 else "強化")+" Lv%d → %d（最大%d）\n" % [before,before+1,d.max_level]
    if c[0]=="weapons":
     var old: Dictionary=StatResolver.new().resolve(c[1],r.state,ui.app.db,false)
-    # Preview uses a cold cloned state; the live state/RNG is never changed.
-    var preview := RunState.new()
-    preview.player.stats=r.state.player.stats.duplicate()
-    preview.player.character=r.state.player.character
-    preview.player.blessing=r.state.player.blessing
-    preview.player.evolved=r.state.player.evolved
-    preview.player.contracts=r.state.player.contracts.duplicate()
-    preview.progression.weapons=p.weapons.duplicate()
-    preview.progression.passives=p.passives.duplicate()
-    preview.progression.evolutions=p.evolutions.duplicate()
-    preview.progression.overclocks=p.overclocks.duplicate()
-    preview.progression.named_overclocks=p.named_overclocks.duplicate(true)
-    preview.progression.weapons[c[1]]=before+1
+    var preview:=BuildDetails.new(ui.app.db).preview(r.state,c[0],c[1])
     var after: Dictionary=StatResolver.new().resolve(c[1],preview,ui.app.db,false)
     content+=("攻撃 %.1f / 間隔 %.2f秒で自動攻撃を開始\n" % [after.damage,float(after.cooldown_ticks)/60] if before==0 else "攻撃 %.1f → %.1f / 間隔 %.2f → %.2f秒\n" % [old.damage,after.damage,float(old.cooldown_ticks)/60,float(after.cooldown_ticks)/60])
    else:
@@ -59,6 +47,7 @@ func choices() -> void:
      content+="進化: "+strings.name("weapons",e.weapon)+" Lv"+strings.number(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+strings.number(e.passive_level)+"（5分以降）\n"
      break
    content+=str(d.get("description_ja",""))
+   content+=BuildDetails.new(ui.app.db).relationships(c[0],c[1],r.state)
   var label: Label=button.get_node("CardMargin/CardText")
   label.text=content
   button.tooltip_text=content
@@ -69,7 +58,8 @@ func choices() -> void:
  for pair in [["Reroll",rerolls,"再抽選"],["Banish",banishes,"末尾封印"],["Skip",p.skips,"スキップ"]]:
   ui.view.text("LevelUpPanel",pair[0],"%s%d" % [pair[2],pair[1]] if ui.app.ui.size.y<500 else "%s（残り%d）" % [pair[2],pair[1]])
   ui.view.node("LevelUpPanel",pair[0]).disabled=int(pair[1])<=0
- ui.view.text("LevelUpPanel","Reason","1つ選択。封印は最後の候補を除外。数字は残り回数。")
+ var queued:=int(p.exp/(int(ui.app.db.config().exp_base)+(p.level+1)*int(ui.app.db.config().exp_level)))
+ ui.view.text("LevelUpPanel","Reason","1つ選択。数字は残り回数。"+(" 次の成長分のEXPもあります。" if queued>0 else ""))
  ui.view.focus("LevelUpPanel")
 func equipment() -> void:
  var p: ProgressionState=ui.app.run.state.progression
@@ -95,12 +85,10 @@ func slot(index: int) -> void:
  var kind := "weapons" if index<6 else "passives"
  var ids: Array=p.weapons.keys() if index<6 else p.passives.keys()
  var text := "空き枠 — 成長画面で新しい装備を選びましょう。"
- if index%6<ids.size():
-  var id: String=ids[index%6]
-  text=ui.view.node("EquipmentPanel","Slot"+str(index)).tooltip_text
-  for e in ui.app.db.table("evolutions").values():
-   if e.weapon==id or e.passive==id: text+="\n進化条件: "+strings.name("weapons",e.weapon)+" Lv"+strings.number(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+strings.number(e.passive_level)+"、5分以降。元武器の枠を保ちます。"
- ui.view.text("EquipmentPanel","Info",text)
+ if index%6<ids.size(): text=BuildDetails.new(ui.app.db).equipment(kind,str(ids[index%6]),ui.app.run.state)
+ ui.open_menu("DetailPanel")
+ ui.view.text("DetailPanel","Title","装備の詳細")
+ ui.view.text("DetailPanel","Info",text)
 func progression_feedback(before: Dictionary) -> void:
  var p: ProgressionState=ui.app.run.state.progression
  for weapon in p.evolutions:

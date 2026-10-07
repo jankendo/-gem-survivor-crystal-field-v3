@@ -100,3 +100,11 @@ func finish(reason: String = "終了") -> bool:
  pending_interact = false
  state.phase = "RESULT"
  return true
+
+func refresh_evolutions() -> void:
+ var before:=state.progression.evolutions.size()
+ var character_before:=state.player.evolved
+ EvolutionSystem.new().refresh(state,db)
+ if before!=state.progression.evolutions.size() or character_before!=state.player.evolved:
+  weapons.refresh(state,db)
+  combos.refresh(state,db)

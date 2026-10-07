@@ -55,13 +55,21 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
   death_slow_radius[death_count]=float(effects.get("death_slow_radius",0))
   death_count += 1
  return actual
+var player_hit_count:=0
+var player_boss_hits:=0
+var player_damage_total:=0.0
 func apply_player(state: RunState, amount: float, source: String) -> void:
  if state.player.invulnerability > 0: return
  amount*=float(state.player.stats.get("char_incoming",1))
  var reduction := float(state.player.stats.get("contract_incoming",1))*maxf(.58,1-float(state.player.stats.get("armor",0)))
  if source.begins_with("boss"): reduction *= maxf(.6,1-float(state.player.stats.get("boss_armor",0)))
  reduction *= maxf(.7,1-float(state.player.stats.get("context_armor",0)))
- state.player.hp = maxf(0, state.player.hp - amount*reduction)
+ var actual:=minf(state.player.hp,maxf(0,amount*reduction))
+ if actual<=0: return
+ player_hit_count+=1
+ player_boss_hits+=int(source.begins_with("boss:"))
+ player_damage_total+=actual
+ state.player.hp = maxf(0, state.player.hp - actual)
  state.player.invulnerability = 36
  state.last_damage_source = source
  if state.player.hp <= 0:

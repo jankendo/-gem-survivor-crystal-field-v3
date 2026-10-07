@@ -24,6 +24,7 @@ func tick(run, direction: Vector2) -> void:
  status.tick(run.enemies,state.player,state.tick,run.damage,int(status_cfg.poison_period_ticks),float(status_cfg.poison_damage))
  death.tick(state,run.enemies,run.gems,run.damage,run.map)
  if state.phase!="RUNNING": return
+ if state.tick%60==0: run.refresh_evolutions()
  var player := state.player
  var context_room: int = run.map.room_at(player.position)
  if not run.warp.active:

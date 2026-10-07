@@ -62,7 +62,13 @@ func pursuit_target(from: Vector2, target: Vector2) -> Vector2:
  if rooms.size() != 25: return target
  var a := room_at(from)
  var b := room_at(target)
- if b < 0: return target
+ var from_room:=a
+ var target_room:=b
+ if b<0:
+  var nearest:=INF
+  for n in range(rooms.size()):
+   var distance:=target.distance_squared_to(rooms[n].get_center())
+   if distance<nearest: nearest=distance;b=n
  if a < 0:
   var best := INF
   for n in range(rooms.size()):
@@ -70,8 +76,17 @@ func pursuit_target(from: Vector2, target: Vector2) -> Vector2:
    if dist < best:
     best = dist
     a = n
- if a==b: return target
  var center := rooms[a].get_center()
+ if a==b:
+  if from_room>=0 and target_room>=0: return target
+  if from_room<0:
+   if target_room>=0: return center
+   var from_horizontal:=absf(from.x-center.x)>absf(from.y-center.y)
+   var target_horizontal:=absf(target.x-center.x)>absf(target.y-center.y)
+   return target if from_horizontal==target_horizontal else center
+  var horizontal:=absf(target.x-center.x)>absf(target.y-center.y)
+  if (absf(from.y-center.y) if horizontal else absf(from.x-center.x))>55: return center
+  return target
  var dx := b%5-a%5
  var dy := int(b/5)-int(a/5)
  if dx != 0:

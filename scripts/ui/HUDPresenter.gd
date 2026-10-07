@@ -51,7 +51,7 @@ func slow() -> void:
  boss_id=r.enemies.boss_id
  var s: RunState=r.state
  var guidance := "Gem・結晶を集めて成長。5・10・15分のボス撃破を目指そう。"
- if r.enemies.alive(boss_id): guidance="ボス戦 — 赤い予告円から離れ、移動しながら攻撃しましょう。"
+ if r.enemies.alive(boss_id): guidance="ボス戦 — 攻撃の予告円から離れ、移動しながら攻撃しましょう。"
  if r.warp.active: guidance="ワープ中 — 波 %d/%d · 残りの敵%d · 主フィールドは停止中" % [r.warp.wave_index,r.db.table("warp_rooms").types[r.warp.room_type].waves.size(),r.enemies.count]
  elif not r.field.event.is_empty(): guidance=str(r.field.events.definition.name_ja)+" — "+str(r.field.events.definition.objective_ja)+" / 残り%d秒" % maxi(0,(r.field.event_deadline-s.field_tick)/60)
  var interactable:=-1

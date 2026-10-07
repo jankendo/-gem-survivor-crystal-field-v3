@@ -16,7 +16,7 @@ func initialize(root) -> void:
  scrim.color = Color(0,0,0,.7)
  scrim.mouse_filter = Control.MOUSE_FILTER_STOP
  app.ui.add_child(scrim)
- for name in ["TitleScreen","CharacterSelect","BlessingSelect","RunSetup","ShopScreen","CollectionScreen","SettingsScreen","PauseMenu","LevelUpPanel","ContractPanel","RewardPanel","ResultScreen","EquipmentPanel","ConfirmPanel","WarpPanel","SystemDialog"]:
+ for name in ["TitleScreen","CharacterSelect","BlessingSelect","RunSetup","ShopScreen","CollectionScreen","SettingsScreen","PauseMenu","LevelUpPanel","ContractPanel","RewardPanel","ResultScreen","EquipmentPanel","ConfirmPanel","WarpPanel","SystemDialog","DetailPanel"]:
   var panel: Control = load("res://scenes/ui/"+name+".tscn").instantiate()
   app.ui.add_child(panel)
   panels[name] = panel
@@ -83,6 +83,10 @@ func fit_panels() -> void:
  for panel in panels.values():
   if not panel.is_visible_in_tree(): continue
   var name:=str(panel.name)
+  if name=="CollectionScreen":
+   var editing: bool=app.keyboard_points>0
+   for key in ["Title","Filters","Scroll","Mode","Previous","Next"]: node(name,key).visible=not editing
+   node(name,"Reason").visible=not editing and not node(name,"Reason").text.is_empty()
   if name=="RunSetup":
    var compact: bool=app.keyboard_points>0
    node(name,"Title").visible=not compact
@@ -95,7 +99,7 @@ func fit_panels() -> void:
   panel.position=(app.ui.size-panel.size)*.5
   var actions: GridContainer=node(name,"Actions")
   var count:=actions.get_child_count()
-  actions.columns=4 if name=="LevelUpPanel" and app.ui.size.y<500 else 3 if count>=5 and app.ui.size.y<500 else 2
+  actions.columns=4 if name in ["LevelUpPanel","CollectionScreen"] and app.ui.size.y<500 else 3 if count>=5 and app.ui.size.y<500 else 2
   var owner: Control=app.get_viewport().gui_get_focus_owner()
   if owner!=null and node(name,"Scroll").is_ancestor_of(owner): node(name,"Scroll").ensure_control_visible.call_deferred(owner)
 func layout_hud() -> void:
@@ -137,6 +141,7 @@ func focus(screen: String) -> void:
  # Confirmation defaults to cancel; run-end cannot be triggered by held Enter.
  var first := values[0]
  if screen == "ConfirmPanel": first = node(screen,"Cancel")
+ elif screen=="CollectionScreen": first=node(screen,"Back")
  elif screen=="RunSetup" and OS.has_feature("mobile"): first=node(screen,"Back" if node(screen,"Start").disabled else "Start")
  elif screen in ["ShopScreen","CharacterSelect","BlessingSelect"]:
   var primary: String="Buy" if screen=="ShopScreen" else "Start" if screen=="CharacterSelect" else "Select"

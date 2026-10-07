@@ -77,28 +77,14 @@ func shop() -> void:
  ui.view.node("ShopScreen","Scroll").scroll_vertical=0
  ui.view.focus("ShopScreen")
 func collection() -> void:
- var data: Dictionary=ui.app.saves.data
- var text := ""
- if collection_mode:
-  for id in ui.app.db.table("quests"):
-   var d: Dictionary=ui.app.db.table("quests")[id]
-   text+=("✓ 達成済み" if data.progression.quests.has(id) else "○ 進行中")+" — "+str(d.name_ja)+"\n"+str(d.description_ja)+"\n"+ConditionSystem.new().progress_label(data,d.condition)+"\n\n"
-  if text.is_empty(): text="クエストはありません。探索で記録を増やしましょう。"
- else:
-  text="図鑑登録: %d / 累計ラン: %d\n\n" % [data.progression.collection.size(),data.profile.runs]
-  for kind in ["weapons","passives","characters"]:
-   for id in ui.app.db.table(kind):
-    text+=("✓ 解放済み — " if data.progression.unlocked.has(id) else "○ 未解放 — ")+strings.name(kind,id)+"\n"
-  if data.progression.collection.is_empty(): text+="\n初めての探索で装備の記録が増えます。"
- ui.view.text("CollectionScreen","Title","クエスト" if collection_mode else "図鑑")
- ui.view.text("CollectionScreen","Info",text)
- ui.view.text("CollectionScreen","Mode","図鑑を見る" if collection_mode else "クエストを見る")
+ ui.collection.update()
 func result() -> void:
  var r: RunController=ui.app.run
  var p: ProgressionState=r.state.progression
  var cleared: bool=r.state.boss_stage>=3 and p.bosses>=3
  var status := "クリア済み・死亡" if cleared and r.state.player.hp<=0 else "クリア" if cleared else "死亡" if r.state.player.hp<=0 else "ラン終了"
  var text := "%s\n生存 %02d:%02d / 最終Lv%d\n敵撃破 %d / ボス撃破 %d / Gem回収 %d\nラン報酬 %d貨 / 所持 %d貨\n" % [status,r.state.tick/3600,(r.state.tick/60)%60,p.level,p.kills,p.bosses,p.gems,r.state.settlement_reward,ui.app.saves.data.profile.currency]
+ text+="被弾%d回 / 被ダメージ%.0f（ボス被弾%d回）\n" % [r.damage.player_hit_count,r.damage.player_damage_total,r.damage.player_boss_hits]
  if r.state.player.hp<=0: text+="死因: "+strings.damage_name(r.state.last_damage_source)+"\n"
  var sources: Array=r.damage.totals.keys()
  sources.sort_custom(func(a,b): return r.damage.totals[a]>r.damage.totals[b])

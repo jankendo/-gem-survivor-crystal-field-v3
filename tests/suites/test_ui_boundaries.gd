@@ -66,7 +66,7 @@ func run(t: TestContext,tree: SceneTree) -> void:
  var slot: Button=app.controller.view.node("EquipmentPanel","Slot0")
  t.check(not slot.text.is_empty() and not slot.tooltip_text.is_empty(),"optional icon absence retains text placeholder and description")
  app.controller.progression.slot(0)
- t.check(app.controller.view.node("EquipmentPanel","Info").text.contains("魔弾"),"touch opens full equipment description")
+ t.check(app.controller.view.node("DetailPanel","Info").text.contains("魔弾"),"touch opens full equipment description")
  app.run.state.phase="RESULT"; app.run.state.player.hp=0; app.run.state.boss_stage=3; app.run.state.progression.bosses=3
  app.controller.menu.result()
  t.check(app.controller.view.node("ResultScreen","Title").text.contains("クリア済み・死亡"),"endless death displays clear credit and death separately")

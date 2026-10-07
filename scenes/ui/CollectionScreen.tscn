@@ -16,6 +16,28 @@ text = "図鑑・クエスト"
 autowrap_mode = 2
 theme_override_font_sizes/font_size = 26
 
+[node name="SearchBar" type="HBoxContainer" parent="Margin/Layout"]
+
+[node name="Search" type="LineEdit" parent="Margin/Layout/SearchBar"]
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0,48)
+placeholder_text = "名前・説明・カテゴリで検索"
+clear_button_enabled = false
+
+[node name="Filters" type="HBoxContainer" parent="Margin/Layout"]
+
+[node name="Category" type="OptionButton" parent="Margin/Layout/Filters"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+
+[node name="Status" type="OptionButton" parent="Margin/Layout/Filters"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+
+[node name="Sort" type="OptionButton" parent="Margin/Layout/Filters"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+
 [node name="Scroll" type="ScrollContainer" parent="Margin/Layout"]
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
@@ -28,6 +50,54 @@ size_flags_horizontal = 3
 autowrap_mode = 2
 text = ""
 
+[node name="Row0" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row1" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row2" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row3" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row4" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row5" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row6" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
+[node name="Row7" type="Button" parent="Margin/Layout/Scroll/Body"]
+custom_minimum_size = Vector2(0,56)
+clip_text = true
+text_overrun_behavior = 3
+text = "項目"
+
 [node name="Reason" type="Label" parent="Margin/Layout"]
 autowrap_mode = 2
 theme_override_font_sizes/font_size = 16
@@ -39,10 +109,25 @@ columns = 2
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
-text = "図鑑 / クエスト"
+text = "クエスト"
 
 [node name="Back" type="Button" parent="Margin/Layout/Actions"]
 custom_minimum_size = Vector2(0,48)
 size_flags_horizontal = 3
 clip_text = true
 text = "戻る"
+
+[node name="Previous" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+text = "前のページ"
+
+[node name="Next" type="Button" parent="Margin/Layout/Actions"]
+custom_minimum_size = Vector2(0,48)
+size_flags_horizontal = 3
+text = "次のページ"
+
+[node name="Clear" type="Button" parent="Margin/Layout/SearchBar"]
+custom_minimum_size = Vector2(64,48)
+size_flags_horizontal = 0
+text = "消去"

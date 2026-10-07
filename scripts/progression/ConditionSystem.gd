@@ -31,7 +31,7 @@ func met(save: Dictionary, c: Dictionary) -> bool:
   "danger_time": return float(metrics.get("terrain_time",{}).get("danger_den",0))>=target
  return metrics.has(type) and float(metrics[type])>=target
 
-func progress_label(save: Dictionary,c: Dictionary) -> String:
+func progress_values(save: Dictionary,c: Dictionary) -> Array:
  var kind:=str(c.get("type",""))
  var target:=float(c.get("value",c.get("count",c.get("seconds",c.get("cost",c.get("amount",1))))))
  var metrics: Dictionary=save.profile.get("metrics",{})
@@ -47,8 +47,23 @@ func progress_label(save: Dictionary,c: Dictionary) -> String:
   "cursed_walls": current=float(metrics.get("total_crystals",0))
   "currency_paid": current=float(metrics.get("total_currency_earned",0))
   "danger_time": current=float(metrics.get("terrain_time",{}).get("danger_den",0))
+ return [current,target]
+
+func progress_label(save: Dictionary,c: Dictionary) -> String:
+ var kind:=str(c.get("type",""))
+ var metrics: Dictionary=save.profile.get("metrics",{})
+ var values:=progress_values(save,c)
+ match kind:
   "exploration_rank": return "現在: ランク"+str(metrics.get("exploration_rank","D"))+" / 必要: "+str(c.get("rank",c.get("value","D")))
   "secret_abyss_merchant": return "現在: %d/25000貨・契約%d/20回" % [int(metrics.get("total_currency_earned",0)),int(metrics.get("total_contracts",0))]
   "secret_void_mapper": return "現在: %d/12部屋・ランク%s / 必要S" % [int(metrics.get("rooms_in_run",0)),str(metrics.get("exploration_rank","D"))]
   "initial","currency_sink","boss_defeat","evolved_weapon","character_unlocked","secret_ghost","secret_reaper","secret_collector","specific_title": return "✓ 条件達成" if met(save,c) else "○ まだ未達成"
- return "現在: %.0f / 必要: %.0f" % [current,target]
+ return "現在: %.0f / 必要: %.0f" % [values[0],values[1]]
+
+func progress_ratio(save: Dictionary,c: Dictionary) -> float:
+ if met(save,c): return 1.0
+ if c.get("type","")=="exploration_rank":
+  var ranks: Array=["D","C","B","A","S","SS"]
+  return clampf(float(ranks.find(str(save.profile.get("metrics",{}).get("exploration_rank","D"))))/maxf(1,ranks.find(str(c.get("rank",c.get("value","D"))))),0,1)
+ var values:=progress_values(save,c)
+ return clampf(values[0]/maxf(1,values[1]),0,1)

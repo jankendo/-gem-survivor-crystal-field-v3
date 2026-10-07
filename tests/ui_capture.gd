@@ -33,18 +33,40 @@ func capture() -> void:
  await shot("settings")
  app.controller.show_collection()
  await shot("collection")
+ app.controller.view.node("CollectionScreen","Search").text="魔弾"
+ await shot("collection-search")
+ app.controller.collection.open_detail(0)
+ await shot("collection-detail")
+ app.controller.back()
+ app.controller.view.node("CollectionScreen","Search").text="存在しない検索結果"
+ await shot("collection-empty")
+ app.controller.collection.clear(); app.controller.collection.quests()
+ await shot("quest-progress")
+ app.keyboard_points_override=220;app.sync_keyboard_area()
+ await shot("collection-keyboard")
+ app.keyboard_points_override=0;app.sync_keyboard_area()
+ app.saves.data.settings.ui_scale=1.25;app.apply_profile()
+ await shot("collection-125")
+ app.saves.data.settings.ui_scale=1.0;app.apply_profile()
+
  app.start_run("noah","attack",60606)
  await shot("gameplay-early")
  var r: RunController=app.run
  for id in app.db.table("weapons").keys().slice(0,6): r.state.progression.weapons[id]=8
  for id in app.db.table("passives").keys().slice(0,6): r.state.progression.passives[id]=5
  r.weapons.refresh(r.state,r.db)
+ r.combos.refresh(r.state,r.db)
  for i in range(600):
   var position:=r.map.safe_position(Vector2(300,0).rotated(i*2.4)*(1+float(i%11)/10))
   r.enemies.spawn(i%r.db.enemy_defs.size(),position,r.db.enemy_defs[i%r.db.enemy_defs.size()])
+  if i==99: await shot("combat-100")
+  if i==299: await shot("combat-300")
  for i in range(500): r.projectiles.add(Vector2(60,0).rotated(i)*float(1+i%5),Vector2.RIGHT.rotated(i)*100,5,"weapon:magic_bolt",1,1)
  for i in range(1000): r.gems.add(r.map.safe_position(Vector2(100+i%500,0).rotated(i*2.4)),1,r.map)
- for i in range(90): r.damage.presentation.emit(Vector2(200,0).rotated(i*2.4),1)
+ for i in range(90): r.damage.presentation.emit(Vector2(20+i%60,0).rotated(i*2.4),1)
+ app.renderer.effects.submitted_tick=-1
+ app.renderer.effects.present(r.damage.presentation,r.state.tick,false)
+ app.renderer.effects.set_process(false) # Freeze only cosmetic decay for reproducible fixture.
  await shot("gameplay-dense")
  var signature: int=r.signature()
  app.set_temporary_profile("ios_ultra")
@@ -53,6 +75,9 @@ func capture() -> void:
  app.set_temporary_profile("")
  app.controller.show_equipment()
  await shot("equipment")
+ app.controller.progression.slot(0)
+ await shot("equipment-detail")
+ app.controller.back()
  app.controller.back()
  app.controller.pause_toggle()
  await shot("pause")
@@ -90,6 +115,11 @@ func capture() -> void:
  r.enemies.attack_target[slot]=r.state.player.position+Vector2(70,50)
  app.controller.update_hud()
  await shot("boss")
+ r.state.player.hp=20
+ app.controller.update_hud()
+ await shot("boss-low-hp")
+ r.enemies.warning[slot]=0
+ await shot("boss-attack")
  r.state.boss_stage=3
  r.state.progression.bosses=3
  r.state.phase="CLEAR"
