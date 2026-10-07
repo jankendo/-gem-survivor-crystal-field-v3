@@ -6,14 +6,17 @@ func name(kind: String,id: String) -> String:
  var d=db.table(kind).get(id,{})
  if not d is Dictionary: return "未登録"
  return str(d.get("name_ja",d.get("display_name_ja","未登録")))
+func number(value) -> String:
+ if value is float or value is int: return str(int(value)) if is_equal_approx(float(value),roundf(float(value))) else String.num(float(value),2)
+ return str(value)
 func condition(c: Dictionary) -> String:
  var type := str(c.get("type",""))
- var value := str(c.get("value",c.get("count",c.get("seconds",c.get("cost",1)))))
+ var value := number(c.get("value",c.get("count",c.get("seconds",c.get("cost",1)))))
  var terrain: String = {"star_plain":"星原","mine_chamber":"鉱床部屋","danger_den":"危険巣","crystal_corridor":"結晶廊下","relic_vault":"遺物庫","safe_room":"安全な部屋"}.get(c.get("terrain",""),"指定の地形")
  match type:
   "initial","currency_sink": return "購入で永久解放"
   "currency": return "クリスタル貨 "+value+"以上を所持"
-  "weapon_level": return name("weapons",str(c.get("weapon","")))+"をLv"+str(c.get("level",1))+"に成長"
+  "weapon_level": return name("weapons",str(c.get("weapon","")))+"をLv"+number(c.get("level",1))+"に成長"
   "weapon_kills": return name("weapons",str(c.get("weapon","")))+"で"+value+"体撃破"
   "boss_defeat": return name("bosses",str(c.get("boss","")))+"を撃破"
   "evolved_weapon": return name("weapons",str(c.get("weapon","")))+"を進化"

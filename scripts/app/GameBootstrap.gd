@@ -18,6 +18,8 @@ var resizing := false
 var critical_elapsed := 0.0
 var slow_elapsed := 0.0
 var system_elapsed := 0.0
+var keyboard_points_override := -1.0 # QA-only occupied keyboard height in logical points.
+var keyboard_points := 0.0
 var camera_size := Vector2(1280,720)
 var ui_elapsed_us := 0
 var ui_samples := 0
@@ -58,7 +60,7 @@ func resize_ui() -> void:
  var density := maxf(1,DisplayServer.screen_get_scale())
  var logical := Vector2i(Vector2(get_tree().root.size)/density)
  if logical.x>0 and logical.y>0: get_tree().root.content_scale_size=logical
- SafeArea.new().apply(ui,safe_override)
+ SafeArea.new().apply(ui,safe_override,keyboard_points)
  touch.safe_rect=Rect2(ui.position,ui.size)
  if controller!=null: controller.layout()
  update_camera()
@@ -112,8 +114,15 @@ func start_run(character: String="noah",blessing: String="attack",seed_input: in
  renderer.player_texture=load(db.table("characters")[character].generated_sprite)
  if not saves.data.settings.get("tutorial_seen",false): controller.notices.add("first_move","移動してGemへ近づくと回収できます。攻撃は自動。結晶は近づいて採掘。",3)
 func reset_input() -> void:
+ if DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD): DisplayServer.virtual_keyboard_hide()
  keyboard_neutral=true
  if touch!=null: touch.set_enabled(false); touch.cancel()
+func sync_keyboard_area() -> void:
+ if not OS.has_feature("mobile") and keyboard_points_override<0: return
+ var occupied: float=maxf(0,keyboard_points_override) if keyboard_points_override>=0 else float(DisplayServer.virtual_keyboard_get_height())/maxf(1,DisplayServer.screen_get_scale())
+ if occupied==keyboard_points: return
+ keyboard_points=occupied
+ resize_ui()
 func input_direction(_tick: int) -> Vector2:
  if run==null or run.state.phase!="RUNNING" or controller.current!="HUD": return Vector2.ZERO
  var x := float(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT))-float(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT))
@@ -143,6 +152,7 @@ func _process(delta: float) -> void:
  slow_elapsed+=delta
  if critical_elapsed>=1.0/30:
   critical_elapsed=fmod(critical_elapsed,1.0/30)
+  sync_keyboard_area()
   controller.hud_presenter.critical()
  if slow_elapsed>=.2:
   slow_elapsed=fmod(slow_elapsed,.2)

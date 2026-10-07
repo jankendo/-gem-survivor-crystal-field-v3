@@ -80,6 +80,7 @@ func initialize(root) -> void:
  for i in range(12): bind("EquipmentPanel","Slot"+str(i),progression.slot.bind(i))
  for pair in [["Pause",pause_toggle],["Equipment",show_equipment],["Speed",change_speed],["Warp",enter_warp],["Mine",interact]]: bind("HUD",pair[0],pair[1])
  view.node("RunSetup","Seed").text_changed.connect(func(_text): validate_seed())
+ view.node("RunSetup","Seed").text_submitted.connect(submit_seed)
  for screen in ["CharacterSelect","BlessingSelect","ShopScreen"]:
   view.node(screen,"Selector").item_selected.connect(func(index):
    if current!=screen: return
@@ -154,6 +155,12 @@ func validate_seed() -> void:
  var valid := text.is_empty() or (text.is_valid_int() and int(text)>=1 and int(text)<=2147483647)
  view.node("RunSetup","Start").disabled=not valid
  view.text("RunSetup","Reason","" if valid else "シードは1〜2147483647の整数にしてください。")
+func submit_seed(_text: String) -> void:
+ if current!="RunSetup": return
+ validate_seed()
+ view.node("RunSetup","Seed").release_focus()
+ if DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD): DisplayServer.virtual_keyboard_hide()
+ view.node("RunSetup","Back" if view.node("RunSetup","Start").disabled else "Start").grab_focus()
 func start_selected() -> void:
  if current not in ["RunSetup","ResultScreen"] or characters.is_empty() or blessings.is_empty(): return
  var text: String=view.node("RunSetup","Seed").text

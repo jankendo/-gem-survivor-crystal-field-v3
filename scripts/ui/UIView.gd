@@ -82,10 +82,17 @@ func fit_panels() -> void:
  if app==null or not is_instance_valid(app): return
  for panel in panels.values():
   if not panel.is_visible_in_tree(): continue
+  var name:=str(panel.name)
+  if name=="RunSetup":
+   var compact: bool=app.keyboard_points>0
+   node(name,"Title").visible=not compact
+   node(name,"Info").visible=not compact and not node(name,"Info").text.is_empty()
+   node(name,"Reason").visible=not compact and not node(name,"Reason").text.is_empty()
+   node(name,"SeedHelp").visible=not compact
+   node(name,"Start").text="1〜2147483647のみ" if compact and node(name,"Start").disabled else "このビルドで出発"
   var desired:=Vector2(minf(800,app.ui.size.x),minf(640,app.ui.size.y))
   if panel.size!=desired: panel.size=desired
   panel.position=(app.ui.size-panel.size)*.5
-  var name:=str(panel.name)
   var actions: GridContainer=node(name,"Actions")
   var count:=actions.get_child_count()
   actions.columns=4 if name=="LevelUpPanel" and app.ui.size.y<500 else 3 if count>=5 and app.ui.size.y<500 else 2
@@ -130,6 +137,10 @@ func focus(screen: String) -> void:
  # Confirmation defaults to cancel; run-end cannot be triggered by held Enter.
  var first := values[0]
  if screen == "ConfirmPanel": first = node(screen,"Cancel")
+ elif screen=="RunSetup" and OS.has_feature("mobile"): first=node(screen,"Back" if node(screen,"Start").disabled else "Start")
+ elif screen in ["ShopScreen","CharacterSelect","BlessingSelect"]:
+  var primary: String="Buy" if screen=="ShopScreen" else "Start" if screen=="CharacterSelect" else "Select"
+  first=node(screen,"Next") if node(screen,primary).disabled else node(screen,primary)
  first.call_deferred("grab_focus")
  settle_focus(screen,first)
 func settle_focus(screen: String,first: Control) -> void:

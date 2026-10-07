@@ -41,6 +41,18 @@ func run(t: TestContext,tree: SceneTree) -> void:
  t.equal(ui.current,"RunSetup","native keyboard Enter starts setup")
  await key(tree,KEY_ENTER,true)
  t.equal(ui.current,"RunSetup","echo Enter cannot execute transition")
+ app.keyboard_points_override=220; app.sync_keyboard_area()
+ for i in range(5): await tree.process_frame
+ t.check(UILayoutInspector.new().inspect(app,"RunSetup").is_empty(),"seed controls fit above 220pt keyboard with notch")
+ t.check(ui.view.node("RunSetup","Start").get_global_rect().end.y<=170,"primary actions above keyboard")
+ ui.view.node("RunSetup","Seed").text="invalid"; ui.validate_seed(); ui.submit_seed("invalid")
+ t.equal(tree.root.gui_get_focus_owner(),ui.view.node("RunSetup","Back"),"invalid seed submission closes edit and focuses safe back")
+ ui.view.node("RunSetup","Seed").text="60606"; ui.submit_seed("60606")
+ t.equal(ui.current,"RunSetup","keyboard done does not start run unexpectedly")
+ t.equal(tree.root.gui_get_focus_owner(),ui.view.node("RunSetup","Start"),"valid seed submission focuses explicit start")
+ app.keyboard_points_override=0; app.sync_keyboard_area()
+ for i in range(5): await tree.process_frame
+ t.check(ui.view.node("RunSetup","Title").visible and ui.view.node("RunSetup","Info").visible,"keyboard dismissal restores setup hierarchy")
  await tree.create_timer(.31).timeout
  ui.view.node("RunSetup","Seed").text="60606"
  ui.view.node("RunSetup","Start").grab_focus()
@@ -135,6 +147,9 @@ func run(t: TestContext,tree: SceneTree) -> void:
  app.saves.data.profile.currency=10000
  ui.shop_index=ui.shop_ids.find(["meta_upgrades","base_hp"])
  ui.menu.shop()
+ for i in range(5): await tree.process_frame
+ t.equal(ui.view.node("ShopScreen","Scroll").scroll_vertical,0,"initial shop keeps identity/description visible")
+ t.check(not ui.view.node("ShopScreen","Info").text.is_empty(),"shop shows full identity independently of selector")
  ui.gate=UIActionGate.new()
  var before: int=app.saves.data.profile.currency
  var definition: Dictionary=app.db.table("meta_upgrades").base_hp

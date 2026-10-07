@@ -12,11 +12,12 @@ func character() -> void:
  var d: Dictionary=ui.app.db.table("characters")[id]
  var owned: bool=ui.app.saves.data.progression.unlocked.has(id) or d.get("initial",false)
  var blessing := str(ui.blessings[ui.blessing_index])
- ui.view.text("CharacterSelect","Info",strings.name("characters",id)+"\n"+str(d.get("trait_ja",""))+"\n弱点: "+str(d.get("weakness_ja",""))+"\n祝福: "+strings.name("blessings",blessing)+"\n"+("解放済み" if owned else "未解放 — "+strings.condition(ShopSystem.new().condition("characters",id,ui.app.db))))
+ ui.view.text("CharacterSelect","Info",strings.name("characters",id)+"\n"+str(d.get("trait_ja",""))+"\n弱点: "+str(d.get("weakness_ja",""))+"\n開始武器: "+strings.name("weapons",str(d.initial_weapon))+" / 祝福: "+strings.name("blessings",blessing)+"\n"+("解放済み" if owned else "未解放 — "+strings.condition(ShopSystem.new().condition("characters",id,ui.app.db))))
  var blessing_owned: bool=blessing=="attack" or ui.app.saves.data.progression.unlocked.has(blessing)
  ui.view.node("CharacterSelect","Start").disabled=not owned or not blessing_owned
  ui.view.node("CharacterSelect","Selector").select(ui.character_index)
  ui.view.text("CharacterSelect","Reason","未解放の祝福です。祝福を選び直してください。" if not blessing_owned else "" if owned else "ショップで条件を達成し、永久解放すると選べます。")
+ ui.view.focus("CharacterSelect")
 func blessing() -> void:
  var id: String=ui.blessings[ui.blessing_index]
  var d: Dictionary=ui.app.db.table("blessings")[id]
@@ -25,6 +26,7 @@ func blessing() -> void:
  ui.view.node("BlessingSelect","Select").disabled=not owned
  ui.view.node("BlessingSelect","Selector").select(ui.blessing_index)
  ui.view.text("BlessingSelect","Reason","" if owned else "未解放の祝福です。ショップで解放してください。")
+ ui.view.focus("BlessingSelect")
 func settings() -> void:
  var saved: Dictionary=ui.app.saves.data.settings
  var effective: String=ui.app.effective_profile()
@@ -70,8 +72,10 @@ func shop() -> void:
  detail+="\n"+("永久強化: Lv%d → %d / 最大%d" % [level,mini(level+1,int(d.max_level)),int(d.max_level)] if is_meta else "永久解放 — 購入後、次のランから選択候補になります。\n条件: "+strings.condition(ShopSystem.new().condition(entry[0],entry[1],ui.app.db)))
  if not is_meta: detail+="\n"+ConditionSystem.new().progress_label(data,ShopSystem.new().condition(entry[0],entry[1],ui.app.db))
  ui.view.text("ShopScreen","Info",detail)
- ui.view.text("ShopScreen","Reason",reason)
+ ui.view.text("ShopScreen","Reason","所持%d貨 — " % currency+reason if (not available or owned or maxed) else reason)
  buy.tooltip_text=reason
+ ui.view.node("ShopScreen","Scroll").scroll_vertical=0
+ ui.view.focus("ShopScreen")
 func collection() -> void:
  var data: Dictionary=ui.app.saves.data
  var text := ""

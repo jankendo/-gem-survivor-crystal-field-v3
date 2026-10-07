@@ -56,7 +56,7 @@ func choices() -> void:
       content+=str(labels[key])+": %.2f → %.2f\n" % [base+float(effects[key])*before,base+float(effects[key])*(before+1)]
    for e in ui.app.db.table("evolutions").values():
     if e.weapon==c[1] or e.passive==c[1]:
-     content+="進化: "+strings.name("weapons",e.weapon)+" Lv"+str(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+str(e.passive_level)+"（5分以降）\n"
+     content+="進化: "+strings.name("weapons",e.weapon)+" Lv"+strings.number(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+strings.number(e.passive_level)+"（5分以降）\n"
      break
    content+=str(d.get("description_ja",""))
   var label: Label=button.get_node("CardMargin/CardText")
@@ -98,7 +98,7 @@ func slot(index: int) -> void:
   var id: String=ids[index%6]
   text=ui.view.node("EquipmentPanel","Slot"+str(index)).tooltip_text
   for e in ui.app.db.table("evolutions").values():
-   if e.weapon==id or e.passive==id: text+="\n進化条件: "+strings.name("weapons",e.weapon)+" Lv"+str(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+str(e.passive_level)+"、5分以降。元武器の枠を保ちます。"
+   if e.weapon==id or e.passive==id: text+="\n進化条件: "+strings.name("weapons",e.weapon)+" Lv"+strings.number(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+strings.number(e.passive_level)+"、5分以降。元武器の枠を保ちます。"
  ui.view.text("EquipmentPanel","Info",text)
 func progression_feedback(before: Dictionary) -> void:
  var p: ProgressionState=ui.app.run.state.progression

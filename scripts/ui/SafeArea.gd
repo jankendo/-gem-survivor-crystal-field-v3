@@ -10,10 +10,12 @@ func logical_rect(viewport: Vector2, window: Vector2, physical_safe: Rect2i) -> 
  return inset(area)
 func inset(area: Rect2) -> Rect2:
  return area.grow(-minf(12,minf(area.size.x,area.size.y)*.05))
-func apply(control: Control, override_rect: Rect2 = Rect2()) -> void:
+func apply(control: Control, override_rect: Rect2 = Rect2(), keyboard_points: float = 0) -> void:
  var viewport := control.get_viewport_rect().size
  var rect := inset(Rect2(Vector2.ZERO,viewport))
  if OS.has_feature("ios"): rect = logical_rect(viewport,Vector2(control.get_tree().root.size),DisplayServer.get_display_safe_area())
  if override_rect.has_area(): rect = inset(override_rect.intersection(Rect2(Vector2.ZERO,viewport)))
+ if keyboard_points>0:
+  rect.size.y=maxf(0,minf(rect.end.y,viewport.y-keyboard_points-12)-rect.position.y)
  control.position = rect.position
  control.size = rect.size
