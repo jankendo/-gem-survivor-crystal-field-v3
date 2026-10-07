@@ -81,6 +81,8 @@ jobs:
           Compress-Archive builds/windows/* builds/GemSurvivorCrystalField-v3-Windows.zip -Force
           python tools/validate_artifacts.py windows builds/GemSurvivorCrystalField-v3-Windows.zip
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python tools/release_manifest.py windows builds/GemSurvivorCrystalField-v3-Windows.zip builds/RELEASE_MANIFEST-windows.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-FileHash "builds/windows/${env:EXPORT_NAME}.exe" -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  windows/${env:EXPORT_NAME}.exe" } | Set-Content builds/SHA256SUMS-Windows.txt
           Get-FileHash builds/GemSurvivorCrystalField-v3-Windows.zip -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  GemSurvivorCrystalField-v3-Windows.zip" } | Add-Content builds/SHA256SUMS-Windows.txt
 
@@ -90,6 +92,7 @@ jobs:
           path: |
             builds/GemSurvivorCrystalField-v3-Windows.zip
             builds/SHA256SUMS-Windows.txt
+            builds/RELEASE_MANIFEST-windows.json
           if-no-files-found: error
           compression-level: 0
 
@@ -171,6 +174,7 @@ jobs:
           cp -R "${APP_PATH}" "builds/ios/Payload/Gem Survivor Crystal Field v3.app"
           (cd builds/ios && zip -qry GemSurvivorCrystalField-v3-unsigned.ipa Payload)
           python3 tools/validate_artifacts.py ios builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa
+          python3 tools/release_manifest.py ios builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa builds/ios/RELEASE_MANIFEST-ios.json
 
       - name: Prepare verification transfers
         shell: bash
@@ -198,13 +202,14 @@ jobs:
           path: |
             builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa
             builds/ios/SHA256SUMS-iOS.txt
+            builds/ios/RELEASE_MANIFEST-ios.json
             README.md
             IOS_UNSIGNED_README.md
           if-no-files-found: error
           compression-level: 0
 
   publish-alpha-preview:
-    if: github.ref == 'refs/tags/v3.0.0-alpha.1'
+    if: startsWith(github.ref, 'refs/tags/v') && github.ref_name != 'v3.0.0-alpha.1'
     needs: [windows-release, ios-unsigned-release]
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -232,8 +237,6 @@ jobs:
           IPA="$(find release-artifacts -name 'GemSurvivorCrystalField-v3-unsigned.ipa' -print -quit)"
           python tools/validate_artifacts.py windows "$WINDOWS"
           python tools/validate_artifacts.py ios "$IPA"
-          mkdir -p release-upload
-          cp "$WINDOWS" "$IPA" IOS_UNSIGNED_README.md release-upload/
-          cat "$(dirname "$WINDOWS")/SHA256SUMS-Windows.txt" "$(dirname "$IPA")/SHA256SUMS-iOS.txt" > release-upload/SHA256SUMS.txt
-          gh release create v3.0.0-alpha.1 release-upload/* --verify-tag --prerelease \
-            --title "Gem Survivor Crystal Field v3 — alpha.1" --notes-file docs/RELEASE_ALPHA_1.md
+          python tools/assemble_release.py
+          gh release create "$GITHUB_REF_NAME" release-upload/* --verify-tag --prerelease \
+            --title "Gem Survivor Crystal Field v3 — $GITHUB_REF_NAME" --notes-file docs/RELEASE_NOTES.md

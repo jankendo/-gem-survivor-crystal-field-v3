@@ -22,6 +22,7 @@ with zipfile.ZipFile(archive) as z:
   assert plist['CFBundleIdentifier']=='com.jankendo14.gemsurvivor'
   assert plist.get('CFBundleDisplayName',plist.get('CFBundleName'))=='Gem Survivor Crystal Field v3'
   assert plist['CFBundleShortVersionString']=='3.0.0'
+  assert plist['CFBundleVersion']=='30002','unexpected current app build'
   executable=prefix+plist['CFBundleExecutable'];assert executable in names
   b=z.read(executable)
   # Mach-O thin arm64 or universal header containing arm64.

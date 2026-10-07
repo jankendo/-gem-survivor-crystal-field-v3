@@ -7,3 +7,4 @@ test-output/
 *.pck
 *.ipa
 docs/qa/evidence/ui-screenshots/**/*.png.import
+__pycache__/

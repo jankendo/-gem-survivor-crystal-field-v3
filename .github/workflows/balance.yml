@@ -39,3 +39,34 @@ jobs:
           name: balance-evidence
           path: test-output/*.json
           if-no-files-found: error
+
+  gameplay-seeded:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      matrix:
+        build: [ranged, melee]
+    env:
+      GODOT: ${{ github.workspace }}/.tools/Godot_v4.7-stable_linux.x86_64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .tools
+          key: godot-4.7-linux
+      - name: Engine and import
+        run: |
+          mkdir -p .tools
+          if [ ! -x "$GODOT" ]; then
+            curl -fL https://github.com/godotengine/godot-builds/releases/download/4.7-stable/Godot_v4.7-stable_linux.x86_64.zip -o /tmp/godot.zip
+            unzip -o /tmp/godot.zip -d .tools
+          fi
+          python tools/run_godot.py --headless --editor --path . --quit
+      - name: Three seeded normal-HP runs
+        run: python tools/run_godot.py --timeout-seconds 1100 --headless --path . --script res://tests/gameplay_quality.gd -- --build=${{ matrix.build }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gameplay-${{ matrix.build }}-evidence
+          path: test-output/gameplay-quality-*.json
+          if-no-files-found: error

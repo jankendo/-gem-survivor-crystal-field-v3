@@ -36,6 +36,7 @@ jobs:
       - name: Gate
         run: |
           python tools/validate_data.py
+          python tools/test_release_manifest.py
           python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
           python tools/run_godot.py --headless --path . --script res://tests/ui_flow.gd
           python tools/run_godot.py --headless --path . --script res://tests/ui_performance.gd

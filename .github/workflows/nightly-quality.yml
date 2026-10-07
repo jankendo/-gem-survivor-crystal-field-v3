@@ -1,0 +1,42 @@
+name: Nightly gameplay and long-run stability
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [ranged, melee, deploy, area, hybrid, utility, long-run]
+    env:
+      GODOT: ${{ github.workspace }}/.tools/Godot_v4.7-stable_linux.x86_64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .tools
+          key: godot-4.7-linux
+      - name: Engine and import
+        run: |
+          mkdir -p .tools
+          if [ ! -x "$GODOT" ]; then
+            curl -fL https://github.com/godotengine/godot-builds/releases/download/4.7-stable/Godot_v4.7-stable_linux.x86_64.zip -o /tmp/godot.zip
+            unzip -o /tmp/godot.zip -d .tools
+          fi
+          python tools/run_godot.py --headless --editor --path . --quit
+      - name: Nightly gate
+        run: |
+          if [ '${{ matrix.mode }}' = long-run ]; then
+            python tools/run_godot.py --timeout-seconds 2600 --headless --path . --script res://tests/long_run.gd -- --ticks=108000
+          else
+            python tools/run_godot.py --timeout-seconds 2600 --headless --path . --script res://tests/gameplay_quality.gd -- --build=${{ matrix.mode }} --nightly
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nightly-${{ matrix.mode }}
+          path: test-output/*.json
+          if-no-files-found: error
