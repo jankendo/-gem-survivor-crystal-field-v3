@@ -23,6 +23,18 @@ func run(t: TestContext,_tree: SceneTree) -> void:
  diagnostic.observe()
  t.equal(r.signature(),before,"QA diagnostics cannot change simulation")
 
+ var warning_run:=RunController.new(db,3)
+ warning_run.map.rooms=[Rect2(-3000,-3000,6000,6000)]
+ warning_run.map.corridors.clear()
+ var warning_boss:=warning_run.enemies.spawn(-3,Vector2(200,0),{"hp":1000,"radius":50},1,true)
+ var warning_slot:=warning_run.enemies.slot(warning_boss)
+ warning_run.enemies.warning[warning_slot]=60
+ warning_run.enemies.attack_target[warning_slot]=Vector2(180,0)
+ var driver:=AutoplayDriver.new()
+ t.check(driver.direction(warning_run,"close_range").x>0,"QA bot does not dodge a distant safe boss circle")
+ warning_run.enemies.attack_target[warning_slot]=Vector2.ZERO
+ t.check(driver.direction(warning_run,"close_range").x<.95,"QA bot evades an actual locked attack circle")
+
  for seed in [60606,314159,20261007]:
   var map:=WorldGenerator.new();map.generate(seed)
   var paths: Array=[[map.rooms[12].get_center(),map.corridors[0].get_center()],[map.corridors[8].get_center(),map.rooms[24].get_center()],[map.corridors[0].get_center(),map.corridors[17].get_center()]]

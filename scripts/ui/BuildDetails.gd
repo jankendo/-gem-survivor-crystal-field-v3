@@ -46,7 +46,7 @@ func equipment(kind: String,id: String,state: RunState=null) -> String:
    else: text+="\n最大Lv — 次は進化・オーバークロックを確認。"
   else:
    var runtime: Dictionary=db.table("v3_weapons")[id]
-   text+="\n基礎値: 攻撃%.1f / 間隔%.2f秒（Character・Passiveで変化）" % [runtime.damage,runtime.cooldown]
+   text+="\n基礎値: 攻撃%.1f / 間隔%.2f秒（キャラクター・パッシブで変化）" % [runtime.damage,runtime.cooldown]
  else:
   var names: Dictionary={"damage":"攻撃","cooldown":"攻撃間隔","area":"範囲","move":"移動","magnet":"回収範囲","regen":"毎秒回復","armor":"軽減","max_hp":"HP上限","currency":"報酬","projectiles":"弾数"}
   for key in db.table("v3_passives").get(id,{}):

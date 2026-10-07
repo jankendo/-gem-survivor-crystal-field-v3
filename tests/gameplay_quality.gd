@@ -12,8 +12,10 @@ func play() -> void:
  var chosen:=""
  var night:=false
  var seed_override:=-1
+ var endless_ticks:=0
  for arg in OS.get_cmdline_user_args():
   if arg=="--nightly": night=true
+  if arg.begins_with("--endless-ticks="): endless_ticks=int(arg.get_slice("=",1))
   if arg.begins_with("--seed="): seed_override=int(arg.get_slice("=",1))
   if arg.begins_with("--build="): chosen=arg.get_slice("=",1)
  if night: seeds=[60606,20261007,314159,271828,9001]
@@ -29,7 +31,12 @@ func play() -> void:
    var diagnostics:=RunDiagnostics.new(r)
    var direction:=Vector2.ZERO
    var started:=Time.get_ticks_usec()
-   while r.state.tick<66000 and r.state.phase not in ["CLEAR","RESULT"]:
+   while r.state.tick<(endless_ticks if endless_ticks>0 else 66000) and r.state.phase!="RESULT":
+    if r.state.phase=="CLEAR":
+     if endless_ticks<=0: break
+     r.continue_endless()
+     diagnostics.timeline.append({"continue_endless":r.state.field_tick})
+     continue
     if r.state.phase=="LEVEL_UP":
      var choice:=driver.choice(r)
      var selected: Array=r.state.progression.choices[choice].duplicate()

@@ -66,6 +66,14 @@ func run(t: TestContext,tree: SceneTree) -> void:
  for i in range(6): await tree.process_frame
  t.check(ui.view.node("CollectionScreen","Filters").visible,"keyboard dismissal restores filters")
  app.start_run("noah","attack",60606)
+ app.run.state.progression.weapons={"magic_bolt":2,"bomb_seed":1}
+ app.run.state.progression.passives={"might":2}
+ app.run.state.progression.choices=[["weapons","magic_bolt"]]
+ app.run.state.phase="LEVEL_UP"
+ ui.sync_phase()
+ var card: String=ui.view.node("LevelUpPanel","Choice0").get_node("CardMargin/CardText").text
+ t.equal(card.count("進化:"),1,"growth card has one accurate evolution explanation")
+ t.check(card.contains("攻撃") and card.contains("→") and card.contains("成立中"),"growth shows numeric difference and actual combo ownership")
  t.check(app.renderer.critical.z_index>app.renderer.effects.z_index,"critical visuals above decoration")
  var render_before: int=app.run.signature()
  app.renderer.present(app.run,Vector2(1280,720))

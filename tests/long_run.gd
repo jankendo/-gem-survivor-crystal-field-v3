@@ -27,7 +27,8 @@ func stress() -> void:
  var start:=Time.get_ticks_usec()
  var min_enemies:=600;var min_projectiles:=500;var min_gems:=1000
  var snapshot:=RenderSnapshot.new()
- var events:=PresentationEvents.new()
+ var max_tick_us:=0
+ var presentation_peak:=0
  for tick in range(target_ticks):
   while r.enemies.count<600: r.enemies.spawn(0,Vector2(700,0),{"hp":1e9,"radius":18,"speed":0})
   while r.projectiles.count<500: r.projectiles.add(Vector2(0,400),Vector2.RIGHT*100,1,"weapon:magic_bolt")
@@ -36,8 +37,15 @@ func stress() -> void:
   r.state.phase="RUNNING";r.state.progression.choices.clear()
   var stamp:=Time.get_ticks_usec()
   r.pipeline.tick(r,Vector2.ZERO)
-  if tick%6==0: samples.append(Time.get_ticks_usec()-stamp)
-  if tick%30==0: snapshot.capture(r.enemies)
+  var elapsed:=Time.get_ticks_usec()-stamp
+  max_tick_us=maxi(max_tick_us,elapsed)
+  if tick%6==0: samples.append(elapsed)
+  if tick%30==0:
+   # Cosmetic overflow is deliberately independent of gameplay and stays bounded.
+   while r.damage.presentation.count<PresentationEvents.CAPACITY: r.damage.presentation.emit(Vector2.ZERO,1)
+   r.damage.presentation.emit(Vector2.ZERO,1)
+   snapshot.capture(r.enemies)
+  presentation_peak=maxi(presentation_peak,r.damage.presentation.count)
   if tick==600:
    initial_objects=int(Performance.get_monitor(Performance.OBJECT_COUNT));warm_memory=int(Performance.get_monitor(Performance.MEMORY_STATIC))
   if tick>0 and tick%9000==0:
@@ -53,7 +61,8 @@ func stress() -> void:
    for tick in range(120): r.pipeline.tick(r,Vector2.ZERO)
    r.warp.leave(r)
   warp_ok=warp_ok and r.enemies==main_enemies and r.gems==main_gems and r.state.field_tick==main_tick and r.warp.suspended.is_empty()
- var result: Dictionary={"ok":min_enemies>=600 and min_projectiles>=500 and min_gems>=1000 and warp_ok,"ticks":target_ticks,"simulation_minutes":target_ticks/3600.0,"wall_seconds":(Time.get_ticks_usec()-start)/1e6,"simulation":stats(samples),"sample_stride_ticks":6,"minimum_load":{"enemies":min_enemies,"projectiles":min_projectiles,"gems":min_gems},"checkpoints":checkpoints,"warm_objects":initial_objects,"final_objects":Performance.get_monitor(Performance.OBJECT_COUNT),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-initial_objects,"static_memory_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"warp_repetitions":6,"warp_main_freeze_resume":warp_ok,"note":"Continuous accelerated fixed-tick stress, late Endless/boss/combo/presentation event buffer. HP/phase are controlled stress fixture values; not normal run, GPU effects or real-time sustained device proof. Memory monitors are proxies, not cumulative native allocations."}
+ var object_delta:=int(Performance.get_monitor(Performance.OBJECT_COUNT))-initial_objects
+ var result: Dictionary={"ok":min_enemies>=600 and min_projectiles>=500 and min_gems>=1000 and warp_ok and object_delta==0,"ticks":target_ticks,"simulation_minutes":target_ticks/3600.0,"wall_seconds":(Time.get_ticks_usec()-start)/1e6,"simulation":stats(samples),"all_ticks_max_ms":max_tick_us/1000.0,"sample_stride_ticks":6,"minimum_load":{"enemies":min_enemies,"projectiles":min_projectiles,"gems":min_gems},"presentation_peak":presentation_peak,"presentation_dropped":r.damage.presentation.dropped,"active_combos":r.combos.active.size(),"checkpoints":checkpoints,"warm_objects":initial_objects,"final_objects":Performance.get_monitor(Performance.OBJECT_COUNT),"object_delta":object_delta,"static_memory_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"warp_repetitions":6,"warp_main_freeze_resume":warp_ok,"note":"Continuous accelerated fixed-tick stress, late Endless/boss/combo/presentation event buffer filled to capacity every30 ticks. HP/phase are controlled stress fixture values; not normal run, GPU effects or real-time sustained device proof. Memory monitors are proxies, not cumulative native allocations."}
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://test-output"))
  FileAccess.open("res://test-output/long-run-"+str(target_ticks)+".json",FileAccess.WRITE).store_string(JSON.stringify(result,"  "))
  print(JSON.stringify(result))

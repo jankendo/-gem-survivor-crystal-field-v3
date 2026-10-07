@@ -32,7 +32,7 @@ jobs:
           if [ '${{ matrix.mode }}' = long-run ]; then
             python tools/run_godot.py --timeout-seconds 2600 --headless --path . --script res://tests/long_run.gd -- --ticks=108000
           else
-            python tools/run_godot.py --timeout-seconds 2600 --headless --path . --script res://tests/gameplay_quality.gd -- --build=${{ matrix.mode }} --nightly
+            python tools/run_godot.py --timeout-seconds 2600 --headless --path . --script res://tests/gameplay_quality.gd -- --build=${{ matrix.mode }} --nightly --endless-ticks=108000
           fi
       - uses: actions/upload-artifact@v4
         if: always()

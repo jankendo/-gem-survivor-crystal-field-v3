@@ -42,12 +42,8 @@ func choices() -> void:
      if labels.has(key):
       var base:=1.0 if key in ["damage","move","magnet","cooldown","area","currency"] else 0.0
       content+=str(labels[key])+": %.2f → %.2f\n" % [base+float(effects[key])*before,base+float(effects[key])*(before+1)]
-   for e in ui.app.db.table("evolutions").values():
-    if e.weapon==c[1] or e.passive==c[1]:
-     content+="進化: "+strings.name("weapons",e.weapon)+" Lv"+strings.number(e.weapon_level)+" + "+strings.name("passives",e.passive)+" Lv"+strings.number(e.passive_level)+"（5分以降）\n"
-     break
    content+=str(d.get("description_ja",""))
-   content+=BuildDetails.new(ui.app.db).relationships(c[0],c[1],r.state)
+   content+=BuildDetails.new(ui.app.db).relationships(c[0],c[1],r.state).replace("\n進化・連携は元の装備枠を保ちます。", "")
   var label: Label=button.get_node("CardMargin/CardText")
   label.text=content
   button.tooltip_text=content

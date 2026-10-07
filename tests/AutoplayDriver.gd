@@ -32,7 +32,14 @@ func direction(run: RunController,build: String="balanced") -> Vector2:
  var warning_slot := -1
  for n in range(run.enemies.count):
   var i := run.enemies.dense[n]
-  if run.enemies.warning[i]>0 and run.enemies.attack_target[i].distance_to(run.state.player.position)<240:
+  if run.enemies.warning[i]<=0: continue
+  var endangered:=false
+  if run.enemies.flags[i]&1:
+   endangered=run.enemies.attack_target[i].distance_to(run.state.player.position)<float(run.db.config().boss_attack_radius)+30
+  else:
+   var nearest:=Geometry2D.get_closest_point_to_segment(run.state.player.position,run.enemies.positions[i],run.enemies.attack_target[i])
+   endangered=nearest.distance_to(run.state.player.position)<run.enemies.radius[i]+40
+  if endangered:
    if warning_slot<0: warning_slot=i
    if run.enemies.flags[i]&1:
     warning_slot=i
