@@ -1,0 +1,41 @@
+name: Fast CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GODOT: ${{ github.workspace }}/.tools/Godot_v4.7-stable_linux.x86_64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .tools
+          key: godot-4.7-linux
+      - uses: actions/cache@v4
+        with:
+          path: .godot/imported
+          key: imports-linux-${{ hashFiles('assets/**', 'data/**') }}
+      - name: Install engine
+        run: |
+          mkdir -p .tools
+          if [ ! -x "$GODOT" ]; then
+            curl -fL https://github.com/godotengine/godot-builds/releases/download/4.7-stable/Godot_v4.7-stable_linux.x86_64.zip -o /tmp/godot.zip
+            unzip -o /tmp/godot.zip -d .tools
+          fi
+      - name: Import
+        run: python tools/run_godot.py --headless --editor --path . --quit
+      - name: Gate
+        run: |
+          python tools/validate_data.py
+          python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ci-fast-evidence
+          path: test-output/*.json
+          if-no-files-found: error

@@ -1,0 +1,161 @@
+name: Build Windows and iOS Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+env:
+  GODOT_VERSION: "4.7-stable"
+  TEMPLATE_VERSION: "4.7.stable"
+  PROJECT_NAME: "GemSurvivor"
+  IOS_PRESET: "iOS"
+  WINDOWS_PRESET: "Windows Desktop"
+  EXPORT_NAME: "GemSurvivorCrystalFieldV3"
+
+jobs:
+  windows-release:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .tools/godot
+            .tools/templates
+          key: godot-release-${{ runner.os }}-${{ env.GODOT_VERSION }}
+
+      - uses: actions/cache@v4
+        with:
+          path: .godot/imported
+          key: godot-imported-${{ runner.os }}-${{ env.GODOT_VERSION }}-${{ hashFiles('project.godot', 'assets/**', 'data/**') }}
+          restore-keys: godot-imported-${{ runner.os }}-${{ env.GODOT_VERSION }}-
+
+      - name: Install Godot and templates
+        shell: pwsh
+        run: |
+          if (-not (Test-Path ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe")) {
+            New-Item -ItemType Directory -Force .tools/godot,.tools/templates | Out-Null
+            Invoke-WebRequest "https://github.com/godotengine/godot-builds/releases/download/${env:GODOT_VERSION}/Godot_v${env:GODOT_VERSION}_win64.exe.zip" -OutFile "$env:TEMP/godot.zip"
+            Invoke-WebRequest "https://github.com/godotengine/godot-builds/releases/download/${env:GODOT_VERSION}/Godot_v${env:GODOT_VERSION}_export_templates.tpz" -OutFile "$env:TEMP/templates.zip"
+            Expand-Archive "$env:TEMP/godot.zip" .tools/godot -Force
+            Expand-Archive "$env:TEMP/templates.zip" .tools/templates -Force
+          }
+          $templateDir = Join-Path $env:APPDATA "Godot/export_templates/${env:TEMPLATE_VERSION}"
+          New-Item -ItemType Directory -Force $templateDir | Out-Null
+          Copy-Item ".tools/templates/templates/*" $templateDir -Recurse -Force
+
+      - name: Validate and import
+        shell: pwsh
+        run: |
+          python tools/validate_data.py
+          
+          $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
+           $env:GODOT = $godot
+          python tools/run_godot.py --headless --editor --path . --quit
+          python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
+
+      - name: Export Windows release
+        shell: pwsh
+        run: |
+          $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
+          New-Item -ItemType Directory -Force builds/windows | Out-Null
+          & $godot --headless --path . --export-release "${env:WINDOWS_PRESET}" "builds/windows/${env:EXPORT_NAME}.exe"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Copy-Item README.md builds/windows/README.md
+          Compress-Archive builds/windows/* builds/GemSurvivorCrystalField-v3-Windows.zip -Force
+          python tools/validate_artifacts.py windows builds/GemSurvivorCrystalField-v3-Windows.zip
+          Get-FileHash "builds/windows/${env:EXPORT_NAME}.exe" -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  windows/${env:EXPORT_NAME}.exe" } | Set-Content builds/SHA256SUMS-Windows.txt
+          Get-FileHash builds/GemSurvivorCrystalField-v3-Windows.zip -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  GemSurvivorCrystalField-v3-Windows.zip" } | Add-Content builds/SHA256SUMS-Windows.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GemSurvivorCrystalField-v3-Windows
+          path: |
+            builds/GemSurvivorCrystalField-v3-Windows.zip
+            builds/SHA256SUMS-Windows.txt
+          if-no-files-found: error
+          compression-level: 0
+
+  ios-unsigned-release:
+    runs-on: macos-26
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .tools/godot
+            .tools/templates
+            ~/Library/Application Support/Godot/export_templates
+          key: godot-release-${{ runner.os }}-${{ env.GODOT_VERSION }}
+
+      - uses: actions/cache@v4
+        with:
+          path: .godot/imported
+          key: godot-imported-${{ runner.os }}-${{ env.GODOT_VERSION }}-${{ hashFiles('project.godot', 'assets/**', 'data/**') }}
+          restore-keys: godot-imported-${{ runner.os }}-${{ env.GODOT_VERSION }}-
+
+      - name: Install Godot and templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -x ".tools/godot/Godot.app/Contents/MacOS/Godot" ]; then
+            mkdir -p .tools/godot .tools/templates
+            curl -fL "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_macos.universal.zip" -o /tmp/godot.zip
+            curl -fL "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_export_templates.tpz" -o /tmp/templates.zip
+            ditto -x -k /tmp/godot.zip .tools/godot
+            ditto -x -k /tmp/templates.zip .tools/templates
+          fi
+          TEMPLATE_DIR="${HOME}/Library/Application Support/Godot/export_templates/${TEMPLATE_VERSION}"
+          mkdir -p "${TEMPLATE_DIR}"
+          cp -R .tools/templates/templates/. "${TEMPLATE_DIR}/"
+          chmod +x .tools/godot/Godot.app/Contents/MacOS/Godot
+
+      - name: Validate and export Xcode project
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/validate_data.py
+          
+          GODOT=".tools/godot/Godot.app/Contents/MacOS/Godot"
+          export GODOT
+          python3 tools/run_godot.py --headless --editor --path . --quit
+          python3 tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
+          mkdir -p builds/ios-export
+          "${GODOT}" --headless --path . --export-release "${IOS_PRESET}" "builds/ios-export/${PROJECT_NAME}.ipa"
+
+      - name: Build unsigned arm64 app
+        shell: bash
+        run: |
+          set -euo pipefail
+          XCODEPROJ="$(find builds/ios-export -maxdepth 1 -name '*.xcodeproj' -print -quit)"
+          SCHEME="$(xcodebuild -project "${XCODEPROJ}" -list -json | python3 -c 'import json,sys; print((json.load(sys.stdin).get("project",{}).get("schemes") or ["GemSurvivor"])[0])')"
+          xcodebuild -project "${XCODEPROJ}" -scheme "${SCHEME}" -configuration Release -sdk iphoneos \
+            -derivedDataPath DerivedData ARCHS=arm64 ONLY_ACTIVE_ARCH=YES \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" DEVELOPMENT_TEAM="" build
+
+      - name: Package and inspect unsigned IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+          APP_PATH="$(find DerivedData/Build/Products -type d -name '*.app' -print -quit)"
+          mkdir -p builds/ios/Payload
+          cp -R "${APP_PATH}" "builds/ios/Payload/Gem Survivor Crystal Field v3.app"
+          (cd builds/ios && zip -qry GemSurvivorCrystalField-v3-unsigned.ipa Payload)
+          python3 tools/validate_artifacts.py ios builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GemSurvivor-iOS-unsigned-IPA
+          path: |
+            builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa
+            builds/ios/SHA256SUMS-iOS.txt
+            README.md
+            IOS_UNSIGNED_README.md
+          if-no-files-found: error
+          compression-level: 0
