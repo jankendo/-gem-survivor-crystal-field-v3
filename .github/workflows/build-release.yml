@@ -55,7 +55,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           
           $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
-           $env:GODOT = $godot
+          $env:GODOT = $godot
           python tools/run_godot.py --headless --editor --path . --quit
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
@@ -66,10 +66,10 @@ jobs:
         run: |
           $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
           New-Item -ItemType Directory -Force builds/windows | Out-Null
-           $env:GODOT = $godot
+          $env:GODOT = $godot
           python tools/run_godot.py --headless --path . --export-release "${env:WINDOWS_PRESET}" "builds/windows/${env:EXPORT_NAME}.exe"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-           $workspace = "$pwd"
+          $workspace = "$pwd"
           $env:GODOT = "$workspace/$godot"
           Push-Location $env:TEMP
           python "$workspace/tools/run_godot.py" --headless --main-pack "$workspace/builds/windows/${env:EXPORT_NAME}.exe" --script "$workspace/tools/pack_smoke.gd"
@@ -79,6 +79,7 @@ jobs:
           Copy-Item README.md builds/windows/README.md
           Compress-Archive builds/windows/* builds/GemSurvivorCrystalField-v3-Windows.zip -Force
           python tools/validate_artifacts.py windows builds/GemSurvivorCrystalField-v3-Windows.zip
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-FileHash "builds/windows/${env:EXPORT_NAME}.exe" -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  windows/${env:EXPORT_NAME}.exe" } | Set-Content builds/SHA256SUMS-Windows.txt
           Get-FileHash builds/GemSurvivorCrystalField-v3-Windows.zip -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  GemSurvivorCrystalField-v3-Windows.zip" } | Add-Content builds/SHA256SUMS-Windows.txt
 
