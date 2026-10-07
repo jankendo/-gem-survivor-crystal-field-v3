@@ -16,6 +16,10 @@ var corridor_rects: Array[Rect2] = []
 var room_kinds: Array[String] = []
 var portals: Array[Vector2] = []
 var profile := "desktop_standard"
+var meteor_warning := false
+var meteor_position := Vector2.ZERO
+var danger_event := false
+var danger_position := Vector2.ZERO
 var camera_size := Vector2(1280,720)
 func _ready() -> void:
  terrain = StaticTerrain.new()
@@ -30,6 +34,10 @@ func _ready() -> void:
  player_texture = load("res://assets/generated/characters/noah.svg")
 func present(run: RunController, size: Vector2) -> void:
  effects.present(run.damage.presentation,run.state.tick,profile=="ios_ultra")
+ meteor_warning = not run.warp.active and run.field.events.impact_tick>run.state.field_tick
+ meteor_position = run.field.events.impact_position
+ danger_event = not run.warp.active and run.field.event=="danger_bloom"
+ if danger_event: danger_position=run.map.rooms[run.field.event_room].get_center()
  camera_size = size
  player_position = run.state.player.position
  snapshot.capture(run.enemies)
@@ -54,6 +62,10 @@ func present(run: RunController, size: Vector2) -> void:
  position = size * .5 - player_position
  queue_redraw()
 func _draw() -> void:
+ if meteor_warning:
+  draw_circle(meteor_position,70,Color(1,.3,.1,.2))
+  draw_arc(meteor_position,70,0,TAU,48,Color(1,.45,.1),3)
+ if danger_event: draw_arc(danger_position,220,0,TAU,64,Color(1,.1,.2),3)
  for n in range(field_positions.size()):
   var p := field_positions[n]
   if field_textures.has(field_kinds[n]): draw_texture_rect(field_textures[field_kinds[n]],Rect2(p-Vector2(24,24),Vector2(48,48)),false)

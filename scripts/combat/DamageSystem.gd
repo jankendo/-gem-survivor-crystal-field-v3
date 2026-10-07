@@ -11,9 +11,12 @@ var normal_damage := 0.0
 var field_damage := 0.0
 var overkill := 0.0
 var death_ids := PackedInt64Array()
+var death_sources := PackedStringArray()
 var death_count := 0
 var event_count := 0
-func _init() -> void: death_ids.resize(600)
+func _init() -> void:
+ death_ids.resize(600)
+ death_sources.resize(600)
 func begin_tick() -> void:
  death_count = 0
  presentation.clear()
@@ -35,6 +38,7 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
  if world.hp[i] <= 0:
   if spatial!=null: spatial.deactivate_enemy(id)
   death_ids[death_count] = id
+  death_sources[death_count] = source
   death_count += 1
  return actual
 func apply_player(state: RunState, amount: float, source: String) -> void:

@@ -77,7 +77,10 @@ func settle(run: RunController) -> void:
  QuestSystem.new().settle(run,data)
  mark_dirty()
  flush()
-func buy(id: String, cost: int) -> bool:
+func buy_item(kind: String,id: String, db: GameDatabase) -> bool:
+ var shop := ShopSystem.new()
+ if not shop.available(kind,id,data,db): return false
+ var cost := shop.cost(kind,id,db)
  if cost < 0 or data.progression.unlocked.has(id) or int(data.profile.currency) < cost: return false
  data.profile.currency -= cost
  data.progression.unlocked.append(id)

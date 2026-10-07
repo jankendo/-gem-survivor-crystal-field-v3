@@ -20,6 +20,9 @@ func tick(run, direction: Vector2) -> void:
  status.tick(run.enemies,state.player,state.tick)
  var player := state.player
  var context_room: int = run.map.room_at(player.position)
+ if not run.warp.active:
+  state.progression.terrain_ticks[run.map.terrain_index(player.position)] += 1
+  if player.hp<player.max_hp*.2: state.progression.metrics.low_hp_time=float(state.progression.metrics.get("low_hp_time",0))+1.0/60.0
  var stat := player.stats
  var move_mult := 1+float(stat.get("move",0))
  if context_room < 0:
@@ -70,7 +73,7 @@ func tick(run, direction: Vector2) -> void:
   var id := scratch.ids[query_index]
   var value: int = run.gems.take(id)
   if value > 0:
-   level.collect(roundi(value*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
+   level.collect(roundi(value*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
    player.hp = minf(player.max_hp,player.hp+float(stat.get("pickup_heal",0)))
  if state.phase == "RUNNING": level.offer(state,run.db,run.unlocked)
  if int(stat.get("recall_frequency",0))>0 and state.tick % maxi(60,600-int(stat.get("recall_frequency",0))) == 0:
@@ -78,7 +81,7 @@ func tick(run, direction: Vector2) -> void:
   for query_index in range(scratch.count):
    var id := scratch.ids[query_index]
    var value: int = run.gems.take(id)
-   if value>0: level.collect(roundi(value*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
+   if value>0: level.collect(roundi(value*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
  var room: int = run.map.room_at(player.position)
  if room >= 0 and not state.progression.rooms.has(room) and not run.warp.active:
   state.progression.chain = state.progression.chain+1 if state.progression.resonance>0 else 1

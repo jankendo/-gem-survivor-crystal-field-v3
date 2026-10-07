@@ -43,7 +43,7 @@ func reroll(state: RunState, db: GameDatabase, unlocked: Array) -> bool:
  return true
 func banish(state: RunState) -> bool:
  var p := state.progression
- if state.phase!="LEVEL_UP" or p.choices.is_empty() or p.banishes_used >= 1+int(state.player.stats.get("banishes",0)): return false
+ if state.phase!="LEVEL_UP" or p.choices.is_empty() or p.banishes_used >= 1+state.progression.banishes_bonus+int(state.player.stats.get("banishes",0)): return false
  p.banishes_used += 1
  var choice: Array = p.choices.pop_back()
  p.banished.append(choice[1])

@@ -1,5 +1,6 @@
 extends RefCounted
 class_name EncounterSystem
+var event_refill_mult := 1.0
 var budget := 0.0
 var threat := 0.0
 var spawned := 0
@@ -19,7 +20,7 @@ func tick(state: RunState, db: GameDatabase, map: WorldGenerator, enemies: Enemy
  var risk := room >= 0 and map.kinds[room] == "risk"
  var multiplier := 1.0+float(state.player.stats.get("spawn",0))
  for c in state.player.contracts: multiplier *= float(db.table("rune_contracts")[c].get("spawn_mult",1))
- budget = minf(24, budget + float(cfg.refill_per_second) * multiplier / 60.0)
+ budget = minf(24, budget + float(cfg.refill_per_second) * multiplier * event_refill_mult / 60.0)
  threat = minf(float(cfg.threat_budget), threat + float(cfg.refill_per_second) / 60.0)
  var target := target_alive(state, db, risk)
  while budget >= 1 and enemies.count < target and enemies.count < int(cfg.enemy_cap):

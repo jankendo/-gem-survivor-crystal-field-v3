@@ -1,5 +1,6 @@
 extends RefCounted
 class_name WorldGenerator
+const TERRAIN_INDICES := {"safe":1,"mining":2,"risk":3,"event":4,"shortcut":5}
 # Connected rooms and orthogonal corridors; every spawn/pickup projects onto valid floor.
 var rooms: Array[Rect2] = []
 var corridors: Array[Rect2] = []
@@ -89,3 +90,8 @@ func spawn_position(center: Vector2, minimum: float, maximum: float, rng: RunRng
    best = candidate
    distance = d
  return best
+
+func terrain_index(p: Vector2) -> int:
+ var room := room_at(p)
+ if room<0: return 0
+ return TERRAIN_INDICES.get(kinds[room],0)

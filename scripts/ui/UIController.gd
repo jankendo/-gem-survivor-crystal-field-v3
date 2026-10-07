@@ -48,6 +48,9 @@ func initialize(root) -> void:
  connect_button("ShopScreen","Buy",buy_next)
  connect_button("ShopScreen","Next",func(): shop_index += 1; update_shop())
  connect_button("LevelUpPanel","Skip",func():
+  if not app.run.state.progression.choices.is_empty():
+   if app.run.state.progression.skips<=0: return
+   app.run.state.progression.skips-=1
   app.run.state.progression.choices.clear()
   app.run.state.phase = "RUNNING"
   show_hud())
@@ -189,6 +192,9 @@ func update_hud() -> void:
   hud.get_node("Stats").text = text
   last_hud = text
  var guidance := "RISK — 探索 / 5・10・15分にボス"
+ if not app.run.field.event.is_empty():
+  var event: Dictionary=app.run.field.events.definition
+  guidance = str(event.name_ja)+" — "+str(event.objective_ja)+" %ds" % maxi(0,(app.run.field.event_deadline-s.field_tick)/60)
  var sense := float(s.player.stats.get("indicator_range",0))
  if sense>0 and app.run.field.positions.size()>0:
   var nearest := -1
@@ -236,17 +242,21 @@ func update_shop() -> void:
  shop_index %= shop_ids.size()
  var entry: Array = shop_ids[shop_index]
  var d: Dictionary = app.db.table(entry[0])[entry[1]]
- var cost: int = int(d.get("unlock_cost",100))
+ var shop := ShopSystem.new()
+ var cost: int = shop.cost(entry[0],entry[1],app.db) if entry[0]!="meta_upgrades" else 0
  if entry[0]=="meta_upgrades": cost = int(d.base_cost)+int(d.cost_step)*int(app.saves.data.progression.get("meta",{}).get(entry[1],0))
  panels.ShopScreen.get_node("Scroll/Body/Info").text = "クリスタル貨: %d
-%s — 100貨
-永久解放は購入でのみ成立します" % [app.saves.data.profile.currency,d.name_ja]
+%s — %d貨
+永久解放は購入でのみ成立します" % [app.saves.data.profile.currency,d.name_ja,cost]
+ var available: bool = entry[0]=="meta_upgrades" or shop.available(entry[0],entry[1],app.saves.data,app.db)
+ panels.ShopScreen.get_node("Scroll/Body/Buy").disabled = not available
+ if not available: panels.ShopScreen.get_node("Scroll/Body/Info").text += "\n条件未達: "+str(shop.condition(entry[0],entry[1],app.db))
 func buy_next() -> void:
  if shop_ids.is_empty(): return
  var entry: Array = shop_ids[shop_index]
  var d: Dictionary = app.db.table(entry[0])[entry[1]]
  if entry[0]=="meta_upgrades": app.saves.buy_meta(entry[1],d)
- elif app.saves.buy(entry[1],int(d.get("unlock_cost",100))): shop_ids.remove_at(shop_index)
+ elif app.saves.buy_item(entry[0],entry[1],app.db): shop_ids.remove_at(shop_index)
  update_shop()
 func show_collection() -> void:
  show_panel("ShopScreen")
@@ -259,4 +269,4 @@ func show_collection() -> void:
  panels.ShopScreen.get_node("Scroll/Body/Info").text = text
 
 func source_name(id: String) -> String:
- return {"enemy":"敵との接触","boss":"ボスの攻撃","field:mining":"結晶採掘","field:lightning":"雷導結晶","status:poison":"毒状態"}.get(id,id)
+ return {"enemy":"敵との接触","boss":"ボスの攻撃","field:mining":"結晶採掘","field:lightning":"雷導結晶","field:meteor":"予告された流星","status:poison":"毒状態"}.get(id,id)

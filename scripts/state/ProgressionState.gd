@@ -23,3 +23,15 @@ var max_gem_streak := 0
 var chain := 0
 var max_chain := 0
 var boss_ids := PackedStringArray()
+
+var terrain_ticks := PackedInt32Array([0,0,0,0,0,0])
+var terrain_kills := PackedInt32Array([0,0,0,0,0,0])
+var terrain_crystals := PackedInt32Array([0,0,0,0,0,0])
+var terrain_bosses := PackedInt32Array([0,0,0,0,0,0])
+var elite_kills := 0
+var metrics: Dictionary = {"weapon_kills":{},"gimmick_count":{},"field_drop_count":{}}
+
+var metrics_settled := false
+
+var skips := 1
+var banishes_bonus := 0

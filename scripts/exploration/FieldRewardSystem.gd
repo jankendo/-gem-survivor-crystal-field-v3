@@ -4,6 +4,7 @@ var positions := PackedVector2Array()
 var hp := PackedFloat32Array()
 var active := PackedInt32Array()
 var kinds := PackedStringArray()
+var events := FieldEventSystem.new()
 var event := ""
 var event_room := -1
 var event_deadline := 0
@@ -34,10 +35,15 @@ func interact(run: RunController) -> bool:
   var i: int = id-100
   if not active[i]: continue
   if kinds[i]=="healing_spring":
+   var before := run.state.player.hp
    run.state.player.hp = minf(run.state.player.max_hp,run.state.player.hp+30*(1+float(run.state.player.stats.get("field_reward",0))))
+   run.state.progression.metrics.oasis_healing=float(run.state.progression.metrics.get("oasis_healing",0))+run.state.player.hp-before
+   record_gimmick(run,i)
    active[i] = 0
    return true
   if kinds[i]=="sealed_chest_pillar":
+   run.state.progression.metrics.total_chests=int(run.state.progression.metrics.get("total_chests",0))+1
+   record_gimmick(run,i)
    active[i] = 0
    run.state.progression.currency += 30
    run.state.progression.exp += roundi(40*(1+float(run.state.player.stats.get("chest_reward",0))))
@@ -54,6 +60,9 @@ func interact(run: RunController) -> bool:
   if hp[i] <= 0:
    active[i] = 0
    crystals += 1
+   run.state.progression.terrain_crystals[run.map.terrain_index(positions[i])] += 1
+   record_gimmick(run,i)
+   if run.map.kinds[i]=="shortcut": run.state.progression.metrics.shortcut_walls=int(run.state.progression.metrics.get("shortcut_walls",0))+1
    var reward := float(cfg.mining_reward)
    reward *= (1+float(run.state.player.stats.get("mining_reward",0)))*float(run.state.player.stats.get("contract_crystal",1))
    run.gems.add(positions[i],roundi(reward),run.map)
@@ -67,18 +76,12 @@ func interact(run: RunController) -> bool:
    # Damage death queue is drained on next fixed tick before it is cleared.
   return true
  var room := run.map.room_at(run.state.player.position)
- if room >= 0 and run.map.kinds[room]=="event" and event.is_empty():
-  event = "elite_hunt" if run.state.field_tick > 18000 else "gem_storm"
-  event_room = room
-  event_deadline = run.state.field_tick + 2700
-  event_start_kills = run.state.progression.kills
-  return true
+ if room >= 0 and run.map.kinds[room]=="event" and event.is_empty() and run.state.field_tick>=14400:
+  return events.start(run,room)
  return false
-func tick(run: RunController) -> void:
- if event.is_empty(): return
- if run.state.field_tick >= event_deadline:
-  if event=="gem_storm" or run.state.progression.kills-event_start_kills >= 10:
-   run.state.progression.currency += roundi(100*(1+float(run.state.player.stats.get("event_reward",0))))
-   run.gems.add(run.map.rooms[event_room].get_center(),80,run.map)
-   events_completed += 1
-  event = ""
+func tick(run: RunController) -> void: events.tick(run)
+func record_gimmick(run: RunController,i: int) -> void:
+ var counters: Dictionary=run.state.progression.metrics.gimmick_count
+ var id: String=kinds[i]
+ counters[id]=int(counters.get(id,0))+1
+ if id=="lightning_crystal": counters.conductive_crystal=int(counters.get("conductive_crystal",0))+1
