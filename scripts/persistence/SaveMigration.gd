@@ -35,8 +35,12 @@ func valid(value) -> bool:
  if not (value is Dictionary and value.get("schema_version")==3 and value.get("profile") is Dictionary and value.get("progression") is Dictionary and value.get("settings") is Dictionary and value.progression.get("unlocked") is Array): return false
  for key in ["currency","runs"]:
   if not (value.profile.get(key) is int or value.profile.get(key) is float) or float(value.profile[key])<0: return false
- for key in ["quests","collection","mastery","meta"]:
+ for key in ["quests","collection","mastery","meta","available","weapon_levels","evolved_weapons","bosses","secret_flags","titles"]:
   if value.progression.has(key) and not value.progression[key] is Dictionary: return false
+ if value.profile.has("metrics"):
+  if not value.profile.metrics is Dictionary: return false
+  for key in ["weapon_kills","terrain_time","terrain_kills","terrain_crystals","terrain_boss_defeat","gimmick_count","field_drop_count"]:
+   if value.profile.metrics.has(key) and not value.profile.metrics[key] is Dictionary: return false
  return true
 func normalize(value: Dictionary) -> Dictionary:
  var result := defaults()

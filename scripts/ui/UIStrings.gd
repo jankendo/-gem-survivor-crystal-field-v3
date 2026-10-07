@@ -3,7 +3,8 @@ class_name UIStrings
 var db: GameDatabase
 func _init(database: GameDatabase) -> void: db=database
 func name(kind: String,id: String) -> String:
- var d: Dictionary=db.table(kind).get(id,{})
+ var d=db.table(kind).get(id,{})
+ if not d is Dictionary: return "未登録"
  return str(d.get("name_ja",d.get("display_name_ja","未登録")))
 func condition(c: Dictionary) -> String:
  var type := str(c.get("type",""))

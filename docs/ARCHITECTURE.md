@@ -31,3 +31,22 @@ GameDatabase reads JSON once, then validates and caches. DataValidator checks ru
 WorldRenderer receives snapshots. Enemy sprites are bucketed by type into MultiMesh nodes. StaticTerrain caches draw commands until map changes. Critical attack telegraphs read immutable snapshot locations. Only world goes into a scaled SubViewport; HUD/modals/touch remain on root canvas.
 
 No worker threads or native extensions are introduced. Current profiling identifies projectile/spatial preparation as the largest CPU portions; optimize only with unchanged fixtures and parity tests.
+
+
+## UI ownership and lifecycle
+
+`UIController` routes guarded commands/navigation; `UIView` owns cached scene nodes,
+shared theme, responsive safe-area geometry and focus. `MenuPresenter`,
+`ProgressionPresenter`, `HUDPresenter` and `GameplayFeedback` read authoritative
+run/save data. `RunController` owns pause/suspended phase, selection, contract and
+finish commands. UI never mutates player/enemy HP or advances gameplay RNG.
+Only one panel is visible; the scrim consumes background input. Save/system dialogs
+have priority over run phase transitions. Pause suspends an existing growth or
+contract modal and resumes that exact phase. EXP and pending contract retain queued
+choices in simulation; notifications have a separate bounded cosmetic buffer.
+
+UI and world camera use separate coordinate spaces: Safe Area uses physical points,
+world camera preserves at least1280×720 field of view and scales only its render target.
+The camera origin and entity transform share the same scale, including Ultra.
+Deferred text/focus layout keeps its RefCounted owner alive and cancels on scene teardown.
+Derived EnemyWorld.boss_id is lifecycle-maintained; rendering never writes it back.

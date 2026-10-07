@@ -21,14 +21,14 @@ func tick(state: RunState, world: EnemyWorld, gems: PickupWorld, damage: DamageS
    values[weapon] = int(values.get(weapon,0))+1
   gems.add(world.positions[i],world.xp[i],map)
   state.progression.kills += 1
-  if float(state.player.stats.get("char_kill_heal",0))>0 and state.rng.chance(float(state.player.stats.char_kill_heal)): state.player.hp=minf(state.player.max_hp,state.player.hp+1)
+  if state.phase!="RESULT" and state.player.hp>0 and float(state.player.stats.get("char_kill_heal",0))>0 and state.rng.chance(float(state.player.stats.char_kill_heal)): state.player.hp=minf(state.player.max_hp,state.player.hp+1)
   state.progression.currency += 1 if not is_boss else 100
   if is_boss:
    if world.types[i]==-5 and state.player.hp<state.player.max_hp*.2: state.progression.metrics.reaper=true
    state.progression.bosses += 1
    state.progression.terrain_bosses[terrain] += 1
    if world.types[i]<0: state.progression.boss_ids.append("boss_"+str(mini(-world.types[i]*5,30)))
-   if world.types[i] == -3 and not state.endless: state.phase = "CLEAR"
+   if world.types[i] == -3 and not state.endless and state.phase!="RESULT" and state.player.hp>0: state.phase = "CLEAR"
   if damage.spatial!=null:
    if damage.death_burst_radius[n]>0:
     damage.spatial.query_circle(SpatialWorld.ENEMY,world.positions[i],damage.death_burst_radius[n],scratch)

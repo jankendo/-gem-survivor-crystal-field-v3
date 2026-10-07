@@ -48,6 +48,7 @@ func index_nodes(node: Node, screen: String) -> void:
    var height: float=maxf(88,node.get_combined_minimum_size().y+16)
    if absf(card.custom_minimum_size.y-height)>1: card.custom_minimum_size.y=height)
  if node is Button:
+  if screen!="HUD": node.focus_entered.connect(func(): settle_focus(screen,node))
   node.custom_minimum_size.y = maxf(UITokens.TOUCH,node.custom_minimum_size.y)
   if node.name in ["Start","Confirm","Select","Resume","Continue","Retry","Buy"]: node.theme_type_variation = "PrimaryButton"
   if node.name in ["End","Home"] and screen in ["PauseMenu","ConfirmPanel"]: node.theme_type_variation = "DangerButton"
@@ -55,7 +56,9 @@ func index_nodes(node: Node, screen: String) -> void:
 func node(screen: String, key: String) -> Control: return controls[screen][key]
 func text(screen: String, key: String, value: String) -> void:
  var control = node(screen,key)
- if control.text != value: control.text = value
+ if control.text != value:
+  control.text = value
+  control.accessibility_name=value
  if key in ["Reason","Info"]: control.visible=not value.is_empty()
 func present(screen: String) -> void:
  for panel in panels.values(): panel.hide()
@@ -130,13 +133,20 @@ func focus(screen: String) -> void:
  first.call_deferred("grab_focus")
  settle_focus(screen,first)
 func settle_focus(screen: String,first: Control) -> void:
+ var lifetime: UIView=self # Keep coroutine owner alive until its deferred layout passes end.
  var tree: SceneTree=app.get_tree()
  # Text shaping and Container sorting finish across deferred layout passes.
- for pass_index in range(3): await tree.process_frame
- if app==null or not is_instance_valid(app) or not is_instance_valid(first): return
+ for pass_index in range(3):
+  await tree.process_frame
+  if lifetime.app==null or not is_instance_valid(app): return
+ if lifetime.app==null or not is_instance_valid(app) or not is_instance_valid(first): return
  if app.controller.current!=screen or app.get_viewport().gui_get_focus_owner()!=first: return
  var scroll: ScrollContainer=node(screen,"Scroll")
- if scroll.is_ancestor_of(first): scroll.ensure_control_visible(first)
+ if scroll.is_ancestor_of(first):
+  if first.size.y>scroll.size.y:
+   var body: Control=node(screen,"Body")
+   scroll.scroll_vertical=maxi(0,roundi(first.global_position.y-body.global_position.y))
+  else: scroll.ensure_control_visible(first)
 func blocked_touch(position: Vector2) -> bool:
  for control in controls.HUD.values():
   if control is Button and control.is_visible_in_tree() and control.get_global_rect().has_point(position): return true

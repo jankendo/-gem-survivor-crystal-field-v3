@@ -23,6 +23,7 @@ var ui_elapsed_us := 0
 var ui_samples := 0
 func _ready() -> void:
  db=GameDatabase.new()
+ if not db.errors.is_empty(): print("Startup data rejected: ",db.errors)
  saves=SaveRepository.new(save_path,SaveRepository.LEGACY if save_path==SaveRepository.PATH else "user://qa_missing_legacy.save")
  world_container=SubViewportContainer.new()
  world_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -33,9 +34,10 @@ func _ready() -> void:
  world_viewport.size=Vector2i(1280,720)
  world_viewport.render_target_update_mode=SubViewport.UPDATE_ALWAYS
  world_container.add_child(world_viewport)
- renderer=WorldRenderer.new()
- world_viewport.add_child(renderer)
- if db.errors.is_empty(): renderer.configure(db)
+ if db.errors.is_empty():
+  renderer=WorldRenderer.new()
+  world_viewport.add_child(renderer)
+  renderer.configure(db)
  ui=Control.new()
  ui.mouse_filter=Control.MOUSE_FILTER_IGNORE
  add_child(ui)
@@ -76,7 +78,7 @@ func set_temporary_profile(value: String) -> void:
 func apply_profile() -> void:
  if saves==null or world_container==null: return
  world_container.stretch_shrink=2 if effective_profile()=="ios_ultra" else 1
- renderer.profile=effective_profile()
+ if renderer!=null: renderer.profile=effective_profile()
  Engine.max_fps=int(saves.data.settings.render_fps)
  if not OS.has_feature("mobile") and DisplayServer.get_name()!="headless":
   var desired := DisplayServer.WINDOW_MODE_FULLSCREEN if saves.data.settings.fullscreen else DisplayServer.WINDOW_MODE_WINDOWED
@@ -88,7 +90,7 @@ func apply_profile() -> void:
   controller.view.apply_typography(float(saves.data.settings.get("ui_scale",1)))
   controller.layout()
 func start_run(character: String="noah",blessing: String="attack",seed_input: int=-1) -> void:
- if not db.errors.is_empty() or not db.table("characters").has(character) or not db.table("blessings").has(blessing): return
+ if saves.blocked_load or not db.errors.is_empty() or not db.table("characters").has(character) or not db.table("blessings").has(blessing): return
  if run!=null and run.state.phase!="RESULT": return
  if not (saves.data.progression.unlocked.has(character) or db.table("characters")[character].get("initial",false)): return
  if blessing!="attack" and not saves.data.progression.unlocked.has(blessing): return
@@ -104,6 +106,8 @@ func start_run(character: String="noah",blessing: String="attack",seed_input: in
  run.state.player.stats["meta_magnet"] = .03*int(meta.get("base_magnet",0))
  run.weapons.refresh(run.state,db)
  controller.progression.announced_combos.clear()
+ controller.notices.entries.clear()
+ controller.feedback.previous_run=null
  controller.show_hud()
  renderer.player_texture=load(db.table("characters")[character].generated_sprite)
  if not saves.data.settings.get("tutorial_seen",false): controller.notices.add("first_move","移動してGemへ近づくと回収できます。攻撃は自動。結晶は近づいて採掘。",3)
@@ -146,7 +150,10 @@ func _process(delta: float) -> void:
  ui_elapsed_us+=Time.get_ticks_usec()-started
  ui_samples+=1
 func _input(event: InputEvent) -> void:
- if event is InputEventKey and event.echo and event.keycode in [KEY_ENTER,KEY_SPACE,KEY_ESCAPE]: get_viewport().set_input_as_handled()
+ if not event is InputEventKey: return
+ if event.echo and event.keycode in [KEY_ENTER,KEY_SPACE,KEY_ESCAPE]: get_viewport().set_input_as_handled(); return
+ # Gameplay shortcuts must precede native Tab focus traversal.
+ if controller!=null and controller.current=="HUD" and event.keycode in [KEY_ESCAPE,KEY_P,KEY_TAB,KEY_M,KEY_E] and controller.key(event): get_viewport().set_input_as_handled()
 func _unhandled_input(event: InputEvent) -> void:
  if event is InputEventKey and controller!=null and controller.key(event): get_viewport().set_input_as_handled()
 func _notification(what: int) -> void:

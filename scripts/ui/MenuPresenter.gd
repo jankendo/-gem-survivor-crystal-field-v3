@@ -28,9 +28,9 @@ func blessing() -> void:
 func settings() -> void:
  var saved: Dictionary=ui.app.saves.data.settings
  var effective: String=ui.app.effective_profile()
- ui.view.text("SettingsScreen","Info","変更は即時反映・自動保存します。UIは縮小せず、描画品質はworldのみ変更します。\n選択品質: "+profile_name(str(saved.profile))+" / 有効品質: "+profile_name(effective)+("（一時override）" if effective!=saved.profile else ""))
+ ui.view.text("SettingsScreen","Info","変更は即時反映・自動保存します。ゲーム処理は常に60Hz。UIは縮小せず、品質は世界描画のみ変更します。\n選択品質: "+profile_name(str(saved.profile))+" / 有効品質: "+profile_name(effective)+("（一時的な自動変更）" if effective!=saved.profile else ""))
  ui.view.text("SettingsScreen","Profile","品質: "+profile_name(str(saved.profile)))
- ui.view.text("SettingsScreen","FPS","描画: %d FPS（simulationは60Hz）" % int(saved.render_fps))
+ ui.view.text("SettingsScreen","FPS","描画: %d FPS" % int(saved.render_fps))
  ui.view.text("SettingsScreen","Scale","UI文字サイズ: %d%%" % roundi(100*float(saved.get("ui_scale",1))))
  ui.view.node("SettingsScreen","Fullscreen").disabled=OS.has_feature("mobile")
  ui.view.text("SettingsScreen","Fullscreen","全画面: "+("ON" if saved.fullscreen else "OFF"))
@@ -68,6 +68,7 @@ func shop() -> void:
  ui.view.text("ShopScreen","Buy","最大Lv" if maxed else "購入済み" if owned and not is_meta else "購入 %d貨" % cost)
  var detail := strings.name(entry[0],entry[1])+"\n"+str(d.get("description_ja",d.get("trait_ja","")))
  detail+="\n"+("永久強化: Lv%d → %d / 最大%d" % [level,mini(level+1,int(d.max_level)),int(d.max_level)] if is_meta else "永久解放 — 購入後、次のランから選択候補になります。\n条件: "+strings.condition(ShopSystem.new().condition(entry[0],entry[1],ui.app.db)))
+ if not is_meta: detail+="\n"+ConditionSystem.new().progress_label(data,ShopSystem.new().condition(entry[0],entry[1],ui.app.db))
  ui.view.text("ShopScreen","Info",detail)
  ui.view.text("ShopScreen","Reason",reason)
  buy.tooltip_text=reason
@@ -77,7 +78,7 @@ func collection() -> void:
  if collection_mode:
   for id in ui.app.db.table("quests"):
    var d: Dictionary=ui.app.db.table("quests")[id]
-   text+=("✓ 達成済み" if data.progression.quests.has(id) else "○ 進行中")+" — "+str(d.name_ja)+"\n"+str(d.description_ja)+"\n\n"
+   text+=("✓ 達成済み" if data.progression.quests.has(id) else "○ 進行中")+" — "+str(d.name_ja)+"\n"+str(d.description_ja)+"\n"+ConditionSystem.new().progress_label(data,d.condition)+"\n\n"
   if text.is_empty(): text="クエストはありません。探索で記録を増やしましょう。"
  else:
   text="図鑑登録: %d / 累計ラン: %d\n\n" % [data.progression.collection.size(),data.profile.runs]
@@ -91,7 +92,8 @@ func collection() -> void:
 func result() -> void:
  var r: RunController=ui.app.run
  var p: ProgressionState=r.state.progression
- var status := "クリア" if r.state.boss_stage>=3 and p.bosses>=3 else "死亡" if r.state.player.hp<=0 else "ラン終了"
+ var cleared: bool=r.state.boss_stage>=3 and p.bosses>=3
+ var status := "クリア済み・死亡" if cleared and r.state.player.hp<=0 else "クリア" if cleared else "死亡" if r.state.player.hp<=0 else "ラン終了"
  var text := "%s\n生存 %02d:%02d / 最終Lv%d\n敵撃破 %d / ボス撃破 %d / Gem回収 %d\nラン報酬 %d貨 / 所持 %d貨\n" % [status,r.state.tick/3600,(r.state.tick/60)%60,p.level,p.kills,p.bosses,p.gems,r.state.settlement_reward,ui.app.saves.data.profile.currency]
  if r.state.player.hp<=0: text+="死因: "+strings.damage_name(r.state.last_damage_source)+"\n"
  var sources: Array=r.damage.totals.keys()
@@ -103,7 +105,10 @@ func result() -> void:
   for source in sources: text+="%s: %.0f（%.1f%%）\n" % [strings.damage_name(str(source)),r.damage.totals[source],100*float(r.damage.totals[source])/maxf(1,r.damage.total())]
  text+="\n完成した進化: "
  for id in p.evolutions.values(): text+=strings.name("evolutions",str(id))+" / "
- if p.evolutions.is_empty(): text+="なし（武器最大Lvと対応Passiveで目指せます）"
+ if p.evolutions.is_empty(): text+="なし（武器最大Lvと対応パッシブで目指せます）"
+ text+="\n連携: "
+ for combo in r.combos.active: text+=str(combo.display_name_ja)+" / "
+ if r.combos.active.is_empty(): text+="なし（対応する武器の組合せで発動）"
  text+="\n新しいクエスト達成: %d件\n次の探索: 図鑑で条件を確認 → ショップで永久解放" % maxi(0,ui.app.saves.data.progression.quests.size()-ui.app.run_start_quests)
  ui.view.text("ResultScreen","Title",status+" — リザルト")
  ui.view.text("ResultScreen","Info",text)

@@ -34,6 +34,8 @@ var reused := 0
 var allocations := 0
 # Conservative lifetime bound, updated only at spawn; never shrinks on removal.
 var maximum_radius := 0.0
+# Derived lookup for presentation; updated only by lifecycle mutations.
+var boss_id := -1
 
 func _init(initial_capacity: int = 600) -> void:
  reserve(initial_capacity)
@@ -100,6 +102,7 @@ func spawn(type_id: int, pos: Vector2, definition: Dictionary, health_scale: flo
  dense[count] = i
  sparse[i] = count
  count += 1
+ if (type_id<0 or flags[i]&1) and not alive(boss_id): boss_id=entity_id(i)
  return entity_id(i)
 
 func entity_id(i: int) -> int: return (generation[i] << SLOT_BITS) | i
@@ -120,4 +123,11 @@ func remove(id: int) -> bool:
  generation[i] += 1
  free_slots[free_count] = i
  free_count += 1
+ if id==boss_id:
+  boss_id=-1
+  for n in range(count):
+   var candidate:=dense[n]
+   if types[candidate]<0 or flags[candidate]&1:
+    boss_id=entity_id(candidate)
+    break
  return true

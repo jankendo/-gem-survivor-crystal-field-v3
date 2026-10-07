@@ -22,6 +22,13 @@ func choices() -> void:
   else:
    var owned: Dictionary=p.weapons if c[0]=="weapons" else p.passives
    var before := int(owned.get(c[1],0))
+   if before>=int(d.max_level):
+    button.disabled=true
+    var label: Label=button.get_node("CardMargin/CardText")
+    label.text=content+"最大Lv%d — これ以上は強化できません。" % before
+    button.tooltip_text=label.text
+    button.accessibility_name=label.text
+    continue
    content+=("武器" if c[0]=="weapons" else "パッシブ")+" / "+("新規" if before==0 else "強化")+" Lv%d → %d（最大%d）\n" % [before,before+1,d.max_level]
    if c[0]=="weapons":
     var old: Dictionary=StatResolver.new().resolve(c[1],r.state,ui.app.db,false)
@@ -54,13 +61,14 @@ func choices() -> void:
   var label: Label=button.get_node("CardMargin/CardText")
   label.text=content
   button.tooltip_text=content
+  button.accessibility_name=content
   button.custom_minimum_size.y=maxf(88,label.get_combined_minimum_size().y+16)
  var rerolls := maxi(0,1+int(r.state.player.stats.get("rerolls",0))-p.rerolls_used)
  var banishes := maxi(0,1+p.banishes_bonus+int(r.state.player.stats.get("banishes",0))-p.banishes_used)
- for pair in [["Reroll",rerolls,"再抽選"],["Banish",banishes,"封印"],["Skip",p.skips,"スキップ"]]:
+ for pair in [["Reroll",rerolls,"再抽選"],["Banish",banishes,"末尾封印"],["Skip",p.skips,"スキップ"]]:
   ui.view.text("LevelUpPanel",pair[0],"%s%d" % [pair[2],pair[1]] if ui.app.ui.size.y<500 else "%s（残り%d）" % [pair[2],pair[1]])
   ui.view.node("LevelUpPanel",pair[0]).disabled=int(pair[1])<=0
- ui.view.text("LevelUpPanel","Reason","1つ選択。数字は操作の残り回数（0は使用不可）。")
+ ui.view.text("LevelUpPanel","Reason","1つ選択。封印は最後の候補を除外。数字は残り回数。")
  ui.view.focus("LevelUpPanel")
 func equipment() -> void:
  var p: ProgressionState=ui.app.run.state.progression

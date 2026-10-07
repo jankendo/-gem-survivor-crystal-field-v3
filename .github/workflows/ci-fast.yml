@@ -27,15 +27,29 @@ jobs:
             curl -fL https://github.com/godotengine/godot-builds/releases/download/4.7-stable/Godot_v4.7-stable_linux.x86_64.zip -o /tmp/godot.zip
             unzip -o /tmp/godot.zip -d .tools
           fi
+      - name: Install Japanese font and virtual display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk xvfb
       - name: Import
         run: python tools/run_godot.py --headless --editor --path . --quit
       - name: Gate
         run: |
           python tools/validate_data.py
           python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
+          python tools/run_godot.py --headless --path . --script res://tests/ui_flow.gd
+          python tools/run_godot.py --headless --path . --script res://tests/ui_performance.gd
+      - name: Native rendering and GUI input gate
+        run: |
+          xvfb-run -a -s "-screen 0 2560x1440x24" python tools/run_godot.py --audio-driver Dummy --display-driver x11 --path . --script res://tests/test_runner.gd -- --category=UI
+          for size in 844x390 1280x720 1024x768; do
+            xvfb-run -a -s "-screen 0 2560x1440x24" python tools/run_godot.py --audio-driver Dummy --display-driver x11 --path . --script res://tests/ui_capture.gd -- --size="$size"
+          done
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: ci-fast-evidence
-          path: test-output/*.json
+          path: |
+            test-output/*.json
+            docs/qa/evidence/ui-screenshots/**/*.png
           if-no-files-found: error

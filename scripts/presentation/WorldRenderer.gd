@@ -87,6 +87,9 @@ func _draw() -> void:
  for n in range(field_positions.size()):
   var p := field_positions[n]
   if field_textures.has(field_kinds[n]): draw_texture_rect(field_textures[field_kinds[n]],Rect2(p-Vector2(24,24),Vector2(48,48)),false)
+  else:
+   draw_rect(Rect2(p-Vector2(16,16),Vector2(32,32)),Color(.1,.3,.4))
+   draw_rect(Rect2(p-Vector2(16,16),Vector2(32,32)),Color(.6,1,1),false,3)
  for p in gem_positions:
   if p.distance_squared_to(player_position) < 900*900: draw_circle(p,4,Color(.2,1,.9))
  for n in range(mini(deployed_positions.size(),8 if profile=="ios_ultra" else 32)):
@@ -101,4 +104,6 @@ func _draw() -> void:
 
 func configure(db: GameDatabase) -> void:
  enemy_renderer.configure(db)
- for id in db.table("field_gimmicks"): field_textures[id] = load(db.table("field_gimmicks")[id].generated_icon)
+ for id in db.table("field_gimmicks"):
+  var path: String=str(db.table("field_gimmicks")[id].get("generated_icon",""))
+  if not path.is_empty() and ResourceLoader.exists(path): field_textures[id]=load(path)

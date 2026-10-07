@@ -60,7 +60,9 @@ func flush() -> bool:
  if blocked_load:
   last_error = ERR_FILE_CORRUPT
   return false
- if not dirty: return true
+ if not dirty:
+  last_error=OK
+  return true
  if not migration.valid(data):
   last_error = ERR_INVALID_DATA
   return false
@@ -78,9 +80,10 @@ func flush() -> bool:
  var absolute := ProjectSettings.globalize_path(path)
  if FileAccess.file_exists(path):
   var previous = parse_file(path)
-  if migration.valid(previous):
-   last_error = DirAccess.copy_absolute(absolute,absolute + ".bak")
-   if last_error != OK: return false
+  var backup:=absolute+".bak" if migration.valid(previous) else absolute+".corrupt"
+  if not migration.valid(previous) and FileAccess.file_exists(backup): backup+="."+str(Time.get_unix_time_from_system())
+  last_error = DirAccess.copy_absolute(absolute,backup)
+  if last_error != OK: return false
  last_error = DirAccess.rename_absolute(ProjectSettings.globalize_path(temp),absolute)
  if last_error != OK: return false
  last_error = OK
@@ -147,3 +150,18 @@ func finish_purchase(before: Dictionary, was_dirty: bool) -> bool:
   if FileAccess.file_exists(path+".tmp"): DirAccess.remove_absolute(ProjectSettings.globalize_path(path+".tmp"))
  purchase_busy = false
  return success
+
+func recover_blocked() -> bool:
+ if not blocked_load: return flush()
+ for candidate in [path,path+".bak",path+".tmp"]:
+  if not FileAccess.file_exists(candidate): continue
+  var value=parse_file(candidate)
+  if not migration.valid(value): continue
+  data=migration.normalize(value)
+  blocked_load=false
+  load_status="recovered"
+  dirty=candidate!=path
+  if flush(): return true
+  return false
+ last_error=ERR_FILE_CORRUPT
+ return false

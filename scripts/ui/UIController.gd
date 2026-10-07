@@ -1,5 +1,6 @@
 extends RefCounted
 class_name UIController
+const PHASE_SCREEN := {"RUNNING":"HUD","PAUSED":"PauseMenu","LEVEL_UP":"LevelUpPanel","CONTRACT":"ContractPanel","CLEAR":"RewardPanel","RESULT":"ResultScreen"}
 # Navigation/command boundary; views never own gameplay phase or currency.
 var app
 var view := UIView.new()
@@ -11,6 +12,7 @@ var notices := UINotifications.new()
 var menu: MenuPresenter
 var progression: ProgressionPresenter
 var hud_presenter: HUDPresenter
+var feedback: GameplayFeedback
 var characters: Array = []
 var blessings: Array = []
 var character_index := 0
@@ -29,6 +31,7 @@ func initialize(root) -> void:
  menu=MenuPresenter.new(self)
  progression=ProgressionPresenter.new(self)
  hud_presenter=HUDPresenter.new(self)
+ feedback=GameplayFeedback.new(self)
  characters=app.db.table("characters").keys()
  blessings=app.db.table("blessings").keys()
  bind("TitleScreen","Start",show_character)
@@ -102,6 +105,9 @@ func show_panel(name: String) -> void:
  current=name
  app.reset_input()
  view.present(name)
+ if name=="TitleScreen":
+  view.node(name,"Start").disabled=app.saves.blocked_load
+  if app.saves.blocked_load: view.text(name,"Reason","保存データの復旧待ちです。元データを保護するため、開始・購入を停止しています。")
 func show_hud() -> void:
  if app.run==null: return
  if app.run.state.phase!="RUNNING": sync_phase(); return
@@ -165,11 +171,13 @@ func pause_toggle() -> void:
  elif app.run.pause():
   history.clear()
   show_panel("PauseMenu")
-  view.text("PauseMenu","Info","simulationと入力は停止しています。シード: "+str(app.run.state.seed_value))
+  view.text("PauseMenu","Info","ゲーム処理と入力は停止しています。シード: "+str(app.run.state.seed_value))
 func choose(index: int) -> void:
  if app.run==null or current!="LevelUpPanel": return
  var before: Dictionary=app.run.state.progression.evolutions.duplicate()
- if not app.run.select(index): return
+ if not app.run.select(index):
+  view.text("LevelUpPanel","Reason","この候補は選べません。最大Lv・装備枠を確認し、他の候補を選んでください。")
+  return
  progression.progression_feedback(before)
  if not app.saves.data.settings.get("tutorial_seen",false):
   app.saves.data.settings.tutorial_seen=true
@@ -193,7 +201,7 @@ func continue_endless() -> void:
  sync_phase()
 func sync_phase() -> void:
  if app.run==null or current=="SystemDialog": return
- var screen: String={"RUNNING":"HUD","PAUSED":"PauseMenu","LEVEL_UP":"LevelUpPanel","CONTRACT":"ContractPanel","CLEAR":"RewardPanel","RESULT":"ResultScreen"}.get(app.run.state.phase,"SystemDialog")
+ var screen: String=PHASE_SCREEN.get(app.run.state.phase,"SystemDialog")
  if app.run.state.phase=="PAUSED" and current in ["SettingsScreen","EquipmentPanel","ConfirmPanel","WarpPanel","SystemDialog"]: return
  if current==screen: return
  if screen=="HUD": show_hud(); return
@@ -202,6 +210,7 @@ func sync_phase() -> void:
  elif screen=="ContractPanel":
   var d: Dictionary=app.db.table("rune_contracts").get(app.run.pending_contract,{})
   view.text(screen,"Info",str(d.get("name_ja","契約"))+"\n"+str(d.get("description_ja",""))+"\n断ってもランを続けられます。")
+ elif screen=="PauseMenu": view.text(screen,"Info","ゲーム処理と入力は停止しています。シード: "+str(app.run.state.seed_value))
  elif screen=="RewardPanel": view.text(screen,"Info","15分の結晶王を撃破しました！終了して報酬を保存するか、同じビルドでエンドレスを続けられます。")
  elif screen=="ResultScreen": menu.result()
 func end_run() -> void:
@@ -213,6 +222,7 @@ func end_run() -> void:
 func home() -> void:
  if app.run!=null and app.run.state.phase!="RESULT": return
  app.run=null
+ feedback.previous_run=null
  history.clear()
  show_panel("TitleScreen")
 func result_text() -> String:
@@ -308,40 +318,54 @@ func system_error(message: String,is_fatal: bool=false) -> void:
  fatal=is_fatal
  show_panel("SystemDialog")
  view.text("SystemDialog","Info",message)
- view.text("SystemDialog","Retry","再起動" if fatal else "保存を再試行")
+ view.text("SystemDialog","Retry","再起動" if fatal else "復旧データを再確認" if app.saves.blocked_load else "保存を再試行")
  view.text("SystemDialog","Close","終了" if fatal else "閉じる")
 func poll_system() -> void:
- if app.saves.last_error==OK or (app.saves.last_error==last_save_error and current!="SystemDialog"): return
+ if app.saves.last_error==OK:
+  last_save_error=OK
+  return
+ if app.saves.last_error==last_save_error: return
  last_save_error=app.saves.last_error
+ print("Save status: ",app.saves.load_status," reason=",last_save_error)
  system_error("保存データを読み込めませんでした。元ファイルを保持し、上書きを止めています。保存を復旧するまで購入できません。" if app.saves.blocked_load else "保存できませんでした。元データは保持しています。空き容量や保存先を確認して、再試行してください。購入が失敗した場合、貨と商品は変更されません。")
 func retry_save() -> void:
  if fatal: app.get_tree().reload_current_scene(); return
- if app.saves.flush(): last_save_error=OK; close_system()
+ if app.saves.recover_blocked():
+  last_save_error=OK
+  view.text("TitleScreen","Reason","✓ 保存データの復旧・保存が完了しました。")
+  close_system()
  else: view.text("SystemDialog","Reason","まだ保存できません。元データを保持しています。")
 func close_system() -> void:
  if fatal: app.get_tree().quit(); return
  var target: String=history.pop_back() if not history.is_empty() else "TitleScreen"
  if target=="HUD":
-  current=target
+  # Force phase presentation, not only the cached name, when dismissing scrim.
+  current=""
   app.run.resume()
   sync_phase()
  else: show_panel(target)
 func key(event: InputEventKey) -> bool:
  if not event.pressed or event.echo: return false
  if event.keycode==KEY_ESCAPE:
+  if not gate.allow("keyboard_navigation",-1,220): return true
   if current=="HUD" or current=="LevelUpPanel" or current=="ContractPanel": pause_toggle()
   elif current=="ResultScreen": home()
   elif current!="TitleScreen": back()
   return true
+ if event.keycode==KEY_P and current in ["HUD","PauseMenu","LevelUpPanel","ContractPanel"]:
+  if gate.allow("keyboard_navigation",-1,220): pause_toggle()
+  return true
  if current=="HUD":
   match event.keycode:
-   KEY_P: pause_toggle()
-   KEY_TAB: show_equipment()
+   KEY_TAB:
+    if gate.allow("keyboard_navigation",-1,220): show_equipment()
    KEY_M: interact()
    KEY_E: enter_warp()
    _: return false
   return true
- if current=="LevelUpPanel" and event.keycode>=KEY_1 and event.keycode<=KEY_3: choose(event.keycode-KEY_1); return true
+ if current=="LevelUpPanel" and event.keycode>=KEY_1 and event.keycode<=KEY_3:
+  if gate.allow("activation",-1,220): choose(event.keycode-KEY_1)
+  return true
  if event.keycode in [KEY_W,KEY_A,KEY_S,KEY_D]:
   var owner: Control = app.get_viewport().gui_get_focus_owner()
   if owner is LineEdit: return false
@@ -355,6 +379,7 @@ func dispose() -> void:
  if menu!=null: menu.ui=null
  if progression!=null: progression.ui=null
  if hud_presenter!=null: hud_presenter.ui=null
+ if feedback!=null: feedback.ui=null; feedback.previous_run=null
  view.app=null
  app=null
 

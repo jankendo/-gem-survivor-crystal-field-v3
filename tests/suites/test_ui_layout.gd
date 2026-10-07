@@ -9,6 +9,8 @@ func run(t: TestContext,tree: SceneTree) -> void:
  await tree.process_frame
  app.start_run("noah","attack",60606)
  app.run.pause()
+ for id in app.db.table("weapons").keys().slice(0,6): app.run.state.progression.weapons[id]=1
+ for id in app.db.table("passives").keys().slice(0,6): app.run.state.progression.passives[id]=1
  var inspector:=UILayoutInspector.new()
  var resolutions: Array=[Vector2i(1280,720),Vector2i(1366,768),Vector2i(1600,900),Vector2i(1920,1080),Vector2i(2560,1440),Vector2i(1280,800),Vector2i(1024,768),Vector2i(844,390),Vector2i(852,393),Vector2i(874,402),Vector2i(932,430),Vector2i(1024,768),Vector2i(1080,810),Vector2i(1180,820),Vector2i(1194,834),Vector2i(1366,1024)]
  var report: Array=[]
@@ -27,6 +29,9 @@ func run(t: TestContext,tree: SceneTree) -> void:
     app.run.state.progression.choices=[["weapons","magic_bolt"],["passives","might"],["weapons","ice_orbit"]]
     app.controller.progression.choices()
    if name=="EquipmentPanel": app.controller.progression.equipment()
+   if name=="LevelUpPanel":
+    var card: Label=app.controller.view.node(name,"Choice0").get_node("CardMargin/CardText")
+    card.text=long_text
    for settle in range(5): await tree.process_frame
    var errors:=inspector.inspect(app,name)
    t.check(errors.is_empty(),str(size)+" "+name+" "+str(errors))
@@ -34,6 +39,17 @@ func run(t: TestContext,tree: SceneTree) -> void:
    t.check(focus==null or focus.is_visible_in_tree(),str(size)+" no hidden focus "+name)
    t.check(focus==null or inspector.visible_rect(focus).has_area(),str(size)+" focused control has visible hit area "+name)
    report.append({"resolution":str(size),"platform":"phone safe-area fixture" if n in range(7,11) else "tablet safe-area fixture" if n>=11 else "desktop fixture","screen":name,"errors":errors})
+  app.saves.data.settings.ui_scale=1.25
+  app.apply_profile()
+  for name in ["TitleScreen","CharacterSelect","LevelUpPanel","PauseMenu","ResultScreen","HUD"]:
+   if name=="HUD": app.run.state.phase="RUNNING"; app.controller.show_hud()
+   else: app.controller.show_panel(name)
+   for settle in range(5): await tree.process_frame
+   var scale_errors:=inspector.inspect(app,name)
+   t.check(scale_errors.is_empty(),str(size)+" 125% "+name+" "+str(scale_errors))
+   report.append({"resolution":str(size),"screen":name,"text_scale":1.25,"errors":scale_errors})
+  app.saves.data.settings.ui_scale=1.0
+  app.apply_profile()
   app.run.state.phase="RUNNING"
   app.controller.show_hud()
   await tree.process_frame
