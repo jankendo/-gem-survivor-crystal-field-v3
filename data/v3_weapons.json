@@ -1,7 +1,7 @@
 {
   "magic_bolt": {
     "archetype": "projectile",
-    "damage": 7.74,
+    "damage": 5.4,
     "cooldown": 0.62,
     "range": 900,
     "radius": 100,
@@ -62,7 +62,10 @@
     "status": "",
     "category": "melee",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "knockback": 100
+    }
   },
   "laser_lance": {
     "archetype": "beam",
@@ -75,7 +78,10 @@
     "status": "",
     "category": "laser",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "mining": 0.3
+    }
   },
   "poison_mist": {
     "archetype": "aura",
@@ -101,7 +107,10 @@
     "status": "",
     "category": "summon",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "homing": true
+    }
   },
   "crystal_mine": {
     "archetype": "deploy",
@@ -114,7 +123,11 @@
     "status": "",
     "category": "crystal",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "trap": true,
+      "duration_ticks": 360
+    }
   },
   "black_hole": {
     "archetype": "deploy",
@@ -127,7 +140,11 @@
     "status": "slow",
     "category": "area",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "gem_pull": 450,
+      "pull": 120
+    }
   },
   "rune_gate": {
     "archetype": "deploy",
@@ -179,7 +196,10 @@
     "status": "",
     "category": "ranged",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "bounce": 1
+    }
   },
   "sonic_wave": {
     "archetype": "melee",
@@ -192,7 +212,10 @@
     "status": "",
     "category": "knockback",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "knockback": 220
+    }
   },
   "gem_turret": {
     "archetype": "projectile",
@@ -218,7 +241,10 @@
     "status": "",
     "category": "melee",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "mining": 0.8
+    }
   },
   "wall_bounce_blaster": {
     "archetype": "projectile",
@@ -231,7 +257,10 @@
     "status": "",
     "category": "ranged",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "bounce": 4
+    }
   },
   "drill_charge": {
     "archetype": "melee",
@@ -244,7 +273,10 @@
     "status": "",
     "category": "crystal",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "mining": 1.5
+    }
   },
   "mine_lantern": {
     "archetype": "aura",
@@ -257,7 +289,11 @@
     "status": "",
     "category": "deploy",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "gem_pull": 350,
+      "mining": 0.4
+    }
   },
   "relic_chain": {
     "archetype": "melee",
@@ -296,7 +332,11 @@
     "status": "poison",
     "category": "poison",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "trap": true,
+      "duration_ticks": 300
+    }
   },
   "frost_wall": {
     "archetype": "deploy",
@@ -309,7 +349,10 @@
     "status": "slow",
     "category": "deploy",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "ward": 6
+    }
   },
   "coin_orbit": {
     "archetype": "orbit",
@@ -335,7 +378,10 @@
     "status": "",
     "category": "knockback",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "knockback": 180
+    }
   },
   "void_mirror": {
     "archetype": "projectile",
@@ -348,7 +394,11 @@
     "status": "",
     "category": "ranged",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "bounce": 2,
+      "homing": true
+    }
   },
   "magma_core": {
     "archetype": "explosion",
@@ -387,7 +437,10 @@
     "status": "",
     "category": "deploy",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "ward": 12
+    }
   },
   "gravity_anchor": {
     "archetype": "deploy",
@@ -400,6 +453,10 @@
     "status": "slow",
     "category": "area",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "gem_pull": 500,
+      "pull": 150
+    }
   }
 }

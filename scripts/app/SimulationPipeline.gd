@@ -16,6 +16,7 @@ func tick(run, direction: Vector2) -> void:
  death.tick(state,run.enemies,run.gems,run.damage,run.map)
  run.damage.begin_tick()
  run.damage.elite_multiplier = (1+float(state.player.stats.get("elite_damage",0)))*float(state.player.stats.get("contract_elite",1))
+ run.damage.boss_multiplier=float(state.player.stats.get("char_boss_damage",1))
  run.damage.normal_multiplier = float(state.player.stats.get("contract_normal",1))
  status.tick(run.enemies,state.player,state.tick)
  var player := state.player
@@ -38,7 +39,7 @@ func tick(run, direction: Vector2) -> void:
  if player.hp < player.max_hp*.3: move_mult += float(stat.get("low_hp_move",0))
  if not state.progression.rooms.has(context_room): move_mult += float(stat.get("explore_move",0))
  player.position = run.map.move(player.position,direction.limit_length() * player.speed * move_mult / 60)
- player.hp = minf(player.max_hp,player.hp + float(stat.get("regen",0)) / 60)
+ player.hp = minf(player.max_hp,player.hp + float(stat.get("regen",0))*float(stat.get("char_healing",1)) / 60)
  if not run.warp.active:
   run.encounter.tick(state,run.db,run.map,run.enemies)
   run.encounter.boss_schedule(state,run.db,run.map,run.enemies)
@@ -49,6 +50,7 @@ func tick(run, direction: Vector2) -> void:
  enemy_sim.move(state,run.enemies,run.map,run.db,run.damage)
  if profiling: timings["enemy_us"] = Time.get_ticks_usec() - stamp
  stamp = Time.get_ticks_usec()
+ run.gems.tick_magnets(player.position,run.map)
  run.spatial.begin_tick()
  for n in range(run.enemies.count):
   var i: int = run.enemies.dense[n]
@@ -62,8 +64,9 @@ func tick(run, direction: Vector2) -> void:
   run.spatial.insert(SpatialWorld.PROJECTILE,i,run.projectiles.positions[i])
  if profiling: timings["spatial_us"] = Time.get_ticks_usec() - stamp
  stamp = Time.get_ticks_usec()
- run.weapons.tick(state,run.enemies,run.spatial,run.projectiles,run.damage)
- run.projectiles.tick(run.enemies,run.spatial,run.damage)
+ run.deployments.tick(run.enemies,run.spatial,run.damage)
+ run.weapons.tick(state,run.enemies,run.spatial,run.projectiles,run.damage,run)
+ run.projectiles.tick(run.enemies,run.spatial,run.damage,run.map)
  run.combos.tick(state,run.db,run.enemies,run.spatial,run.damage)
  if profiling: timings["weapon_us"] = Time.get_ticks_usec() - stamp
  enemy_sim.contact(state,run.enemies,run.spatial,run.damage,run.db)
@@ -73,7 +76,7 @@ func tick(run, direction: Vector2) -> void:
   var id := scratch.ids[query_index]
   var value: int = run.gems.take(id)
   if value > 0:
-   level.collect(roundi(value*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
+   level.collect(roundi(value*float(stat.get("char_gem_value",1))*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
    player.hp = minf(player.max_hp,player.hp+float(stat.get("pickup_heal",0)))
  if state.phase == "RUNNING": level.offer(state,run.db,run.unlocked)
  if int(stat.get("recall_frequency",0))>0 and state.tick % maxi(60,600-int(stat.get("recall_frequency",0))) == 0:
@@ -81,7 +84,7 @@ func tick(run, direction: Vector2) -> void:
   for query_index in range(scratch.count):
    var id := scratch.ids[query_index]
    var value: int = run.gems.take(id)
-   if value>0: level.collect(roundi(value*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
+   if value>0: level.collect(roundi(value*float(stat.get("char_gem_value",1))*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
  var room: int = run.map.room_at(player.position)
  if room >= 0 and not state.progression.rooms.has(room) and not run.warp.active:
   state.progression.chain = state.progression.chain+1 if state.progression.resonance>0 else 1

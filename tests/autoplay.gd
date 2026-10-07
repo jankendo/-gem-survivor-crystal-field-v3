@@ -43,6 +43,15 @@ func autoplay() -> void:
     if run.enemies.warning[i]>0 and run.enemies.attack_target[i].distance_to(run.state.player.position)<150:
      direction = (run.state.player.position-run.enemies.attack_target[i]).normalized()
      if direction==Vector2.ZERO: direction = Vector2.RIGHT
+     var best_clearance := -1.0
+     for candidate in range(8):
+      var escape := Vector2.RIGHT.rotated(candidate*TAU/8)
+      var point := run.state.player.position+escape*140
+      if run.map.walkable(point,14):
+       var clearance := point.distance_squared_to(run.enemies.attack_target[i])
+       if clearance>best_clearance:
+        best_clearance=clearance
+        direction=escape
    if run.state.tick%120==0: run.interact()
    run.pipeline.tick(run,direction)
   reports.append({"build":build,"seed":60606,"phase":run.state.phase,"seconds":run.state.field_tick/60.0,"HP":run.state.player.hp,"last_damage_source":run.state.last_damage_source,"level":run.state.progression.level,"kills":run.state.progression.kills,"bosses":run.state.progression.bosses,"weapons":run.state.progression.weapons,"evolutions":run.state.progression.evolutions,"damage":run.damage.totals,"signature":run.signature(),"wall_seconds":(Time.get_ticks_usec()-start)/1e6})

@@ -19,9 +19,10 @@ func enter(run, portal_index: int) -> bool:
  visits += 1
  room_type = choose(run.state.seed_value,visits,run.db)
  stream = run.state.rng.stream_rng("warp",visits)
- suspended = {"enemies":run.enemies,"gems":run.gems,"projectiles":run.projectiles,"map":run.map,"position":run.state.player.position,"rng":run.state.rng,"budget":run.encounter.budget,"threat":run.encounter.threat}
+ suspended = {"enemies":run.enemies,"gems":run.gems,"deployments":run.deployments,"projectiles":run.projectiles,"map":run.map,"position":run.state.player.position,"rng":run.state.rng,"budget":run.encounter.budget,"threat":run.encounter.threat}
  run.enemies = EnemyWorld.new()
  run.gems = PickupWorld.new()
+ run.deployments = DeployWorld.new()
  run.projectiles = ProjectileWorld.new()
  run.map = WorldGenerator.new()
  run.map.rooms.append(Rect2(-650,-400,1300,800))
@@ -50,6 +51,7 @@ func leave(run) -> void:
  var rewards: PickupWorld = run.gems
  run.enemies = suspended.enemies
  run.gems = suspended.gems
+ run.deployments = suspended.deployments
  run.projectiles = suspended.projectiles
  run.map = suspended.map
  for i in range(rewards.capacity):

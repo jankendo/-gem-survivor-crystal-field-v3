@@ -4,6 +4,7 @@ class_name EnemyWorld
 const SLOT_BITS := 20
 const SLOT_MASK := (1 << SLOT_BITS) - 1
 var positions := PackedVector2Array()
+var impulses := PackedVector2Array()
 var velocities := PackedVector2Array()
 var hp := PackedFloat64Array()
 var max_hp := PackedFloat64Array()
@@ -42,6 +43,7 @@ func reserve(size: int) -> void:
  capacity = maxi(size, capacity)
  positions.resize(capacity)
  velocities.resize(capacity)
+ impulses.resize(capacity)
  hp.resize(capacity)
  max_hp.resize(capacity)
  radius.resize(capacity)
@@ -77,6 +79,7 @@ func spawn(type_id: int, pos: Vector2, definition: Dictionary, health_scale: flo
  reused += int(generation[i] > 1)
  positions[i] = pos
  velocities[i] = Vector2.ZERO
+ impulses[i] = Vector2.ZERO
  hp[i] = float(definition.get("hp", 4)) * health_scale
  max_hp[i] = hp[i]
  radius[i] = float(definition.get("radius", 18))

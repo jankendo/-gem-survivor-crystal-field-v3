@@ -10,6 +10,7 @@ var enemy_renderer: EnemyRenderer
 var player_position := Vector2.ZERO
 var player_texture: Texture2D
 var gem_positions := PackedVector2Array()
+var deployed_positions := PackedVector2Array()
 var projectile_positions := PackedVector2Array()
 var room_rects: Array[Rect2] = []
 var corridor_rects: Array[Rect2] = []
@@ -45,6 +46,8 @@ func present(run: RunController, size: Vector2) -> void:
  gem_positions.clear()
  for i in range(run.gems.capacity):
   if run.gems.active[i]: gem_positions.append(run.gems.positions[i])
+ deployed_positions.resize(run.deployments.count)
+ for n in range(run.deployments.count): deployed_positions[n]=run.deployments.positions[run.deployments.dense[n]]
  projectile_positions.resize(run.projectiles.count)
  for n in range(run.projectiles.count): projectile_positions[n] = run.projectiles.positions[run.projectiles.dense[n]]
  terrain.present(run.map)
@@ -71,6 +74,7 @@ func _draw() -> void:
   if field_textures.has(field_kinds[n]): draw_texture_rect(field_textures[field_kinds[n]],Rect2(p-Vector2(24,24),Vector2(48,48)),false)
  for p in gem_positions:
   if p.distance_squared_to(player_position) < 900*900: draw_circle(p,4,Color(.2,1,.9))
+ for n in range(mini(deployed_positions.size(),8 if profile=="ios_ultra" else 32)): draw_arc(deployed_positions[n],24,0,TAU,16,Color(.4,.6,1),2)
  for p in projectile_positions:
   if p.distance_squared_to(player_position) < 900*900: draw_circle(p,4,Color(1,.85,.4))
  for p in snapshot.warnings:

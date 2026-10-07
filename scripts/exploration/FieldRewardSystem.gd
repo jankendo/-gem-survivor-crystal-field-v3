@@ -54,26 +54,7 @@ func interact(run: RunController) -> bool:
     run.weapons.refresh(run.state,run.db)
     run.combos.refresh(run.state,run.db)
    return true
-  var cfg := run.db.config()
-  var amount := float(cfg.mining_hit_damage) * (1+float(run.state.player.stats.get("mining",0)))
-  run.damage.apply_field(self,i,amount,"field:mining")
-  if hp[i] <= 0:
-   active[i] = 0
-   crystals += 1
-   run.state.progression.terrain_crystals[run.map.terrain_index(positions[i])] += 1
-   record_gimmick(run,i)
-   if run.map.kinds[i]=="shortcut": run.state.progression.metrics.shortcut_walls=int(run.state.progression.metrics.get("shortcut_walls",0))+1
-   var reward := float(cfg.mining_reward)
-   reward *= (1+float(run.state.player.stats.get("mining_reward",0)))*float(run.state.player.stats.get("contract_crystal",1))
-   run.gems.add(positions[i],roundi(reward),run.map)
-   run.state.progression.currency += roundi(10*(1+float(run.state.player.stats.get("field_reward",0))))
-   if kinds[i]=="lightning_crystal":
-    var available: Array = run.db.table("rune_contracts").keys()
-    var rng = run.state.rng.stream_rng("contract",crystals)
-    run.pending_contract = available[rng.next_int(available.size())]
-    run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],250,scratch)
-    for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],30,"field:lightning")
-   # Damage death queue is drained on next fixed tick before it is cleared.
+  mine(run,i,float(run.db.config().mining_hit_damage)*(1+float(run.state.player.stats.get("mining",0))),"field:mining")
   return true
  var room := run.map.room_at(run.state.player.position)
  if room >= 0 and run.map.kinds[room]=="event" and event.is_empty() and run.state.field_tick>=14400:
@@ -85,3 +66,25 @@ func record_gimmick(run: RunController,i: int) -> void:
  var id: String=kinds[i]
  counters[id]=int(counters.get(id,0))+1
  if id=="lightning_crystal": counters.conductive_crystal=int(counters.get("conductive_crystal",0))+1
+
+func mine(run: RunController,i: int,amount: float,source: String) -> void:
+ if not active[i]: return
+ var cfg := run.db.config()
+ run.damage.apply_field(self,i,amount,source)
+ if hp[i] <= 0:
+  active[i] = 0
+  crystals += 1
+  run.state.progression.terrain_crystals[run.map.terrain_index(positions[i])] += 1
+  record_gimmick(run,i)
+  if run.map.kinds[i]=="shortcut": run.state.progression.metrics.shortcut_walls=int(run.state.progression.metrics.get("shortcut_walls",0))+1
+  var reward := float(cfg.mining_reward)
+  reward *= (1+float(run.state.player.stats.get("mining_reward",0)))*float(run.state.player.stats.get("contract_crystal",1))
+  run.gems.add(positions[i],roundi(reward),run.map)
+  run.state.progression.currency += roundi(10*(1+float(run.state.player.stats.get("field_reward",0))))
+  if kinds[i]=="lightning_crystal":
+   var available: Array = run.db.table("rune_contracts").keys()
+   var rng = run.state.rng.stream_rng("contract",crystals)
+   run.pending_contract = available[rng.next_int(available.size())]
+   run.spatial.query_circle(SpatialWorld.ENEMY,positions[i],250,scratch)
+   for hit_index in range(scratch.count): run.damage.apply(run.enemies,scratch.ids[hit_index],30,"field:lightning")
+  # Damage death queue is drained on next fixed tick before it is cleared.

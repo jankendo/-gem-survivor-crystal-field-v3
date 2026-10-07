@@ -5,6 +5,7 @@ var spatial: SpatialWorld
 var presentation := PresentationEvents.new()
 var normal_multiplier := 1.0
 var elite_multiplier := 1.0
+var boss_multiplier := 1.0
 var totals: Dictionary = {}
 var boss_damage := 0.0
 var normal_damage := 0.0
@@ -26,6 +27,7 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
  if world.hp[i] <= 0: return 0.0
  if source.begins_with("weapon:") or source.begins_with("combo:"):
   amount *= elite_multiplier if world.flags[i]&3 else normal_multiplier
+ if world.flags[i]&1: amount*=boss_multiplier
  if world.flags[i]&8: amount *= .6
  var actual := minf(world.hp[i], amount)
  world.hp[i] -= actual
@@ -43,6 +45,7 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
  return actual
 func apply_player(state: RunState, amount: float, source: String) -> void:
  if state.player.invulnerability > 0: return
+ amount*=float(state.player.stats.get("char_incoming",1))
  var reduction := float(state.player.stats.get("contract_incoming",1))*maxf(.58,1-float(state.player.stats.get("armor",0)))
  if source=="boss": reduction *= maxf(.6,1-float(state.player.stats.get("boss_armor",0)))
  reduction *= maxf(.7,1-float(state.player.stats.get("context_armor",0)))

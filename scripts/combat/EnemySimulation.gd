@@ -6,6 +6,7 @@ func move(state: RunState, enemies: EnemyWorld, map: WorldGenerator, db: GameDat
   var i := enemies.dense[n]
   var direction := (map.pursuit_target(enemies.positions[i],state.player.position) - enemies.positions[i]).normalized()
   var speed: float = enemies.speed[i] * (.52 if enemies.slow[i] > 0 else 1)
+  if enemies.shock[i]>0: speed=0
   if enemies.behaviors[i]==1:
    if enemies.action[i]==0:
     enemies.action[i] = 180
@@ -27,7 +28,8 @@ func move(state: RunState, enemies: EnemyWorld, map: WorldGenerator, db: GameDat
    if enemies.warning[i] == 1 and enemies.attack_target[i].distance_to(state.player.position) < float(db.config().boss_attack_radius):
     damage.apply_player(state, enemies.damage[i], "boss")
    if enemies.warning[i] > 0: speed = 0
-  enemies.velocities[i] = direction * speed
+  enemies.velocities[i] = direction * speed+enemies.impulses[i]
+  enemies.impulses[i]*=.85
   enemies.positions[i] = map.move(enemies.positions[i], enemies.velocities[i] / 60, minf(18,enemies.radius[i]))
   if enemies.poison[i] > 0 and enemies.periodic[i] == 0:
    damage.apply(enemies,enemies.entity_id(i),2,"status:poison")

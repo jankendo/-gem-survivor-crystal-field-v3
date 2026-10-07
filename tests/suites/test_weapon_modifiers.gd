@@ -1,0 +1,48 @@
+extends RefCounted
+func tags() -> Array: return ["unit","gameplay","deterministic"]
+func run(t: TestContext,_tree: SceneTree) -> void:
+ var db:=GameDatabase.new()
+ var run:=RunController.new(db,321)
+ var gem:=run.gems.add(Vector2(200,0),5,run.map)
+ run.spatial.begin_tick()
+ run.spatial.insert(SpatialWorld.GEM,gem,run.gems.positions[gem])
+ var modifier:=WeaponModifiers.new()
+ modifier.utility(run,db.table("v3_weapons").black_hole,Vector2.ZERO,100,1,"weapon:black_hole")
+ t.equal(run.gems.magnet_count,1,"black hole uses gem query")
+ var before:=run.gems.positions[gem].length()
+ run.gems.tick_magnets(Vector2.ZERO,run.map)
+ t.check(run.gems.positions[gem].length()<before,"gem pull moves simulation pickup")
+ run.gems.take(gem)
+ t.equal(run.gems.magnet_count,0,"pickup clears pull dense membership")
+ var reused:=run.gems.add(Vector2(200,0),5,run.map)
+ t.equal(run.gems.magnet_sparse[reused],-1,"reused gem has no stale magnet state")
+ var id:=run.enemies.spawn(0,Vector2(30,0),{"hp":100,"radius":18})
+ modifier.on_hit(run.enemies,id,Vector2.ZERO,db.table("v3_weapons").sonic_wave)
+ t.check(run.enemies.impulses[run.enemies.slot(id)].x>0,"sonic wave actual knockback")
+ run.map.rooms=[Rect2(-100,-100,200,200)]
+ run.map.corridors.clear()
+ run.map.kinds=["safe"]
+ run.projectiles.add(Vector2(90,0),Vector2(1200,0),1,"weapon:wall_bounce_blaster",0,2)
+ run.spatial.begin_tick()
+ run.projectiles.tick(run.enemies,run.spatial,run.damage,run.map)
+ var p:=run.projectiles.dense[0]
+ t.check(run.projectiles.velocities[p].x<0,"wall projectile reflection")
+ var seeking:=ProjectileWorld.new()
+ seeking.add(Vector2.ZERO,Vector2.UP*100,1,"weapon:drone_bit",0,0,true)
+ run.spatial.insert(SpatialWorld.ENEMY,id,Vector2(30,0))
+ seeking.tick(run.enemies,run.spatial,run.damage,run.map)
+ t.check(seeking.velocities[0].x>0,"drone seeker steers toward query target")
+ run.deployments.add(Vector2(30,0),50,10,"weapon:crystal_mine",3,db.table("v3_weapons").crystal_mine)
+ for tick in range(29): run.deployments.tick(run.enemies,run.spatial,run.damage)
+ t.equal(run.enemies.hp[run.enemies.slot(id)],100.0,"mine arm delay")
+ run.deployments.tick(run.enemies,run.spatial,run.damage)
+ t.equal(run.enemies.hp[run.enemies.slot(id)],90.0,"armed mine centralized damage")
+ t.equal(run.deployments.count,0,"mine consumed exactly once")
+ var main:=run.deployments
+ run.deployments.add(Vector2.ZERO,50,1,"weapon:frost_wall",1,db.table("v3_weapons").frost_wall)
+ var clock:=main.remaining[main.dense[0]]
+ run.warp.enter(run,0)
+ t.check(run.deployments!=main,"warp has separate deployment world")
+ run.warp.leave(run)
+ t.check(run.deployments==main,"main deployments restored")
+ t.equal(main.remaining[main.dense[0]],clock,"main deployment frozen during warp")

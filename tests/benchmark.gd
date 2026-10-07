@@ -41,8 +41,9 @@ func combat_tick(run: RunController, moving: bool = false, mobility: bool = fals
   if moving: run.enemies.positions[i] = run.enemies.positions[i].rotated(.008)
   if mobility: run.enemies.positions[i] = Vector2.RIGHT.rotated(run.state.tick*.035)*280
   run.spatial.insert(SpatialWorld.ENEMY,run.enemies.entity_id(i),run.enemies.positions[i])
- run.weapons.tick(run.state,run.enemies,run.spatial,run.projectiles,run.damage)
- run.projectiles.tick(run.enemies,run.spatial,run.damage)
+ run.deployments.tick(run.enemies,run.spatial,run.damage)
+ run.weapons.tick(run.state,run.enemies,run.spatial,run.projectiles,run.damage,run)
+ run.projectiles.tick(run.enemies,run.spatial,run.damage,run.map)
  for n in range(run.damage.death_count):
   var id := run.damage.death_ids[n]
   var i := run.enemies.slot(id)
@@ -91,6 +92,8 @@ func performance() -> Dictionary:
  var enemy: Array = []
  var spatial: Array = []
  var weapons: Array = []
+ var warm_objects := 0
+ var warm_memory := 0
  var allocations := run.enemies.allocations
  var initial_projectiles := run.projectiles.count
  run.pipeline.profiling = true
@@ -107,13 +110,16 @@ func performance() -> Dictionary:
   start = Time.get_ticks_usec()
   snapshot.capture(run.enemies)
   var prep := Time.get_ticks_usec()-start
+  if frame==20:
+   warm_objects=int(Performance.get_monitor(Performance.OBJECT_COUNT))
+   warm_memory=int(Performance.get_monitor(Performance.MEMORY_STATIC))
   if frame >= 20:
    total.append(sim)
    render.append(prep)
    enemy.append(run.pipeline.timings.get("enemy_us",0))
    spatial.append(run.pipeline.timings.get("spatial_us",0))
    weapons.append(run.pipeline.timings.get("weapon_us",0))
- return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":1000,"allocation_proxy":{"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
+ return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":1000,"engine_memory":{"warm_objects":warm_objects,"final_objects":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-warm_objects,"warm_static_bytes":warm_memory,"final_static_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"static_bytes_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"limit":"Godot live objects/static memory monitors, not cumulative heap allocation count"},"allocation_proxy":{"projectile_query_buffer_growth":run.projectiles.scratch.allocations,"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
 func stats(values: Array) -> Dictionary:
  values.sort()
  var sum := 0.0
