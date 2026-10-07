@@ -1,0 +1,5295 @@
+{
+  "boss_TTK": [
+    {
+      "TTK_seconds": 30.7954250913146,
+      "build_strength": 0.6,
+      "measured_DPS": 124.6938462
+    },
+    {
+      "TTK_seconds": 18.4772550547887,
+      "build_strength": 1.0,
+      "measured_DPS": 207.823077
+    },
+    {
+      "TTK_seconds": 10.2651416971049,
+      "build_strength": 1.8,
+      "measured_DPS": 374.0815386
+    }
+  ],
+  "limitation": "Repeatable combat fixture; utility descriptors are not a numerical value judgment. Boss TTK uses measured stationary build DPS; mechanics and human fun require playtest.",
+  "ok": true,
+  "seconds_per_scenario": 5,
+  "seed": 60606,
+  "weapon_results": [
+    {
+      "CC_uptime": 0.0,
+      "DPS": 172.726882,
+      "boss_DPS": 172.726882,
+      "coverage_uptime": 0.07,
+      "damage_per_target": 863.63441,
+      "kills_per_second": 2.0,
+      "overkill": 48.4588000000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 863.63441,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 321.938352,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.183333333333333,
+      "damage_per_target": 53.6563919999999,
+      "kills_per_second": 3.6,
+      "overkill": 87.2258400000004,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1609.69176,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 398.665233999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.223333333333333,
+      "damage_per_target": 19.9332617,
+      "kills_per_second": 4.4,
+      "overkill": 106.60936,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1993.32617,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 398.665233999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.223333333333333,
+      "damage_per_target": 6.64442056666666,
+      "kills_per_second": 4.4,
+      "overkill": 106.60936,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1993.32617,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 398.665233999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.223333333333333,
+      "damage_per_target": 3.32221028333333,
+      "kills_per_second": 4.4,
+      "overkill": 106.60936,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1993.32617,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 399.634409999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 19.9817205,
+      "kills_per_second": 4.2,
+      "overkill": 101.76348,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1998.17205,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 398.665233999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.223333333333333,
+      "damage_per_target": 19.9332617,
+      "kills_per_second": 4.4,
+      "overkill": 106.60936,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1993.32617,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 398.665233999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.15,
+      "damage_per_target": 19.9332617,
+      "kills_per_second": 4.4,
+      "overkill": 106.60936,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1993.32617,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 400.118997999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.21,
+      "damage_per_target": 20.0059499,
+      "kills_per_second": 3.2,
+      "overkill": 99.3405400000006,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 2000.59499,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "magic_bolt"
+    },
+    {
+      "CC_uptime": 0.9,
+      "DPS": 35.9068568,
+      "boss_DPS": 35.9068568,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 179.534284,
+      "kills_per_second": 0.4,
+      "overkill": 15.808556,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 179.534284,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.18,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 35.9068568,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.054,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 10.77205704,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.018,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 3.59068568,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.009,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 1.79534284,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.054,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 10.77205704,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.054,
+      "DPS": 215.4411408,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 10.77205704,
+      "kills_per_second": 2.4,
+      "overkill": 94.8513360000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1077.205704,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.088,
+      "DPS": 223.3454188,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 11.16727094,
+      "kills_per_second": 1.4,
+      "overkill": 55.3299460000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1116.727094,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.055,
+      "DPS": 218.602852,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0666666666666667,
+      "damage_per_target": 10.9301426,
+      "kills_per_second": 2.0,
+      "overkill": 79.0427800000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1093.01426,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "orbit",
+        "status": "slow"
+      },
+      "weapon": "ice_orbit"
+    },
+    {
+      "CC_uptime": 0.81,
+      "DPS": 24.87922,
+      "boss_DPS": 24.87922,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 124.3961,
+      "kills_per_second": 0.2,
+      "overkill": 8.79220000000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 124.3961,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.108,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 16.5861466666667,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0324,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.975844,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0108,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 1.65861466666667,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0054,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 0.829307333333334,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0324,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.975844,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0324,
+      "DPS": 99.51688,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.975844,
+      "kills_per_second": 0.8,
+      "overkill": 35.1688,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 497.5844,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.052,
+      "DPS": 106.55064,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 5.327532,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 532.7532,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0343,
+      "DPS": 101.27532,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 5.063766,
+      "kills_per_second": 0.6,
+      "overkill": 26.3766,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 506.3766,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.81,
+      "DPS": 24.87922,
+      "boss_DPS": 24.87922,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 124.3961,
+      "kills_per_second": 0.2,
+      "overkill": 8.79220000000001,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 124.3961,
+      "utility": {
+        "archetype": "chain",
+        "status": "shock"
+      },
+      "weapon": "thunder_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 21.91948,
+      "boss_DPS": 21.91948,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 109.5974,
+      "kills_per_second": 0.2,
+      "overkill": 8.79220000000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 109.5974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 197.27532,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 32.87922,
+      "kills_per_second": 1.8,
+      "overkill": 79.1298000000002,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 986.3766,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 219.1948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 10.95974,
+      "kills_per_second": 2.0,
+      "overkill": 87.9220000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1095.974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 219.1948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.65324666666667,
+      "kills_per_second": 2.0,
+      "overkill": 87.9220000000002,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1095.974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 219.1948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.82662333333333,
+      "kills_per_second": 2.0,
+      "overkill": 87.9220000000002,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1095.974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 263.03376,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 13.151688,
+      "kills_per_second": 2.4,
+      "overkill": 105.5064,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1315.1688,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 219.1948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 10.95974,
+      "kills_per_second": 2.0,
+      "overkill": 87.9220000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1095.974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 219.1948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 10.95974,
+      "kills_per_second": 2.0,
+      "overkill": 87.9220000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1095.974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 222.71168,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 11.135584,
+      "kills_per_second": 1.6,
+      "overkill": 70.3376000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1113.5584,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 21.91948,
+      "boss_DPS": 21.91948,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 109.5974,
+      "kills_per_second": 0.2,
+      "overkill": 8.79220000000002,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 109.5974,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "bomb_seed"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 64.0,
+      "boss_DPS": 64.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 320.0,
+      "kills_per_second": 0.8,
+      "overkill": 8.33382400000005,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 320.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 32.0,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 3.2,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 1.6,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 194.083456,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 9.7041728,
+      "kills_per_second": 1.4,
+      "overkill": 14.5841920000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 970.41728,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0266666666666667,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 25.0014720000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "blade_fan"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 20.538268,
+      "boss_DPS": 20.538268,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 102.69134,
+      "kills_per_second": 0.2,
+      "overkill": 10.76536,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 102.69134,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 61.614804,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 10.269134,
+      "kills_per_second": 0.6,
+      "overkill": 32.29608,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 308.07402,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.229608,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.1614804,
+      "kills_per_second": 1.2,
+      "overkill": 64.5921600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 616.14804,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 164.306144,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 2.73843573333333,
+      "kills_per_second": 1.6,
+      "overkill": 86.1228800000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 821.53072,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 164.306144,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 1.36921786666667,
+      "kills_per_second": 1.6,
+      "overkill": 86.1228800000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 821.53072,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 164.306144,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 8.2153072,
+      "kills_per_second": 1.6,
+      "overkill": 86.1228800000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 821.53072,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.229608,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.1614804,
+      "kills_per_second": 1.2,
+      "overkill": 64.5921600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 616.14804,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.229608,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.1614804,
+      "kills_per_second": 1.2,
+      "overkill": 64.5921600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 616.14804,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 127.535752,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.3767876,
+      "kills_per_second": 0.8,
+      "overkill": 43.0614400000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 637.67876,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 20.538268,
+      "boss_DPS": 20.538268,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 102.69134,
+      "kills_per_second": 0.2,
+      "overkill": 10.76536,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 102.69134,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "laser_lance"
+    },
+    {
+      "CC_uptime": 0.916666666666667,
+      "DPS": 24.287272,
+      "boss_DPS": 24.287272,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 121.43636,
+      "kills_per_second": 0.2,
+      "overkill": 2.87272,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 121.43636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.305555555555556,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 40.4787866666667,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0916666666666667,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 12.143636,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0305555555555556,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 4.04787866666666,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0152777777777778,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 2.02393933333333,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0916666666666667,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 12.143636,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0916666666666667,
+      "DPS": 242.87272,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 12.143636,
+      "kills_per_second": 2.0,
+      "overkill": 28.7272,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1214.3636,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.212166666666667,
+      "DPS": 248.61816,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 12.430908,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1243.0908,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0933333333333333,
+      "DPS": 244.021808,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.04,
+      "damage_per_target": 12.2010904,
+      "kills_per_second": 1.6,
+      "overkill": 22.98176,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1220.10904,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "aura",
+        "status": "poison"
+      },
+      "weapon": "poison_mist"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 107.542986,
+      "boss_DPS": 107.542986,
+      "coverage_uptime": 0.0433333333333333,
+      "damage_per_target": 537.71493,
+      "kills_per_second": 1.2,
+      "overkill": 97.1493,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 537.71493,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 182.47662,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.113333333333333,
+      "damage_per_target": 30.41277,
+      "kills_per_second": 1.8,
+      "overkill": 145.72395,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 912.383099999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 210.019606,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 10.5009803,
+      "kills_per_second": 2.0,
+      "overkill": 161.9155,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1050.09803,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 210.019606,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 3.50032676666666,
+      "kills_per_second": 2.0,
+      "overkill": 161.9155,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1050.09803,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 210.019606,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 1.75016338333333,
+      "kills_per_second": 2.0,
+      "overkill": 161.9155,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1050.09803,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 213.257916,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 10.6628958,
+      "kills_per_second": 1.8,
+      "overkill": 145.72395,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1066.28958,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 210.019606,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 10.5009803,
+      "kills_per_second": 2.0,
+      "overkill": 161.9155,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1050.09803,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 206.781296,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.11,
+      "damage_per_target": 10.3390648,
+      "kills_per_second": 2.2,
+      "overkill": 178.10705,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1033.90648,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 218.324282,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 10.9162141,
+      "kills_per_second": 1.6,
+      "overkill": 120.39212,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1091.62141,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "drone_bit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 23.547337,
+      "boss_DPS": 23.547337,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 117.736685,
+      "kills_per_second": 0.2,
+      "overkill": 33.210055,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 117.736685,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 11.7736685,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.53210055,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.17736685,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.588683425,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.53210055,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.642011,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.53210055,
+      "kills_per_second": 0.6,
+      "overkill": 99.630165,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 353.210055,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 90.568044,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.5284022,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 452.84022,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 77.284022,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.8642011,
+      "kills_per_second": 0.4,
+      "overkill": 66.42011,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 386.42011,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "crystal_mine"
+    },
+    {
+      "CC_uptime": 0.633333333333333,
+      "DPS": 5.4607203,
+      "boss_DPS": 5.4607203,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 27.3036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 27.3036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.211111111111111,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 9.1012005,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0633333333333333,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.73036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0211111111111111,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 0.91012005,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0105555555555556,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 0.455060025,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0633333333333333,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.73036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0633333333333333,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.73036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0633333333333333,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.73036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0633333333333333,
+      "DPS": 54.607203,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.73036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 273.036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.633333333333333,
+      "DPS": 5.4607203,
+      "boss_DPS": 5.4607203,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 27.3036015,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 27.3036015,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "black_hole"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 24.3464668,
+      "boss_DPS": 24.3464668,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 121.732334,
+      "kills_per_second": 0.2,
+      "overkill": 3.46466800000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 121.732334,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 12.1732334,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.65197002,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 1.21732334,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 0.60866167,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.65197002,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.0394004,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.65197002,
+      "kills_per_second": 0.6,
+      "overkill": 10.3940040000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 365.197002,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 74.4252676,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.72126338,
+      "kills_per_second": 0.2,
+      "overkill": 3.46466800000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 372.126338,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 73.732334,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.6866167,
+      "kills_per_second": 0.4,
+      "overkill": 6.92933600000003,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 368.66167,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 24.3464668,
+      "boss_DPS": 24.3464668,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 121.732334,
+      "kills_per_second": 0.2,
+      "overkill": 3.46466800000002,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 121.732334,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "rune_gate"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 5.09252500000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 144.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 24.0,
+      "kills_per_second": 1.8,
+      "overkill": 45.8327250000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 720.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 50.9252500000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.66666666666667,
+      "kills_per_second": 2.0,
+      "overkill": 50.9252500000002,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 1.33333333333333,
+      "kills_per_second": 2.0,
+      "overkill": 50.9252500000002,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 61.1103000000002,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 960.000000000001,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 50.9252500000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 50.9252500000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 162.03701,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.1018505,
+      "kills_per_second": 1.6,
+      "overkill": 40.7402000000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 810.18505,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 5.09252500000002,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "comet_staff"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 41.1061334,
+      "boss_DPS": 41.1061334,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 205.530667,
+      "kills_per_second": 0.4,
+      "overkill": 22.122668,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 205.530667,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 20.5530667,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.16592001,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 2.05530667,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 1.027653335,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.16592001,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 123.3184002,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.16592001,
+      "kills_per_second": 1.2,
+      "overkill": 66.3680040000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 616.592001,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 125.530667,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.27653335,
+      "kills_per_second": 1.0,
+      "overkill": 55.3066700000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 627.653335,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 121.1061334,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 6.05530667,
+      "kills_per_second": 0.8,
+      "overkill": 77.4293380000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 605.530667,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "soul_scythe"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 108.430908,
+      "boss_DPS": 108.430908,
+      "coverage_uptime": 0.0433333333333333,
+      "damage_per_target": 542.15454,
+      "kills_per_second": 1.2,
+      "overkill": 17.23632,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 542.15454,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 200.861816,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.113333333333333,
+      "damage_per_target": 33.4769693333333,
+      "kills_per_second": 2.2,
+      "overkill": 31.5999200000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1004.30908,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 245.292724,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 12.2646362,
+      "kills_per_second": 2.6,
+      "overkill": 37.3453600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1226.46362,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 245.292724,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 4.08821206666667,
+      "kills_per_second": 2.6,
+      "overkill": 37.3453600000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1226.46362,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 245.292724,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 2.04410603333333,
+      "kills_per_second": 2.6,
+      "overkill": 37.3453600000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1226.46362,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 254.15454,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 12.707727,
+      "kills_per_second": 2.4,
+      "overkill": 34.4726400000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1270.7727,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 245.292724,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.136666666666667,
+      "damage_per_target": 12.2646362,
+      "kills_per_second": 2.6,
+      "overkill": 37.3453600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1226.46362,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 253.579996,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0966666666666667,
+      "damage_per_target": 12.6789998,
+      "kills_per_second": 2.6,
+      "overkill": 37.3453600000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1267.89998,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 245.867268,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.13,
+      "damage_per_target": 12.2933634,
+      "kills_per_second": 1.8,
+      "overkill": 34.47264,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1229.33634,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "mirror_shard"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 2.87272000000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 8.0,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.8,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.4,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 8.61816000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 49.723632,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 2.4861816,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 248.61816,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 48.574544,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 2.4287272,
+      "kills_per_second": 0.4,
+      "overkill": 5.74544000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 242.87272,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "sonic_wave"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 91.247012,
+      "boss_DPS": 91.247012,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 456.23506,
+      "kills_per_second": 1.0,
+      "overkill": 68.6255000000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 456.23506,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 154.243028,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0966666666666667,
+      "damage_per_target": 25.7071713333333,
+      "kills_per_second": 1.6,
+      "overkill": 109.8008,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 771.215139999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 8.88705179999999,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 2.9623506,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 1.4811753,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 8.88705179999999,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 8.88705179999999,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 177.741036,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0966666666666667,
+      "damage_per_target": 8.88705179999999,
+      "kills_per_second": 1.8,
+      "overkill": 123.5259,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 888.705179999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 187.482072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 9.37410359999999,
+      "kills_per_second": 1.2,
+      "overkill": 74.8207200000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 937.410359999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "gem_turret"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 39.1823024,
+      "boss_DPS": 39.1823024,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 195.911512,
+      "kills_per_second": 0.4,
+      "overkill": 55.4690720000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 195.911512,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 19.5911512,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 5.87734536,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 1.95911512,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 0.97955756,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 5.87734536,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 5.87734536,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 134.1876288,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 6.70938144,
+      "kills_per_second": 0.6,
+      "overkill": 83.2036080000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 670.938144,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 117.5469072,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 5.87734536,
+      "kills_per_second": 1.2,
+      "overkill": 166.407216,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 587.734536,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "corridor_blade"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 109.614804,
+      "boss_DPS": 109.614804,
+      "coverage_uptime": 0.0433333333333333,
+      "damage_per_target": 548.07402,
+      "kills_per_second": 1.2,
+      "overkill": 64.5921600000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 548.07402,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 207.767876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.116666666666667,
+      "damage_per_target": 34.6279793333333,
+      "kills_per_second": 2.2,
+      "overkill": 118.41896,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1038.83938,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 255.767876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.143333333333333,
+      "damage_per_target": 12.7883938,
+      "kills_per_second": 2.8,
+      "overkill": 150.71504,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1278.83938,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 255.767876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.143333333333333,
+      "damage_per_target": 4.26279793333333,
+      "kills_per_second": 2.8,
+      "overkill": 150.71504,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1278.83938,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 255.767876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.143333333333333,
+      "damage_per_target": 2.13139896666667,
+      "kills_per_second": 2.8,
+      "overkill": 150.71504,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1278.83938,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 260.07402,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 13.003701,
+      "kills_per_second": 2.4,
+      "overkill": 129.18432,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1300.3701,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 255.767876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.143333333333333,
+      "damage_per_target": 12.7883938,
+      "kills_per_second": 2.8,
+      "overkill": 150.71504,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1278.83938,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 257.920948,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0966666666666667,
+      "damage_per_target": 12.8960474,
+      "kills_per_second": 2.6,
+      "overkill": 139.94968,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1289.60474,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 268.306144,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.123333333333333,
+      "damage_per_target": 13.4153072,
+      "kills_per_second": 2.0,
+      "overkill": 88.0237000000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1341.53072,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "wall_bounce_blaster"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 29.31883,
+      "boss_DPS": 29.31883,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 146.59415,
+      "kills_per_second": 0.2,
+      "overkill": 19.891225,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 146.59415,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 14.659415,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 4.3978245,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 1.4659415,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 0.73297075,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 4.3978245,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 4.3978245,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.891225,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 4.99456125,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 499.456125,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 87.95649,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 4.3978245,
+      "kills_per_second": 0.6,
+      "overkill": 59.6736750000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 439.78245,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "drill_charge"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 9.9447264,
+      "boss_DPS": 9.9447264,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 49.723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 49.723632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 16.574544,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.9723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.6574544,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.828727199999999,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.9723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.9723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.9723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 99.4472639999999,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.9723632,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 497.23632,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "mine_lantern"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 32.0,
+      "boss_DPS": 32.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 160.0,
+      "kills_per_second": 0.4,
+      "overkill": 67.0120580000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 160.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 16.0,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.8,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 1.6,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 0.8,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.8,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.8,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 136.2072348,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 6.81036174,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 681.036174,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 96.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 4.8,
+      "kills_per_second": 1.2,
+      "overkill": 201.036174,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 480.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "melee",
+        "status": ""
+      },
+      "weapon": "relic_chain"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 25.0568044,
+      "boss_DPS": 25.0568044,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 125.284022,
+      "kills_per_second": 0.2,
+      "overkill": 10.568044,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 125.284022,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 75.1704132,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 12.5284022,
+      "kills_per_second": 0.6,
+      "overkill": 31.704132,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 375.852066,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 150.3408264,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 7.51704132,
+      "kills_per_second": 1.2,
+      "overkill": 63.408264,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 751.704132,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 200.4544352,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 3.34090725333333,
+      "kills_per_second": 1.6,
+      "overkill": 84.544352,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1002.272176,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 200.4544352,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 1.67045362666667,
+      "kills_per_second": 1.6,
+      "overkill": 84.544352,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1002.272176,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 200.4544352,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 10.02272176,
+      "kills_per_second": 1.6,
+      "overkill": 84.544352,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1002.272176,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 150.3408264,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 7.51704132,
+      "kills_per_second": 1.2,
+      "overkill": 63.408264,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 751.704132,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 150.3408264,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 7.51704132,
+      "kills_per_second": 1.2,
+      "overkill": 63.408264,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 751.704132,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 154.568044,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 7.7284022,
+      "kills_per_second": 0.8,
+      "overkill": 42.272176,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 772.84022,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 25.0568044,
+      "boss_DPS": 25.0568044,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 125.284022,
+      "kills_per_second": 0.2,
+      "overkill": 10.568044,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 125.284022,
+      "utility": {
+        "archetype": "beam",
+        "status": ""
+      },
+      "weapon": "shrine_beam"
+    },
+    {
+      "CC_uptime": 0.71,
+      "DPS": 22.067467,
+      "boss_DPS": 22.067467,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 110.337335,
+      "kills_per_second": 0.2,
+      "overkill": 11.012005,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 110.337335,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.071,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 11.0337335,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0213,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.31012005,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0071,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.10337335,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.00355,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.551686675,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0213,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.31012005,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0213,
+      "DPS": 66.202401,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.31012005,
+      "kills_per_second": 0.6,
+      "overkill": 33.0360150000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 331.012005,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0479,
+      "DPS": 72.809604,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.6404802,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 364.04802,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.0242,
+      "DPS": 68.404802,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.4202401,
+      "kills_per_second": 0.4,
+      "overkill": 22.02401,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 342.02401,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.71,
+      "DPS": 22.067467,
+      "boss_DPS": 22.067467,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 110.337335,
+      "kills_per_second": 0.2,
+      "overkill": 11.012005,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 110.337335,
+      "utility": {
+        "archetype": "deploy",
+        "status": "poison"
+      },
+      "weapon": "thorn_seed"
+    },
+    {
+      "CC_uptime": 0.67,
+      "DPS": 23.103376,
+      "boss_DPS": 23.103376,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 115.51688,
+      "kills_per_second": 0.2,
+      "overkill": 26.55064,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 115.51688,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.067,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 11.551688,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0201,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.4655064,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0067,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.1551688,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.00335,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.5775844,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0201,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.4655064,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0201,
+      "DPS": 69.310128,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.4655064,
+      "kills_per_second": 0.6,
+      "overkill": 79.6519200000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 346.55064,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0284,
+      "DPS": 79.930384,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.9965192,
+      "kills_per_second": 0.2,
+      "overkill": 26.55064,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 399.65192,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0231,
+      "DPS": 74.620256,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.7310128,
+      "kills_per_second": 0.4,
+      "overkill": 53.10128,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 373.10128,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.67,
+      "DPS": 23.103376,
+      "boss_DPS": 23.103376,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 115.51688,
+      "kills_per_second": 0.2,
+      "overkill": 26.55064,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 115.51688,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "frost_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 15.538635,
+      "boss_DPS": 15.538635,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 77.693175,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 77.693175,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 15.538635,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 4.6615905,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 1.5538635,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 0.77693175,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 4.6615905,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 4.6615905,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 4.6615905,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 93.23181,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 4.6615905,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 466.15905,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "orbit",
+        "status": ""
+      },
+      "weapon": "coin_orbit"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 11.34567,
+      "boss_DPS": 11.34567,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 56.72835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 56.72835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 18.90945,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 5.672835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 1.890945,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 0.9454725,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 5.672835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 5.672835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 5.672835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 113.4567,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0166666666666667,
+      "damage_per_target": 5.672835,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 567.2835,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "aura",
+        "status": ""
+      },
+      "weapon": "echo_bell"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 94.7986999999999,
+      "boss_DPS": 94.7986999999999,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 473.9935,
+      "kills_per_second": 1.0,
+      "overkill": 93.2900000000001,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 473.9935,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 178.5303,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.1,
+      "damage_per_target": 29.75505,
+      "kills_per_second": 1.8,
+      "overkill": 167.922,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 892.651499999999,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 225.329,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.123333333333333,
+      "damage_per_target": 11.26645,
+      "kills_per_second": 2.2,
+      "overkill": 205.238,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1126.645,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 225.329,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.123333333333333,
+      "damage_per_target": 3.75548333333333,
+      "kills_per_second": 2.2,
+      "overkill": 205.238,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1126.645,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 225.329,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.123333333333333,
+      "damage_per_target": 1.87774166666667,
+      "kills_per_second": 2.2,
+      "overkill": 205.238,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1126.645,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 221.5974,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.02,
+      "damage_per_target": 11.07987,
+      "kills_per_second": 2.4,
+      "overkill": 223.896,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1107.987,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 225.329,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.123333333333333,
+      "damage_per_target": 11.26645,
+      "kills_per_second": 2.2,
+      "overkill": 205.238,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1126.645,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 225.329,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0833333333333333,
+      "damage_per_target": 11.26645,
+      "kills_per_second": 2.2,
+      "overkill": 205.238,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1126.645,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 238.9264,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.106666666666667,
+      "damage_per_target": 11.94632,
+      "kills_per_second": 1.4,
+      "overkill": 137.251,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1194.632,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "void_mirror"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 7.31233000000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 144.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 24.0,
+      "kills_per_second": 1.8,
+      "overkill": 65.8109700000002,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 720.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 73.1233000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.66666666666667,
+      "kills_per_second": 2.0,
+      "overkill": 73.1233000000002,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 1.33333333333333,
+      "kills_per_second": 2.0,
+      "overkill": 73.1233000000002,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 192.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 9.6,
+      "kills_per_second": 2.4,
+      "overkill": 87.7479600000002,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 960.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 73.1233000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 160.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 2.0,
+      "overkill": 73.1233000000002,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 800.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 162.924932,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.1462466,
+      "kills_per_second": 1.6,
+      "overkill": 58.4986400000001,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 814.62466,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 7.31233000000002,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "explosion",
+        "status": ""
+      },
+      "weapon": "magma_core"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 125.022856,
+      "boss_DPS": 125.022856,
+      "coverage_uptime": 0.05,
+      "damage_per_target": 625.11428,
+      "kills_per_second": 1.4,
+      "overkill": 47.7332800000002,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 625.11428,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 234.045712,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.133333333333333,
+      "damage_per_target": 39.0076186666667,
+      "kills_per_second": 2.6,
+      "overkill": 88.6475200000003,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 1170.22856,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 290.727616,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.163333333333333,
+      "damage_per_target": 14.5363808,
+      "kills_per_second": 3.2,
+      "overkill": 109.10464,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 1453.63808,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 290.727616,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.163333333333333,
+      "damage_per_target": 4.84546026666667,
+      "kills_per_second": 3.2,
+      "overkill": 109.10464,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 1453.63808,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 290.727616,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.163333333333333,
+      "damage_per_target": 2.42273013333333,
+      "kills_per_second": 3.2,
+      "overkill": 109.10464,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 1453.63808,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 327.068568,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.03,
+      "damage_per_target": 16.3534284,
+      "kills_per_second": 3.6,
+      "overkill": 122.74272,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 1635.34284,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 290.727616,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.163333333333333,
+      "damage_per_target": 14.5363808,
+      "kills_per_second": 3.2,
+      "overkill": 109.10464,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 1453.63808,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 290.727616,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.11,
+      "damage_per_target": 14.5363808,
+      "kills_per_second": 3.2,
+      "overkill": 109.10464,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 1453.63808,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 293.455232,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.156666666666667,
+      "damage_per_target": 14.6727616,
+      "kills_per_second": 2.2,
+      "overkill": 95.4665600000003,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 1467.27616,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 0.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0,
+      "damage_per_target": 0.0,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 0.0,
+      "utility": {
+        "archetype": "projectile",
+        "status": ""
+      },
+      "weapon": "compass_star"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 23.6361292,
+      "boss_DPS": 23.6361292,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 118.180646,
+      "kills_per_second": 0.2,
+      "overkill": 34.541938,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 118.180646,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 11.8180646,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.54541938,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 1.18180646,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 0.59090323,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.54541938,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 70.9083876,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.54541938,
+      "kills_per_second": 0.6,
+      "overkill": 103.625814,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 354.541938,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 91.6335504,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 4.58167752,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 458.167752,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 77.8167752,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 3.89083876,
+      "kills_per_second": 0.4,
+      "overkill": 69.083876,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 389.083876,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.0,
+      "DPS": 23.6361292,
+      "boss_DPS": 23.6361292,
+      "coverage_uptime": 0.0133333333333333,
+      "damage_per_target": 118.180646,
+      "kills_per_second": 0.2,
+      "overkill": 34.541938,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 118.180646,
+      "utility": {
+        "archetype": "deploy",
+        "status": ""
+      },
+      "weapon": "guardian_wall"
+    },
+    {
+      "CC_uptime": 0.6,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 11.899927,
+      "player_risk_exposure": 1.0,
+      "scenario": "single_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.06,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 8.0,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.0666666666666667,
+      "scenario": "30_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.018,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.02,
+      "scenario": "100_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.006,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 0.8,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.00666666666666667,
+      "scenario": "300_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.003,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 0.4,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.00333333333333333,
+      "scenario": "600_enemies",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.018,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.49,
+      "scenario": "narrow_corridor",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.018,
+      "DPS": 48.0,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.4,
+      "kills_per_second": 0.6,
+      "overkill": 35.699781,
+      "player_risk_exposure": 0.02,
+      "scenario": "open_field",
+      "total_damage": 240.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.0204,
+      "DPS": 55.1399562,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.75699781,
+      "kills_per_second": 0.0,
+      "overkill": 0.0,
+      "player_risk_exposure": 0.02,
+      "scenario": "moving_swarm",
+      "total_damage": 275.699781,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.0188,
+      "DPS": 50.3799854,
+      "boss_DPS": 0.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 2.51899927,
+      "kills_per_second": 0.4,
+      "overkill": 23.799854,
+      "player_risk_exposure": 0.02,
+      "scenario": "elite_mix",
+      "total_damage": 251.899927,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    },
+    {
+      "CC_uptime": 0.6,
+      "DPS": 16.0,
+      "boss_DPS": 16.0,
+      "coverage_uptime": 0.01,
+      "damage_per_target": 80.0,
+      "kills_per_second": 0.2,
+      "overkill": 11.899927,
+      "player_risk_exposure": 0.0,
+      "scenario": "high_mobility_boss",
+      "total_damage": 80.0,
+      "utility": {
+        "archetype": "deploy",
+        "status": "slow"
+      },
+      "weapon": "gravity_anchor"
+    }
+  ]
+}

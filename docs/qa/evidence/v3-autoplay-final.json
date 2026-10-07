@@ -1,0 +1,68 @@
+{
+  "note": "Deterministic scripted autoplayer with normal HP and progression. Clearing is measured, not assumed; this does not certify human fun.",
+  "ok": true,
+  "runs": [
+    {
+      "HP": 0.0,
+      "bosses": 2,
+      "build": "balanced",
+      "damage": {
+        "combo:starburst_seed": 4251.72905829114,
+        "field:mining": 300.0,
+        "weapon:bomb_seed": 4405.12129669074,
+        "weapon:laser_lance": 36879.6034867503,
+        "weapon:magic_bolt": 74463.0817788973,
+        "weapon:thunder_chain": 54488.4860038826
+      },
+      "evolutions": {
+        "laser_lance": "aurora_lance",
+        "magic_bolt": "starbreaker_bolt",
+        "thunder_chain": "divine_chain"
+      },
+      "kills": 6405,
+      "last_damage_source": "boss",
+      "level": 62,
+      "phase": "RESULT",
+      "seconds": 912.633333333333,
+      "seed": 60606,
+      "signature": 688410473,
+      "wall_seconds": 75.979653,
+      "weapons": {
+        "bomb_seed": 8,
+        "laser_lance": 8,
+        "magic_bolt": 8,
+        "thunder_chain": 8
+      }
+    },
+    {
+      "HP": 0.0,
+      "bosses": 2,
+      "build": "close_range",
+      "damage": {
+        "field:mining": 280.0,
+        "status:poison": 376.27416304,
+        "weapon:blade_fan": 15203.0828018161,
+        "weapon:ice_orbit": 515.54741854,
+        "weapon:magic_bolt": 84025.4554922714,
+        "weapon:poison_mist": 3745.94618579202,
+        "weapon:sonic_wave": 1268.56224874
+      },
+      "evolutions": {},
+      "kills": 4532,
+      "last_damage_source": "boss",
+      "level": 57,
+      "phase": "RESULT",
+      "seconds": 919.983333333333,
+      "seed": 60606,
+      "signature": 2863944248,
+      "wall_seconds": 67.530988,
+      "weapons": {
+        "blade_fan": 8,
+        "ice_orbit": 8,
+        "magic_bolt": 8,
+        "poison_mist": 8,
+        "sonic_wave": 8
+      }
+    }
+  ]
+}

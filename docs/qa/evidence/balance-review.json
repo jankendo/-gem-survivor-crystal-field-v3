@@ -1,0 +1,50 @@
+{
+  "scenario_count": 310,
+  "lowest_mean_scenario_DPS": [
+    [
+      40.229817600000004,
+      "sonic_wave"
+    ],
+    [
+      42.55199416,
+      "gravity_anchor"
+    ],
+    [
+      44.77790646,
+      "black_hole"
+    ],
+    [
+      58.256374599999994,
+      "thorn_seed"
+    ],
+    [
+      61.525146899999996,
+      "crystal_mine"
+    ]
+  ],
+  "highest_mean_scenario_DPS": [
+    [
+      197.41635599999998,
+      "poison_mist"
+    ],
+    [
+      204.4065424,
+      "mirror_shard"
+    ],
+    [
+      212.6755296,
+      "wall_bounce_blaster"
+    ],
+    [
+      243.32304480000002,
+      "compass_star"
+    ],
+    [
+      328.7744811999993,
+      "magic_bolt"
+    ]
+  ],
+  "conclusion": "Strong spread remains; magic_bolt is a high damage outlier. Low utility weapons need behavior/utility-specific evaluation rather than matching DPS. Full balance completion NOT PASSED.",
+  "stationary_boss_TTK_goal_met": true,
+  "autoplay_clear_gate_met": false
+}

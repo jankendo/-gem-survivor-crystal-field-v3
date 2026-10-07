@@ -1,0 +1,10 @@
+{
+  "authenticated_user": "jankendo",
+  "target_repository": "https://github.com/jankendo/gem-survivor-crystal-field-v3",
+  "creation": "blocked: HTTP403 Resource not accessible by integration (GraphQL and REST)",
+  "target_readback": "HTTP404",
+  "remote_push": false,
+  "Actions_run": false,
+  "release_created": false,
+  "source_remote_modified": false
+}

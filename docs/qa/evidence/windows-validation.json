@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "archive": "GemSurvivorCrystalField-v3-Windows.zip",
+  "sha256": "ad1571b30daa7ba654a099e30ef39498b97176efb0dcb20d71b73c5349affc55",
+  "ZIP_integrity": true,
+  "PE_x86_64": true,
+  "embedded_PCK": true,
+  "README": true,
+  "embedded_pack_main_and_database_smoke": true,
+  "native_Windows_execution": false,
+  "host": "Linux x86_64/Godot4.7"
+}

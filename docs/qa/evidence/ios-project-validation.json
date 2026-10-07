@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "project_exists": true,
+  "PCK_exists": true,
+  "icons_exists": true,
+  "launch_storyboard_exists": true,
+  "expected_display_name": "Gem Survivor Crystal Field v3",
+  "expected_version": "3.0.0",
+  "expected_bundle_identifier": "com.jankendo14.gemsurvivor",
+  "note": "Project settings validation only; Info.plist contains Xcode substitution macros, not resolved built values. No built app, arm64 main executable, Assets.car or IPA."
+}

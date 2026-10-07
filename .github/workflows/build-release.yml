@@ -52,18 +52,22 @@ jobs:
         shell: pwsh
         run: |
           python tools/validate_data.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           
           $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
            $env:GODOT = $godot
           python tools/run_godot.py --headless --editor --path . --quit
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Export Windows release
         shell: pwsh
         run: |
           $godot = ".tools/godot/Godot_v${env:GODOT_VERSION}_win64_console.exe"
           New-Item -ItemType Directory -Force builds/windows | Out-Null
-          & $godot --headless --path . --export-release "${env:WINDOWS_PRESET}" "builds/windows/${env:EXPORT_NAME}.exe"
+           $env:GODOT = $godot
+          python tools/run_godot.py --headless --path . --export-release "${env:WINDOWS_PRESET}" "builds/windows/${env:EXPORT_NAME}.exe"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
            $workspace = "$pwd"
           $env:GODOT = "$workspace/$godot"
@@ -134,7 +138,7 @@ jobs:
           python3 tools/run_godot.py --headless --editor --path . --quit
           python3 tools/run_godot.py --headless --path . --script res://tests/test_runner.gd
           mkdir -p builds/ios-export
-          "${GODOT}" --headless --path . --export-release "${IOS_PRESET}" "builds/ios-export/${PROJECT_NAME}.ipa"
+          python3 tools/run_godot.py --headless --path . --export-release "${IOS_PRESET}" "builds/ios-export/${PROJECT_NAME}.ipa"
 
       - name: Build unsigned arm64 app
         shell: bash

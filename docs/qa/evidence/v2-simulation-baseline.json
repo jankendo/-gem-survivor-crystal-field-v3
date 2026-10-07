@@ -1,0 +1,24 @@
+{
+  "enemy_update": {
+    "mean_ms": 98.8801636363636,
+    "p95_ms": 294.353,
+    "p99_ms": 352.405
+  },
+  "initial_enemies": 600,
+  "initial_gems": 1000,
+  "minimum_projectiles": 500,
+  "note": "Selected v2 simulation paths, not full GameScreen or GPU. Gameplay/balance differs; not a deterministic parity comparison with v3.",
+  "samples": 220,
+  "seed": 60606,
+  "simulation_subset": {
+    "mean_ms": 188.981395454545,
+    "p95_ms": 600.34,
+    "p99_ms": 646.015
+  },
+  "source_sha": "b9b70807492b673a6836eb6beafe8823f71e6672",
+  "weapon_update_including_private_grid": {
+    "mean_ms": 86.0810363636364,
+    "p95_ms": 272.13,
+    "p99_ms": 317.423
+  }
+}
