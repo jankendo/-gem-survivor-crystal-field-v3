@@ -1,0 +1,188 @@
+{
+  "noah": {
+    "initial": true,
+    "text_ja": "初期解放"
+  },
+  "mio": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "rai": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "bomb": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "gantz": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "kaede": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "sera": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "rei": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "atlas": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "nero": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "lily": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "zero": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "ghost": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "collector": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "nameless_reaper": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "corridor_knight": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "cave_mapper": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "relic_hunter": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "shrine_guardian": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "tunnel_runner": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "crystal_witch": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "forge_master": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "storm_pilgrim": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "blast_miner": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "oasis_saint": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "void_cartographer": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  },
+  "abyss_merchant": {
+    "condition": {
+      "type": "character_mastery_points",
+      "value": 350
+    },
+    "text_ja": "そのキャラクターの熟練度350ptで進化解放"
+  }
+}

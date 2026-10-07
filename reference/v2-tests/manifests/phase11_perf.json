@@ -1,0 +1,12 @@
+{
+  "name": "Phase 11 warp core combo performance",
+  "tasks": [
+    {"id": "phase11-performance-fixture", "path": "res://tests/Phase11PerformanceHarness.gd", "kind": "harness"},
+    {"id": "phase11-warp-placement", "path": "res://tests/test_warp_reward_safe_placement.gd"},
+    {"id": "phase11-room-distribution", "path": "res://tests/test_warp_room_type_distribution.gd"},
+    {"id": "phase11-heaven-loot", "path": "res://tests/test_warp_heaven_loot_quantity.gd"},
+    {"id": "phase11-hell-density", "path": "res://tests/test_warp_hell_difficulty.gd"},
+    {"id": "phase11-combo-performance", "path": "res://tests/test_weapon_combo_performance.gd"},
+    {"id": "phase11-combo-attribution", "path": "res://tests/test_weapon_combo_damage_attribution.gd"}
+  ]
+}

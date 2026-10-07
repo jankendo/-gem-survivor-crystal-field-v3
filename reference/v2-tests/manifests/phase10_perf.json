@@ -1,0 +1,11 @@
+{
+  "name": "Phase 10 deterministic performance and parity",
+  "tasks": [
+    {"id": "phase10-performance-fixture", "path": "res://tests/Phase10PerformanceHarness.gd", "kind": "harness"},
+    {"id": "phase10-enemy-all-tier", "path": "res://tests/test_enemy_all_tier_ultralite.gd"},
+    {"id": "phase10-enemy-prewarm", "path": "res://tests/test_enemy_spawn_prewarm.gd"},
+    {"id": "phase10-gem-1200", "path": "res://tests/test_gem_persistence.gd"},
+    {"id": "phase10-warp-100-seed", "path": "res://tests/test_warp_room_portal_placement.gd"},
+    {"id": "phase10-warp-roundtrip", "path": "res://tests/test_warp_room_return_state.gd"}
+  ]
+}

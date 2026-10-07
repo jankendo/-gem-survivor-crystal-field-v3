@@ -1,0 +1,8 @@
+.godot/
+builds/
+.tools/
+DerivedData/
+test-output/
+*.log
+*.pck
+*.ipa

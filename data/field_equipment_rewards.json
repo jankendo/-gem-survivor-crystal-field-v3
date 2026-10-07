@@ -1,0 +1,39 @@
+{
+  "config": {
+    "max_per_run": 8,
+    "max_weapons_per_run": 4,
+    "max_passives_per_run": 4,
+    "weapon_pickups_per_run": { "min": 2, "max": 4 },
+    "passive_pickups_per_run": { "min": 2, "max": 4 },
+    "max_total_equipment_pickups": 6,
+    "allow_duplicates_when_pool_short": true,
+    "min_distance": 1050.0,
+    "rare_min_distance": 1700.0,
+    "start_room_block_radius": 850.0,
+    "pickup_radius": 34.0,
+    "field_over_cap_max_bonus": 3
+  },
+  "reward_rooms": {
+    "relic_vault": { "weight": 4.0, "quality": "rare", "reason_ja": "遠方の金庫報酬" },
+    "sealed_room": { "weight": 3.2, "quality": "rare", "reason_ja": "封印部屋報酬" },
+    "danger_den": { "weight": 2.4, "quality": "uncommon", "reason_ja": "危険地帯踏破報酬" },
+    "event_room": { "weight": 2.0, "quality": "event", "reason_ja": "イベント導線報酬" },
+    "crystal_corridor": { "weight": 1.3, "quality": "common", "reason_ja": "探索通路報酬" },
+    "mine_chamber": { "weight": 1.3, "quality": "common", "reason_ja": "採掘室報酬" }
+  },
+  "weapon_pool": [
+    { "id": "thunder_chain", "weight": 1.4, "min_distance": 1250.0, "icon": "W", "color": [0.42, 0.86, 1.0] },
+    { "id": "ice_orbit", "weight": 1.2, "min_distance": 1150.0, "icon": "W", "color": [0.62, 0.92, 1.0] },
+    { "id": "bomb_seed", "weight": 1.0, "min_distance": 1500.0, "icon": "W", "color": [1.0, 0.48, 0.22] },
+    { "id": "corridor_blade", "weight": 1.0, "min_distance": 1650.0, "icon": "W", "color": [0.86, 1.0, 0.62] },
+    { "id": "mine_lantern", "weight": 0.9, "min_distance": 1750.0, "icon": "W", "color": [1.0, 0.76, 0.28] }
+  ],
+  "passive_pool": [
+    { "id": "magnet", "weight": 1.4, "min_distance": 1050.0, "icon": "P", "color": [0.44, 0.95, 1.0] },
+    { "id": "luck", "weight": 1.2, "min_distance": 1250.0, "icon": "P", "color": [1.0, 0.86, 0.35] },
+    { "id": "treasure_instinct", "weight": 1.0, "min_distance": 1450.0, "icon": "P", "color": [0.78, 1.0, 0.48] },
+    { "id": "chain_reward", "weight": 1.0, "min_distance": 1450.0, "icon": "P", "color": [0.58, 1.0, 0.72] },
+    { "id": "event_focus", "weight": 0.9, "min_distance": 1650.0, "icon": "P", "color": [0.86, 0.58, 1.0] },
+    { "id": "resonance_magnet_core", "weight": 1.1, "min_distance": 1250.0, "icon": "P", "color": [0.50, 1.0, 0.92] }
+  ]
+}

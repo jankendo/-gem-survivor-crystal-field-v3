@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[node name="TitleScreen" type="PanelContainer"]
+custom_minimum_size = Vector2(520, 300)
+
+[node name="Body" type="VBoxContainer" parent="."]
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Body"]
+text = "Gem Survivor Crystal Field v3"
+theme_override_font_sizes/font_size = 28
+
+[node name="Info" type="Label" parent="Body"]
+autowrap_mode = 2
+text = ""
+
+[node name="Start" type="Button" parent="Body"]
+custom_minimum_size = Vector2(0, 48)
+text = "探索を始める"
+
+[node name="Shop" type="Button" parent="Body"]
+custom_minimum_size = Vector2(0, 48)
+text = "ショップ"
+
+[node name="Collection" type="Button" parent="Body"]
+custom_minimum_size = Vector2(0, 48)
+text = "図鑑・クエスト"
+
+[node name="Settings" type="Button" parent="Body"]
+custom_minimum_size = Vector2(0, 48)
+text = "設定"

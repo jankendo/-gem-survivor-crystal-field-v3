@@ -1,0 +1,23 @@
+[gd_scene format=3]
+[node name="HUD" type="VBoxContainer"]
+mouse_filter = 2
+[node name="Stats" type="Label" parent="."]
+text = "HP / EXP"
+theme_override_font_sizes/font_size = 24
+[node name="Build" type="Label" parent="."]
+text = "BUILD"
+[node name="Goal" type="Label" parent="."]
+text = "RISK — 探索して結晶を集める / 5・10・15分にボス"
+[node name="Actions" type="HBoxContainer" parent="."]
+[node name="Pause" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(100, 48)
+text = "ポーズ"
+[node name="Speed" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(100, 48)
+text = "1x / 2x"
+[node name="Warp" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(120, 48)
+text = "ワープへ"
+[node name="Mine" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(120, 48)
+text = "採掘 / イベント"

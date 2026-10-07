@@ -1,0 +1,110 @@
+{
+  "reflect_crystal": {
+    "name_ja": "反射水晶",
+    "max_per_run": 5,
+    "unlock_seconds": 240,
+    "min_distance": 850,
+    "hp": 80,
+    "priority": 9,
+    "biomes": [
+      "star_plain",
+      "amethyst_forest"
+    ],
+    "color": [
+      0.74,
+      0.92,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/reflect_crystal.svg"
+  },
+  "lightning_crystal": {
+    "name_ja": "雷導結晶",
+    "max_per_run": 4,
+    "unlock_seconds": 300,
+    "min_distance": 1250,
+    "hp": 90,
+    "priority": 7,
+    "biomes": [
+      "amethyst_forest",
+      "void_zone"
+    ],
+    "color": [
+      0.78,
+      0.7,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/lightning_crystal.svg"
+  },
+  "explosive_vein": {
+    "name_ja": "爆薬鉱脈",
+    "max_per_run": 5,
+    "unlock_seconds": 0,
+    "min_distance": 900,
+    "hp": 45,
+    "priority": 9,
+    "biomes": [
+      "red_mine"
+    ],
+    "color": [
+      1.0,
+      0.44,
+      0.16
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/explosive_vein.svg"
+  },
+  "healing_spring": {
+    "name_ja": "回復泉",
+    "max_per_run": 4,
+    "unlock_seconds": 0,
+    "min_distance": 650,
+    "hp": 9999,
+    "priority": 6,
+    "biomes": [
+      "star_plain",
+      "amethyst_forest"
+    ],
+    "color": [
+      0.42,
+      1.0,
+      0.62
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/healing_spring.svg"
+  },
+  "spawn_rift": {
+    "name_ja": "召喚裂け目",
+    "max_per_run": 4,
+    "unlock_seconds": 360,
+    "min_distance": 1450,
+    "hp": 140,
+    "priority": 9,
+    "biomes": [
+      "void_zone",
+      "red_mine"
+    ],
+    "color": [
+      1.0,
+      0.24,
+      0.76
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/spawn_rift.svg"
+  },
+  "sealed_chest_pillar": {
+    "name_ja": "封印宝箱柱",
+    "max_per_run": 3,
+    "unlock_seconds": 300,
+    "min_distance": 1500,
+    "hp": 120,
+    "priority": 9,
+    "biomes": [
+      "amethyst_forest",
+      "red_mine",
+      "void_zone"
+    ],
+    "color": [
+      1.0,
+      0.86,
+      0.28
+    ],
+    "generated_icon": "res://assets/generated/field_gimmicks/sealed_chest_pillar.svg"
+  }
+}

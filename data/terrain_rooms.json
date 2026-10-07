@@ -1,0 +1,30 @@
+{
+  "required_sequence": [
+    "crystal_corridor",
+    "mine_chamber",
+    "danger_den",
+    "healing_oasis",
+    "relic_vault",
+    "event_room",
+    "crystal_corridor",
+    "mine_chamber",
+    "danger_den",
+    "sealed_room",
+    "crystal_corridor",
+    "boss_arena"
+  ],
+  "important_types": [
+    "mine_chamber",
+    "danger_den",
+    "healing_oasis",
+    "relic_vault",
+    "event_room",
+    "sealed_room",
+    "boss_arena"
+  ],
+  "dead_end_types": [
+    "relic_vault",
+    "sealed_room",
+    "boss_arena"
+  ]
+}

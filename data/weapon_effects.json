@@ -1,0 +1,277 @@
+{
+  "magic_bolt": {
+    "effect_type": "ranged_bullet",
+    "primary_color": [0.54, 0.86, 1.0],
+    "secondary_color": [1.0, 1.0, 1.0],
+    "hit_effect": "blue_shard_spark",
+    "evolved_effect_type": "gold_meteor_bullet",
+    "screen_priority": 3,
+    "opacity": 0.82,
+    "lifetime": 0.28,
+    "max_effect_count": 36,
+    "normal": { "color": [0.54, 0.86, 1.0], "shape": "small_bolt", "effect": "blue_white_bullet", "trail": true, "range_preview": false, "area_indicator": false },
+    "evolved": { "color": [1.0, 0.92, 0.42], "shape": "meteor_bolt", "effect": "gold_star_trail", "trail": true, "meteor_tail": true, "area_indicator": true }
+  },
+  "ice_orbit": {
+    "effect_type": "orbit_area",
+    "primary_color": [0.38, 0.82, 1.0],
+    "secondary_color": [0.86, 0.98, 1.0],
+    "hit_effect": "ice_spark",
+    "evolved_effect_type": "multi_crystal_orbit",
+    "screen_priority": 3,
+    "opacity": 0.70,
+    "lifetime": 0.34,
+    "max_effect_count": 32,
+    "normal": { "color": [0.38, 0.82, 1.0], "shape": "orbit_ring", "effect": "ice_ring", "trail": true, "area_indicator": true },
+    "evolved": { "color": [0.86, 0.98, 1.0], "shape": "multi_orbit_ring", "effect": "crystal_freeze_ring", "trail": true, "area_indicator": true, "wide_ring": true }
+  },
+  "thunder_chain": {
+    "effect_type": "lightning_chain",
+    "primary_color": [0.78, 0.70, 1.0],
+    "secondary_color": [0.38, 0.92, 1.0],
+    "hit_effect": "electric_spark",
+    "evolved_effect_type": "divine_lightning_chain",
+    "screen_priority": 5,
+    "opacity": 0.90,
+    "lifetime": 0.22,
+    "max_effect_count": 44,
+    "lightning_line": true,
+    "shock_icon": true,
+    "normal": { "color": [0.78, 0.70, 1.0], "shape": "zigzag_line", "effect": "short_lightning", "trail": true, "lightning_line": true, "shock_icon": true },
+    "evolved": { "color": [1.0, 1.0, 1.0], "shape": "thick_zigzag_line", "effect": "divine_purple_lightning", "trail": true, "lightning_line": true, "shock_icon": true, "thick_line": true }
+  },
+  "bomb_seed": {
+    "effect_type": "delayed_explosion",
+    "primary_color": [1.0, 0.38, 0.18],
+    "secondary_color": [1.0, 0.72, 0.24],
+    "hit_effect": "orange_impact_spark",
+    "evolved_effect_type": "multi_ring_firework",
+    "screen_priority": 4,
+    "opacity": 0.78,
+    "lifetime": 0.42,
+    "max_effect_count": 32,
+    "normal": { "color": [1.0, 0.38, 0.18], "shape": "seed_bomb", "effect": "blink_then_explode", "trail": false, "area_indicator": true, "pre_blast_circle": true },
+    "evolved": { "color": [1.0, 0.72, 0.24], "shape": "firework_ring", "effect": "multi_ring_explosion", "trail": true, "area_indicator": true, "shockwave_ring": true }
+  },
+  "blade_fan": {
+    "effect_type": "melee_arc",
+    "primary_color": [0.90, 0.96, 1.0],
+    "secondary_color": [0.46, 1.0, 0.62],
+    "hit_effect": "white_green_slash_spark",
+    "evolved_effect_type": "green_slash_wave",
+    "screen_priority": 5,
+    "opacity": 0.76,
+    "lifetime": 0.18,
+    "max_effect_count": 40,
+    "melee_arc": true,
+    "normal": { "color": [0.90, 0.96, 1.0], "shape": "fan_slash", "effect": "forward_arc", "trail": true, "melee_arc": true, "area_indicator": true },
+    "evolved": { "color": [0.46, 1.0, 0.62], "shape": "chain_slash_wave", "effect": "green_white_slash_wave", "trail": true, "melee_arc": true, "slash_wave": true, "area_indicator": true }
+  },
+  "laser_lance": {
+    "effect_type": "laser_beam",
+    "primary_color": [0.46, 0.95, 1.0],
+    "secondary_color": [1.0, 0.55, 1.0],
+    "hit_effect": "laser_pierce_spark",
+    "evolved_effect_type": "aurora_wide_laser",
+    "screen_priority": 5,
+    "opacity": 0.72,
+    "lifetime": 0.16,
+    "max_effect_count": 22,
+    "warning_line": true,
+    "normal": { "color": [0.46, 0.95, 1.0], "shape": "thin_laser", "effect": "warning_line_laser", "trail": true, "warning_line": true },
+    "evolved": { "color": [1.0, 0.55, 1.0], "shape": "aurora_laser", "effect": "wide_rainbow_laser", "trail": true, "warning_line": true, "wide_beam": true }
+  },
+  "poison_mist": {
+    "effect_type": "poison_area",
+    "primary_color": [0.48, 1.0, 0.34],
+    "secondary_color": [0.68, 0.25, 1.0],
+    "hit_effect": "green_purple_poison_tick",
+    "evolved_effect_type": "corrosion_domain",
+    "screen_priority": 2,
+    "opacity": 0.42,
+    "lifetime": 0.55,
+    "max_effect_count": 18,
+    "poison_icon": true,
+    "normal": { "color": [0.48, 1.0, 0.34], "shape": "mist_circle", "effect": "green_poison_area", "trail": false, "area_indicator": true, "poison_icon": true },
+    "evolved": { "color": [0.68, 0.25, 1.0], "shape": "corrosion_pool", "effect": "purple_green_corrosion", "trail": false, "area_indicator": true, "poison_icon": true, "wide_ring": true }
+  },
+  "drone_bit": {
+    "effect_type": "summon_bit",
+    "primary_color": [0.40, 1.0, 0.88],
+    "secondary_color": [1.0, 0.82, 0.28],
+    "hit_effect": "bit_muzzle_flash",
+    "evolved_effect_type": "gold_star_bit",
+    "screen_priority": 3,
+    "opacity": 0.80,
+    "lifetime": 0.24,
+    "max_effect_count": 36,
+    "normal": { "color": [0.40, 1.0, 0.88], "shape": "small_bit", "effect": "orbiting_auto_shot", "trail": true, "orbit_line": true },
+    "evolved": { "color": [1.0, 0.82, 0.28], "shape": "gold_star_bit", "effect": "multi_homing_bit", "trail": true, "orbit_line": true, "multi_bit": true }
+  },
+  "crystal_mine": {
+    "effect_type": "crystal_explosion",
+    "primary_color": [0.48, 0.95, 1.0],
+    "secondary_color": [0.84, 1.0, 1.0],
+    "hit_effect": "crystal_shard_burst",
+    "evolved_effect_type": "large_crystal_burst",
+    "screen_priority": 4,
+    "opacity": 0.74,
+    "lifetime": 0.42,
+    "max_effect_count": 24,
+    "normal": { "color": [0.48, 0.95, 1.0], "shape": "mine_crystal", "effect": "crystal_mine_burst", "trail": false, "area_indicator": true, "pre_blast_circle": true },
+    "evolved": { "color": [0.84, 1.0, 1.0], "shape": "mine_crystal_large", "effect": "large_crystal_burst", "trail": true, "area_indicator": true, "shockwave_ring": true }
+  },
+  "black_hole": {
+    "effect_type": "gravity_area",
+    "primary_color": [0.80, 0.46, 1.0],
+    "secondary_color": [0.96, 0.72, 1.0],
+    "hit_effect": "void_pull_tick",
+    "evolved_effect_type": "wide_void_vortex",
+    "screen_priority": 3,
+    "opacity": 0.52,
+    "lifetime": 0.60,
+    "max_effect_count": 18,
+    "normal": { "color": [0.80, 0.46, 1.0], "shape": "gravity_orb", "effect": "pulling_void", "trail": true, "area_indicator": true },
+    "evolved": { "color": [0.96, 0.72, 1.0], "shape": "gravity_vortex", "effect": "wide_void_pull", "trail": true, "area_indicator": true, "wide_ring": true }
+  },
+  "rune_gate": {
+    "effect_type": "deploy_gate",
+    "primary_color": [1.0, 0.52, 0.24],
+    "secondary_color": [1.0, 0.84, 0.38],
+    "hit_effect": "gate_flare",
+    "evolved_effect_type": "eternal_gate",
+    "screen_priority": 3,
+    "opacity": 0.70,
+    "lifetime": 0.45,
+    "max_effect_count": 24,
+    "normal": { "color": [1.0, 0.52, 0.24], "shape": "rune_gate", "effect": "burn_gate", "trail": false, "area_indicator": true, "deploy_marker": true },
+    "evolved": { "color": [1.0, 0.84, 0.38], "shape": "large_rune_gate", "effect": "multi_eternal_gate", "trail": true, "area_indicator": true, "deploy_marker": true, "wide_ring": true }
+  },
+  "comet_staff": {
+    "effect_type": "falling_explosion",
+    "primary_color": [1.0, 0.72, 0.28],
+    "secondary_color": [1.0, 0.88, 0.48],
+    "hit_effect": "meteor_impact_ring",
+    "evolved_effect_type": "meteor_cluster",
+    "screen_priority": 4,
+    "opacity": 0.78,
+    "lifetime": 0.40,
+    "max_effect_count": 28,
+    "normal": { "color": [1.0, 0.72, 0.28], "shape": "falling_comet", "effect": "single_meteor", "trail": true, "area_indicator": true, "pre_blast_circle": true },
+    "evolved": { "color": [1.0, 0.88, 0.48], "shape": "meteor_cluster", "effect": "multi_meteor_rain", "trail": true, "area_indicator": true, "shockwave_ring": true }
+  },
+  "soul_scythe": {
+    "effect_type": "melee_arc",
+    "primary_color": [0.82, 0.94, 1.0],
+    "secondary_color": [1.0, 1.0, 1.0],
+    "hit_effect": "white_red_soul_spark",
+    "evolved_effect_type": "death_scythe_wave",
+    "screen_priority": 5,
+    "opacity": 0.78,
+    "lifetime": 0.18,
+    "max_effect_count": 42,
+    "melee_arc": true,
+    "normal": { "color": [0.82, 0.94, 1.0], "shape": "scythe_arc", "effect": "close_soul_slash", "trail": true, "melee_arc": true, "area_indicator": true },
+    "evolved": { "color": [1.0, 1.0, 1.0], "shape": "death_scythe_arc", "effect": "life_steal_slash", "trail": true, "melee_arc": true, "slash_wave": true, "area_indicator": true }
+  },
+  "mirror_shard": {
+    "effect_type": "reflect_bullet",
+    "primary_color": [0.74, 0.92, 1.0],
+    "secondary_color": [1.0, 1.0, 1.0],
+    "hit_effect": "mirror_splinter",
+    "evolved_effect_type": "kaleido_reflect",
+    "screen_priority": 3,
+    "opacity": 0.80,
+    "lifetime": 0.26,
+    "max_effect_count": 36,
+    "normal": { "color": [0.74, 0.92, 1.0], "shape": "mirror_shard", "effect": "reflect_projectile", "trail": true, "reflect_trail": true },
+    "evolved": { "color": [1.0, 1.0, 1.0], "shape": "kaleido_shard", "effect": "split_reflect_projectile", "trail": true, "reflect_trail": true, "split_trail": true }
+  },
+  "sonic_wave": {
+    "effect_type": "melee_knockback_ring",
+    "primary_color": [0.58, 1.0, 0.92],
+    "secondary_color": [0.90, 1.0, 1.0],
+    "hit_effect": "white_sonic_spark",
+    "evolved_effect_type": "full_sonic_domain",
+    "screen_priority": 4,
+    "opacity": 0.58,
+    "lifetime": 0.24,
+    "max_effect_count": 24,
+    "melee_arc": true,
+    "normal": { "color": [0.58, 1.0, 0.92], "shape": "sound_arc", "effect": "knockback_wave", "trail": true, "melee_arc": true, "area_indicator": true },
+    "evolved": { "color": [0.90, 1.0, 1.0], "shape": "sonic_domain", "effect": "full_circle_knockback", "trail": true, "melee_arc": true, "area_indicator": true, "wide_ring": true }
+  },
+  "gem_turret": {
+    "effect_type": "gem_shot",
+    "primary_color": [0.36, 1.0, 0.76],
+    "secondary_color": [1.0, 0.92, 0.36],
+    "hit_effect": "gem_spark",
+    "evolved_effect_type": "gem_star_barrage",
+    "screen_priority": 3,
+    "opacity": 0.78,
+    "lifetime": 0.24,
+    "max_effect_count": 36,
+    "normal": { "color": [0.36, 1.0, 0.76], "shape": "gem_turret", "effect": "gem_echo_shot", "trail": true, "resource_link": true },
+    "evolved": { "color": [1.0, 0.92, 0.36], "shape": "gem_star_cannon", "effect": "gem_star_barrage", "trail": true, "resource_link": true, "star_barrage": true }
+  },
+  "corridor_blade": {
+    "effect_type": "melee_arc", "primary_color": [0.42, 0.92, 1.0], "secondary_color": [1.0, 0.94, 0.48], "hit_effect": "corridor_slash", "evolved_effect_type": "corridor_judgement", "screen_priority": 4, "opacity": 0.78, "lifetime": 0.20, "max_effect_count": 36, "melee_arc": true,
+    "normal": {"color": [0.42, 0.92, 1.0], "shape": "long_arc", "effect": "corridor_slash", "trail": true, "area_indicator": true}, "evolved": {"color": [1.0, 0.94, 0.48], "shape": "double_arc", "effect": "reflected_judgement", "trail": true}
+  },
+  "wall_bounce_blaster": {
+    "effect_type": "reflect_bullet", "primary_color": [0.64, 0.90, 1.0], "secondary_color": [1.0, 0.48, 0.88], "hit_effect": "prism_spark", "evolved_effect_type": "infinite_ricochet", "screen_priority": 3, "opacity": 0.82, "lifetime": 0.24, "max_effect_count": 48,
+    "normal": {"color": [0.64, 0.90, 1.0], "shape": "diamond", "effect": "ricochet", "trail": true}, "evolved": {"color": [1.0, 0.48, 0.88], "shape": "split_diamond", "effect": "infinite_ricochet", "trail": true}
+  },
+  "drill_charge": {
+    "effect_type": "melee_arc", "primary_color": [1.0, 0.72, 0.28], "secondary_color": [0.56, 0.94, 1.0], "hit_effect": "rock_shatter", "evolved_effect_type": "divine_drill", "screen_priority": 5, "opacity": 0.86, "lifetime": 0.24, "max_effect_count": 32, "melee_arc": true,
+    "normal": {"color": [1.0, 0.72, 0.28], "shape": "drill_line", "effect": "wall_drill", "trail": true, "area_indicator": true}, "evolved": {"color": [0.56, 0.94, 1.0], "shape": "divine_drill", "effect": "shatter_blast", "trail": true}
+  },
+  "mine_lantern": {
+    "effect_type": "deploy_area", "primary_color": [1.0, 0.88, 0.36], "secondary_color": [0.46, 1.0, 0.82], "hit_effect": "lantern_spark", "evolved_effect_type": "star_lantern", "screen_priority": 2, "opacity": 0.54, "lifetime": 0.35, "max_effect_count": 20,
+    "normal": {"color": [1.0, 0.88, 0.36], "shape": "lantern_field", "effect": "mine_light", "area_indicator": true}, "evolved": {"color": [0.46, 1.0, 0.82], "shape": "star_lantern", "effect": "exploration_light", "area_indicator": true}
+  },
+  "relic_chain": {
+    "effect_type": "melee_arc", "primary_color": [0.78, 0.36, 1.0], "secondary_color": [1.0, 0.30, 0.46], "hit_effect": "curse_chain", "evolved_effect_type": "curse_king_chain", "screen_priority": 4, "opacity": 0.80, "lifetime": 0.22, "max_effect_count": 38, "melee_arc": true,
+    "normal": {"color": [0.78, 0.36, 1.0], "shape": "chain_arc", "effect": "relic_chain", "trail": true, "area_indicator": true}, "evolved": {"color": [1.0, 0.30, 0.46], "shape": "king_chain", "effect": "multi_curse_chain", "trail": true}
+  },
+  "shrine_beam": {
+    "effect_type": "deploy_laser", "primary_color": [1.0, 0.94, 0.62], "secondary_color": [0.52, 0.90, 1.0], "hit_effect": "holy_spark", "evolved_effect_type": "sanctuary_beam", "screen_priority": 5, "opacity": 0.66, "lifetime": 0.32, "max_effect_count": 24,
+    "normal": {"color": [1.0, 0.94, 0.62], "shape": "shrine_field", "effect": "altar_beam", "area_indicator": true}, "evolved": {"color": [0.52, 0.90, 1.0], "shape": "sanctuary_field", "effect": "judgement_beam", "area_indicator": true}
+  },
+  "thorn_seed": {
+    "effect_type": "deploy_poison", "primary_color": [0.48, 1.0, 0.42], "secondary_color": [0.76, 0.32, 1.0], "hit_effect": "thorn_burst", "evolved_effect_type": "thorn_garden", "screen_priority": 3, "opacity": 0.58, "lifetime": 0.30, "max_effect_count": 30,
+    "normal": {"color": [0.48, 1.0, 0.42], "shape": "thorn_trap", "effect": "poison_thorns", "area_indicator": true}, "evolved": {"color": [0.76, 0.32, 1.0], "shape": "thorn_garden", "effect": "poison_garden", "area_indicator": true}
+  },
+  "frost_wall": {
+    "effect_type": "deploy_defense", "primary_color": [0.54, 0.92, 1.0], "secondary_color": [0.92, 1.0, 1.0], "hit_effect": "frost_spark", "evolved_effect_type": "eternal_frost_wall", "screen_priority": 3, "opacity": 0.62, "lifetime": 0.30, "max_effect_count": 22,
+    "normal": {"color": [0.54, 0.92, 1.0], "shape": "ice_wall", "effect": "slow_field", "area_indicator": true}, "evolved": {"color": [0.92, 1.0, 1.0], "shape": "eternal_ice_wall", "effect": "freeze_field", "area_indicator": true}
+  },
+  "coin_orbit": {
+    "effect_type": "gem_orbit", "primary_color": [1.0, 0.82, 0.22], "secondary_color": [0.46, 1.0, 0.76], "hit_effect": "coin_spark", "evolved_effect_type": "golden_orbit", "screen_priority": 3, "opacity": 0.82, "lifetime": 0.22, "max_effect_count": 42,
+    "normal": {"color": [1.0, 0.82, 0.22], "shape": "coin", "effect": "coin_orbit", "trail": true}, "evolved": {"color": [0.46, 1.0, 0.76], "shape": "gold_star", "effect": "golden_orbit", "trail": true}
+  },
+  "echo_bell": {
+    "effect_type": "melee_knockback_ring", "primary_color": [0.56, 1.0, 0.88], "secondary_color": [1.0, 0.86, 0.42], "hit_effect": "echo_ring", "evolved_effect_type": "final_echo", "screen_priority": 4, "opacity": 0.60, "lifetime": 0.28, "max_effect_count": 28, "melee_arc": true,
+    "normal": {"color": [0.56, 1.0, 0.88], "shape": "sound_ring", "effect": "echo_pulse", "area_indicator": true}, "evolved": {"color": [1.0, 0.86, 0.42], "shape": "triple_ring", "effect": "final_echo", "area_indicator": true}
+  },
+  "void_mirror": {
+    "effect_type": "reflect_bullet", "primary_color": [0.62, 0.34, 0.96], "secondary_color": [1.0, 0.22, 0.62], "hit_effect": "void_splinter", "evolved_effect_type": "void_reflection", "screen_priority": 4, "opacity": 0.84, "lifetime": 0.26, "max_effect_count": 44,
+    "normal": {"color": [0.62, 0.34, 0.96], "shape": "void_shard", "effect": "curse_reflect", "trail": true}, "evolved": {"color": [1.0, 0.22, 0.62], "shape": "void_mirror", "effect": "void_explosion_reflect", "trail": true}
+  },
+  "magma_core": {
+    "effect_type": "deploy_area", "primary_color": [1.0, 0.34, 0.12], "secondary_color": [1.0, 0.82, 0.24], "hit_effect": "magma_splash", "evolved_effect_type": "magma_domain", "screen_priority": 4, "opacity": 0.62, "lifetime": 0.34, "max_effect_count": 26,
+    "normal": {"color": [1.0, 0.34, 0.12], "shape": "lava_pool", "effect": "burning_ground", "area_indicator": true}, "evolved": {"color": [1.0, 0.82, 0.24], "shape": "magma_domain", "effect": "eruption_field", "area_indicator": true}
+  },
+  "compass_star": {
+    "effect_type": "explore_projectile", "primary_color": [0.42, 0.90, 1.0], "secondary_color": [1.0, 0.92, 0.34], "hit_effect": "star_spark", "evolved_effect_type": "guiding_star", "screen_priority": 3, "opacity": 0.84, "lifetime": 0.22, "max_effect_count": 42,
+    "normal": {"color": [0.42, 0.90, 1.0], "shape": "star", "effect": "compass_shot", "trail": true}, "evolved": {"color": [1.0, 0.92, 0.34], "shape": "guiding_star", "effect": "target_star", "trail": true}
+  },
+  "guardian_wall": {
+    "effect_type": "deploy_defense", "primary_color": [0.46, 0.76, 1.0], "secondary_color": [0.58, 1.0, 0.76], "hit_effect": "guard_spark", "evolved_effect_type": "guardian_fortress", "screen_priority": 3, "opacity": 0.60, "lifetime": 0.30, "max_effect_count": 22,
+    "normal": {"color": [0.46, 0.76, 1.0], "shape": "guard_wall", "effect": "defense_field", "area_indicator": true}, "evolved": {"color": [0.58, 1.0, 0.76], "shape": "guardian_fortress", "effect": "fortress_field", "area_indicator": true}
+  },
+  "gravity_anchor": {
+    "effect_type": "gravity_area", "primary_color": [0.54, 0.30, 0.92], "secondary_color": [0.44, 0.96, 1.0], "hit_effect": "gravity_spark", "evolved_effect_type": "singularity_anchor", "screen_priority": 5, "opacity": 0.58, "lifetime": 0.36, "max_effect_count": 24,
+    "normal": {"color": [0.54, 0.30, 0.92], "shape": "gravity_anchor", "effect": "pull_field", "area_indicator": true}, "evolved": {"color": [0.44, 0.96, 1.0], "shape": "singularity", "effect": "singularity_pull", "area_indicator": true}
+  }
+}

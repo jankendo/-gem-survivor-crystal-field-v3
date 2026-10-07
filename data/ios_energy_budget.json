@@ -1,0 +1,36 @@
+{
+  "standard": {
+    "target_fps": 60,
+    "force_quality_reduction": false,
+    "max_ui_rebuild_per_second": 6,
+    "max_label_updates_per_second": 30,
+    "minimap_update_interval": 0.25,
+    "goal_update_interval": 0.25,
+    "equipment_hud_update_interval": 0.25,
+    "notification_update_interval": 0.20,
+    "hud_update_interval": 0.10,
+    "pause_update_interval": 0.20,
+    "max_haptic_per_minute": 20,
+    "max_log_write_interval": 5.0,
+    "background_particle_update_interval": 0.15,
+    "far_enemy_ai_update_interval": 0.25,
+    "offscreen_ai_update_interval": 0.45
+  },
+  "battery_saver": {
+    "target_fps": 30,
+    "force_quality_reduction": true,
+    "max_ui_rebuild_per_second": 4,
+    "max_label_updates_per_second": 20,
+    "minimap_update_interval": 0.333,
+    "goal_update_interval": 0.25,
+    "equipment_hud_update_interval": 0.25,
+    "notification_update_interval": 0.25,
+    "hud_update_interval": 0.10,
+    "pause_update_interval": 0.35,
+    "max_haptic_per_minute": 0,
+    "max_log_write_interval": 10.0,
+    "background_particle_update_interval": 999.0,
+    "far_enemy_ai_update_interval": 0.32,
+    "offscreen_ai_update_interval": 0.60
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "duration_seconds": 1800,
+  "phases": [
+    { "time": 0, "interval": 1.10, "count": 2 },
+    { "time": 30, "interval": 0.82, "count": 2 },
+    { "time": 60, "interval": 0.66, "count": 3 },
+    { "time": 140, "interval": 0.50, "count": 4 },
+    { "time": 300, "interval": 0.34, "count": 7 },
+    { "time": 420, "interval": 0.28, "count": 8 },
+    { "time": 600, "interval": 0.23, "count": 10 },
+    { "time": 900, "interval": 0.18, "count": 12 },
+    { "time": 1200, "interval": 0.145, "count": 15 },
+    { "time": 1500, "interval": 0.12, "count": 18 },
+    { "time": 1800, "interval": 0.10, "count": 22 }
+  ],
+  "boss_minutes": [5, 10, 15, 20, 25, 30]
+}

@@ -1,0 +1,35 @@
+{
+  "seed": 70707,
+  "duration_seconds": 20,
+  "enemy_count": 600,
+  "simulation_projectiles": 500,
+  "simulation_gems": 1000,
+  "scenarios": [
+    {
+      "id": "multi_projectile_ricochet",
+      "weapons": ["mirror_shard", "magic_bolt", "wall_bounce_blaster", "void_mirror", "compass_star"],
+      "commands_per_frame": 30
+    },
+    {
+      "id": "explosion_bloom",
+      "weapons": ["bomb_seed", "comet_staff", "magma_core", "burning_afterglow"],
+      "commands_per_frame": 34
+    },
+    {
+      "id": "persistent_area",
+      "weapons": ["black_hole", "poison_mist", "rune_gate", "mine_lantern", "gravity_anchor"],
+      "commands_per_frame": 28
+    },
+    {
+      "id": "arc_lightning",
+      "weapons": ["ice_orbit", "thunder_chain", "soul_scythe", "sonic_wave"],
+      "commands_per_frame": 36
+    },
+    {
+      "id": "combined_worst_case",
+      "weapons": ["magic_bolt", "ice_orbit", "thunder_chain", "bomb_seed", "black_hole", "mirror_shard"],
+      "commands_per_frame": 48
+    }
+  ]
+}
+

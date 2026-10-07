@@ -1,0 +1,7 @@
+{
+  "tabs": ["characters", "weapons", "passives", "evolutions", "enemies", "bosses", "field_drops", "field_gimmicks", "field_events", "titles"],
+  "locked_label_ja": "？？？",
+  "notes_ja": "未解放要素は条件を表示し、取得/撃破/進化/初回発見後に記録を更新します。",
+  "filters": ["unlocked", "locked", "secret", "melee", "ranged", "lightning", "poison", "explosion", "crystal", "explore", "currency", "evolvable", "not_evolved"],
+  "sorts": ["unlock", "category", "highest_level", "acquired"]
+}

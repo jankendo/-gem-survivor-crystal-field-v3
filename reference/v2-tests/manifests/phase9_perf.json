@@ -1,0 +1,8 @@
+{
+  "name": "phase9_perf",
+  "tasks": [
+    {"id": "phase9-enemy-motion-stress", "path": "res://tests/auto_play_phase9_enemy_motion_stress.gd"},
+    {"id": "phase9-gem-collection-burst", "path": "res://tests/auto_play_phase9_gem_collection_burst.gd"},
+    {"id": "phase9-visual-simulation-parity", "path": "res://tests/auto_play_phase9_visual_simulation_parity.gd"}
+  ]
+}

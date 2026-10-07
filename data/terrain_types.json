@@ -1,0 +1,92 @@
+{
+  "safe_room": {
+    "name_ja": "安全拠点",
+    "description_ja": "開始地点。敵圧が低く、四方向へ進める。",
+    "danger": 0,
+    "spawn_mult": 0.72,
+    "enemy_damage_mult": 0.90,
+    "reward_mult": 0.90,
+    "color": [0.12, 0.32, 0.36]
+  },
+  "crystal_corridor": {
+    "name_ja": "結晶回廊",
+    "description_ja": "採掘しやすい細道。近接と壁破壊が有効。",
+    "danger": 2,
+    "spawn_mult": 1.04,
+    "enemy_damage_mult": 1.00,
+    "reward_mult": 1.10,
+    "color": [0.16, 0.30, 0.50]
+  },
+  "mine_chamber": {
+    "name_ja": "採掘室",
+    "description_ja": "結晶報酬が多い広間。滞在すると敵が増える。",
+    "danger": 2,
+    "spawn_mult": 1.12,
+    "enemy_damage_mult": 1.00,
+    "reward_mult": 1.28,
+    "color": [0.36, 0.24, 0.18]
+  },
+  "danger_den": {
+    "name_ja": "危険巣窟",
+    "description_ja": "敵密度とエリート率が高い高報酬区域。",
+    "danger": 5,
+    "spawn_mult": 1.40,
+    "enemy_damage_mult": 1.18,
+    "reward_mult": 1.55,
+    "color": [0.42, 0.08, 0.16]
+  },
+  "healing_oasis": {
+    "name_ja": "回復の泉",
+    "description_ja": "回復ギミックが置かれる休息部屋。",
+    "danger": 1,
+    "spawn_mult": 0.88,
+    "enemy_damage_mult": 0.92,
+    "reward_mult": 1.00,
+    "color": [0.10, 0.36, 0.24]
+  },
+  "relic_vault": {
+    "name_ja": "遺物庫",
+    "description_ja": "希少報酬を狙える袋小路。出口を確保して挑む。",
+    "danger": 4,
+    "spawn_mult": 1.22,
+    "enemy_damage_mult": 1.10,
+    "reward_mult": 1.48,
+    "color": [0.34, 0.22, 0.46]
+  },
+  "boss_arena": {
+    "name_ja": "ボス闘技場",
+    "description_ja": "広い決戦部屋。攻撃予兆を見て回避する。",
+    "danger": 5,
+    "spawn_mult": 1.18,
+    "enemy_damage_mult": 1.15,
+    "reward_mult": 1.60,
+    "color": [0.44, 0.12, 0.10]
+  },
+  "event_room": {
+    "name_ja": "イベント室",
+    "description_ja": "時間制イベントが起きやすい特殊部屋。",
+    "danger": 3,
+    "spawn_mult": 1.12,
+    "enemy_damage_mult": 1.05,
+    "reward_mult": 1.30,
+    "color": [0.16, 0.34, 0.44]
+  },
+  "shortcut_wall": {
+    "name_ja": "近道結晶壁",
+    "description_ja": "破壊すると別区画への移動が短縮される。",
+    "danger": 2,
+    "spawn_mult": 1.00,
+    "enemy_damage_mult": 1.00,
+    "reward_mult": 1.20,
+    "color": [0.28, 0.52, 0.62]
+  },
+  "sealed_room": {
+    "name_ja": "封印室",
+    "description_ja": "破壊可能な入口を持つ高難度報酬部屋。",
+    "danger": 4,
+    "spawn_mult": 1.28,
+    "enemy_damage_mult": 1.12,
+    "reward_mult": 1.50,
+    "color": [0.30, 0.16, 0.38]
+  }
+}

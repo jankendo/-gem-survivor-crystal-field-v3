@@ -1,0 +1,58 @@
+extends RefCounted
+class_name WorldGenerator
+# Connected rooms and orthogonal corridors; every spawn/pickup projects onto valid floor.
+var rooms: Array[Rect2] = []
+var corridors: Array[Rect2] = []
+var kinds: Array[String] = []
+var portals: Array[Vector2] = []
+var seed_value := 0
+func generate(seed_input: int) -> void:
+ seed_value = seed_input
+ var rng := RunRng.new()
+ rng.set_seed_value(seed_input)
+ rooms.clear()
+ corridors.clear()
+ portals.clear()
+ kinds.clear()
+ for y in range(5):
+  for x in range(5):
+   var center := Vector2(x - 2, y - 2) * 900.0
+   var size := Vector2(rng.range_int(530, 700), rng.range_int(530, 700))
+   rooms.append(Rect2(center - size / 2, size))
+   kinds.append(["safe", "mining", "risk", "event", "shortcut"][(x + y * 2) % 5])
+   if x > 0: corridors.append(Rect2(center - Vector2(900, 100), Vector2(900, 200)))
+   if y > 0: corridors.append(Rect2(center - Vector2(100, 900), Vector2(200, 900)))
+   if (x + y) % 3 == 0 and center.length() > 500: portals.append(center)
+ kinds[12] = "safe"
+func walkable(p: Vector2, margin: float = 0) -> bool:
+ for rect in rooms:
+  if rect.grow(-margin).has_point(p): return true
+ for rect in corridors:
+  if rect.grow(-margin).has_point(p): return true
+ return false
+func safe_position(p: Vector2, margin: float = 24) -> Vector2:
+ if walkable(p, margin): return p
+ var best := Vector2.ZERO
+ var distance := INF
+ for rect in rooms:
+  var q := p.clamp(rect.position + Vector2.ONE * margin, rect.end - Vector2.ONE * margin)
+  if p.distance_squared_to(q) < distance:
+   best = q
+   distance = p.distance_squared_to(q)
+ for rect in corridors:
+  var q := p.clamp(rect.position + Vector2.ONE * margin, rect.end - Vector2.ONE * margin)
+  if p.distance_squared_to(q) < distance:
+   best = q
+   distance = p.distance_squared_to(q)
+ return best
+func move(p: Vector2, delta: Vector2, margin: float = 14) -> Vector2:
+ var next := p + delta
+ if walkable(next, margin): return next
+ var slide := Vector2(next.x, p.y)
+ if walkable(slide, margin): return slide
+ slide = Vector2(p.x, next.y)
+ return slide if walkable(slide, margin) else p
+func room_at(p: Vector2) -> int:
+ for i in range(rooms.size()):
+  if rooms[i].has_point(p): return i
+ return -1

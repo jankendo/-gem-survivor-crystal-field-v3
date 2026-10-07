@@ -1,0 +1,22 @@
+{
+  "ios": {
+    "target_fps": 60,
+    "warning_fps": 50,
+    "max_frame_time_ms": 33,
+    "max_enemies_visible": 360,
+    "max_enemies_total": 700,
+    "max_rendered_effects": 96,
+    "max_rendered_damage_numbers": 0,
+    "max_rendered_gems": 420,
+    "max_rendered_projectiles": 190,
+    "max_rendered_background_particles": 90,
+    "max_notifications_visible": 3,
+    "max_log_entries_memory": 80,
+    "minimap_update_interval": 0.25,
+    "equipment_hud_update_interval": 0.20,
+    "goal_hint_update_interval": 0.25,
+    "offscreen_ai_update_interval": 0.35,
+    "far_enemy_ai_update_interval": 0.20,
+    "near_enemy_ai_update_interval": 0.05
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "events": [
+    {
+      "id": "gem_storm",
+      "name_ja": "ジェム嵐",
+      "duration": 45.0,
+      "risk": "敵出現+30%",
+      "reward": "ジェム価値+65% / 成功でスキップ補充",
+      "objective_ja": "ジェムを回収しながら生存",
+      "success_type": "survive",
+      "success_condition_ja": "45秒生存",
+      "failure_condition_ja": "途中で倒れる",
+      "reward_candidates": [
+        "スキップ+1",
+        "高価値ジェム"
+      ],
+      "rare_rewards": [
+        "field_weapon"
+      ],
+      "limited_rewards": [],
+      "generated_icon": "res://assets/generated/field_events/gem_storm.svg"
+    },
+    {
+      "id": "crystal_surge",
+      "name_ja": "結晶隆起",
+      "duration": 50.0,
+      "risk": "結晶壁が増える",
+      "reward": "結晶報酬UP / 成功でフィールド装備抽選",
+      "objective_ja": "追加結晶を破壊",
+      "success_type": "crystal_break",
+      "success_count": 1,
+      "success_condition_ja": "追加結晶を1個破壊",
+      "failure_condition_ja": "時間切れ",
+      "reward_candidates": [
+        "フィールド装備",
+        "結晶貨"
+      ],
+      "rare_rewards": [
+        "field_passive"
+      ],
+      "limited_rewards": [],
+      "generated_icon": "res://assets/generated/field_events/crystal_surge.svg"
+    },
+    {
+      "id": "elite_hunt",
+      "name_ja": "エリート狩り",
+      "duration": 45.0,
+      "risk": "エリート出現率UP",
+      "reward": "撃破で宝箱 / 封印補充の可能性",
+      "objective_ja": "エリートを1体撃破",
+      "success_type": "elite_reward",
+      "success_condition_ja": "エリートを1体撃破",
+      "failure_condition_ja": "時間内に撃破できない",
+      "reward_candidates": [
+        "宝箱",
+        "封印+1"
+      ],
+      "rare_rewards": [
+        "seal_charge"
+      ],
+      "limited_rewards": [],
+      "generated_icon": "res://assets/generated/field_events/elite_hunt.svg"
+    },
+    {
+      "id": "danger_bloom",
+      "name_ja": "危険地帯拡大",
+      "duration": 55.0,
+      "risk": "危険地帯増加",
+      "reward": "危険地帯倍率UP / 探索チェーン加速",
+      "objective_ja": "危険地帯で10秒戦う",
+      "success_type": "danger_time",
+      "success_count": 10,
+      "success_condition_ja": "危険地帯内で累計10秒戦う",
+      "failure_condition_ja": "時間切れ",
+      "reward_candidates": [
+        "探索チェーン+1",
+        "レアドロップ率UP"
+      ],
+      "rare_rewards": [
+        "field_weapon"
+      ],
+      "limited_rewards": [],
+      "generated_icon": "res://assets/generated/field_events/danger_bloom.svg"
+    },
+    {
+      "id": "meteor_rain",
+      "name_ja": "流星雨",
+      "duration": 40.0,
+      "risk": "予告円の後に隕石",
+      "reward": "敵にも当たる / 成功で結晶貨",
+      "objective_ja": "流星雨を生き残る",
+      "success_type": "survive",
+      "success_condition_ja": "40秒生存",
+      "failure_condition_ja": "途中で倒れる",
+      "reward_candidates": [
+        "結晶貨",
+        "スコア"
+      ],
+      "rare_rewards": [
+        "skip_charge"
+      ],
+      "limited_rewards": [
+        "流星雨中だけの隕石支援"
+      ],
+      "generated_icon": "res://assets/generated/field_events/meteor_rain.svg"
+    },
+    {
+      "id": "cursed_treasure",
+      "name_ja": "呪いの宝箱",
+      "duration": 60.0,
+      "risk": "拾うと敵強化",
+      "reward": "過充電/黄金抽選 / 成功で高品質装備",
+      "objective_ja": "呪いの宝箱を開ける",
+      "success_type": "chest_open",
+      "success_condition_ja": "呪いの宝箱を開ける",
+      "failure_condition_ja": "時間切れ",
+      "reward_candidates": [
+        "過充電核",
+        "フィールド装備"
+      ],
+      "rare_rewards": [
+        "field_weapon",
+        "field_passive"
+      ],
+      "limited_rewards": [
+        "呪い報酬倍率"
+      ],
+      "generated_icon": "res://assets/generated/field_events/cursed_treasure.svg"
+    }
+  ],
+  "start_seconds": 240.0,
+  "interval_min": 120.0,
+  "interval_max": 180.0
+}

@@ -1,0 +1,69 @@
+{
+  "ios": {
+    "minimum_tap_target_pt": 44,
+    "primary_button_px": 76,
+    "secondary_button_px": 60,
+    "small_button_px": 52,
+    "card_min_height_px": 100,
+    "card_min_width_px": 160,
+    "virtual_joystick_outer_px": 200,
+    "virtual_joystick_knob_px": 84,
+    "virtual_joystick_touch_scale": 1.30,
+    "action_button_px": 76,
+    "pause_button_px": 64,
+    "font_size_small": 16,
+    "font_size_body": 18,
+    "font_size_title": 24,
+    "hud_icon_px": 42,
+    "safe_area_extra_padding_px": 16
+  },
+  "breakpoints": {
+    "compact_phone_max_width": 1599,
+    "regular_phone_max_width": 2299,
+    "large_phone_max_width": 2999,
+    "tablet_min_width": 2300,
+    "tablet_max_aspect": 1.55
+  },
+  "profiles": {
+    "compact_phone": {
+      "visible_characters": 3,
+      "character_card_width": 176,
+      "character_card_height": 128,
+      "joystick_outer": 200,
+      "action_button": 72,
+      "minimap_size": 204,
+      "minimap_icon": 8,
+      "camera_zoom": 1.20
+    },
+    "regular_phone": {
+      "visible_characters": 4,
+      "character_card_width": 184,
+      "character_card_height": 132,
+      "joystick_outer": 204,
+      "action_button": 76,
+      "minimap_size": 216,
+      "minimap_icon": 9,
+      "camera_zoom": 1.16
+    },
+    "large_phone": {
+      "visible_characters": 5,
+      "character_card_width": 188,
+      "character_card_height": 136,
+      "joystick_outer": 212,
+      "action_button": 80,
+      "minimap_size": 228,
+      "minimap_icon": 10,
+      "camera_zoom": 1.12
+    },
+    "tablet": {
+      "visible_characters": 8,
+      "character_card_width": 174,
+      "character_card_height": 132,
+      "joystick_outer": 188,
+      "action_button": 72,
+      "minimap_size": 200,
+      "minimap_icon": 10,
+      "camera_zoom": 1.00
+    }
+  }
+}

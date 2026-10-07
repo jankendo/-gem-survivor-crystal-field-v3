@@ -1,0 +1,68 @@
+{
+  "boss_5": {
+    "minute": 5,
+    "name_ja": "巨大スライム",
+    "hp": 340,
+    "speed": 56.0,
+    "damage": 28,
+    "score": 1200,
+    "exp": 60,
+    "radius": 46.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_5.svg"
+  },
+  "boss_10": {
+    "minute": 10,
+    "name_ja": "突進王ベリル",
+    "hp": 520,
+    "speed": 82.0,
+    "damage": 36,
+    "score": 2200,
+    "exp": 90,
+    "radius": 50.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_10.svg"
+  },
+  "boss_15": {
+    "minute": 15,
+    "name_ja": "結晶王",
+    "hp": 720,
+    "speed": 50.0,
+    "damage": 46,
+    "score": 3600,
+    "exp": 120,
+    "radius": 55.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_15.svg"
+  },
+  "boss_20": {
+    "minute": 20,
+    "name_ja": "霧の女王",
+    "hp": 960,
+    "speed": 60.0,
+    "damage": 54,
+    "score": 5600,
+    "exp": 160,
+    "radius": 62.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_20.svg"
+  },
+  "boss_25": {
+    "minute": 25,
+    "name_ja": "死神の影",
+    "hp": 1250,
+    "speed": 112.0,
+    "damage": 68,
+    "score": 7800,
+    "exp": 210,
+    "radius": 58.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_25.svg"
+  },
+  "boss_30": {
+    "minute": 30,
+    "name_ja": "終末核",
+    "hp": 1600,
+    "speed": 68.0,
+    "damage": 86,
+    "score": 12000,
+    "exp": 320,
+    "radius": 70.0,
+    "generated_sprite": "res://assets/generated/bosses/boss_30.svg"
+  }
+}

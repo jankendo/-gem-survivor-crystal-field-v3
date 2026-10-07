@@ -1,0 +1,31 @@
+{
+  "safe_margin": 24,
+  "hud_top_margin": 18,
+  "hud_side_margin": 28,
+  "message_bottom_margin": 22,
+  "minimap_size": 144,
+  "indicator_max_count": 3,
+  "minimum_text_width": 180,
+  "minimum_card_width": 240,
+  "minimum_scroll_content_width": 720,
+  "menu_content_width_1280": 1120,
+  "pause_tab_width": 178,
+  "pause_summary_width": 286,
+  "pause_content_min_width": 520,
+  "goal_panel_width": 330,
+  "field_help_panel_width": 390,
+  "shop_category_columns": 5,
+  "collection_filter_columns": 7,
+  "minimap_room_outline_width": 1,
+  "minimap_breakable_wall_color": [1.0, 0.78, 0.24],
+  "minimap_structural_wall_color": [0.42, 0.48, 0.56],
+  "hud_max_height": 118,
+  "supported_resolutions": [
+    [1280, 720],
+    [1366, 768],
+    [1600, 900],
+    [1920, 1080]
+  ],
+  "ui_scale_min": 0.85,
+  "ui_scale_max": 1.18
+}

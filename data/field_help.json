@@ -1,0 +1,168 @@
+{
+  "drops": {
+    "weapon_core": {
+      "name_ja": "武器コア",
+      "effect_ja": "所持武器を強化するか、新しい武器を獲得します。",
+      "approach_ja": "武器枠が空いている時や、主力武器を育てたい時に回収。",
+      "reward_ja": "武器Lv+1。候補がない場合はスコア。",
+      "build_ja": "全ビルド",
+      "danger": 2
+    },
+    "passive_core": {
+      "name_ja": "パッシブ結晶",
+      "effect_ja": "所持パッシブを強化するか、新しいパッシブを獲得します。",
+      "approach_ja": "進化素材や不足している能力を補いたい時に回収。",
+      "reward_ja": "パッシブLv+1。候補がない場合はスコア。",
+      "build_ja": "進化準備ビルド",
+      "danger": 2
+    },
+    "evolution_core": {
+      "name_ja": "進化核",
+      "effect_ja": "条件を満たした武器を即座に進化させます。",
+      "approach_ja": "武器Lvと必要パッシブを揃えてから回収。",
+      "reward_ja": "武器進化。条件未達時はスコア。",
+      "build_ja": "進化条件達成済み",
+      "danger": 4
+    },
+    "overclock_core": {
+      "name_ja": "過充電核",
+      "effect_ja": "進化武器へ追加効果を付与します。",
+      "approach_ja": "進化武器を作った後に遠征して回収。",
+      "reward_ja": "オーバークロック1種。",
+      "build_ja": "進化武器ビルド",
+      "danger": 5
+    },
+    "cursed_relic": {
+      "name_ja": "呪いの遺物",
+      "effect_ja": "高スコアを得る代わりに、敵が恒久的に強化されます。",
+      "approach_ja": "火力と回復に余裕がある時だけ回収。",
+      "reward_ja": "スコア+1800、報酬倍率上昇。",
+      "build_ja": "高火力・防御ビルド",
+      "danger": 5
+    },
+    "heal_ore": {
+      "name_ja": "回復鉱石",
+      "effect_ja": "拾うと最大HPの18%を回復します。",
+      "approach_ja": "HPが減っている時に優先。満タン時は温存。",
+      "reward_ja": "HP回復。",
+      "build_ja": "全ビルド",
+      "danger": 1
+    },
+    "magnet_ore": {
+      "name_ja": "磁力鉱石",
+      "effect_ja": "周辺のジェムを一斉に引き寄せます。",
+      "approach_ja": "大量のジェムを残した場所で回収。",
+      "reward_ja": "半径1150のジェム吸引。",
+      "build_ja": "ジェム・宝石ビルド",
+      "danger": 2
+    },
+    "crystal_cache": {
+      "name_ja": "結晶貯蔵庫",
+      "effect_ja": "高価値ジェムを周囲へ放出します。",
+      "approach_ja": "周囲の敵を処理してから回収。",
+      "reward_ja": "高価値ジェム8個とスコア。",
+      "build_ja": "ジェム・レベル上げビルド",
+      "danger": 3
+    }
+  },
+  "gimmicks": {
+    "reflect_crystal": {
+      "name_ja": "反射水晶",
+      "effect_ja": "接触した弾の進行方向を反射します。",
+      "approach_ja": "射線を変えて敵へ当てるか、邪魔なら破壊。",
+      "reward_ja": "破壊スコア。",
+      "build_ja": "投射物・反射ビルド",
+      "danger": 2
+    },
+    "lightning_crystal": {
+      "name_ja": "雷導結晶",
+      "effect_ja": "周囲の感電を誘発し、雷攻撃を強化します。",
+      "approach_ja": "敵を近くへ誘導して雷攻撃を当てる。",
+      "reward_ja": "感電爆発の連鎖。",
+      "build_ja": "雷ビルド",
+      "danger": 3
+    },
+    "explosive_vein": {
+      "name_ja": "爆薬鉱脈",
+      "effect_ja": "破壊時に周囲へ大爆発を起こします。",
+      "approach_ja": "敵を集めてから攻撃して破壊。",
+      "reward_ja": "周囲の敵へ大ダメージ。",
+      "build_ja": "爆発・範囲ビルド",
+      "danger": 3
+    },
+    "healing_spring": {
+      "name_ja": "回復泉",
+      "effect_ja": "近くにいる間、3秒ごとにHPを回復します。",
+      "approach_ja": "HPが減った時の退避地点として利用。",
+      "reward_ja": "継続回復。",
+      "build_ja": "防御・近接ビルド",
+      "danger": 1
+    },
+    "spawn_rift": {
+      "name_ja": "召喚裂け目",
+      "effect_ja": "放置すると周囲へ敵を召喚し続けます。",
+      "approach_ja": "優先して破壊。敵が多い時は距離を取る。",
+      "reward_ja": "破壊スコアと探索評価。",
+      "build_ja": "単体火力・近接ビルド",
+      "danger": 5
+    },
+    "sealed_chest_pillar": {
+      "name_ja": "封印宝箱柱",
+      "effect_ja": "周囲の敵を倒すと封印が解除されます。",
+      "approach_ja": "柱の近くで敵を全滅させるか直接破壊。",
+      "reward_ja": "宝箱。進化可能なら進化宝箱。",
+      "build_ja": "全ビルド",
+      "danger": 4
+    }
+  },
+  "events": {
+    "gem_storm": {
+      "name_ja": "ジェム嵐",
+      "effect_ja": "敵が増える代わりにジェム価値が上昇します。",
+      "approach_ja": "移動しながら大量のジェムを回収。",
+      "reward_ja": "ジェム効率上昇。",
+      "build_ja": "吸収・範囲ビルド",
+      "danger": 3
+    },
+    "crystal_surge": {
+      "name_ja": "結晶隆起",
+      "effect_ja": "報酬付き結晶が出現します。",
+      "approach_ja": "結晶破壊武器で時間内に採掘。",
+      "reward_ja": "結晶報酬。",
+      "build_ja": "採掘ビルド",
+      "danger": 3
+    },
+    "elite_hunt": {
+      "name_ja": "エリート狩り",
+      "effect_ja": "エリートが増加します。",
+      "approach_ja": "エリートを倒してイベントを成功させる。",
+      "reward_ja": "宝箱。",
+      "build_ja": "単体火力ビルド",
+      "danger": 4
+    },
+    "danger_bloom": {
+      "name_ja": "危険地帯拡大",
+      "effect_ja": "危険地帯が拡大し、報酬倍率が上がります。",
+      "approach_ja": "火力に余裕があれば危険地帯内で戦う。",
+      "reward_ja": "危険地帯倍率。",
+      "build_ja": "高機動・防御ビルド",
+      "danger": 4
+    },
+    "meteor_rain": {
+      "name_ja": "流星雨",
+      "effect_ja": "予告地点へ隕石が落ち、敵にも命中します。",
+      "approach_ja": "予告円を避けながら敵を誘導。",
+      "reward_ja": "敵への隕石ダメージ。",
+      "build_ja": "高機動ビルド",
+      "danger": 4
+    },
+    "cursed_treasure": {
+      "name_ja": "呪いの宝箱",
+      "effect_ja": "呪われた宝箱が出現します。",
+      "approach_ja": "敵強化を受け入れられる時に回収。",
+      "reward_ja": "レア宝箱抽選。",
+      "build_ja": "高火力ビルド",
+      "danger": 5
+    }
+  }
+}

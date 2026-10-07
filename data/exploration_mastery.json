@@ -1,0 +1,19 @@
+{
+  "ranks": [
+    { "rank": "D", "min_score": 0, "currency_bonus": 0.00, "color": [0.58, 0.64, 0.72] },
+    { "rank": "C", "min_score": 20, "currency_bonus": 0.05, "color": [0.42, 0.82, 1.00] },
+    { "rank": "B", "min_score": 55, "currency_bonus": 0.10, "color": [0.46, 1.00, 0.68] },
+    { "rank": "A", "min_score": 100, "currency_bonus": 0.20, "color": [1.00, 0.84, 0.34] },
+    { "rank": "S", "min_score": 170, "currency_bonus": 0.35, "color": [1.00, 0.48, 0.22] },
+    { "rank": "SS", "min_score": 260, "currency_bonus": 0.40, "color": [0.92, 0.34, 1.00] }
+  ],
+  "points": {
+    "field_drop_pickup": 8,
+    "far_drop_bonus": 7,
+    "danger_pickup_bonus": 10,
+    "gimmick_trigger": 10,
+    "spawn_rift_destroyed": 18,
+    "sealed_pillar_opened": 20,
+    "field_event_success": 22
+  }
+}

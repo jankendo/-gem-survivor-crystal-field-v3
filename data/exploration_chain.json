@@ -1,0 +1,9 @@
+{
+  "window_seconds": 60.0,
+  "thresholds": {
+    "2": { "currency_bonus": 5, "message_ja": "クリスタル貨小ボーナス" },
+    "3": { "drop_rate_multiplier": 1.50, "duration": 60.0, "message_ja": "次のドロップ発生率UP" },
+    "4": { "fever_seconds": 8.0, "message_ja": "ジェムフィーバー" },
+    "5": { "rare_drop_multiplier": 1.75, "duration": 90.0, "message_ja": "レアドロップ候補率UP" }
+  }
+}

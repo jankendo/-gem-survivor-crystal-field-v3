@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "name": "V2 Crystal Field",
+  "colors": {
+    "background": "#080d18",
+    "panel": "#111a2b",
+    "panel_alt": "#17223a",
+    "line": "#65e7ff",
+    "line_soft": "#366f8f",
+    "text": "#edf8ff",
+    "text_primary": "#edf8ff",
+    "text_secondary": "#9fb6c9",
+    "muted_text": "#9fb6c9",
+    "growth": "#ffe07a",
+    "weapon": "#ff7a52",
+    "passive": "#5ff0b6",
+    "momentum": "#9d8cff",
+    "momentum_high": "#d9f8ff",
+    "danger": "#ff4778",
+    "heal": "#57f08a",
+    "locked": "#313844",
+    "crystal": "#58e6ff"
+  },
+  "spacing": {
+    "page_margin_desktop": 48,
+    "page_margin_touch": 32,
+    "section_gap": 14,
+    "card_padding": 14,
+    "button_height": 52,
+    "button_height_touch": 60
+  },
+  "shape": {
+    "corner_radius": 8,
+    "border_width": 2,
+    "glow_alpha": 0.20,
+    "shadow_alpha": 0.35
+  },
+  "font_sizes": {
+    "title": 42,
+    "subtitle": 20,
+    "title_desktop": 54,
+    "title_touch": 42,
+    "headline": 30,
+    "body": 18,
+    "caption": 14,
+    "hud_primary": 19,
+    "hud_secondary": 14
+  }
+}

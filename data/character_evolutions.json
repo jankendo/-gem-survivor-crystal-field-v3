@@ -1,0 +1,758 @@
+{
+  "noah": {
+    "character_id": "noah",
+    "base_name_ja": "探鉱者ノア",
+    "evolved_name_ja": "星晶探鉱者ノア",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "ジェム吸収範囲 +15%、移動速度 +5%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/noah_evolved.svg"
+  },
+  "mio": {
+    "character_id": "mio",
+    "base_name_ja": "氷術師ミオ",
+    "evolved_name_ja": "永久氷晶ミオ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "氷結/遅延効果 +25%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/mio_evolved.svg"
+  },
+  "rai": {
+    "character_id": "rai",
+    "base_name_ja": "雷技師ライ",
+    "evolved_name_ja": "進化雷技師ライ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "rooms_discovered",
+      "value": 7,
+      "text_ja": "部屋7室発見"
+    },
+    "trait_upgrade_ja": "連鎖系武器の連鎖数 +1を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/rai_evolved.svg"
+  },
+  "bomb": {
+    "character_id": "bomb",
+    "base_name_ja": "爆薬師ボム",
+    "evolved_name_ja": "進化爆薬師ボム",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "crystals_destroyed",
+      "value": 24,
+      "text_ja": "結晶壁24個破壊"
+    },
+    "trait_upgrade_ja": "爆発範囲 +20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/bomb_evolved.svg"
+  },
+  "gantz": {
+    "character_id": "gantz",
+    "base_name_ja": "採掘王ガンツ",
+    "evolved_name_ja": "進化採掘王ガンツ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "boss_defeats",
+      "value": 1,
+      "text_ja": "ボス1体撃破"
+    },
+    "trait_upgrade_ja": "結晶壁へのダメージ +100%、結晶報酬 +20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/gantz_evolved.svg"
+  },
+  "kaede": {
+    "character_id": "kaede",
+    "base_name_ja": "斬影カエデ",
+    "evolved_name_ja": "真影カエデ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "近接/斬撃武器ダメージ +30%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/kaede_evolved.svg"
+  },
+  "sera": {
+    "character_id": "sera",
+    "base_name_ja": "星詠みセラ",
+    "evolved_name_ja": "進化星詠みセラ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "落下/天体系武器クールダウン -20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/sera_evolved.svg"
+  },
+  "rei": {
+    "character_id": "rei",
+    "base_name_ja": "鏡術師レイ",
+    "evolved_name_ja": "進化鏡術師レイ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "rooms_discovered",
+      "value": 7,
+      "text_ja": "部屋7室発見"
+    },
+    "trait_upgrade_ja": "反射/分裂弾 +1を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/rei_evolved.svg"
+  },
+  "atlas": {
+    "character_id": "atlas",
+    "base_name_ja": "守護者アトラス",
+    "evolved_name_ja": "進化守護者アトラス",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "crystals_destroyed",
+      "value": 24,
+      "text_ja": "結晶壁24個破壊"
+    },
+    "trait_upgrade_ja": "最大HP +50、防御 +20%、ノックバック +25%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/atlas_evolved.svg"
+  },
+  "nero": {
+    "character_id": "nero",
+    "base_name_ja": "呪晶使いネロ",
+    "evolved_name_ja": "進化呪晶使いネロ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "boss_defeats",
+      "value": 1,
+      "text_ja": "ボス1体撃破"
+    },
+    "trait_upgrade_ja": "契約効果 +25%、危険地帯倍率 +50%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/nero_evolved.svg"
+  },
+  "lily": {
+    "character_id": "lily",
+    "base_name_ja": "宝石商リリィ",
+    "evolved_name_ja": "進化宝石商リリィ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "クリスタル貨 +20%、宝箱レア率 +6%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/lily_evolved.svg"
+  },
+  "zero": {
+    "character_id": "zero",
+    "base_name_ja": "終末観測者ゼロ",
+    "evolved_name_ja": "進化終末観測者ゼロ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "進化武器ダメージ +35%、過充電出現率UPを強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/zero_evolved.svg"
+  },
+  "ghost": {
+    "character_id": "ghost",
+    "base_name_ja": "クリスタルの亡霊",
+    "evolved_name_ja": "進化クリスタルの亡霊",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "rooms_discovered",
+      "value": 7,
+      "text_ja": "部屋7室発見"
+    },
+    "trait_upgrade_ja": "壁をすり抜けるが、HPが低いを強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/ghost_evolved.svg"
+  },
+  "collector": {
+    "character_id": "collector",
+    "base_name_ja": "金色の回収者",
+    "evolved_name_ja": "進化金色の回収者",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "crystals_destroyed",
+      "value": 24,
+      "text_ja": "結晶壁24個破壊"
+    },
+    "trait_upgrade_ja": "ジェム吸収で周囲にダメージを強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/collector_evolved.svg"
+  },
+  "nameless_reaper": {
+    "character_id": "nameless_reaper",
+    "base_name_ja": "無名の死神",
+    "evolved_name_ja": "進化無名の死神",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "boss_defeats",
+      "value": 1,
+      "text_ja": "ボス1体撃破"
+    },
+    "trait_upgrade_ja": "撃破時HP回復、ボスダメージ +50%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/nameless_reaper_evolved.svg"
+  },
+  "corridor_knight": {
+    "character_id": "corridor_knight",
+    "base_name_ja": "回廊騎士ロウ",
+    "evolved_name_ja": "進化回廊騎士ロウ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "廊下で被ダメージ-20%、近接+20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/corridor_knight_evolved.svg"
+  },
+  "cave_mapper": {
+    "character_id": "cave_mapper",
+    "base_name_ja": "洞窟地図師ユナ",
+    "evolved_name_ja": "進化洞窟地図師ユナ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "探索範囲+50%、探索報酬+20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/cave_mapper_evolved.svg"
+  },
+  "relic_hunter": {
+    "character_id": "relic_hunter",
+    "base_name_ja": "遺物狩りラズ",
+    "evolved_name_ja": "進化遺物狩りラズ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "rooms_discovered",
+      "value": 7,
+      "text_ja": "部屋7室発見"
+    },
+    "trait_upgrade_ja": "呪いの不利効果-20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/relic_hunter_evolved.svg"
+  },
+  "shrine_guardian": {
+    "character_id": "shrine_guardian",
+    "base_name_ja": "祭壇守りオルガ",
+    "evolved_name_ja": "進化祭壇守りオルガ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "crystals_destroyed",
+      "value": 24,
+      "text_ja": "結晶壁24個破壊"
+    },
+    "trait_upgrade_ja": "イベント部屋でダメージ+25%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/shrine_guardian_evolved.svg"
+  },
+  "tunnel_runner": {
+    "character_id": "tunnel_runner",
+    "base_name_ja": "隧道走者キリ",
+    "evolved_name_ja": "進化隧道走者キリ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "boss_defeats",
+      "value": 1,
+      "text_ja": "ボス1体撃破"
+    },
+    "trait_upgrade_ja": "廊下移動速度+20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/tunnel_runner_evolved.svg"
+  },
+  "crystal_witch": {
+    "character_id": "crystal_witch",
+    "base_name_ja": "晶魔女フィア",
+    "evolved_name_ja": "進化晶魔女フィア",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "結晶壁破壊時に毒霧を残すを強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/crystal_witch_evolved.svg"
+  },
+  "forge_master": {
+    "character_id": "forge_master",
+    "base_name_ja": "鍛冶師ドーガ",
+    "evolved_name_ja": "進化鍛冶師ドーガ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "武器コアの追加強化確率+20%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/forge_master_evolved.svg"
+  },
+  "storm_pilgrim": {
+    "character_id": "storm_pilgrim",
+    "base_name_ja": "雷巡礼者テン",
+    "evolved_name_ja": "進化雷巡礼者テン",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "rooms_discovered",
+      "value": 7,
+      "text_ja": "部屋7室発見"
+    },
+    "trait_upgrade_ja": "雷導ギミック効果+50%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/storm_pilgrim_evolved.svg"
+  },
+  "blast_miner": {
+    "character_id": "blast_miner",
+    "base_name_ja": "爆破鉱夫バル",
+    "evolved_name_ja": "進化爆破鉱夫バル",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "crystals_destroyed",
+      "value": 24,
+      "text_ja": "結晶壁24個破壊"
+    },
+    "trait_upgrade_ja": "爆薬鉱脈範囲+50%、壁ダメージ+50%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/blast_miner_evolved.svg"
+  },
+  "oasis_saint": {
+    "character_id": "oasis_saint",
+    "base_name_ja": "泉の聖者リノ",
+    "evolved_name_ja": "進化泉の聖者リノ",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "boss_defeats",
+      "value": 1,
+      "text_ja": "ボス1体撃破"
+    },
+    "trait_upgrade_ja": "回復泉の回復量+50%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/oasis_saint_evolved.svg"
+  },
+  "void_cartographer": {
+    "character_id": "void_cartographer",
+    "base_name_ja": "虚無地図師",
+    "evolved_name_ja": "進化虚無地図師",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "gems_collected",
+      "value": 260,
+      "text_ja": "ジェム260個回収"
+    },
+    "trait_upgrade_ja": "未探索部屋でダメージ+35%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/void_cartographer_evolved.svg"
+  },
+  "abyss_merchant": {
+    "character_id": "abyss_merchant",
+    "base_name_ja": "深淵商人",
+    "evolved_name_ja": "進化深淵商人",
+    "required_level": 20,
+    "required_seconds": 600.0,
+    "activation": [
+      "evolution_core",
+      "boss_chest"
+    ],
+    "unique_condition": {
+      "type": "kills",
+      "value": 520,
+      "text_ja": "撃破520体"
+    },
+    "trait_upgrade_ja": "通貨獲得+40%を強化し、進化副特性を追加",
+    "subtrait_ja": "最大HP+12、吸収範囲+8%",
+    "modifiers": {
+      "damage_mult": 1.08,
+      "gem_value_mult": 1.06,
+      "move_mult": 1.03
+    },
+    "subtraits": {
+      "max_hp_flat": 12,
+      "magnet_mult": 1.08
+    },
+    "evolved_sprite": "res://assets/generated/character_evolutions/abyss_merchant_evolved.svg"
+  }
+}

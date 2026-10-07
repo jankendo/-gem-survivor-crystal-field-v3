@@ -1,0 +1,22 @@
+{
+  "speed_hold_key": {"left_shift": "左Shift", "tab": "Tab", "space": "Space", "middle_mouse": "マウス中央"},
+  "speed_multiplier": {"1.5": "1.5倍", "2.0": "2.0倍", "2": "2.0倍"},
+  "touch_ui_mode": {"auto": "自動", "on": "常に表示", "off": "非表示"},
+  "touch_button_size": {"small": "小", "standard": "標準", "large": "大"},
+  "touch_handedness": {"right": "右利き", "left": "左利き"},
+  "move_control_mode": {"dynamic": "動的", "fixed": "固定"},
+  "joystick_visual_mode": {"always": "常に表示", "active": "操作中のみ", "hidden": "非表示"},
+  "joystick_sensitivity": {"0.8": "低", "1.0": "標準", "1.2": "高", "1.5": "最高"},
+  "joystick_deadzone": {"0.08": "小", "0.12": "標準", "0.18": "広め", "0.24": "最大"},
+  "notification_log_amount": {"low": "少なめ", "standard": "標準"},
+  "equipment_hud_mode": {"simple": "簡易", "detail": "詳細", "hidden": "非表示"},
+  "boss_alert_intensity": {"normal": "標準", "strong": "強調"},
+  "ui_animation_amount": {"off": "OFF", "low": "少なめ", "standard": "標準", "high": "多め"},
+  "minimap_size": {"small": "小", "standard": "標準", "large": "大"},
+  "minimap_opacity": {"low": "薄い", "standard": "標準", "high": "濃い"},
+  "camera_view_size": {"near": "近い", "standard": "標準", "wide": "広い"},
+  "effect_density": {"minimal": "極限軽量", "low": "少なめ", "normal": "標準", "high": "多め"},
+  "render_quality": {"low": "最低", "standard": "標準", "high": "高品質"},
+  "minimap_update_hz": {"3": "省電力 3Hz", "4": "低頻度 4Hz", "8": "標準 8Hz", "12": "高頻度 12Hz"},
+  "debug_exp_multiplier": {"0.25": "0.25倍", "0.5": "0.5倍", "1.0": "1.0倍（標準）", "1.5": "1.5倍", "2.0": "2.0倍", "3.0": "3.0倍", "5.0": "5.0倍", "10.0": "10.0倍", "20.0": "20.0倍"}
+}

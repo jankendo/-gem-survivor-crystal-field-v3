@@ -1,0 +1,577 @@
+{
+  "magic_bolt": {
+    "name_ja": "魔弾",
+    "max_level": 8,
+    "description_ja": "近い敵へ飛ぶ基本弾。Lvで弾数、威力、貫通、小爆発が伸びます。",
+    "evolution_passive": "might",
+    "tags": [
+      "ranged",
+      "projectile"
+    ],
+    "category": "ranged",
+    "range": 900,
+    "base_damage_score": 0.86,
+    "base_cooldown_score": 0.62,
+    "effect_id": "magic_bolt",
+    "generated_icon": "res://assets/generated/weapons/magic_bolt.svg"
+  },
+  "ice_orbit": {
+    "name_ja": "氷輪",
+    "max_level": 8,
+    "description_ja": "周囲を回る氷の輪。敵を削り、鈍足にします。",
+    "evolution_passive": "area",
+    "tags": [
+      "area",
+      "orbit",
+      "ice"
+    ],
+    "category": "area",
+    "range": 180,
+    "base_damage_score": 0.88,
+    "base_cooldown_score": 0.34,
+    "effect_id": "ice_orbit",
+    "generated_icon": "res://assets/generated/weapons/ice_orbit.svg"
+  },
+  "thunder_chain": {
+    "name_ja": "雷撃",
+    "max_level": 8,
+    "description_ja": "近い敵から連鎖する雷。群れをまとめて削ります。",
+    "evolution_passive": "cooldown",
+    "tags": [
+      "lightning",
+      "ranged",
+      "projectile"
+    ],
+    "category": "lightning",
+    "range": 540,
+    "base_damage_score": 0.9,
+    "base_cooldown_score": 1.25,
+    "shock_enabled": true,
+    "effect_id": "thunder_chain",
+    "generated_icon": "res://assets/generated/weapons/thunder_chain.svg"
+  },
+  "bomb_seed": {
+    "name_ja": "爆種",
+    "max_level": 8,
+    "description_ja": "時間差で爆発する種。密集した敵に強い武器です。",
+    "evolution_passive": "projectile_count",
+    "tags": [
+      "explosion",
+      "area"
+    ],
+    "category": "explosion",
+    "range": 420,
+    "base_damage_score": 1.2,
+    "base_cooldown_score": 2.15,
+    "effect_id": "bomb_seed",
+    "generated_icon": "res://assets/generated/weapons/bomb_seed.svg"
+  },
+  "blade_fan": {
+    "name_ja": "刃扇",
+    "max_level": 8,
+    "description_ja": "前方へ扇状に刃を飛ばします。",
+    "evolution_passive": "move_speed",
+    "tags": [
+      "melee",
+      "knockback",
+      "projectile"
+    ],
+    "category": "melee",
+    "range": 260,
+    "base_damage_score": 1.28,
+    "base_cooldown_score": 0.86,
+    "effect_id": "blade_fan",
+    "generated_icon": "res://assets/generated/weapons/blade_fan.svg"
+  },
+  "laser_lance": {
+    "name_ja": "光槍",
+    "max_level": 8,
+    "description_ja": "直線上の敵とクリスタルを貫く光の槍です。",
+    "evolution_passive": "might",
+    "tags": [
+      "ranged",
+      "laser",
+      "crystal",
+      "projectile"
+    ],
+    "category": "laser",
+    "range": 980,
+    "base_damage_score": 0.92,
+    "base_cooldown_score": 1.35,
+    "effect_id": "laser_lance",
+    "generated_icon": "res://assets/generated/weapons/laser_lance.svg"
+  },
+  "poison_mist": {
+    "name_ja": "毒霧",
+    "max_level": 8,
+    "description_ja": "周囲に残る毒の領域で敵を継続的に削ります。",
+    "evolution_passive": "curse",
+    "tags": [
+      "poison",
+      "area",
+      "curse"
+    ],
+    "category": "poison",
+    "range": 240,
+    "base_damage_score": 0.84,
+    "base_cooldown_score": 0.56,
+    "dot_enabled": true,
+    "effect_id": "poison_mist",
+    "generated_icon": "res://assets/generated/weapons/poison_mist.svg"
+  },
+  "drone_bit": {
+    "name_ja": "浮遊ビット",
+    "max_level": 8,
+    "description_ja": "周囲を浮遊するビットが近い敵を射撃します。",
+    "evolution_passive": "luck",
+    "tags": [
+      "summon",
+      "ranged",
+      "projectile"
+    ],
+    "category": "summon",
+    "range": 720,
+    "base_damage_score": 0.78,
+    "base_cooldown_score": 0.98,
+    "effect_id": "drone_bit",
+    "generated_icon": "res://assets/generated/weapons/drone_bit.svg"
+  },
+  "crystal_mine": {
+    "name_ja": "結晶地雷",
+    "max_level": 8,
+    "description_ja": "足元付近に結晶地雷を設置して爆発させます。",
+    "evolution_passive": "crystal_breaker",
+    "tags": [
+      "crystal",
+      "explosion",
+      "deploy"
+    ],
+    "category": "crystal",
+    "range": 160,
+    "base_damage_score": 1.02,
+    "base_cooldown_score": 1.85,
+    "effect_id": "crystal_mine",
+    "generated_icon": "res://assets/generated/weapons/crystal_mine.svg"
+  },
+  "black_hole": {
+    "name_ja": "小型重力球",
+    "max_level": 8,
+    "description_ja": "重力球で敵とジェムを引き寄せ、範囲内を削ります。",
+    "evolution_passive": "area",
+    "tags": [
+      "area",
+      "summon"
+    ],
+    "category": "area",
+    "range": 680,
+    "base_damage_score": 0.82,
+    "base_cooldown_score": 3.2,
+    "effect_id": "black_hole",
+    "generated_icon": "res://assets/generated/weapons/black_hole.svg"
+  },
+  "rune_gate": {
+    "name_ja": "ルーン門",
+    "max_level": 8,
+    "description_ja": "地面に門を設置し、通過する敵を焼きます。",
+    "evolution_passive": "area",
+    "tags": [
+      "deploy",
+      "area",
+      "crystal"
+    ],
+    "category": "deploy",
+    "range": 520,
+    "base_damage_score": 0.94,
+    "base_cooldown_score": 2.45,
+    "effect_id": "rune_gate",
+    "generated_icon": "res://assets/generated/weapons/rune_gate.svg"
+  },
+  "comet_staff": {
+    "name_ja": "彗星杖",
+    "max_level": 8,
+    "description_ja": "敵の群れへ空から彗星を落とします。",
+    "evolution_passive": "might",
+    "tags": [
+      "ranged",
+      "area",
+      "explosion",
+      "meteor"
+    ],
+    "category": "explosion",
+    "range": 760,
+    "base_damage_score": 1.15,
+    "base_cooldown_score": 3.0,
+    "effect_id": "comet_staff",
+    "generated_icon": "res://assets/generated/weapons/comet_staff.svg"
+  },
+  "soul_scythe": {
+    "name_ja": "魂刈り",
+    "max_level": 8,
+    "description_ja": "近距離を円弧で斬り、撃破時に低確率で回復します。",
+    "evolution_passive": "regen",
+    "tags": [
+      "melee"
+    ],
+    "category": "melee",
+    "range": 210,
+    "base_damage_score": 1.42,
+    "base_cooldown_score": 1.45,
+    "effect_id": "soul_scythe",
+    "generated_icon": "res://assets/generated/weapons/soul_scythe.svg"
+  },
+  "mirror_shard": {
+    "name_ja": "鏡片",
+    "max_level": 8,
+    "description_ja": "壁で反射する鏡の弾を撃ちます。",
+    "evolution_passive": "luck",
+    "tags": [
+      "ranged",
+      "projectile",
+      "mirror"
+    ],
+    "category": "ranged",
+    "range": 800,
+    "base_damage_score": 0.84,
+    "base_cooldown_score": 1.05,
+    "effect_id": "mirror_shard",
+    "generated_icon": "res://assets/generated/weapons/mirror_shard.svg"
+  },
+  "sonic_wave": {
+    "name_ja": "音波衝撃",
+    "max_level": 8,
+    "description_ja": "周囲へノックバック波を放ち、囲まれた時の逃げ道を作ります。",
+    "evolution_passive": "move_speed",
+    "tags": [
+      "melee",
+      "knockback",
+      "area",
+      "defense"
+    ],
+    "category": "knockback",
+    "range": 220,
+    "base_damage_score": 0.84,
+    "base_cooldown_score": 1.7,
+    "effect_id": "sonic_wave",
+    "generated_icon": "res://assets/generated/weapons/sonic_wave.svg"
+  },
+  "gem_turret": {
+    "name_ja": "宝石砲台",
+    "max_level": 8,
+    "description_ja": "回収したジェムの残響を消費して強力な砲撃を行います。",
+    "evolution_passive": "magnet",
+    "tags": [
+      "gem",
+      "ranged",
+      "projectile"
+    ],
+    "category": "gem",
+    "range": 920,
+    "base_damage_score": 0.76,
+    "base_cooldown_score": 1.18,
+    "effect_id": "gem_turret",
+    "generated_icon": "res://assets/generated/weapons/gem_turret.svg"
+  },
+  "corridor_blade": {
+    "name_ja": "回廊刃",
+    "max_level": 8,
+    "description_ja": "前方を長く斬る。結晶廊下では射程と威力が増す。",
+    "evolution_passive": "corridor_sense",
+    "tags": [
+      "melee",
+      "explore"
+    ],
+    "category": "melee",
+    "attack_pattern": "melee_arc",
+    "range": 290,
+    "base_damage": 8,
+    "cooldown": 1.02,
+    "runtime_damage_mult": 0.85,
+    "base_damage_score": 1.12,
+    "base_cooldown_score": 1.02,
+    "effect_id": "corridor_blade",
+    "generated_icon": "res://assets/generated/weapons/corridor_blade.svg"
+  },
+  "wall_bounce_blaster": {
+    "name_ja": "壁跳弾砲",
+    "max_level": 8,
+    "description_ja": "外壁で反射する弾を放つ。",
+    "evolution_passive": "reflect_prism",
+    "tags": [
+      "ranged",
+      "projectile",
+      "mirror"
+    ],
+    "category": "ranged",
+    "attack_pattern": "ricochet",
+    "range": 900,
+    "base_damage": 7,
+    "cooldown": 1.02,
+    "base_damage_score": 0.92,
+    "base_cooldown_score": 1.02,
+    "effect_id": "wall_bounce_blaster",
+    "generated_icon": "res://assets/generated/weapons/wall_bounce_blaster.svg"
+  },
+  "drill_charge": {
+    "name_ja": "掘削突進",
+    "max_level": 8,
+    "description_ja": "前方の敵と壊せる壁を一直線に削る。",
+    "evolution_passive": "wall_breaker",
+    "tags": [
+      "melee",
+      "crystal"
+    ],
+    "category": "crystal",
+    "attack_pattern": "melee_arc",
+    "range": 350,
+    "base_damage": 11,
+    "cooldown": 1.36,
+    "base_damage_score": 1.35,
+    "base_cooldown_score": 1.36,
+    "effect_id": "drill_charge",
+    "generated_icon": "res://assets/generated/weapons/drill_charge.svg"
+  },
+  "mine_lantern": {
+    "name_ja": "鉱灯",
+    "max_level": 8,
+    "description_ja": "未探索区画で強くなる灯火領域を設置する。",
+    "evolution_passive": "route_memory",
+    "tags": [
+      "summon",
+      "support",
+      "explore",
+      "area"
+    ],
+    "category": "deploy",
+    "attack_pattern": "deploy_area",
+    "range": 520,
+    "base_damage": 6,
+    "cooldown": 2.15,
+    "base_damage_score": 0.84,
+    "base_cooldown_score": 2.15,
+    "effect_id": "mine_lantern",
+    "generated_icon": "res://assets/generated/weapons/mine_lantern.svg"
+  },
+  "relic_chain": {
+    "name_ja": "遺物鎖",
+    "max_level": 8,
+    "description_ja": "呪い契約が多いほど強くなる近接鎖。",
+    "evolution_passive": "relic_resist",
+    "tags": [
+      "curse",
+      "melee"
+    ],
+    "category": "melee",
+    "attack_pattern": "melee_arc",
+    "range": 270,
+    "base_damage": 9,
+    "cooldown": 1.28,
+    "runtime_damage_mult": 0.88,
+    "base_damage_score": 1.18,
+    "base_cooldown_score": 1.28,
+    "effect_id": "relic_chain",
+    "generated_icon": "res://assets/generated/weapons/relic_chain.svg"
+  },
+  "shrine_beam": {
+    "name_ja": "祭壇光線",
+    "max_level": 8,
+    "description_ja": "設置した祭壇から持続光線領域を放つ。",
+    "evolution_passive": "event_focus",
+    "tags": [
+      "laser",
+      "deploy",
+      "area"
+    ],
+    "category": "deploy",
+    "attack_pattern": "deploy_area",
+    "range": 650,
+    "base_damage": 8,
+    "cooldown": 2.3,
+    "base_damage_score": 1.02,
+    "base_cooldown_score": 2.3,
+    "effect_id": "shrine_beam",
+    "generated_icon": "res://assets/generated/weapons/shrine_beam.svg"
+  },
+  "thorn_seed": {
+    "name_ja": "棘種",
+    "max_level": 8,
+    "description_ja": "敵の足元へ毒棘の罠を植える。",
+    "evolution_passive": "poison_vessel",
+    "tags": [
+      "deploy",
+      "poison",
+      "area"
+    ],
+    "category": "poison",
+    "attack_pattern": "deploy_area",
+    "range": 560,
+    "base_damage": 6,
+    "cooldown": 1.92,
+    "base_damage_score": 0.82,
+    "base_cooldown_score": 1.92,
+    "effect_id": "thorn_seed",
+    "generated_icon": "res://assets/generated/weapons/thorn_seed.svg"
+  },
+  "frost_wall": {
+    "name_ja": "氷壁",
+    "max_level": 8,
+    "description_ja": "短時間残る冷気の防壁を置き、敵を鈍化する。",
+    "evolution_passive": "max_hp",
+    "tags": [
+      "defense",
+      "ice",
+      "deploy",
+      "area"
+    ],
+    "category": "deploy",
+    "attack_pattern": "deploy_area",
+    "range": 280,
+    "base_damage": 6,
+    "cooldown": 2.05,
+    "base_damage_score": 0.8,
+    "base_cooldown_score": 2.05,
+    "effect_id": "frost_wall",
+    "generated_icon": "res://assets/generated/weapons/frost_wall.svg"
+  },
+  "coin_orbit": {
+    "name_ja": "貨幣輪",
+    "max_level": 8,
+    "description_ja": "通貨とジェムの残響を周囲へ回転させる。",
+    "evolution_passive": "crystal_wallet",
+    "tags": [
+      "gem",
+      "orbit",
+      "currency",
+      "area"
+    ],
+    "category": "gem",
+    "attack_pattern": "orbit",
+    "range": 220,
+    "base_damage": 6,
+    "cooldown": 1.05,
+    "base_damage_score": 0.9,
+    "base_cooldown_score": 1.05,
+    "effect_id": "coin_orbit",
+    "generated_icon": "res://assets/generated/weapons/coin_orbit.svg"
+  },
+  "echo_bell": {
+    "name_ja": "反響鐘",
+    "max_level": 8,
+    "description_ja": "全周音波を放ち、細い通路で複数回反響する。",
+    "evolution_passive": "choke_point",
+    "tags": [
+      "knockback",
+      "area",
+      "explore"
+    ],
+    "category": "knockback",
+    "attack_pattern": "pulse",
+    "range": 260,
+    "base_damage": 7,
+    "cooldown": 1.55,
+    "base_damage_score": 0.92,
+    "base_cooldown_score": 1.55,
+    "effect_id": "echo_bell",
+    "generated_icon": "res://assets/generated/weapons/echo_bell.svg"
+  },
+  "void_mirror": {
+    "name_ja": "虚無鏡",
+    "max_level": 8,
+    "description_ja": "反射する虚無弾。反射後は小爆発する。",
+    "evolution_passive": "curse",
+    "tags": [
+      "ranged",
+      "projectile",
+      "mirror",
+      "curse"
+    ],
+    "category": "ranged",
+    "attack_pattern": "ricochet",
+    "range": 920,
+    "base_damage": 8,
+    "cooldown": 1.22,
+    "base_damage_score": 1.0,
+    "base_cooldown_score": 1.22,
+    "effect_id": "void_mirror",
+    "generated_icon": "res://assets/generated/weapons/void_mirror.svg"
+  },
+  "magma_core": {
+    "name_ja": "溶岩核",
+    "max_level": 8,
+    "description_ja": "敵の密集地点へ持続する炎床を残す。",
+    "evolution_passive": "area",
+    "tags": [
+      "fire",
+      "area",
+      "explosion"
+    ],
+    "category": "explosion",
+    "attack_pattern": "deploy_area",
+    "range": 620,
+    "base_damage": 9,
+    "cooldown": 2.72,
+    "base_damage_score": 1.18,
+    "base_cooldown_score": 2.72,
+    "effect_id": "magma_core",
+    "generated_icon": "res://assets/generated/weapons/magma_core.svg"
+  },
+  "compass_star": {
+    "name_ja": "羅針星",
+    "max_level": 8,
+    "description_ja": "目標方向へ高速の星弾を放つ。",
+    "evolution_passive": "map_reader",
+    "tags": [
+      "ranged",
+      "projectile",
+      "explore"
+    ],
+    "category": "ranged",
+    "attack_pattern": "ricochet",
+    "range": 980,
+    "base_damage": 7,
+    "cooldown": 0.82,
+    "base_damage_score": 0.88,
+    "base_cooldown_score": 0.82,
+    "effect_id": "compass_star",
+    "generated_icon": "res://assets/generated/weapons/compass_star.svg"
+  },
+  "guardian_wall": {
+    "name_ja": "守護壁",
+    "max_level": 8,
+    "description_ja": "プレイヤー前方へ敵を削る守護領域を設置する。",
+    "evolution_passive": "armor",
+    "tags": [
+      "defense",
+      "deploy",
+      "area"
+    ],
+    "category": "deploy",
+    "attack_pattern": "deploy_area",
+    "range": 320,
+    "base_damage": 7,
+    "cooldown": 1.9,
+    "base_damage_score": 0.86,
+    "base_cooldown_score": 1.9,
+    "effect_id": "guardian_wall",
+    "generated_icon": "res://assets/generated/weapons/guardian_wall.svg"
+  },
+  "gravity_anchor": {
+    "name_ja": "重力錨",
+    "max_level": 8,
+    "description_ja": "敵とジェムを吸引して鈍化する重力場を設置する。",
+    "evolution_passive": "magnet",
+    "tags": [
+      "area",
+      "gem",
+      "deploy"
+    ],
+    "category": "area",
+    "attack_pattern": "gravity",
+    "range": 660,
+    "base_damage": 7,
+    "cooldown": 3.05,
+    "base_damage_score": 0.92,
+    "base_cooldown_score": 3.05,
+    "effect_id": "gravity_anchor",
+    "generated_icon": "res://assets/generated/weapons/gravity_anchor.svg"
+  }
+}

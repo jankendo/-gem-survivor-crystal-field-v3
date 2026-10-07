@@ -1,0 +1,39 @@
+{
+  "infinite_damage": {
+    "name_ja": "無限強化：攻撃力",
+    "description_ja": "全武器ダメージ +5%",
+    "stat": "damage",
+    "value": 0.05
+  },
+  "infinite_speed": {
+    "name_ja": "無限強化：連射",
+    "description_ja": "攻撃間隔 -3%",
+    "stat": "cooldown",
+    "value": 0.03
+  },
+  "infinite_area": {
+    "name_ja": "無限強化：範囲",
+    "description_ja": "攻撃範囲 +5%",
+    "stat": "area",
+    "value": 0.05
+  },
+  "infinite_magnet": {
+    "name_ja": "無限強化：吸収",
+    "description_ja": "ジェム吸収範囲 +8%",
+    "stat": "magnet",
+    "value": 0.08
+  },
+  "infinite_hp": {
+    "name_ja": "無限強化：生命",
+    "description_ja": "最大HP +10 / HP +10",
+    "stat": "hp",
+    "value": 10
+  },
+  "infinite_greed": {
+    "name_ja": "無限強化：欲張り",
+    "description_ja": "スコア +10% / ジェム価値 +3%",
+    "stat": "greed",
+    "score_value": 0.10,
+    "gem_value": 0.03
+  }
+}

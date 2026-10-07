@@ -1,0 +1,87 @@
+{
+  "enabled": true,
+  "max_queue": 4,
+  "dedupe_window_seconds": 1.25,
+  "default_duration": 2.6,
+  "ending_warning_duration": 1.4,
+  "priorities": {
+    "critical": 100,
+    "high": 75,
+    "normal": 50,
+    "low": 20
+  },
+  "events": {
+    "character_evolution": {
+      "priority": "critical",
+      "accent": "growth",
+      "title": "キャラクター進化",
+      "duration": 3.2
+    },
+    "boss_defeat": {
+      "priority": "critical",
+      "accent": "danger",
+      "title": "ボス撃破",
+      "duration": 3.0
+    },
+    "evolution": {
+      "priority": "critical",
+      "accent": "growth",
+      "title": "武器進化",
+      "duration": 3.0
+    },
+    "boss_spawn": {
+      "priority": "high",
+      "accent": "danger",
+      "title": "ボス出現",
+      "duration": 2.8
+    },
+    "boss_warning": {
+      "priority": "high",
+      "accent": "danger",
+      "title": "ボス接近",
+      "duration": 2.2
+    },
+    "global_gem_collection": {
+      "priority": "high",
+      "accent": "crystal",
+      "title": "全ジェム回収",
+      "duration": 2.3
+    },
+    "build_synergy": {
+      "priority": "high",
+      "accent": "passive",
+      "title": "ビルド相性成立",
+      "duration": 2.5
+    },
+    "unlock": {
+      "priority": "high",
+      "accent": "growth",
+      "title": "新規解放",
+      "duration": 2.6
+    },
+    "v2_momentum": {
+      "priority": "normal",
+      "accent": "momentum",
+      "title": "Momentum開始",
+      "duration": 2.0
+    },
+    "v2_momentum_tier_up": {
+      "priority": "normal",
+      "accent": "momentum",
+      "title": "Momentum上昇",
+      "duration": 1.8
+    },
+    "v2_momentum_ending": {
+      "priority": "low",
+      "accent": "momentum",
+      "title": "Momentum終了間近",
+      "duration": 1.4
+    },
+    "combo_milestone": {
+      "priority": "low",
+      "accent": "crystal",
+      "title": "連続回収",
+      "duration": 1.6
+    }
+  }
+}

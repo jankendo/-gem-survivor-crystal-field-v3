@@ -1,0 +1,6 @@
+{
+  "speed_hold_keys": ["left_shift", "tab", "space", "middle_mouse"],
+  "speed_multipliers": [1.5, 2.0],
+  "boss_alert_intensity": ["normal", "strong"],
+  "effect_density": ["minimal", "low", "normal", "high"]
+}

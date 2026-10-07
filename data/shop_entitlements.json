@@ -1,0 +1,30 @@
+{
+	"schema_version": 1,
+	"migration_version": 1,
+	"save_schema_version": 3,
+	"default_costs": {
+		"weapon": {
+			"base": 620,
+			"step": 16
+		},
+		"passive": {
+			"base": 520,
+			"step": 110
+		},
+		"character": {
+			"base": 700,
+			"step": 180
+		},
+		"blessing": {
+			"base": 720,
+			"step": 180
+		}
+	},
+	"starter": {
+		"weapon": "data/weapon_unlocks.json initial=true",
+		"passive": "data/passive_unlocks.json initial=true",
+		"character": "data/characters.json initial=true",
+		"blessing": "data/blessings.json unlock.type=initial"
+	},
+	"rule_ja": "スターター、またはショップ購入済みだけがラン内候補と選択画面で使用可能になります。条件達成は商品公開と購入条件にだけ使います。"
+}

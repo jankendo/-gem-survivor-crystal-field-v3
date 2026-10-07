@@ -1,0 +1,28 @@
+{
+	"schema_version": 1,
+	"terms": {
+		"Momentum": "ラッシュ",
+		"Momentum Tier": "ラッシュ段階",
+		"Level Up": "レベルアップ",
+		"Result": "リザルト",
+		"Locked": "未解放",
+		"Unlocked": "解放済み",
+		"Purchased": "購入済み",
+		"Available": "購入可能",
+		"Requirement": "購入条件",
+		"Passive": "パッシブ",
+		"Evolution": "進化",
+		"Overclock": "過充電",
+		"Retry": "もう一度",
+		"Collection": "図鑑",
+		"Achievement": "実績",
+		"Currency": "クリスタル貨",
+		"READY": "使用可能",
+		"New": "新着"
+	},
+	"concept": "結晶迷宮を探索し、危険な報酬を選びながら、壊れたビルドを完成させる探索型サバイバー。",
+	"shop_locked": "未購入のため、現在のランでは候補に出現しません。",
+	"shop_purchase_effect": "購入すると、以後のランで候補に出現します。",
+	"requirement_unmet": "購入条件を満たしていません。",
+	"migration_notice": "旧セーブの条件解放品をショップ商品へ移行しました。購入済みと確認できたものは保持されています。"
+}

@@ -1,0 +1,6 @@
+{
+  "max_visible": 5,
+  "max_history": 50,
+  "display_seconds": 7.0,
+  "categories": ["boss", "danger", "growth", "exploration", "reward"]
+}

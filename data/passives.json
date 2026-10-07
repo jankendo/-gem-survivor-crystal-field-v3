@@ -1,0 +1,364 @@
+{
+  "move_speed": {
+    "name_ja": "軽量ブーツ",
+    "max_level": 5,
+    "description_ja": "移動速度UP",
+    "generated_icon": "res://assets/generated/passives/move_speed.svg"
+  },
+  "magnet": {
+    "name_ja": "磁力コア",
+    "max_level": 5,
+    "description_ja": "ジェム吸収範囲UP",
+    "generated_icon": "res://assets/generated/passives/magnet.svg"
+  },
+  "might": {
+    "name_ja": "力の紋章",
+    "max_level": 5,
+    "description_ja": "全武器ダメージUP",
+    "effect_per_level": 0.13,
+    "effect_cap": 0.65,
+    "direct_damage": true,
+    "generated_icon": "res://assets/generated/passives/might.svg"
+  },
+  "cooldown": {
+    "name_ja": "速射回路",
+    "max_level": 5,
+    "description_ja": "攻撃間隔短縮",
+    "effect_per_level": 0.065,
+    "effect_cap": 0.325,
+    "direct_damage": true,
+    "generated_icon": "res://assets/generated/passives/cooldown.svg"
+  },
+  "area": {
+    "name_ja": "拡張リング",
+    "max_level": 5,
+    "description_ja": "攻撃範囲UP",
+    "effect_per_level": 0.11,
+    "effect_cap": 0.55,
+    "direct_damage": true,
+    "generated_icon": "res://assets/generated/passives/area.svg"
+  },
+  "max_hp": {
+    "name_ja": "生命の器",
+    "max_level": 5,
+    "description_ja": "最大HPUP",
+    "generated_icon": "res://assets/generated/passives/max_hp.svg"
+  },
+  "regen": {
+    "name_ja": "再生細胞",
+    "max_level": 5,
+    "description_ja": "少しずつHP回復",
+    "heal_per_second_cap": 3,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/regen.svg"
+  },
+  "greed": {
+    "name_ja": "欲張り袋",
+    "max_level": 5,
+    "description_ja": "スコア獲得量UP",
+    "effect_per_level": 0.14,
+    "effect_cap": 0.7,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/greed.svg"
+  },
+  "armor": {
+    "name_ja": "甲殻装甲",
+    "max_level": 5,
+    "description_ja": "接触ダメージを軽減",
+    "reduction_per_level": 0.07,
+    "minimum_multiplier": 0.58,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/armor.svg"
+  },
+  "revival": {
+    "name_ja": "復活の羽",
+    "max_level": 1,
+    "description_ja": "一度だけ倒れてもHP半分で復活",
+    "generated_icon": "res://assets/generated/passives/revival.svg"
+  },
+  "curse": {
+    "name_ja": "呪いの鈴",
+    "max_level": 5,
+    "description_ja": "敵が増える代わりにスコアと毒霧が強化",
+    "generated_icon": "res://assets/generated/passives/curse.svg"
+  },
+  "projectile_count": {
+    "name_ja": "多重射出",
+    "max_level": 3,
+    "description_ja": "弾数や設置数が増加",
+    "generated_icon": "res://assets/generated/passives/projectile_count.svg"
+  },
+  "pickup_heal": {
+    "name_ja": "吸収治癒",
+    "max_level": 5,
+    "description_ja": "ジェム吸収時に定期的に回復",
+    "minimum_interval": 6,
+    "heal_cap": 4,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/pickup_heal.svg"
+  },
+  "elite_hunter": {
+    "name_ja": "狩人の証",
+    "max_level": 5,
+    "description_ja": "エリートとボスへのダメージUP",
+    "effect_per_level": 0.12,
+    "combined_effect_cap": 1.0,
+    "direct_damage": true,
+    "generated_icon": "res://assets/generated/passives/elite_hunter.svg"
+  },
+  "crystal_breaker": {
+    "name_ja": "採掘グローブ",
+    "max_level": 5,
+    "description_ja": "クリスタル壁へのダメージと報酬UP",
+    "bonus_per_level": 0.16,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/crystal_breaker.svg"
+  },
+  "luck": {
+    "name_ja": "幸運のお守り",
+    "max_level": 5,
+    "description_ja": "宝箱とクリスタル報酬の発生率UP",
+    "generated_icon": "res://assets/generated/passives/luck.svg"
+  },
+  "corridor_sense": {
+    "name_ja": "回廊感覚",
+    "max_level": 5,
+    "description_ja": "廊下内で移動速度と接触回避力UP（1Lvごとに6.5%）",
+    "tags": [
+      "explore",
+      "corridor"
+    ],
+    "generated_icon": "res://assets/generated/passives/corridor_sense.svg"
+  },
+  "room_mastery": {
+    "name_ja": "部屋支配",
+    "max_level": 5,
+    "description_ja": "広い部屋で攻撃範囲UP（1Lvごとに7%）",
+    "tags": [
+      "explore",
+      "area"
+    ],
+    "generated_icon": "res://assets/generated/passives/room_mastery.svg"
+  },
+  "wall_breaker": {
+    "name_ja": "壁砕き",
+    "max_level": 5,
+    "description_ja": "壊せる壁へのダメージUP",
+    "tags": [
+      "crystal"
+    ],
+    "effect_per_level": 0.14,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/wall_breaker.svg"
+  },
+  "route_memory": {
+    "name_ja": "ルート記憶",
+    "max_level": 5,
+    "description_ja": "ミニマップの探索済み表示範囲UP",
+    "tags": [
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/route_memory.svg"
+  },
+  "treasure_instinct": {
+    "name_ja": "宝感知",
+    "max_level": 5,
+    "description_ja": "レアドロップの方向表示と検知距離UP",
+    "tags": [
+      "explore",
+      "currency"
+    ],
+    "generated_icon": "res://assets/generated/passives/treasure_instinct.svg"
+  },
+  "event_focus": {
+    "name_ja": "試練集中",
+    "max_level": 5,
+    "description_ja": "イベント成功時の報酬UP",
+    "tags": [
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/event_focus.svg"
+  },
+  "relic_resist": {
+    "name_ja": "呪物耐性",
+    "max_level": 5,
+    "description_ja": "呪いと契約の不利効果を軽減",
+    "tags": [
+      "curse"
+    ],
+    "generated_icon": "res://assets/generated/passives/relic_resist.svg"
+  },
+  "boss_pressure": {
+    "name_ja": "威圧耐性",
+    "max_level": 5,
+    "description_ja": "ボス接近中の被ダメージ軽減",
+    "tags": [
+      "defense"
+    ],
+    "reduction_per_level": 0.05,
+    "minimum_multiplier": 0.65,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/boss_pressure.svg"
+  },
+  "choke_point": {
+    "name_ja": "関所戦術",
+    "max_level": 5,
+    "description_ja": "結晶廊下で武器ダメージUP（1Lvごとに9%）",
+    "tags": [
+      "explore",
+      "melee"
+    ],
+    "generated_icon": "res://assets/generated/passives/choke_point.svg"
+  },
+  "open_field": {
+    "name_ja": "平地戦術",
+    "max_level": 5,
+    "description_ja": "広場系部屋で移動速度UP",
+    "tags": [
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/open_field.svg"
+  },
+  "mining_luck": {
+    "name_ja": "採掘運",
+    "max_level": 5,
+    "description_ja": "壁破壊時のジェムと宝箱報酬UP",
+    "tags": [
+      "crystal",
+      "currency"
+    ],
+    "reward_per_level": 0.09,
+    "direct_damage": false,
+    "generated_icon": "res://assets/generated/passives/mining_luck.svg"
+  },
+  "map_reader": {
+    "name_ja": "地図読み",
+    "max_level": 5,
+    "description_ja": "未探索部屋へ向かう間の移動速度UP",
+    "tags": [
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/map_reader.svg"
+  },
+  "hunter_mark": {
+    "name_ja": "狩猟印",
+    "max_level": 5,
+    "description_ja": "エリートとボスへのダメージUP",
+    "tags": [
+      "combat"
+    ],
+    "effect_per_level": 0.08,
+    "combined_effect_cap": 1.0,
+    "direct_damage": true,
+    "generated_icon": "res://assets/generated/passives/hunter_mark.svg"
+  },
+  "chain_reward": {
+    "name_ja": "探索連鎖",
+    "max_level": 5,
+    "description_ja": "探索チェーンの制限時間を延長",
+    "tags": [
+      "explore",
+      "currency"
+    ],
+    "generated_icon": "res://assets/generated/passives/chain_reward.svg"
+  },
+  "emergency_route": {
+    "name_ja": "緊急退路",
+    "max_level": 3,
+    "description_ja": "HP低下時に壊せる壁をすり抜ける",
+    "tags": [
+      "defense",
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/emergency_route.svg"
+  },
+  "terrain_core": {
+    "name_ja": "地形核",
+    "max_level": 5,
+    "description_ja": "地形ギミックの有利効果UP",
+    "tags": [
+      "explore"
+    ],
+    "generated_icon": "res://assets/generated/passives/terrain_core.svg"
+  },
+  "relic_appraiser": {
+    "name_ja": "遺物鑑定",
+    "max_level": 5,
+    "description_ja": "呪い遺物の良い効果と報酬UP",
+    "tags": [
+      "curse",
+      "currency"
+    ],
+    "generated_icon": "res://assets/generated/passives/relic_appraiser.svg"
+  },
+  "safe_pocket": {
+    "name_ja": "安全袋",
+    "max_level": 5,
+    "description_ja": "死亡時に持ち帰る通貨の保護率UP",
+    "tags": [
+      "currency"
+    ],
+    "generated_icon": "res://assets/generated/passives/safe_pocket.svg"
+  },
+  "reroll_ticket": {
+    "name_ja": "再抽選券",
+    "max_level": 3,
+    "description_ja": "レベルアップ候補の再抽選回数UP",
+    "tags": [
+      "utility"
+    ],
+    "generated_icon": "res://assets/generated/passives/reroll_ticket.svg"
+  },
+  "banish_mark": {
+    "name_ja": "封印印",
+    "max_level": 3,
+    "description_ja": "不要候補を除外できる回数UP",
+    "tags": [
+      "utility"
+    ],
+    "generated_icon": "res://assets/generated/passives/banish_mark.svg"
+  },
+  "reflect_prism": {
+    "name_ja": "反射プリズム",
+    "max_level": 5,
+    "description_ja": "反射弾の威力と反射回数UP",
+    "tags": [
+      "ranged",
+      "mirror"
+    ],
+    "generated_icon": "res://assets/generated/passives/reflect_prism.svg"
+  },
+  "poison_vessel": {
+    "name_ja": "毒の器",
+    "max_level": 5,
+    "description_ja": "毒領域の持続時間と範囲UP",
+    "tags": [
+      "poison"
+    ],
+    "generated_icon": "res://assets/generated/passives/poison_vessel.svg"
+  },
+  "crystal_wallet": {
+    "name_ja": "結晶財布",
+    "max_level": 5,
+    "description_ja": "通貨系武器とラン報酬UP",
+    "tags": [
+      "currency",
+      "gem"
+    ],
+    "generated_icon": "res://assets/generated/passives/crystal_wallet.svg"
+  },
+  "resonance_magnet_core": {
+    "name_ja": "共鳴磁核",
+    "max_level": 5,
+    "description_ja": "経験値獲得量UP。一定時間ごとに周囲の全ジェムを自動回収",
+    "tags": [
+      "utility",
+      "gem",
+      "explore"
+    ],
+    "exp_bonus_by_level": [0.10, 0.18, 0.26, 0.34, 0.42],
+    "collection_interval_by_level": [50.0, 45.0, 40.0, 35.0, 30.0],
+    "collection_radius_by_level": [900.0, 1050.0, 1200.0, 1500.0, 1850.0],
+    "generated_icon": "res://assets/generated/passives/resonance_magnet_core.svg"
+  }
+}

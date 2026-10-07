@@ -1,0 +1,13 @@
+{
+  "characters": {"name_ja": "キャラ", "order": 0, "recommend_ja": "初心者：新しい初期武器と特性を試せます。"},
+  "meta": {"name_ja": "永続強化", "order": 1, "recommend_ja": "初心者：基礎HPと基礎吸収を優先。"},
+  "weapon_license": {"name_ja": "武器ライセンス", "order": 2, "recommend_ja": "新武器を試したい時の先行投資。"},
+  "passive_license": {"name_ja": "パッシブライセンス", "order": 3, "recommend_ja": "狙う進化に必要なパッシブを確認。"},
+  "blessings": {"name_ja": "祝福", "order": 4, "recommend_ja": "初期ビルドの方向を安定させます。"},
+  "exploration": {"name_ja": "探索装備", "order": 5, "recommend_ja": "進化核が見つけにくいならスキャナー。"},
+  "forge": {"name_ja": "鍛冶屋", "order": 6, "recommend_ja": "よく使う武器系統を少しずつ強化。"},
+  "research": {"name_ja": "研究所", "order": 7, "recommend_ja": "進化条件や敵情報を詳しく表示。"},
+  "loadout": {"name_ja": "候補整理", "order": 8, "recommend_ja": "武器・パッシブのOFF枠を増やします。候補枯渇防止の上限があります。"},
+  "cosmetic": {"name_ja": "外見", "order": 9, "recommend_ja": "性能なし。長期収集用の高額商品。"},
+  "difficulty": {"name_ja": "高難度", "order": 10, "recommend_ja": "上級者：敵圧と報酬倍率を同時に上げる刻印。"}
+}

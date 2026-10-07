@@ -1,0 +1,58 @@
+{
+  "thunder_circuit": {
+    "name_ja": "雷鳴回路",
+    "description_ja": "雷攻撃が低確率で追加連鎖します。",
+    "requirements": { "lightning": 2 },
+    "effects": { "lightning_bonus_chain_chance": 0.18, "shock_damage_mult": 1.10 },
+    "color": [0.78, 0.70, 1.0]
+  },
+  "melee_ashura": {
+    "name_ja": "近接修羅",
+    "description_ja": "近接ダメージ+25%、近接撃破で短時間移動速度が上がります。",
+    "requirements": { "melee": 2 },
+    "effects": { "melee_damage_mult": 1.25, "melee_kill_speed_seconds": 1.2 },
+    "color": [0.45, 1.0, 0.62]
+  },
+  "star_reader": {
+    "name_ja": "星詠み",
+    "description_ja": "遠距離/レーザー/範囲攻撃の範囲+15%。",
+    "requirements_any_total": { "tags": ["ranged", "laser", "area"], "count": 3 },
+    "effects": { "ranged_area_mult": 1.15 },
+    "color": [1.0, 0.84, 0.44]
+  },
+  "mining_king": {
+    "name_ja": "採掘王",
+    "description_ja": "結晶破壊報酬+30%。",
+    "requirements_any_total": { "tags": ["crystal", "deploy"], "count": 2 },
+    "effects": { "crystal_reward_mult": 1.30 },
+    "color": [0.52, 0.92, 1.0]
+  },
+  "toxic_curse": {
+    "name_ja": "毒呪領域",
+    "description_ja": "危険地帯内で毒ダメージ+50%。",
+    "requirements_any_total": { "tags": ["poison", "curse"], "count": 2 },
+    "effects": { "danger_poison_damage_mult": 1.50 },
+    "color": [0.72, 1.0, 0.34]
+  },
+  "gem_engine": {
+    "name_ja": "宝石機関",
+    "description_ja": "ジェム回収時に低確率で弾を発射します。",
+    "requirements": { "gem": 2 },
+    "effects": { "gem_shot_chance": 0.12 },
+    "color": [0.36, 1.0, 0.76]
+  },
+  "blast_core": {
+    "name_ja": "爆裂核",
+    "description_ja": "爆発範囲+20%、爆発クールダウン+5%。",
+    "requirements": { "explosion": 2 },
+    "effects": { "explosion_area_mult": 1.20, "explosion_cooldown_mult": 1.05 },
+    "color": [1.0, 0.48, 0.20]
+  },
+  "guardian_field": {
+    "name_ja": "守護陣",
+    "description_ja": "被ダメージ-10%、ノックバック+20%。",
+    "requirements_any_total": { "tags": ["knockback", "defense"], "count": 2 },
+    "effects": { "damage_taken_mult": 0.90, "knockback_mult": 1.20 },
+    "color": [0.76, 0.86, 1.0]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "deprecated": true,
+  "replacement": "res://data/selection_actions.json",
+  "shop_inventory_reroll_enabled": false,
+  "note_ja": "ショップ商品のおすすめ枠再抽選は廃止済み。再抽選はレベルアップ3択の永続強化として扱う。"
+}

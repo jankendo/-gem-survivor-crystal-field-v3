@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+    <stop offset="45%" stop-color="#6ee7ff" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#7c3cff" stop-opacity="0.0"/>
+  </radialGradient>
+  <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#e6fbff"/>
+    <stop offset="48%" stop-color="#4aa3ff"/>
+    <stop offset="100%" stop-color="#20123f"/>
+  </linearGradient>
+</defs>
+<rect width="128" height="128" fill="none"/>
+
+<circle cx="64" cy="64" r="56" fill="#63ff86" opacity="0.12"/>
+<path d="M38 110 L44 36 L64 14 L84 36 L90 110 Z" fill="#10251e" stroke="#63ff86" stroke-width="5"/>
+<circle cx="64" cy="48" r="18" fill="#10172f" stroke="#eaf8ff" stroke-width="4"/>
+<circle cx="57" cy="46" r="3" fill="#63ff86"/>
+<circle cx="71" cy="46" r="3" fill="#63ff86"/>
+<path d="M30 76 C54 52 78 52 104 28" stroke="#63ff86" stroke-width="8" fill="none"/>
+<path d="M42 92 Q64 108 86 92" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.55"/>
+
+</svg>

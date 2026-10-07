@@ -1,0 +1,90 @@
+{
+  "enabled": true,
+  "kill_streak_window_seconds": 4.0,
+  "max_history": 8,
+  "dedupe_window_seconds": 0.35,
+  "ending_warning_seconds": 2.5,
+  "telemetry_enabled": false,
+  "kill_streak_tiers": [
+    {
+      "kills": 20,
+      "tier": 1,
+      "label": "連続撃破",
+      "message": "連続撃破：流れが来ています",
+      "duration": 8.0,
+      "score_multiplier": 1.04
+    },
+    {
+      "kills": 50,
+      "tier": 2,
+      "label": "殲滅加速",
+      "message": "殲滅加速：ビルドが回り始めました",
+      "duration": 10.0,
+      "score_multiplier": 1.08
+    },
+    {
+      "kills": 100,
+      "tier": 3,
+      "label": "クリスタルラッシュ",
+      "message": "クリスタルラッシュ：この波を押し切れ",
+      "duration": 12.0,
+      "score_multiplier": 1.12
+    }
+  ],
+  "no_damage_milestones": [
+    {
+      "seconds": 60.0,
+      "tier": 1,
+      "label": "無被弾集中",
+      "message": "無被弾継続：立ち回りが安定しています",
+      "duration": 8.0,
+      "score_multiplier": 1.04
+    },
+    {
+      "seconds": 120.0,
+      "tier": 2,
+      "label": "無傷の流れ",
+      "message": "無傷の流れ：報酬を伸ばす好機",
+      "duration": 10.0,
+      "score_multiplier": 1.08
+    }
+  ],
+  "special_triggers": {
+    "evolution": {
+      "tier": 3,
+      "label": "進化覚醒",
+      "message": "進化覚醒：主力ビルドが完成しました",
+      "duration": 12.0,
+      "score_multiplier": 1.12
+    },
+    "boss_defeat": {
+      "tier": 3,
+      "label": "ボス撃破",
+      "message": "ボス撃破：次の探索へ押し出せ",
+      "duration": 14.0,
+      "score_multiplier": 1.14
+    },
+    "global_gem_collection": {
+      "tier": 2,
+      "label": "全回収",
+      "message": "全ジェム回収：盤面が一気に進みました",
+      "duration": 10.0,
+      "score_multiplier": 1.08,
+      "min_count": 20
+    },
+    "build_synergy": {
+      "tier": 2,
+      "label": "ビルド完成",
+      "message": "ビルド完成：相性が噛み合っています",
+      "duration": 10.0,
+      "score_multiplier": 1.08
+    },
+    "field_event_success": {
+      "tier": 1,
+      "label": "イベント成功",
+      "message": "イベント成功：探索の流れを維持",
+      "duration": 8.0,
+      "score_multiplier": 1.04
+    }
+  }
+}

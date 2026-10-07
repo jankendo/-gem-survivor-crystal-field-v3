@@ -1,0 +1,8 @@
+{
+  "base_hp": { "name_ja": "基礎HP", "description_ja": "最大HP +3%", "max_level": 10, "base_cost": 120, "cost_step": 80, "effect": { "hp_mult_per_level": 0.03 } },
+  "base_damage": { "name_ja": "基礎攻撃", "description_ja": "ダメージ +1.5%", "max_level": 10, "base_cost": 150, "cost_step": 90, "effect": { "damage_mult_per_level": 0.015 } },
+  "base_magnet": { "name_ja": "基礎吸収", "description_ja": "吸収範囲 +3%", "max_level": 10, "base_cost": 120, "cost_step": 80, "effect": { "magnet_mult_per_level": 0.03 } },
+  "currency": { "name_ja": "初期通貨", "description_ja": "ラン後クリスタル貨 +2.5%", "max_level": 10, "base_cost": 180, "cost_step": 110, "effect": { "currency_mult_per_level": 0.025 } },
+  "chest_sense": { "name_ja": "宝箱感知", "description_ja": "宝箱矢印距離 +10%", "max_level": 5, "base_cost": 160, "cost_step": 120, "effect": { "chest_indicator_per_level": 0.10 } },
+  "crystal_mining": { "name_ja": "結晶採掘", "description_ja": "結晶壁ダメージ +5%", "max_level": 10, "base_cost": 160, "cost_step": 100, "effect": { "crystal_damage_per_level": 0.05 } }
+}

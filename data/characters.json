@@ -1,0 +1,416 @@
+{
+  "noah": {
+    "name_ja": "探鉱者ノア",
+    "display_locked_ja": "探鉱者ノア",
+    "initial": true,
+    "initial_weapon": "magic_bolt",
+    "role_ja": "初心者向け",
+    "trait_ja": "ジェム吸収範囲 +15%、移動速度 +5%",
+    "weakness_ja": "HP -10",
+    "modifiers": {
+      "hp_flat": -10,
+      "magnet_mult": 1.15,
+      "move_mult": 1.05
+    },
+    "generated_sprite": "res://assets/generated/characters/noah.svg"
+  },
+  "mio": {
+    "name_ja": "氷術師ミオ",
+    "display_locked_ja": "氷術師ミオ",
+    "unlock_cost": 300,
+    "initial_weapon": "ice_orbit",
+    "role_ja": "安定型",
+    "trait_ja": "氷結/遅延効果 +25%",
+    "weakness_ja": "移動速度 -5%",
+    "modifiers": {
+      "move_mult": 0.95,
+      "tag_damage": {
+        "orbit": 1.08
+      },
+      "slow_mult": 1.25
+    },
+    "generated_sprite": "res://assets/generated/characters/mio.svg"
+  },
+  "rai": {
+    "name_ja": "雷技師ライ",
+    "display_locked_ja": "雷技師ライ",
+    "initial_weapon": "thunder_chain",
+    "role_ja": "火力型",
+    "trait_ja": "連鎖系武器の連鎖数 +1",
+    "weakness_ja": "最大HP -15",
+    "modifiers": {
+      "hp_flat": -15,
+      "chain_bonus": 1,
+      "tag_damage": {
+        "lightning": 1.1
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/rai.svg"
+  },
+  "bomb": {
+    "name_ja": "爆薬師ボム",
+    "display_locked_ja": "爆薬師ボム",
+    "initial_weapon": "bomb_seed",
+    "role_ja": "範囲破壊",
+    "trait_ja": "爆発範囲 +20%",
+    "weakness_ja": "被ダメージ +10%",
+    "modifiers": {
+      "damage_taken_mult": 1.1,
+      "tag_area": {
+        "explosion": 1.2
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/bomb.svg"
+  },
+  "gantz": {
+    "name_ja": "採掘王ガンツ",
+    "display_locked_ja": "採掘王ガンツ",
+    "initial_weapon": "rune_gate",
+    "role_ja": "結晶壁/資源特化",
+    "trait_ja": "結晶壁へのダメージ +100%、結晶報酬 +20%",
+    "weakness_ja": "移動速度 -10%",
+    "modifiers": {
+      "move_mult": 0.9,
+      "crystal_damage_mult": 2.0,
+      "crystal_reward_mult": 1.2
+    },
+    "generated_sprite": "res://assets/generated/characters/gantz.svg"
+  },
+  "kaede": {
+    "name_ja": "斬影カエデ",
+    "display_locked_ja": "斬影カエデ",
+    "initial_weapon": "soul_scythe",
+    "role_ja": "高速接近型",
+    "trait_ja": "近接/斬撃武器ダメージ +30%",
+    "weakness_ja": "吸収範囲 -20%",
+    "modifiers": {
+      "magnet_mult": 0.8,
+      "tag_damage": {
+        "melee": 1.3
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/kaede.svg"
+  },
+  "sera": {
+    "name_ja": "星詠みセラ",
+    "display_locked_ja": "星詠みセラ",
+    "initial_weapon": "comet_staff",
+    "role_ja": "画面制圧",
+    "trait_ja": "落下/天体系武器クールダウン -20%",
+    "weakness_ja": "防御 -10%",
+    "modifiers": {
+      "damage_taken_mult": 1.1,
+      "tag_cooldown": {
+        "meteor": 0.8,
+        "area": 0.92
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/sera.svg"
+  },
+  "rei": {
+    "name_ja": "鏡術師レイ",
+    "display_locked_ja": "鏡術師レイ",
+    "initial_weapon": "mirror_shard",
+    "role_ja": "分裂ビルド",
+    "trait_ja": "反射/分裂弾 +1",
+    "weakness_ja": "攻撃力 -10%",
+    "modifiers": {
+      "damage_mult": 0.9,
+      "bounce_bonus": 1
+    },
+    "generated_sprite": "res://assets/generated/characters/rei.svg"
+  },
+  "atlas": {
+    "name_ja": "守護者アトラス",
+    "display_locked_ja": "守護者アトラス",
+    "initial_weapon": "sonic_wave",
+    "role_ja": "タンク型",
+    "trait_ja": "最大HP +50、防御 +20%、ノックバック +25%",
+    "weakness_ja": "移動速度 -15%",
+    "modifiers": {
+      "hp_flat": 50,
+      "move_mult": 0.85,
+      "damage_taken_mult": 0.8,
+      "knockback_mult": 1.25
+    },
+    "generated_sprite": "res://assets/generated/characters/atlas.svg"
+  },
+  "nero": {
+    "name_ja": "呪晶使いネロ",
+    "display_locked_ja": "呪晶使いネロ",
+    "initial_weapon": "poison_mist",
+    "role_ja": "ハイリスク高報酬",
+    "trait_ja": "契約効果 +25%、危険地帯倍率 +50%",
+    "weakness_ja": "敵出現 +15%",
+    "modifiers": {
+      "contract_effect_mult": 1.25,
+      "danger_reward_mult": 1.5,
+      "spawn_mult": 1.15
+    },
+    "generated_sprite": "res://assets/generated/characters/nero.svg"
+  },
+  "lily": {
+    "name_ja": "宝石商リリィ",
+    "display_locked_ja": "宝石商リリィ",
+    "unlock_cost": 2000,
+    "initial_weapon": "gem_turret",
+    "role_ja": "稼ぎ型",
+    "trait_ja": "クリスタル貨 +20%、宝箱レア率 +6%",
+    "weakness_ja": "攻撃力 -14%",
+    "modifiers": {
+      "damage_mult": 0.86,
+      "currency_mult": 1.2,
+      "rare_reward_bonus": 0.06
+    },
+    "generated_sprite": "res://assets/generated/characters/lily.svg"
+  },
+  "zero": {
+    "name_ja": "終末観測者ゼロ",
+    "display_locked_ja": "終末観測者ゼロ",
+    "initial_weapon": "laser_lance",
+    "role_ja": "上級者向け",
+    "trait_ja": "進化武器ダメージ +35%、過充電出現率UP",
+    "weakness_ja": "HP回復量 -50%",
+    "modifiers": {
+      "evolved_damage_mult": 1.35,
+      "overclock_bonus": 0.15,
+      "healing_mult": 0.5
+    },
+    "generated_sprite": "res://assets/generated/characters/zero.svg"
+  },
+  "ghost": {
+    "name_ja": "クリスタルの亡霊",
+    "display_locked_ja": "？？？",
+    "secret": true,
+    "secret_hint_ja": "虚無領域で“ある条件”を満たす",
+    "initial_weapon": "poison_mist",
+    "role_ja": "高難度特殊操作",
+    "trait_ja": "壁をすり抜けるが、HPが低い",
+    "weakness_ja": "最大HP -40%",
+    "modifiers": {
+      "hp_mult": 0.6,
+      "phase_walls": true,
+      "tag_damage": {
+        "poison": 1.25
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/ghost.svg"
+  },
+  "collector": {
+    "name_ja": "金色の回収者",
+    "display_locked_ja": "？？？",
+    "secret": true,
+    "secret_hint_ja": "吸収の極致に到達する",
+    "initial_weapon": "",
+    "role_ja": "吸収ビルド",
+    "trait_ja": "ジェム吸収で周囲にダメージ",
+    "weakness_ja": "初期攻撃が弱い",
+    "modifiers": {
+      "magnet_mult": 1.85,
+      "gem_damage": true,
+      "damage_mult": 0.82
+    },
+    "generated_sprite": "res://assets/generated/characters/collector.svg"
+  },
+  "nameless_reaper": {
+    "name_ja": "無名の死神",
+    "display_locked_ja": "？？？",
+    "secret": true,
+    "secret_hint_ja": "死神の影を極限状態で倒す",
+    "initial_weapon": "soul_scythe",
+    "role_ja": "ボス狩り",
+    "trait_ja": "撃破時HP回復、ボスダメージ +50%",
+    "weakness_ja": "ジェム価値 -20%",
+    "modifiers": {
+      "boss_damage_mult": 1.5,
+      "kill_heal_chance": 0.08,
+      "gem_value_mult": 0.8
+    },
+    "generated_sprite": "res://assets/generated/characters/nameless_reaper.svg"
+  },
+  "corridor_knight": {
+    "name_ja": "回廊騎士ロウ",
+    "display_locked_ja": "回廊騎士ロウ",
+    "initial_weapon": "corridor_blade",
+    "role_ja": "廊下近接",
+    "trait_ja": "廊下で被ダメージ-20%、近接+20%",
+    "weakness_ja": "広場で移動速度-5%",
+    "modifiers": {
+      "corridor_defense_mult": 0.8,
+      "tag_damage": {
+        "melee": 1.2
+      },
+      "open_move_mult": 0.95
+    },
+    "generated_sprite": "res://assets/generated/characters/corridor_knight.svg"
+  },
+  "cave_mapper": {
+    "name_ja": "洞窟地図師ユナ",
+    "display_locked_ja": "洞窟地図師ユナ",
+    "initial_weapon": "compass_star",
+    "role_ja": "探索支援",
+    "trait_ja": "探索範囲+50%、探索報酬+20%",
+    "weakness_ja": "最大HP-10",
+    "modifiers": {
+      "hp_flat": -10,
+      "map_reveal_mult": 1.5,
+      "exploration_reward_mult": 1.2
+    },
+    "generated_sprite": "res://assets/generated/characters/cave_mapper.svg"
+  },
+  "relic_hunter": {
+    "name_ja": "遺物狩りラズ",
+    "display_locked_ja": "遺物狩りラズ",
+    "initial_weapon": "relic_chain",
+    "role_ja": "呪物特化",
+    "trait_ja": "呪いの不利効果-20%",
+    "weakness_ja": "通常回復-15%",
+    "modifiers": {
+      "curse_penalty_mult": 0.8,
+      "healing_mult": 0.85,
+      "tag_damage": {
+        "curse": 1.18
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/relic_hunter.svg"
+  },
+  "shrine_guardian": {
+    "name_ja": "祭壇守りオルガ",
+    "display_locked_ja": "祭壇守りオルガ",
+    "initial_weapon": "shrine_beam",
+    "role_ja": "設置防衛",
+    "trait_ja": "イベント部屋でダメージ+25%",
+    "weakness_ja": "攻撃間隔+8%",
+    "modifiers": {
+      "event_damage_mult": 1.25,
+      "cooldown_mult": 1.08,
+      "tag_damage": {
+        "deploy": 1.16
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/shrine_guardian.svg"
+  },
+  "tunnel_runner": {
+    "name_ja": "隧道走者キリ",
+    "display_locked_ja": "隧道走者キリ",
+    "initial_weapon": "drill_charge",
+    "role_ja": "高速探索",
+    "trait_ja": "廊下移動速度+20%",
+    "weakness_ja": "最大HP-20",
+    "modifiers": {
+      "hp_flat": -20,
+      "corridor_move_mult": 1.2
+    },
+    "generated_sprite": "res://assets/generated/characters/tunnel_runner.svg"
+  },
+  "crystal_witch": {
+    "name_ja": "晶魔女フィア",
+    "display_locked_ja": "晶魔女フィア",
+    "initial_weapon": "thorn_seed",
+    "role_ja": "結晶毒",
+    "trait_ja": "結晶壁破壊時に毒霧を残す",
+    "weakness_ja": "接触被ダメージ+10%",
+    "modifiers": {
+      "crystal_poison_burst": true,
+      "damage_taken_mult": 1.1,
+      "tag_damage": {
+        "poison": 1.15,
+        "crystal": 1.15
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/crystal_witch.svg"
+  },
+  "forge_master": {
+    "name_ja": "鍛冶師ドーガ",
+    "display_locked_ja": "鍛冶師ドーガ",
+    "initial_weapon": "magma_core",
+    "role_ja": "武器強化",
+    "trait_ja": "武器コアの追加強化確率+20%",
+    "weakness_ja": "移動速度-8%",
+    "modifiers": {
+      "weapon_core_bonus": 0.2,
+      "move_mult": 0.92,
+      "damage_mult": 1.08
+    },
+    "generated_sprite": "res://assets/generated/characters/forge_master.svg"
+  },
+  "storm_pilgrim": {
+    "name_ja": "雷巡礼者テン",
+    "display_locked_ja": "雷巡礼者テン",
+    "initial_weapon": "echo_bell",
+    "role_ja": "雷反響",
+    "trait_ja": "雷導ギミック効果+50%",
+    "weakness_ja": "最大HP-12",
+    "modifiers": {
+      "hp_flat": -12,
+      "terrain_gimmick_mult": 1.5,
+      "tag_damage": {
+        "lightning": 1.18
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/storm_pilgrim.svg"
+  },
+  "blast_miner": {
+    "name_ja": "爆破鉱夫バル",
+    "display_locked_ja": "爆破鉱夫バル",
+    "initial_weapon": "gravity_anchor",
+    "role_ja": "爆破採掘",
+    "trait_ja": "爆薬鉱脈範囲+50%、壁ダメージ+50%",
+    "weakness_ja": "攻撃間隔+10%",
+    "modifiers": {
+      "terrain_gimmick_area_mult": 1.5,
+      "crystal_damage_mult": 1.5,
+      "cooldown_mult": 1.1
+    },
+    "generated_sprite": "res://assets/generated/characters/blast_miner.svg"
+  },
+  "oasis_saint": {
+    "name_ja": "泉の聖者リノ",
+    "display_locked_ja": "泉の聖者リノ",
+    "initial_weapon": "guardian_wall",
+    "role_ja": "回復防御",
+    "trait_ja": "回復泉の回復量+50%",
+    "weakness_ja": "全武器ダメージ-15%",
+    "modifiers": {
+      "healing_mult": 1.5,
+      "damage_mult": 0.85,
+      "damage_taken_mult": 0.9
+    },
+    "generated_sprite": "res://assets/generated/characters/oasis_saint.svg"
+  },
+  "void_cartographer": {
+    "name_ja": "虚無地図師",
+    "display_locked_ja": "？？？",
+    "secret": true,
+    "secret_hint_ja": "未踏の部屋を一度の旅で深く巡る",
+    "initial_weapon": "void_mirror",
+    "role_ja": "未探索特化",
+    "trait_ja": "未探索部屋でダメージ+35%",
+    "weakness_ja": "探索済み部屋で攻撃力-10%",
+    "modifiers": {
+      "unexplored_damage_mult": 1.35,
+      "explored_damage_mult": 0.9,
+      "map_reveal_mult": 1.2
+    },
+    "generated_sprite": "res://assets/generated/characters/void_cartographer.svg"
+  },
+  "abyss_merchant": {
+    "name_ja": "深淵商人",
+    "display_locked_ja": "？？？",
+    "secret": true,
+    "secret_hint_ja": "通貨と呪いを同時に極める",
+    "initial_weapon": "coin_orbit",
+    "role_ja": "通貨呪い",
+    "trait_ja": "通貨獲得+40%",
+    "weakness_ja": "敵出現+18%",
+    "modifiers": {
+      "currency_mult": 1.4,
+      "spawn_mult": 1.18,
+      "tag_damage": {
+        "gem": 1.2,
+        "curse": 1.15
+      }
+    },
+    "generated_sprite": "res://assets/generated/characters/abyss_merchant.svg"
+  }
+}

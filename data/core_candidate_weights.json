@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "owned_upgrade_weight": 1.0,
+  "unowned_weight": 1.0,
+  "weapon_combo_partner_weight": 1.25,
+  "maximum_weight": 1.35
+}

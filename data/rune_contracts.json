@@ -1,0 +1,50 @@
+{
+  "blood_pact": {
+    "name_ja": "血の契約",
+    "description_ja": "ダメージ+40%。最大HP-20%。",
+    "damage_mult": 1.40,
+    "max_hp_mult": 0.80,
+    "score_mult": 1.12
+  },
+  "greed_pact": {
+    "name_ja": "欲望の契約",
+    "description_ja": "ジェム価値+50%。敵出現+25%。",
+    "gem_mult": 1.50,
+    "spawn_mult": 1.25,
+    "score_mult": 1.18
+  },
+  "thunder_pact": {
+    "name_ja": "雷鳴の契約",
+    "description_ja": "攻撃速度+30%。被ダメージ+20%。",
+    "cooldown_mult": 0.70,
+    "damage_taken_mult": 1.20,
+    "score_mult": 1.15
+  },
+  "giant_slayer": {
+    "name_ja": "巨人殺し",
+    "description_ja": "ボス/エリートダメージ+80%。ザコへのダメージ-15%。",
+    "elite_damage_mult": 1.80,
+    "normal_damage_mult": 0.85,
+    "score_mult": 1.14
+  },
+  "ruin_pact": {
+    "name_ja": "破滅の契約",
+    "description_ja": "スコア+150%。10分ごとに死神出現。",
+    "score_mult": 2.50,
+    "reaper_interval": 600.0
+  },
+  "mining_pact": {
+    "name_ja": "採掘契約",
+    "description_ja": "結晶報酬+100%。結晶壁HP+80%。",
+    "crystal_reward_mult": 2.0,
+    "crystal_hp_mult": 1.80,
+    "score_mult": 1.16
+  },
+  "curse_pact": {
+    "name_ja": "呪詛契約",
+    "description_ja": "レア報酬率UP。危険地帯が増える。",
+    "rare_reward_bonus": 0.20,
+    "danger_bonus": 1.35,
+    "score_mult": 1.20
+  }
+}

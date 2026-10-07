@@ -1,0 +1,29 @@
+{
+  "skip_base_count": 1,
+  "reroll_base_count": 1,
+  "seal_base_count": 0,
+  "max_skip_count": 6,
+  "max_reroll_count": 6,
+  "max_seal_count": 5,
+  "skip_reward": {
+    "score": 120,
+    "heal": 4,
+    "crystal_currency": 2
+  },
+  "shop_skip_sink_id": "selection_skip_charm",
+  "shop_reroll_sink_id": "levelup_reroll_capacity",
+  "shop_seal_sink_id": "selection_seal_art",
+  "shop_skip_per_level": 1,
+  "shop_reroll_per_level": 1,
+  "shop_seal_per_level": 1,
+  "achievement_skip_rewards": [
+    { "stat": "best_survival", "value": 600, "count": 1 },
+    { "stat": "max_exploration_chain", "value": 4, "count": 1 }
+  ],
+  "achievement_reroll_rewards": [
+  ],
+  "achievement_seal_rewards": [
+    { "stat": "field_event_successes", "value": 3, "count": 1 },
+    { "stat": "best_exploration_score", "value": 2500, "count": 1 }
+  ]
+}

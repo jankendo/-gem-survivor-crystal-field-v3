@@ -1,0 +1,148 @@
+{
+  "attack": {
+    "name_ja": "攻撃の祝福",
+    "short_description_ja": "全武器ダメージを底上げ",
+    "description_ja": "全武器ダメージ+5%",
+    "effect_description_ja": "武器種を問わず、与えるダメージが常時5%増加します。",
+    "numeric_effects_ja": [
+      "全武器ダメージ +5%"
+    ],
+    "tradeoff_description_ja": "防御・回収能力は増えません。",
+    "recommended_for_ja": "初見、遠距離、近接、どのビルドにも対応",
+    "unlock_condition_ja": "初期解放",
+    "icon": "res://assets/ui/blessing_attack.png",
+    "unlock": {
+      "type": "initial"
+    },
+    "modifiers": {
+      "damage_mult": 1.05
+    },
+    "generated_icon": "res://assets/generated/blessings/attack.svg"
+  },
+  "magnet": {
+    "name_ja": "吸収の祝福",
+    "short_description_ja": "ジェム回収を安定化",
+    "description_ja": "吸収範囲+10%",
+    "effect_description_ja": "ジェム吸収半径が10%広がり、移動ロスを減らします。",
+    "numeric_effects_ja": [
+      "吸収範囲 +10%"
+    ],
+    "tradeoff_description_ja": "直接火力は増えません。",
+    "recommended_for_ja": "レベル上げ、ジェム、探索ビルド",
+    "unlock_condition_ja": "累計クリスタル貨500",
+    "icon": "res://assets/ui/blessing_magnet.png",
+    "unlock": {
+      "type": "currency_paid",
+      "cost": 500
+    },
+    "modifiers": {
+      "magnet_mult": 1.1
+    },
+    "generated_icon": "res://assets/generated/blessings/magnet.svg"
+  },
+  "mining": {
+    "name_ja": "採掘の祝福",
+    "short_description_ja": "結晶壁を素早く突破",
+    "description_ja": "結晶壁ダメージ+20%",
+    "effect_description_ja": "破壊可能な結晶壁へのダメージが20%増加します。",
+    "numeric_effects_ja": [
+      "結晶壁ダメージ +20%"
+    ],
+    "tradeoff_description_ja": "通常敵へのダメージは増えません。",
+    "recommended_for_ja": "採掘、探索、近道開通ビルド",
+    "unlock_condition_ja": "結晶壁を累計100個破壊",
+    "icon": "res://assets/ui/blessing_mining.png",
+    "unlock": {
+      "type": "total_crystals",
+      "count": 100
+    },
+    "modifiers": {
+      "crystal_damage_mult": 1.2
+    },
+    "generated_icon": "res://assets/generated/blessings/mining.svg"
+  },
+  "danger": {
+    "name_ja": "危険の祝福",
+    "short_description_ja": "敵圧と引き換えに高得点",
+    "description_ja": "スコア+20%、敵出現+10%",
+    "effect_description_ja": "獲得スコアが20%増えますが、敵出現量も10%増加します。",
+    "numeric_effects_ja": [
+      "スコア +20%",
+      "敵出現 +10%"
+    ],
+    "tradeoff_description_ja": "包囲されやすくなります。",
+    "recommended_for_ja": "高火力、スコア、高難度ビルド",
+    "unlock_condition_ja": "10分生存",
+    "icon": "res://assets/ui/blessing_danger.png",
+    "unlock": {
+      "type": "survive_seconds",
+      "seconds": 600
+    },
+    "modifiers": {
+      "score_mult": 1.2,
+      "spawn_mult": 1.1
+    },
+    "generated_icon": "res://assets/generated/blessings/danger.svg"
+  },
+  "chest": {
+    "name_ja": "宝箱の祝福",
+    "short_description_ja": "宝箱の方向確認を強化",
+    "description_ja": "宝箱インジケーター強化",
+    "effect_description_ja": "宝箱の方向・残り時間表示を見つけやすくします。",
+    "numeric_effects_ja": [
+      "宝箱案内強度 +35%"
+    ],
+    "tradeoff_description_ja": "戦闘能力は直接増えません。",
+    "recommended_for_ja": "進化狙い、探索初心者",
+    "unlock_condition_ja": "宝箱を累計10個開封",
+    "icon": "res://assets/ui/blessing_chest.png",
+    "unlock": {
+      "type": "total_chests",
+      "count": 10
+    },
+    "modifiers": {
+      "chest_indicator_mult": 1.35
+    },
+    "generated_icon": "res://assets/generated/blessings/chest.svg"
+  },
+  "guard": {
+    "name_ja": "守護の祝福",
+    "short_description_ja": "被ダメージを安定軽減",
+    "description_ja": "受けるダメージ-8%",
+    "effect_description_ja": "接触・弾・地形を含む受けるダメージを8%軽減します。",
+    "numeric_effects_ja": [
+      "被ダメージ -8%"
+    ],
+    "tradeoff_description_ja": "火力と報酬は増えません。",
+    "recommended_for_ja": "初心者、近接、防御ビルド",
+    "unlock_condition_ja": "ショップで守護の祝福を購入",
+    "icon": "res://assets/ui/blessing_guard.png",
+    "unlock": {
+      "type": "currency_sink"
+    },
+    "modifiers": {
+      "damage_taken_mult": 0.92
+    },
+    "generated_icon": "res://assets/generated/blessings/guard.svg"
+  },
+  "explore": {
+    "name_ja": "探索の祝福",
+    "short_description_ja": "遠征中の回収効率を強化",
+    "description_ja": "吸収範囲+15%",
+    "effect_description_ja": "ジェム吸収半径が15%広がり、部屋移動中の取りこぼしを減らします。",
+    "numeric_effects_ja": [
+      "吸収範囲 +15%"
+    ],
+    "tradeoff_description_ja": "直接火力は増えません。",
+    "recommended_for_ja": "探索ランク、回収、通貨ビルド",
+    "unlock_condition_ja": "ショップで探索の祝福を購入",
+    "icon": "res://assets/ui/blessing_explore.png",
+    "unlock": {
+      "type": "currency_sink"
+    },
+    "modifiers": {
+      "magnet_mult": 1.15
+    },
+    "generated_icon": "res://assets/generated/blessings/explore.svg"
+  }
+}

@@ -1,0 +1,45 @@
+extends RefCounted
+class_name EncounterSystem
+var budget := 0.0
+var threat := 0.0
+var spawned := 0
+var scratch: Array = []
+func target_alive(state: RunState, db: GameDatabase, risk: bool = false) -> int:
+ var targets: Array = db.config().target_alive
+ return int(targets[mini(targets.size()-1, state.field_tick / 18000)]) + (20 if risk else 0)
+func tick(state: RunState, db: GameDatabase, map: WorldGenerator, enemies: EnemyWorld) -> void:
+ var cfg := db.config()
+ var room := map.room_at(state.player.position)
+ var risk := room >= 0 and map.kinds[room] == "risk"
+ var multiplier := 1.0
+ for c in state.player.contracts: multiplier *= float(db.table("rune_contracts")[c].get("spawn_mult",1))
+ budget = minf(24, budget + float(cfg.refill_per_second) * multiplier / 60.0)
+ threat = minf(float(cfg.threat_budget), threat + float(cfg.refill_per_second) / 60.0)
+ var target := target_alive(state, db, risk)
+ while budget >= 1 and enemies.count < target and enemies.count < int(cfg.enemy_cap):
+  var eligible: Array = []
+  var seconds := state.field_tick / 60.0
+  for i in range(db.enemy_defs.size()):
+   var d: Dictionary = db.enemy_defs[i]
+   if not d.get("boss",false) and float(d.get("weight",0)) > 0 and float(d.get("unlock_seconds",0)) <= seconds: eligible.append(i)
+  var type_id := int(eligible[state.rng.next_int(eligible.size())])
+  var d: Dictionary = db.enemy_defs[type_id]
+  var cost := 5.0 if d.get("elite",false) else 1.0
+  if threat < cost: break
+  var pos := map.safe_position(state.player.position + Vector2.RIGHT.rotated(state.rng.range_float(0,TAU)) * state.rng.range_float(450,700))
+  enemies.spawn(type_id, pos, d, 1 + seconds / 60.0 * float(cfg.enemy_hp_per_minute))
+  spawned += 1
+  budget -= 1
+  threat -= cost
+func boss_schedule(state: RunState, db: GameDatabase, map: WorldGenerator, enemies: EnemyWorld) -> void:
+ var stage := state.field_tick / 18000
+ if stage <= state.boss_stage or enemies.free_count == 0: return
+ var definitions := db.table("bosses")
+ var key := "boss_" + str(mini(stage * 5, 30))
+ if not definitions.has(key): return
+ var d: Dictionary = definitions[key].duplicate(true)
+ var reference: Array = db.config().boss_reference_dps
+ d.hp = float(reference[mini(stage-1,2)]) * float(db.config().boss_ttk_seconds) * (1 + maxf(0,stage-3)*.3)
+ var pos := map.safe_position(state.player.position + Vector2(380,0))
+ var id := enemies.spawn(-stage, pos, d, 1, true)
+ if id >= 0: state.boss_stage = stage

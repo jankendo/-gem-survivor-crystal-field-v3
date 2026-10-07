@@ -1,0 +1,19 @@
+{
+  "survive_10": { "name_ja": "生存者", "description_ja": "10分生存", "condition": { "type": "survive_seconds", "value": 600 }, "reward": { "currency": 300 } },
+  "survive_20": { "name_ja": "熟練者", "description_ja": "20分生存", "condition": { "type": "survive_seconds", "value": 1200 }, "reward": { "unlock_character": "atlas" } },
+  "kill_5000": { "name_ja": "殲滅者", "description_ja": "累計5000体撃破", "condition": { "type": "total_kills", "value": 5000 }, "reward": { "discover_weapon": "mirror_shard", "currency": 500 } },
+  "crystal_300": { "name_ja": "採掘者", "description_ja": "結晶壁300個破壊", "condition": { "type": "total_crystals", "value": 300 }, "reward": { "unlock_character": "gantz" } },
+  "evolve_magic": { "name_ja": "星砕き", "description_ja": "魔弾を進化", "condition": { "type": "evolved_weapon", "weapon": "magic_bolt" }, "reward": { "currency": 250 } },
+  "combo_500": { "name_ja": "吸収中毒", "description_ja": "吸収コンボ500", "condition": { "type": "max_combo", "value": 500 }, "reward": { "secret_flag": "collector" } },
+  "boss_30": { "name_ja": "終末突破", "description_ja": "終末核撃破", "condition": { "type": "boss_defeat", "boss": "boss_30" }, "reward": { "unlock_character": "zero", "currency": 1000 } },
+  "contract_10": { "name_ja": "契約者", "description_ja": "ルーン契約10回", "condition": { "type": "total_contracts", "value": 10 }, "reward": { "unlock_character": "nero" } },
+  "exploration_rank_a": { "name_ja": "遠征の達人", "description_ja": "探索ランクA以上を達成", "condition": { "type": "exploration_rank", "value": "A" }, "reward": { "currency": 400 } },
+  "exploration_chain_5": { "name_ja": "探索連鎖", "description_ja": "探索チェーン5を達成", "condition": { "type": "exploration_chain", "value": 5 }, "reward": { "currency": 250 } },
+  "corridor_breaker": { "name_ja": "回廊突破者", "description_ja": "結晶廊下で累計1000体撃破", "condition": { "type": "terrain_kills", "terrain": "crystal_corridor", "value": 1000 }, "reward": { "currency": 1000, "discover_weapon": "corridor_blade" } },
+  "mine_king": { "name_ja": "採掘王", "description_ja": "鉱床部屋で結晶壁500個破壊", "condition": { "type": "terrain_crystals", "terrain": "mine_chamber", "value": 500 }, "reward": { "currency": 1200 } },
+  "danger_den_master": { "name_ja": "危険巣の主", "description_ja": "危険巣で累計5分生存", "condition": { "type": "terrain_time", "terrain": "danger_den", "value": 300 }, "reward": { "currency": 700 } },
+  "relic_addict": { "name_ja": "遺物中毒", "description_ja": "呪いの遺物を10個取得", "condition": { "type": "cursed_relics", "value": 10 }, "reward": { "currency": 900, "unlock_character": "relic_hunter" } },
+  "map_filler": { "name_ja": "地図埋め", "description_ja": "1ランで部屋10個発見", "condition": { "type": "rooms_in_run", "value": 10 }, "reward": { "currency": 600, "unlock_character": "tunnel_runner" } },
+  "explorer_100": { "name_ja": "探索者", "description_ja": "部屋を累計100個発見", "condition": { "type": "rooms_discovered", "value": 100 }, "reward": { "currency": 1200 } },
+  "shortcut_master": { "name_ja": "ショートカット職人", "description_ja": "近道壁を累計100個破壊", "condition": { "type": "shortcut_walls", "value": 100 }, "reward": { "currency": 1800 } }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Phase 12 iOS ultra-lite rendering and equipment grid performance",
+  "tasks": [
+    {"id": "phase12-effect-combo-enemy-allocation", "path": "res://tests/Phase12PerformanceHarness.gd", "kind": "harness"},
+    {"id": "phase12-effect-budget", "path": "res://tests/test_ios_ultra_effect_budget.gd"},
+    {"id": "phase12-critical-visuals", "path": "res://tests/test_ios_ultra_critical_visuals.gd"},
+    {"id": "phase12-simulation-parity", "path": "res://tests/test_ios_ultra_simulation_parity.gd"},
+    {"id": "phase12-rng-parity", "path": "res://tests/test_ios_ultra_rng_parity.gd"},
+    {"id": "phase12-damage-parity", "path": "res://tests/test_ios_ultra_damage_parity.gd"},
+    {"id": "phase12-combo-parity", "path": "res://tests/test_ios_ultra_combo_damage_parity.gd"},
+    {"id": "phase12-enemy-batch-ab", "path": "res://tests/test_enemy_batch_performance.gd"},
+    {"id": "phase12-equipment-layout", "path": "res://tests/test_equipment_grid_all_slots_visible.gd"},
+    {"id": "phase12-equipment-safe-area", "path": "res://tests/test_equipment_grid_safe_area.gd"},
+    {"id": "phase12-equipment-dirty", "path": "res://tests/test_equipment_grid_dirty_update.gd"},
+    {"id": "phase12-ui-text-scale", "path": "res://tests/test_ios_ultra_ui_text_scale_parity.gd"},
+    {"id": "phase12-all-enemy-types", "path": "res://tests/test_ios_ultra_all_enemy_types_visible.gd"}
+  ]
+}

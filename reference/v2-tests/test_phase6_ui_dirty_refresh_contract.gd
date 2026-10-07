@@ -1,0 +1,28 @@
+extends RefCounted
+
+const DirtyScript = preload("res://scripts/systems/UiDirtyFlagSystem.gd")
+const MetricsScript = preload("res://scripts/performance/Phase6MetricsSystem.gd")
+
+func run(t) -> void:
+	var dirty = DirtyScript.new()
+	dirty.configure({"critical_hud": 1.0 / 30.0, "equipment": 0.25})
+	t.assert_true(dirty.should_update("critical_hud", "hp:10 exp:0"), "first critical HUD sample should update immediately")
+	t.assert_true(not dirty.should_update("critical_hud", "hp:10 exp:0"), "unchanged critical HUD should not refresh twice in the same frame")
+	t.assert_true(dirty.should_update("critical_hud", "hp:9 exp:0"), "HP changes should refresh immediately")
+	dirty.tick(1.0 / 60.0)
+	t.assert_true(not dirty.should_update("critical_hud", "hp:9 exp:0"), "critical HUD should stay below the 30Hz cadence when unchanged")
+	dirty.tick(1.0 / 30.0)
+	t.assert_true(dirty.should_update("critical_hud", "hp:9 exp:0"), "critical HUD should refresh after the bounded 30Hz interval")
+	t.assert_true(dirty.should_update("equipment", "weapon:a passive:b"), "equipment state should update first sample")
+	t.assert_true(not dirty.should_update("equipment", "weapon:a passive:b"), "unchanged equipment should not rebuild every frame")
+	t.assert_true(dirty.should_update("equipment", "weapon:a,c passive:b"), "weapon changes should refresh equipment immediately")
+	var metrics = MetricsScript.new()
+	metrics.configure(false)
+	metrics.add("refresh_calls", 10)
+	t.assert_eq(metrics.snapshot().counters.size(), 0, "Phase 6 counters should be disabled in release by default")
+	metrics.configure(true)
+	metrics.add("refresh_calls", 2)
+	metrics.max_value("max_enemy_count", 4)
+	metrics.max_value("max_enemy_count", 3)
+	t.assert_eq(int(metrics.snapshot().counters.get("refresh_calls", 0)), 2, "Phase 6 counters should record QA metrics when enabled")
+	t.assert_eq(int(metrics.snapshot().gauges.get("max_enemy_count", 0)), 4, "Phase 6 gauges should keep the maximum observed value")

@@ -1,0 +1,13 @@
+{
+  "name": "phase7_perf",
+  "tasks": [
+    {
+      "id": "phase7-effect-stress",
+      "kind": "harness",
+      "path": "res://tests/Phase7EffectStressHarness.gd",
+      "method": "run",
+      "args": ["res://test-output/phase7/ci_effect_stress"]
+    }
+  ]
+}
+

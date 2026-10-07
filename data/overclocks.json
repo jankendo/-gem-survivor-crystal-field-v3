@@ -1,0 +1,38 @@
+{
+  "starbreaker_bolt": [
+    { "id": "meteor_swarm", "name_ja": "流星群", "description_ja": "弾数+3。単発ダメージ-20%。" },
+    { "id": "supernova", "name_ja": "超新星", "description_ja": "撃破爆発範囲+80%。攻撃間隔+15%。" },
+    { "id": "comet_orbit", "name_ja": "彗星軌道", "description_ja": "魔弾が近い敵へ軽く追尾する。" }
+  ],
+  "eternal_ice_ring": [
+    { "id": "absolute_zero", "name_ja": "絶対零度", "description_ja": "凍結中の敵への氷ダメージ+100%。" },
+    { "id": "glacier_expand", "name_ja": "氷河拡張", "description_ja": "リング半径+60%。回転速度-20%。" },
+    { "id": "powder_chain", "name_ja": "粉雪連鎖", "description_ja": "凍結敵撃破で周囲を遅延させる。" }
+  ],
+  "divine_chain": [
+    { "id": "judgement_amp", "name_ja": "神罰増幅", "description_ja": "連鎖数+5。クールダウン+10%。" },
+    { "id": "thunder_field", "name_ja": "落雷領域", "description_ja": "一定間隔で周囲へ範囲雷を落とす。" },
+    { "id": "shock_burst", "name_ja": "感電爆発", "description_ja": "雷で倒した敵が小爆発する。" }
+  ],
+  "final_fireworks": [
+    { "id": "triple_bloom", "name_ja": "多段開花", "description_ja": "爆発が3回に広がる。" },
+    { "id": "burning_afterglow", "name_ja": "焼夷残火", "description_ja": "爆発地点に短い炎床を残す。" },
+    { "id": "overloaded_firework", "name_ja": "花火過積載", "description_ja": "爆発範囲+100%。低確率で自傷。" }
+  ],
+  "eternal_gate": [
+    { "id": "wide_gate", "name_ja": "門拡張", "description_ja": "門の判定+35%。" },
+    { "id": "hot_rune", "name_ja": "灼熱刻印", "description_ja": "門の継続ダメージ+40%。" }
+  ],
+  "meteor_cluster": [
+    { "id": "double_impact", "name_ja": "二重落下", "description_ja": "彗星が追加で落ちる。" },
+    { "id": "crater_bonus", "name_ja": "クレーター", "description_ja": "落下地点に短いダメージ領域を残す。" }
+  ],
+  "death_soul_scythe": [
+    { "id": "life_reap", "name_ja": "生命刈り", "description_ja": "撃破時の回復率UP。" },
+    { "id": "wide_reap", "name_ja": "大鎌化", "description_ja": "斬撃範囲+45%。" }
+  ],
+  "kaleido_shard": [
+    { "id": "split_reflect", "name_ja": "分裂反射", "description_ja": "反射時に弾が増える。" },
+    { "id": "sharp_mirror", "name_ja": "鋭鏡", "description_ja": "反射弾ダメージ+35%。" }
+  ]
+}

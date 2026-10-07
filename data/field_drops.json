@@ -1,0 +1,227 @@
+{
+  "_config": {
+    "time_spawn_enabled": false,
+    "time_despawn_enabled": false,
+    "initial_delay": 45.0,
+    "roll_interval": 30.0,
+    "base_spawn_chance": 0.0,
+    "max_dynamic_per_run": 0,
+    "despawn_seconds": 0.0,
+    "respawn_check_interval": 0.25,
+    "spawn_log_enabled": false,
+    "spawn_log_path": "user://dynamic_field_drops.csv"
+  },
+  "weapon_core": {
+    "name_ja": "武器コア",
+    "max_per_run": 3,
+    "dynamic_max_per_run": 2,
+    "respawn_enabled": true,
+    "respawn_seconds": 210,
+    "max_active": 3,
+    "max_spawned_per_run": 5,
+    "dynamic_weight": 10,
+    "dynamic_cooldown": 150,
+    "unlock_seconds": 180,
+    "min_distance": 1250,
+    "value": 5,
+    "priority": 4,
+    "color": [
+      0.42,
+      0.92,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_drops/weapon_core.svg"
+  },
+  "passive_core": {
+    "name_ja": "パッシブ結晶",
+    "max_per_run": 4,
+    "dynamic_max_per_run": 2,
+    "respawn_enabled": true,
+    "respawn_seconds": 180,
+    "max_active": 4,
+    "max_spawned_per_run": 6,
+    "dynamic_weight": 13,
+    "dynamic_cooldown": 120,
+    "unlock_seconds": 180,
+    "min_distance": 1050,
+    "value": 4,
+    "priority": 8,
+    "color": [
+      0.52,
+      1.0,
+      0.68
+    ],
+    "generated_icon": "res://assets/generated/field_drops/passive_core.svg"
+  },
+  "evolution_core": {
+    "name_ja": "進化核",
+    "max_per_run": 2,
+    "dynamic_max_per_run": 1,
+    "respawn_enabled": true,
+    "respawn_seconds": 360,
+    "max_active": 1,
+    "max_spawned_per_run": 3,
+    "dynamic_weight": 3,
+    "dynamic_cooldown": 300,
+    "unlock_seconds": 480,
+    "min_distance": 1800,
+    "value": 9,
+    "priority": 1,
+    "rare": true,
+    "color": [
+      1.0,
+      0.92,
+      0.34
+    ],
+    "generated_icon": "res://assets/generated/field_drops/evolution_core.svg"
+  },
+  "overclock_core": {
+    "name_ja": "過充電核",
+    "max_per_run": 1,
+    "dynamic_max_per_run": 1,
+    "respawn_enabled": true,
+    "respawn_seconds": 480,
+    "max_active": 1,
+    "max_spawned_per_run": 2,
+    "dynamic_weight": 1,
+    "dynamic_cooldown": 420,
+    "unlock_seconds": 900,
+    "min_distance": 2150,
+    "value": 8,
+    "priority": 3,
+    "rare": true,
+    "color": [
+      1.0,
+      0.55,
+      0.16
+    ],
+    "generated_icon": "res://assets/generated/field_drops/overclock_core.svg"
+  },
+  "cursed_relic": {
+    "name_ja": "呪いの遺物",
+    "max_per_run": 3,
+    "dynamic_max_per_run": 1,
+    "respawn_enabled": true,
+    "respawn_seconds": 300,
+    "max_active": 3,
+    "max_spawned_per_run": 4,
+    "dynamic_weight": 3,
+    "dynamic_cooldown": 240,
+    "unlock_seconds": 420,
+    "min_distance": 1600,
+    "value": 7,
+    "priority": 9,
+    "rare": true,
+    "color": [
+      0.92,
+      0.22,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_drops/cursed_relic.svg"
+  },
+  "heal_ore": {
+    "name_ja": "回復鉱石",
+    "max_per_run": 10,
+    "dynamic_max_per_run": 4,
+    "respawn_enabled": true,
+    "respawn_seconds": 75,
+    "max_active": 10,
+    "max_spawned_per_run": 18,
+    "dynamic_weight": 20,
+    "dynamic_cooldown": 75,
+    "unlock_seconds": 0,
+    "min_distance": 420,
+    "value": 2,
+    "priority": 6,
+    "color": [
+      0.42,
+      1.0,
+      0.52
+    ],
+    "generated_icon": "res://assets/generated/field_drops/heal_ore.svg"
+  },
+  "magnet_ore": {
+    "name_ja": "磁力鉱石",
+    "max_per_run": 6,
+    "dynamic_max_per_run": 3,
+    "respawn_enabled": true,
+    "respawn_seconds": 120,
+    "max_active": 6,
+    "max_spawned_per_run": 10,
+    "dynamic_weight": 15,
+    "dynamic_cooldown": 90,
+    "unlock_seconds": 90,
+    "min_distance": 900,
+    "value": 3,
+    "priority": 8,
+    "color": [
+      0.42,
+      0.95,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_drops/magnet_ore.svg"
+  },
+  "crystal_cache": {
+    "name_ja": "結晶貯蔵庫",
+    "max_per_run": 5,
+    "dynamic_max_per_run": 3,
+    "respawn_enabled": true,
+    "respawn_seconds": 150,
+    "max_active": 5,
+    "max_spawned_per_run": 8,
+    "dynamic_weight": 12,
+    "dynamic_cooldown": 105,
+    "unlock_seconds": 240,
+    "min_distance": 1150,
+    "value": 4,
+    "priority": 7,
+    "color": [
+      0.76,
+      0.96,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_drops/crystal_cache.svg"
+  },
+  "skip_charge": {
+    "name_ja": "スキップの欠片",
+    "max_per_run": 2,
+    "dynamic_max_per_run": 1,
+    "respawn_enabled": true,
+    "respawn_seconds": 240,
+    "max_active": 2,
+    "max_spawned_per_run": 3,
+    "dynamic_weight": 4,
+    "dynamic_cooldown": 240,
+    "unlock_seconds": 420,
+    "min_distance": 1450,
+    "value": 1,
+    "priority": 5,
+    "color": [
+      0.76,
+      0.82,
+      1.0
+    ],
+    "generated_icon": "res://assets/generated/field_drops/skip_charge.svg"
+  },
+  "seal_charge": {
+    "name_ja": "封印の欠片",
+    "max_per_run": 1,
+    "dynamic_max_per_run": 1,
+    "respawn_enabled": true,
+    "respawn_seconds": 300,
+    "max_active": 1,
+    "max_spawned_per_run": 2,
+    "dynamic_weight": 2,
+    "dynamic_cooldown": 360,
+    "unlock_seconds": 660,
+    "min_distance": 1800,
+    "value": 1,
+    "priority": 4,
+    "color": [
+      1.0,
+      0.54,
+      0.42
+    ],
+    "generated_icon": "res://assets/generated/field_drops/seal_charge.svg"
+  }
+}

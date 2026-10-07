@@ -1,0 +1,23 @@
+extends RefCounted
+class_name StatResolver
+# Fixed calculation order. Detailed breakdown is produced on demand, never per frame.
+func resolve(id: String, state: RunState, db: GameDatabase) -> Dictionary:
+ var d: Dictionary = db.table("v3_weapons")[id]
+ var cfg := db.config()
+ var level := int(state.progression.weapons.get(id, 1))
+ var p := state.progression.passives
+ var char_mod: Dictionary = db.table("characters")[state.player.character].get("modifiers", {})
+ var category := str(d.category)
+ var base := float(d.damage)
+ var leveled := base * (1.0 + (level - 1) * float(cfg.weapon_level_damage))
+ var character := leveled * float(char_mod.get("damage_mult", 1))
+ var passive := character * (1 + float(p.get("might", 0)) * .13)
+ var categorized := passive * float(cfg.category_damage.get(category, 1))
+ var evolved := categorized * (float(cfg.evolution_damage) if state.progression.evolutions.has(id) else 1.0)
+ var synergy := evolved * float(db.table("blessings").get(state.player.blessing, {}).get("modifiers", {}).get("damage_mult", 1))
+ for contract in state.player.contracts: synergy *= float(db.table("rune_contracts")[contract].get("damage_mult", 1))
+ var temporary := synergy * (1.1 if state.progression.resonance > 0 else 1.0)
+ var final := temporary * pow(float(cfg.overclock_damage), int(state.progression.overclocks.get(id, 0)))
+ var cooldown := float(d.cooldown) * maxf(.4, 1 - (level - 1) * float(cfg.weapon_level_cooldown)) * maxf(.675, 1 - float(p.get("cooldown", 0)) * .065)
+ for contract in state.player.contracts: cooldown *= float(db.table("rune_contracts")[contract].get("cooldown_mult", 1))
+ return {"damage": final, "cooldown_ticks": maxi(1, roundi(cooldown * 60)), "range":float(d.range), "radius":float(d.radius) * (1 + float(p.get("area", 0)) * .11), "targets":int(d.targets) + int(p.get("projectile_count", 0)), "breakdown":[base,leveled,character,passive,categorized,evolved,synergy,temporary,final]}

@@ -1,0 +1,105 @@
+{
+  "profiles": {
+    "desktop_minimal": {
+      "max_rendered_projectiles": 96,
+      "max_rendered_gems": 180,
+      "max_rendered_effects": 28,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 0,
+      "arc_segment_scale": 0.45,
+      "persistent_area_animation_hz": 6,
+      "minimap_animation": false,
+      "trails_enabled": false,
+      "glow_enabled": false,
+      "decorative_enabled": false,
+      "duplicate_visuals_enabled": false,
+      "minimal": true
+    },
+    "desktop_low": {
+      "max_rendered_projectiles": 340,
+      "max_rendered_gems": 760,
+      "max_rendered_effects": 130,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 210,
+      "arc_segment_scale": 0.85
+    },
+    "desktop_standard": {
+      "max_rendered_projectiles": 500,
+      "max_rendered_gems": 1000,
+      "max_rendered_effects": 200,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 300,
+      "arc_segment_scale": 1.0
+    },
+    "desktop_high": {
+      "max_rendered_projectiles": 580,
+      "max_rendered_gems": 1150,
+      "max_rendered_effects": 240,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 360,
+      "arc_segment_scale": 1.1
+    },
+    "ios_low": {
+      "max_rendered_projectiles": 120,
+      "max_rendered_gems": 260,
+      "max_rendered_effects": 64,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 48,
+      "arc_segment_scale": 0.62
+    },
+    "ios_minimal": {
+      "max_rendered_projectiles": 56,
+      "max_rendered_gems": 120,
+      "max_rendered_effects": 20,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 0,
+      "arc_segment_scale": 0.35,
+      "persistent_area_animation_hz": 6,
+      "minimap_animation": false,
+      "trails_enabled": false,
+      "glow_enabled": false,
+      "decorative_enabled": false,
+      "duplicate_visuals_enabled": false,
+      "minimal": true
+    },
+    "ios_ultra": {
+      "max_rendered_projectiles": 24,
+      "max_rendered_gems": 64,
+      "max_rendered_effects": 8,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 0,
+      "arc_segment_scale": 0.20,
+      "persistent_area_animation_hz": 3,
+      "minimap_update_hz": 2,
+      "trails_enabled": false,
+      "glow_enabled": false,
+      "decorative_enabled": false,
+      "duplicate_visuals_enabled": false,
+      "translucent_area_fill_enabled": false,
+      "player_magnet_ring_enabled": false,
+      "field_item_pulse_enabled": false,
+      "warp_floor_animation_enabled": false,
+      "enemy_batch_mode": "multimesh_ab",
+      "world_stretch_shrink": 2,
+      "coalesce_window_ms": 140,
+      "minimal": true,
+      "ultra": true
+    },
+    "ios_standard": {
+      "max_rendered_projectiles": 190,
+      "max_rendered_gems": 420,
+      "max_rendered_effects": 96,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 90,
+      "arc_segment_scale": 0.78
+    },
+    "ios_high": {
+      "max_rendered_projectiles": 280,
+      "max_rendered_gems": 620,
+      "max_rendered_effects": 140,
+      "max_rendered_damage_numbers": 0,
+      "max_rendered_background_particles": 150,
+      "arc_segment_scale": 0.92
+    }
+  }
+}

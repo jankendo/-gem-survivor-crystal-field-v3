@@ -1,0 +1,118 @@
+{
+  "schema_version": 2,
+  "type_weights": {
+    "normal": 50,
+    "heaven": 25,
+    "hell": 25
+  },
+  "types": {
+    "normal": {
+      "display_name_ja": "通常晶洞",
+      "icon": "◇",
+      "description_ja": "標準的な敵と報酬が待つ安定した試練",
+      "danger_ja": "★★☆☆☆",
+      "reward_tendency_ja": "標準",
+      "colors": {
+        "background": [0.025, 0.035, 0.085],
+        "floor": [0.12, 0.18, 0.34],
+        "accent": [0.48, 0.68, 1.0],
+        "warning": [0.72, 0.62, 1.0]
+      },
+      "floor_pattern": "diamond",
+      "border_pattern": "double",
+      "wave_count": 3,
+      "enemy_count_multiplier": 1.0,
+      "enemy_hp_multiplier": 1.0,
+      "enemy_damage_multiplier": 1.0,
+      "enemy_speed_multiplier": 1.0,
+      "attack_frequency_multiplier": 1.0,
+      "elite_multiplier": 1.0,
+      "waves": [
+        {"enemies": [{"type": "slime", "count": 12}, {"type": "bat", "count": 7}]},
+        {"enemies": [{"type": "charger", "count": 8}, {"type": "shooter", "count": 6}, {"type": "elite", "count": 1}]},
+        {"enemies": [{"type": "splitter", "count": 9}, {"type": "reaper", "count": 5}]}
+      ],
+      "reward": {
+        "score": 2200,
+        "exp": 100,
+        "chests": {"min": 1, "max": 2},
+        "items": {"min": 2, "max": 4},
+        "chest_rarities": [{"id": "normal", "weight": 0.82}, {"id": "golden", "weight": 0.18}],
+        "item_pool": ["heal_ore", "crystal_cache", "magnet_ore", "weapon_core", "passive_core"]
+      }
+    },
+    "heaven": {
+      "display_name_ja": "天上宝晶庭",
+      "icon": "✦",
+      "description_ja": "大量の宝箱とアイテムが眠る豊穣の領域",
+      "danger_ja": "★☆☆☆☆",
+      "reward_tendency_ja": "数量特化",
+      "colors": {
+        "background": [0.075, 0.105, 0.15],
+        "floor": [0.40, 0.54, 0.64],
+        "accent": [1.0, 0.88, 0.38],
+        "warning": [0.78, 0.94, 1.0]
+      },
+      "floor_pattern": "halo",
+      "border_pattern": "rays",
+      "wave_count": 1,
+      "enemy_count_multiplier": 0.65,
+      "enemy_hp_multiplier": 0.85,
+      "enemy_damage_multiplier": 0.85,
+      "enemy_speed_multiplier": 0.90,
+      "attack_frequency_multiplier": 0.90,
+      "elite_multiplier": 0.6,
+      "waves": [
+        {"enemies": [{"type": "slime", "count": 12}, {"type": "bat", "count": 7}, {"type": "elite", "count": 1}]}
+      ],
+      "reward": {
+        "score": 2600,
+        "exp": 130,
+        "chests": {"min": 4, "max": 6},
+        "items": {"min": 8, "max": 12},
+        "required_core_count": 1,
+        "chest_rarities": [{"id": "normal", "weight": 0.72}, {"id": "golden", "weight": 0.24}, {"id": "evolution", "weight": 0.04}],
+        "item_pool": ["heal_ore", "crystal_cache", "magnet_ore", "weapon_core", "passive_core", "skip_charge"]
+      }
+    },
+    "hell": {
+      "display_name_ja": "煉獄晶窟",
+      "icon": "▲",
+      "description_ja": "高密度の敵と強敵が押し寄せる極限領域",
+      "danger_ja": "★★★★★",
+      "reward_tendency_ja": "品質特化",
+      "colors": {
+        "background": [0.055, 0.008, 0.018],
+        "floor": [0.20, 0.035, 0.08],
+        "accent": [1.0, 0.22, 0.12],
+        "warning": [1.0, 0.62, 0.18]
+      },
+      "floor_pattern": "cracks",
+      "border_pattern": "teeth",
+      "wave_count": 5,
+      "enemy_count_multiplier": 1.75,
+      "enemy_hp_multiplier": 1.35,
+      "enemy_damage_multiplier": 1.25,
+      "enemy_speed_multiplier": 1.10,
+      "attack_frequency_multiplier": 1.15,
+      "elite_multiplier": 2.0,
+      "waves": [
+        {"enemies": [{"type": "charger", "count": 9}, {"type": "shooter", "count": 7}]},
+        {"enemies": [{"type": "splitter", "count": 8}, {"type": "bomber", "count": 7}, {"type": "elite", "count": 2}]},
+        {"enemies": [{"type": "reaper", "count": 7}, {"type": "void_knight", "count": 5}, {"type": "elite", "count": 2}]},
+        {"enemies": [{"type": "swarm_mother", "count": 5}, {"type": "crystal_sniper", "count": 7}, {"type": "elite", "count": 2}]},
+        {"enemies": [{"type": "slime_king", "count": 1}, {"type": "reaper", "count": 8}, {"type": "splitter", "count": 6}, {"type": "elite", "count": 2}]}
+      ],
+      "reward": {
+        "score": 6200,
+        "exp": 320,
+        "chests": {"min": 2, "max": 3},
+        "items": {"min": 3, "max": 5},
+        "required_core_count": 1,
+        "required_rare_count": 1,
+        "chest_rarities": [{"id": "golden", "weight": 0.62}, {"id": "evolution", "weight": 0.20}, {"id": "overclock", "weight": 0.18}],
+        "item_pool": ["weapon_core", "passive_core", "evolution_core", "overclock_core", "heal_ore", "crystal_cache"]
+      }
+    }
+  }
+}

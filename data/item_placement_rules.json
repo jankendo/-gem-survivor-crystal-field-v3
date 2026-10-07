@@ -1,0 +1,36 @@
+{
+	"schema_version": 1,
+	"default": {
+		"radius": 22.0,
+		"margin": 10.0,
+		"edge_margin": 96.0,
+		"reroll_attempts": 32,
+		"require_reachable": true,
+		"require_room_or_corridor": true
+	},
+	"exp_gem": {
+		"radius": 8.0,
+		"margin": 6.0,
+		"edge_margin": 64.0
+	},
+	"chest": {
+		"radius": 28.0,
+		"margin": 12.0,
+		"edge_margin": 96.0
+	},
+	"field_drop": {
+		"radius": 24.0,
+		"margin": 10.0,
+		"edge_margin": 96.0
+	},
+	"field_equipment": {
+		"radius": 22.0,
+		"margin": 8.0,
+		"edge_margin": 112.0
+	},
+	"field_gimmick": {
+		"radius": 38.0,
+		"margin": 14.0,
+		"edge_margin": 128.0
+	}
+}
