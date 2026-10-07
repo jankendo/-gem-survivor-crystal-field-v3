@@ -10,7 +10,7 @@
     "tradeoff_description_ja": "防御・回収能力は増えません。",
     "recommended_for_ja": "初見、遠距離、近接、どのビルドにも対応",
     "unlock_condition_ja": "初期解放",
-    "icon": "res://assets/ui/blessing_attack.png",
+    "icon": "res://assets/generated/blessings/attack.svg",
     "unlock": {
       "type": "initial"
     },
@@ -30,7 +30,7 @@
     "tradeoff_description_ja": "直接火力は増えません。",
     "recommended_for_ja": "レベル上げ、ジェム、探索ビルド",
     "unlock_condition_ja": "累計クリスタル貨500",
-    "icon": "res://assets/ui/blessing_magnet.png",
+    "icon": "res://assets/generated/blessings/magnet.svg",
     "unlock": {
       "type": "currency_paid",
       "cost": 500
@@ -51,7 +51,7 @@
     "tradeoff_description_ja": "通常敵へのダメージは増えません。",
     "recommended_for_ja": "採掘、探索、近道開通ビルド",
     "unlock_condition_ja": "結晶壁を累計100個破壊",
-    "icon": "res://assets/ui/blessing_mining.png",
+    "icon": "res://assets/generated/blessings/mining.svg",
     "unlock": {
       "type": "total_crystals",
       "count": 100
@@ -73,7 +73,7 @@
     "tradeoff_description_ja": "包囲されやすくなります。",
     "recommended_for_ja": "高火力、スコア、高難度ビルド",
     "unlock_condition_ja": "10分生存",
-    "icon": "res://assets/ui/blessing_danger.png",
+    "icon": "res://assets/generated/blessings/danger.svg",
     "unlock": {
       "type": "survive_seconds",
       "seconds": 600
@@ -95,7 +95,7 @@
     "tradeoff_description_ja": "戦闘能力は直接増えません。",
     "recommended_for_ja": "進化狙い、探索初心者",
     "unlock_condition_ja": "宝箱を累計10個開封",
-    "icon": "res://assets/ui/blessing_chest.png",
+    "icon": "res://assets/generated/blessings/chest.svg",
     "unlock": {
       "type": "total_chests",
       "count": 10
@@ -116,7 +116,7 @@
     "tradeoff_description_ja": "火力と報酬は増えません。",
     "recommended_for_ja": "初心者、近接、防御ビルド",
     "unlock_condition_ja": "ショップで守護の祝福を購入",
-    "icon": "res://assets/ui/blessing_guard.png",
+    "icon": "res://assets/generated/blessings/guard.svg",
     "unlock": {
       "type": "currency_sink"
     },
@@ -136,7 +136,7 @@
     "tradeoff_description_ja": "直接火力は増えません。",
     "recommended_for_ja": "探索ランク、回収、通貨ビルド",
     "unlock_condition_ja": "ショップで探索の祝福を購入",
-    "icon": "res://assets/ui/blessing_explore.png",
+    "icon": "res://assets/generated/blessings/explore.svg",
     "unlock": {
       "type": "currency_sink"
     },

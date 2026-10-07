@@ -8,18 +8,22 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "ranged"
+    "category": "ranged",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "ice_orbit": {
     "archetype": "orbit",
-    "damage": 7.92,
+    "damage": 3.96,
     "cooldown": 0.34,
     "range": 180,
     "radius": 180,
     "targets": 6,
     "speed": 650,
     "status": "slow",
-    "category": "area"
+    "category": "area",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "thunder_chain": {
     "archetype": "chain",
@@ -30,7 +34,9 @@
     "targets": 4,
     "speed": 650,
     "status": "shock",
-    "category": "lightning"
+    "category": "lightning",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "bomb_seed": {
     "archetype": "explosion",
@@ -41,7 +47,9 @@
     "targets": 12,
     "speed": 650,
     "status": "",
-    "category": "explosion"
+    "category": "explosion",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "blade_fan": {
     "archetype": "melee",
@@ -49,32 +57,38 @@
     "cooldown": 0.86,
     "range": 260,
     "radius": 230,
-    "targets": 8,
+    "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "melee"
+    "category": "melee",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "laser_lance": {
-    "archetype": "projectile",
+    "archetype": "beam",
     "damage": 8.28,
     "cooldown": 1.35,
     "range": 980,
     "radius": 100,
-    "targets": 1,
+    "targets": 8,
     "speed": 650,
     "status": "",
-    "category": "laser"
+    "category": "laser",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "poison_mist": {
     "archetype": "aura",
-    "damage": 7.56,
+    "damage": 3.78,
     "cooldown": 0.56,
     "range": 240,
     "radius": 230,
     "targets": 10,
     "speed": 650,
     "status": "poison",
-    "category": "poison"
+    "category": "poison",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "drone_bit": {
     "archetype": "projectile",
@@ -85,40 +99,48 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "summon"
+    "category": "summon",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "crystal_mine": {
     "archetype": "deploy",
-    "damage": 9.18,
+    "damage": 13.77,
     "cooldown": 1.85,
     "range": 160,
     "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "crystal"
+    "category": "crystal",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "black_hole": {
-    "archetype": "aura",
-    "damage": 7.38,
+    "archetype": "deploy",
+    "damage": 3.69,
     "cooldown": 3.2,
     "range": 680,
-    "radius": 230,
+    "radius": 180,
     "targets": 10,
     "speed": 650,
-    "status": "",
-    "category": "area"
+    "status": "slow",
+    "category": "area",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "rune_gate": {
     "archetype": "deploy",
-    "damage": 8.46,
+    "damage": 12.69,
     "cooldown": 2.45,
     "range": 520,
     "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "deploy"
+    "category": "deploy",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "comet_staff": {
     "archetype": "explosion",
@@ -129,7 +151,9 @@
     "targets": 12,
     "speed": 650,
     "status": "",
-    "category": "explosion"
+    "category": "explosion",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "soul_scythe": {
     "archetype": "melee",
@@ -137,10 +161,12 @@
     "cooldown": 1.45,
     "range": 210,
     "radius": 210,
-    "targets": 8,
+    "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "melee"
+    "category": "melee",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "mirror_shard": {
     "archetype": "projectile",
@@ -151,7 +177,9 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "ranged"
+    "category": "ranged",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "sonic_wave": {
     "archetype": "melee",
@@ -159,10 +187,12 @@
     "cooldown": 1.7,
     "range": 220,
     "radius": 220,
-    "targets": 8,
+    "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "knockback"
+    "category": "knockback",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "gem_turret": {
     "archetype": "projectile",
@@ -173,7 +203,9 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "gem"
+    "category": "gem",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "corridor_blade": {
     "archetype": "melee",
@@ -181,10 +213,12 @@
     "cooldown": 1.02,
     "range": 290,
     "radius": 230,
-    "targets": 8,
+    "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "melee"
+    "category": "melee",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "wall_bounce_blaster": {
     "archetype": "projectile",
@@ -195,7 +229,9 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "ranged"
+    "category": "ranged",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "drill_charge": {
     "archetype": "melee",
@@ -203,21 +239,25 @@
     "cooldown": 1.36,
     "range": 350,
     "radius": 230,
-    "targets": 8,
+    "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "crystal"
+    "category": "crystal",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "mine_lantern": {
     "archetype": "aura",
-    "damage": 7.56,
+    "damage": 3.78,
     "cooldown": 2.15,
     "range": 520,
     "radius": 230,
     "targets": 10,
     "speed": 650,
     "status": "",
-    "category": "deploy"
+    "category": "deploy",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "relic_chain": {
     "archetype": "melee",
@@ -225,65 +265,77 @@
     "cooldown": 1.28,
     "range": 270,
     "radius": 230,
-    "targets": 8,
-    "speed": 650,
-    "status": "",
-    "category": "melee"
-  },
-  "shrine_beam": {
-    "archetype": "deploy",
-    "damage": 9.18,
-    "cooldown": 2.3,
-    "range": 650,
-    "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "deploy"
+    "category": "melee",
+    "projectile_level_step": 3,
+    "pierce": 0
+  },
+  "shrine_beam": {
+    "archetype": "beam",
+    "damage": 13.77,
+    "cooldown": 2.3,
+    "range": 650,
+    "radius": 100,
+    "targets": 8,
+    "speed": 650,
+    "status": "",
+    "category": "deploy",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "thorn_seed": {
     "archetype": "deploy",
-    "damage": 7.38,
+    "damage": 11.07,
     "cooldown": 1.92,
     "range": 560,
     "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "poison",
-    "category": "poison"
+    "category": "poison",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "frost_wall": {
     "archetype": "deploy",
-    "damage": 7.2,
+    "damage": 10.8,
     "cooldown": 2.05,
     "range": 280,
     "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "slow",
-    "category": "deploy"
+    "category": "deploy",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "coin_orbit": {
     "archetype": "orbit",
-    "damage": 8.1,
+    "damage": 4.05,
     "cooldown": 1.05,
     "range": 220,
     "radius": 220,
     "targets": 6,
     "speed": 650,
     "status": "",
-    "category": "gem"
+    "category": "gem",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "echo_bell": {
     "archetype": "aura",
-    "damage": 8.28,
+    "damage": 4.14,
     "cooldown": 1.55,
     "range": 260,
     "radius": 230,
     "targets": 10,
     "speed": 650,
     "status": "",
-    "category": "knockback"
+    "category": "knockback",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "void_mirror": {
     "archetype": "projectile",
@@ -294,7 +346,9 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "ranged"
+    "category": "ranged",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "magma_core": {
     "archetype": "explosion",
@@ -305,7 +359,9 @@
     "targets": 12,
     "speed": 650,
     "status": "",
-    "category": "explosion"
+    "category": "explosion",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "compass_star": {
     "archetype": "projectile",
@@ -316,28 +372,34 @@
     "targets": 1,
     "speed": 650,
     "status": "",
-    "category": "ranged"
+    "category": "ranged",
+    "projectile_level_step": 3,
+    "pierce": 2
   },
   "guardian_wall": {
     "archetype": "deploy",
-    "damage": 7.74,
+    "damage": 11.61,
     "cooldown": 1.9,
     "range": 320,
     "radius": 100,
     "targets": 3,
     "speed": 650,
     "status": "",
-    "category": "deploy"
+    "category": "deploy",
+    "projectile_level_step": 3,
+    "pierce": 0
   },
   "gravity_anchor": {
     "archetype": "deploy",
-    "damage": 8.28,
+    "damage": 12.42,
     "cooldown": 3.05,
     "range": 660,
     "radius": 100,
     "targets": 3,
     "speed": 650,
-    "status": "",
-    "category": "area"
+    "status": "slow",
+    "category": "area",
+    "projectile_level_step": 3,
+    "pierce": 0
   }
 }

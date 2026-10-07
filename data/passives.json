@@ -265,7 +265,7 @@
   "emergency_route": {
     "name_ja": "緊急退路",
     "max_level": 3,
-    "description_ja": "HP低下時に壊せる壁をすり抜ける",
+    "description_ja": "HP30%未満で移動速度UP（1Lvごとに8%）",
     "tags": [
       "defense",
       "explore"
@@ -294,7 +294,7 @@
   "safe_pocket": {
     "name_ja": "安全袋",
     "max_level": 5,
-    "description_ja": "死亡時に持ち帰る通貨の保護率UP",
+    "description_ja": "死亡時の持ち帰り通貨ボーナス（1Lvごとに8%）",
     "tags": [
       "currency"
     ],
@@ -356,9 +356,27 @@
       "gem",
       "explore"
     ],
-    "exp_bonus_by_level": [0.10, 0.18, 0.26, 0.34, 0.42],
-    "collection_interval_by_level": [50.0, 45.0, 40.0, 35.0, 30.0],
-    "collection_radius_by_level": [900.0, 1050.0, 1200.0, 1500.0, 1850.0],
+    "exp_bonus_by_level": [
+      0.1,
+      0.18,
+      0.26,
+      0.34,
+      0.42
+    ],
+    "collection_interval_by_level": [
+      50.0,
+      45.0,
+      40.0,
+      35.0,
+      30.0
+    ],
+    "collection_radius_by_level": [
+      900.0,
+      1050.0,
+      1200.0,
+      1500.0,
+      1850.0
+    ],
     "generated_icon": "res://assets/generated/passives/resonance_magnet_core.svg"
   }
 }

@@ -7,10 +7,13 @@ var stats: Array = []
 var cooldowns := PackedInt32Array()
 var signature := 0
 var resolver := StatResolver.new()
-var scratch: Array = []
+var scratch := QueryBuffer.new(600)
 var processed := 0
 var coverage_ticks := 0
 func refresh(state: RunState, db: GameDatabase) -> void:
+ state.player.stats = PassiveSystem.new().resolve(state,db)
+ var contracts := ContractSystem.new().multipliers(state,db)
+ for key in contracts: state.player.stats["contract_"+str(key)] = contracts[key]
  ids.clear()
  definitions.clear()
  stats.clear()
@@ -33,25 +36,28 @@ func tick(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, projectil
   cooldowns[n] = int(s.cooldown_ticks)
   coverage_ticks += 1
   var origin := state.player.position
+  var hit_damage := float(s.damage)
+  hit_damage *= 1+float(state.player.stats.get("context_damage",0))
   var center := enemies.positions[enemies.slot(target)]
   match str(d.archetype):
    "projectile", "summon":
     var direction := (center - origin).normalized()
     for shot in range(int(s.targets)):
-     projectiles.add(origin, direction.rotated((shot - (int(s.targets)-1)*.5) * .13) * float(d.speed), s.damage, "weapon:" + ids[n])
+     projectiles.add(origin, direction.rotated((shot - (int(s.targets)-1)*.5) * .13) * float(d.speed), hit_damage, "weapon:" + ids[n],int(d.get("pierce",0))+int(state.player.stats.get("pierce",0)))
    "beam": spatial.query_segment(SpatialWorld.ENEMY, origin, origin + (center-origin).normalized() * float(s.range), 30, scratch)
    "explosion", "deploy": spatial.query_circle(SpatialWorld.ENEMY, center, s.radius, scratch)
    "chain": spatial.query_circle(SpatialWorld.ENEMY, center, minf(s.range, 280), scratch)
    _: spatial.query_circle(SpatialWorld.ENEMY, origin, s.radius, scratch)
   if str(d.archetype) == "projectile" or str(d.archetype) == "summon": continue
   var hits := 0
-  for id in scratch:
+  for query_index in range(scratch.count):
+   var id := scratch.ids[query_index]
    if not enemies.alive(id): continue
-   damage_system.apply(enemies, id, s.damage, "weapon:" + ids[n])
+   damage_system.apply(enemies, id, hit_damage, "weapon:" + ids[n])
    var i := enemies.slot(id)
    match str(d.status):
     "slow": enemies.slow[i] = 90
     "shock": enemies.shock[i] = 90
-    "poison": enemies.poison[i] = 180
+    "poison": enemies.poison[i] = 180+int(state.player.stats.get("poison_duration",0))
    hits += 1
    if hits >= int(s.targets): break

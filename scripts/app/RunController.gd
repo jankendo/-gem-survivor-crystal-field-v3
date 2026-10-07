@@ -7,6 +7,10 @@ var gems := PickupWorld.new()
 var projectiles := ProjectileWorld.new()
 var spatial := SpatialWorld.new()
 var map := WorldGenerator.new()
+var field := FieldRewardSystem.new()
+var pending_contract := ""
+var contract := ContractSystem.new()
+var pending_interact := false
 var encounter := EncounterSystem.new()
 var weapons := WeaponRuntime.new()
 var damage := DamageSystem.new()
@@ -21,6 +25,7 @@ func _init(database: GameDatabase, seed_input: int = 60606, character: String = 
  state.seed_value = seed_input
  state.rng.set_seed_value(seed_input)
  map.generate(state.rng.stream_seed("map"))
+ field.generate(map)
  state.player.character = character
  var c: Dictionary = db.table("characters")[character]
  state.player.max_hp += float(c.get("modifiers",{}).get("hp_flat",0))
@@ -30,6 +35,7 @@ func _init(database: GameDatabase, seed_input: int = 60606, character: String = 
  unlocked = equipment.duplicate()
  if unlocked.is_empty():
   unlocked = [c.initial_weapon,"might","magnet","cooldown","move_speed","area","regen"]
+ state.player.stats = PassiveSystem.new().resolve(state,db)
  weapons.refresh(state,db)
  combos.refresh(state,db)
 func advance(render_delta: float, input_at_tick: Callable) -> void:
@@ -43,11 +49,15 @@ func advance(render_delta: float, input_at_tick: Callable) -> void:
   pipeline.tick(self,input_at_tick.call(state.tick))
 func select(index: int) -> void:
  pipeline.level.select(index,state,db)
+ state.player.stats = PassiveSystem.new().resolve(state,db)
  weapons.refresh(state,db)
  combos.refresh(state,db)
+ if not pending_contract.is_empty(): state.phase = "CONTRACT"
 func continue_endless() -> void:
  if state.phase == "CLEAR":
   state.endless = true
   state.phase = "RUNNING"
 func signature() -> int:
- return [state.tick,state.field_tick,state.player.position,state.player.hp,state.progression.exp,state.progression.level,state.progression.kills,state.progression.currency,enemies.positions,enemies.hp,enemies.generation,enemies.dense,enemies.count,gems.positions,gems.values,gems.active,projectiles.positions,projectiles.count,damage.totals,state.rng.snapshot()].hash()
+ return [state.tick,state.field_tick,state.phase,state.player.position,state.player.hp,state.player.invulnerability,state.player.stats,state.progression.exp,state.progression.level,state.progression.kills,state.progression.currency,state.progression.weapons,state.progression.passives,state.progression.evolutions,state.progression.overclocks,state.progression.rooms,enemies.positions,enemies.hp,enemies.generation,enemies.dense,enemies.count,enemies.contact,enemies.shock,enemies.poison,enemies.periodic,enemies.slow,enemies.action,enemies.warning,enemies.flags,gems.positions,gems.values,gems.active,projectiles.positions,projectiles.velocities,projectiles.damage,projectiles.life,projectiles.count,projectiles.remaining_hits,projectiles.seen_ids,weapons.cooldowns,combos.cooldowns,damage.totals,damage.overkill,field.positions,field.hp,field.active,state.rng.snapshot()].hash()
+
+func interact() -> void: pending_interact = true

@@ -1,31 +1,38 @@
 [gd_scene format=3]
 
 [node name="SettingsScreen" type="PanelContainer"]
-custom_minimum_size = Vector2(520, 300)
+custom_minimum_size = Vector2(0, 0)
 
-[node name="Body" type="VBoxContainer" parent="."]
+[node name="Scroll" type="ScrollContainer" parent="."]
+
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="Title" type="Label" parent="Body"]
+[node name="Title" type="Label" parent="Scroll/Body"]
 text = "設定"
 theme_override_font_sizes/font_size = 28
 
-[node name="Info" type="Label" parent="Body"]
+[node name="Info" type="Label" parent="Scroll/Body"]
 autowrap_mode = 2
 text = ""
 
-[node name="Profile" type="Button" parent="Body"]
+[node name="Profile" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "描画品質を切り替え"
 
-[node name="FPS" type="Button" parent="Body"]
+[node name="FPS" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "描画30 / 60 FPS"
 
-[node name="Fullscreen" type="Button" parent="Body"]
+[node name="Fullscreen" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "全画面切り替え"
 
-[node name="Back" type="Button" parent="Body"]
+[node name="Back" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "戻る"

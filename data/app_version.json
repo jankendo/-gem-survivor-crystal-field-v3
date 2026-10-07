@@ -1,9 +1,7 @@
 {
-	"display_version": "0.4.0",
-	"build_number": 4,
-	"phase": "v2 Phase 4",
-	"phase_ja": "Phase 4：iOSレスポンシブUI・結晶迷宮環境アート刷新",
-	"product_name_ja": "ジェムサバイバー：クリスタルフィールド",
-	"windows_exe_name": "ChronoMergeTactics.exe",
-	"ios_bundle_id": "com.jankendo14.gemsurvivor"
+  "display_version": "3.0.0",
+  "build_number": 30000,
+  "product_name": "Gem Survivor Crystal Field v3",
+  "windows_exe_name": "GemSurvivorCrystalFieldV3.exe",
+  "ios_bundle_id": "com.jankendo14.gemsurvivor"
 }

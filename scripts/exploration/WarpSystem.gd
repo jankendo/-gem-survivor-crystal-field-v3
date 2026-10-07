@@ -23,8 +23,8 @@ func enter(run, portal_index: int) -> bool:
  run.gems = PickupWorld.new()
  run.projectiles = ProjectileWorld.new()
  run.map = WorldGenerator.new()
- run.map.rooms = [Rect2(-650,-400,1300,800)]
- run.map.kinds = ["risk"]
+ run.map.rooms.append(Rect2(-650,-400,1300,800))
+ run.map.kinds.append("risk")
  run.state.player.position = Vector2.ZERO
  run.state.rng = stream
  var type_data: Dictionary = run.db.table("warp_rooms").types[room_type]
@@ -48,10 +48,13 @@ func tick(run) -> void:
  elif elapsed >= int(run.db.config().warp_duration_ticks): leave(run)
 func leave(run) -> void:
  if not active: return
+ var rewards: PickupWorld = run.gems
  run.enemies = suspended.enemies
  run.gems = suspended.gems
  run.projectiles = suspended.projectiles
  run.map = suspended.map
+ for i in range(rewards.capacity):
+  if rewards.active[i]: run.gems.add(suspended.position,rewards.values[i],run.map)
  run.state.player.position = suspended.position + Vector2(80,0)
  run.state.rng = suspended.rng
  run.encounter.budget = suspended.budget

@@ -1,27 +1,48 @@
 [gd_scene format=3]
 
 [node name="LevelUpPanel" type="PanelContainer"]
-custom_minimum_size = Vector2(520, 300)
+custom_minimum_size = Vector2(0, 0)
 
-[node name="Body" type="VBoxContainer" parent="."]
+[node name="Scroll" type="ScrollContainer" parent="."]
+
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="Title" type="Label" parent="Body"]
+[node name="Title" type="Label" parent="Scroll/Body"]
 text = "BUILD — 成長を選ぶ"
 theme_override_font_sizes/font_size = 28
 
-[node name="Info" type="Label" parent="Body"]
+[node name="Info" type="Label" parent="Scroll/Body"]
 autowrap_mode = 2
 text = ""
 
-[node name="Choice0" type="Button" parent="Body"]
+[node name="Choice0" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "選択 1"
 
-[node name="Choice1" type="Button" parent="Body"]
+[node name="Choice1" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "選択 2"
 
-[node name="Choice2" type="Button" parent="Body"]
+[node name="Choice2" type="Button" parent="Scroll/Body"]
+clip_text = true
 custom_minimum_size = Vector2(0, 48)
 text = "選択 3"
+
+[node name="Reroll" type="Button" parent="Scroll/Body"]
+clip_text = true
+custom_minimum_size = Vector2(0, 48)
+text = "再抽選"
+
+[node name="Banish" type="Button" parent="Scroll/Body"]
+clip_text = true
+custom_minimum_size = Vector2(0, 48)
+text = "最後の候補を封印"
+
+[node name="Skip" type="Button" parent="Scroll/Body"]
+clip_text = true
+custom_minimum_size = Vector2(0,48)
+text = "成長をスキップ"

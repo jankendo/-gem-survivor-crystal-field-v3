@@ -1,0 +1,16 @@
+[gd_scene format=3]
+[node name="ContractPanel" type="PanelContainer"]
+[node name="Scroll" type="ScrollContainer" parent="."]
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+size_flags_horizontal=3
+[node name="Title" type="Label" parent="Scroll/Body"]
+text="RISK — ルーン契約"
+theme_override_font_sizes/font_size=28
+[node name="Info" type="Label" parent="Scroll/Body"]
+autowrap_mode=2
+[node name="Accept" type="Button" parent="Scroll/Body"]
+custom_minimum_size=Vector2(0,48)
+text="リスクを引き受ける"
+[node name="Decline" type="Button" parent="Scroll/Body"]
+custom_minimum_size=Vector2(0,48)
+text="契約せずに進む"

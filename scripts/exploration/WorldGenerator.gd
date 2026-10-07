@@ -56,3 +56,36 @@ func room_at(p: Vector2) -> int:
  for i in range(rooms.size()):
   if rooms[i].has_point(p): return i
  return -1
+
+func pursuit_target(from: Vector2, target: Vector2) -> Vector2:
+ if rooms.size() != 25: return target
+ var a := room_at(from)
+ var b := room_at(target)
+ if b < 0: return target
+ if a < 0:
+  var best := INF
+  for n in range(rooms.size()):
+   var dist := from.distance_squared_to(rooms[n].get_center())
+   if dist < best:
+    best = dist
+    a = n
+ if a==b: return target
+ var center := rooms[a].get_center()
+ var dx := b%5-a%5
+ var dy := int(b/5)-int(a/5)
+ if dx != 0:
+  if absf(from.y-center.y)>55: return center
+  return rooms[a+signi(dx)].get_center()
+ if absf(from.x-center.x)>55: return center
+ return rooms[a+signi(dy)*5].get_center()
+
+func spawn_position(center: Vector2, minimum: float, maximum: float, rng: RunRng) -> Vector2:
+ var best := safe_position(center)
+ var distance := -1.0
+ for attempt in range(8):
+  var candidate := safe_position(center+Vector2.RIGHT.rotated(rng.range_float(0,TAU))*rng.range_float(minimum,maximum))
+  var d := candidate.distance_squared_to(center)
+  if d > distance:
+   best = candidate
+   distance = d
+ return best

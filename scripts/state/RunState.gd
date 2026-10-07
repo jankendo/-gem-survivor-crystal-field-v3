@@ -11,3 +11,4 @@ var endless := false
 var boss_stage := 0
 var last_damage_source := ""
 var settled := false
+var settlement_reward := 0

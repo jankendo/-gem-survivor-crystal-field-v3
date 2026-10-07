@@ -13,7 +13,7 @@ func _init(target: String = PATH, legacy: String = LEGACY) -> void:
  path = target
  for candidate in [path,path + ".bak",path + ".tmp"]:
   if not FileAccess.file_exists(candidate): continue
-  var value = JSON.parse_string(FileAccess.get_file_as_string(candidate))
+  var value = parse_file(candidate)
   if migration.valid(value):
    data = value
    dirty = candidate != path
@@ -45,12 +45,12 @@ func flush() -> bool:
  file.store_string(JSON.stringify(data))
  file.flush()
  file.close()
- if not migration.valid(JSON.parse_string(FileAccess.get_file_as_string(temp))):
+ if not migration.valid(parse_file(temp)):
   last_error = ERR_INVALID_DATA
   return false
  var absolute := ProjectSettings.globalize_path(path)
  if FileAccess.file_exists(path):
-  var previous = JSON.parse_string(FileAccess.get_file_as_string(path))
+  var previous = parse_file(path)
   if migration.valid(previous):
    last_error = DirAccess.copy_absolute(absolute,absolute + ".bak")
    if last_error != OK: return false
@@ -63,16 +63,39 @@ func settle(run: RunController) -> void:
  if run.state.settled: return
  run.state.settled = true
  var p := run.state.progression
- data.profile.currency += p.currency
+ var reward_mult := (1+float(run.state.player.stats.get("currency",0)))*float(run.state.player.stats.get("contract_currency",1))
+ if run.state.player.hp <= 0: reward_mult += float(run.state.player.stats.get("death_reward",0))
+ run.state.settlement_reward = roundi(p.currency*reward_mult)
+ data.profile.currency += run.state.settlement_reward
+ data.profile["total_kills"] = int(data.profile.get("total_kills",0))+p.kills
+ data.profile["total_crystals"] = int(data.profile.get("total_crystals",0))+run.field.crystals
+ data.profile["total_rooms"] = int(data.profile.get("total_rooms",0))+p.rooms.size()
  data.profile.runs += 1
  data.profile.best_kills = maxi(data.profile.best_kills,p.kills)
  for id in p.weapons: data.progression.collection[id] = true
  data.progression.mastery[run.state.player.character] = int(data.progression.mastery.get(run.state.player.character,0)) + p.kills
+ QuestSystem.new().settle(run,data)
  mark_dirty()
  flush()
 func buy(id: String, cost: int) -> bool:
  if cost < 0 or data.progression.unlocked.has(id) or int(data.profile.currency) < cost: return false
  data.profile.currency -= cost
  data.progression.unlocked.append(id)
+ mark_dirty()
+ return flush()
+
+func parse_file(filename: String):
+ var parser := JSON.new()
+ if parser.parse(FileAccess.get_file_as_string(filename)) != OK: return null
+ return parser.data
+
+func buy_meta(id: String, definition: Dictionary) -> bool:
+ if not data.progression.has("meta"): data.progression.meta = {}
+ var level := int(data.progression.meta.get(id,0))
+ if level >= int(definition.max_level): return false
+ var cost := int(definition.base_cost)+int(definition.cost_step)*level
+ if int(data.profile.currency) < cost: return false
+ data.profile.currency -= cost
+ data.progression.meta[id] = level+1
  mark_dirty()
  return flush()

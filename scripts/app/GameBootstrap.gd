@@ -27,6 +27,7 @@ func _ready() -> void:
  world_container.add_child(world_viewport)
  renderer = WorldRenderer.new()
  world_viewport.add_child(renderer)
+ renderer.configure(db)
  ui = Control.new()
  add_child(ui)
  SafeArea.new().apply(ui)
@@ -47,11 +48,17 @@ func apply_profile() -> void:
  if saves == null or world_container == null: return
  var ultra := str(saves.data.settings.profile) == "ios_ultra"
  world_container.stretch_shrink = 2 if ultra else 1
+ renderer.scale = Vector2.ONE / float(world_container.stretch_shrink)
  renderer.profile = str(saves.data.settings.profile)
  Engine.max_fps = int(saves.data.settings.render_fps)
 func start_run(character: String = "noah", blessing: String = "attack") -> void:
  run = RunController.new(db,int(Time.get_unix_time_from_system()) % 2147483647,character,saves.data.progression.unlocked)
  run.state.player.blessing = blessing
+ var meta: Dictionary = saves.data.progression.get("meta",{})
+ run.state.player.max_hp *= 1+.03*int(meta.get("base_hp",0))
+ run.state.player.hp = run.state.player.max_hp
+ run.state.player.stats["meta_damage"] = .015*int(meta.get("base_damage",0))
+ run.state.player.stats["meta_magnet"] = .03*int(meta.get("base_magnet",0))
  run.weapons.refresh(run.state,db)
  controller.show_hud()
  renderer.player_texture = load(db.table("characters")[character].generated_sprite)
@@ -68,7 +75,7 @@ func _physics_process(_delta: float) -> void:
 func _process(delta: float) -> void:
  if saves != null: saves.tick(delta)
  if run != null and renderer != null:
-  renderer.present(run,Vector2(world_viewport.size))
+  renderer.present(run,get_viewport_rect().size)
   dirty_ticks += 1
   if dirty_ticks >= 6:
    controller.update_hud()

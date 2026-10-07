@@ -9,3 +9,5 @@ var blessing := "attack"
 var contracts: Array[String] = []
 var invulnerability := 0
 var evolved := false
+var stats: Dictionary = {}
+var revival_used := false

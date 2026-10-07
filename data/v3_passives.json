@@ -1,0 +1,129 @@
+{
+  "move_speed": {
+    "move": 0.06
+  },
+  "magnet": {
+    "magnet": 0.15
+  },
+  "might": {
+    "damage": 0.13
+  },
+  "cooldown": {
+    "cooldown": -0.065
+  },
+  "area": {
+    "area": 0.11
+  },
+  "max_hp": {
+    "max_hp": 15
+  },
+  "regen": {
+    "regen": 0.3
+  },
+  "greed": {
+    "currency": 0.14
+  },
+  "armor": {
+    "armor": 0.07
+  },
+  "revival": {
+    "revivals": 1
+  },
+  "curse": {
+    "spawn": 0.08,
+    "currency": 0.1,
+    "poison_damage": 0.08
+  },
+  "projectile_count": {
+    "projectiles": 1
+  },
+  "pickup_heal": {
+    "pickup_heal": 0.5
+  },
+  "elite_hunter": {
+    "elite_damage": 0.12
+  },
+  "crystal_breaker": {
+    "mining": 0.16,
+    "mining_reward": 0.16
+  },
+  "luck": {
+    "chest_reward": 0.08
+  },
+  "corridor_sense": {
+    "corridor_move": 0.065,
+    "corridor_armor": 0.025
+  },
+  "room_mastery": {
+    "room_area": 0.07
+  },
+  "wall_breaker": {
+    "mining": 0.14
+  },
+  "route_memory": {
+    "map_range": 100
+  },
+  "treasure_instinct": {
+    "indicator_range": 150
+  },
+  "event_focus": {
+    "event_reward": 0.12
+  },
+  "relic_resist": {
+    "contract_resist": 0.08
+  },
+  "boss_pressure": {
+    "boss_armor": 0.06
+  },
+  "choke_point": {
+    "corridor_damage": 0.09
+  },
+  "open_field": {
+    "room_move": 0.045
+  },
+  "mining_luck": {
+    "mining_reward": 0.12
+  },
+  "map_reader": {
+    "explore_move": 0.04
+  },
+  "hunter_mark": {
+    "elite_damage": 0.08
+  },
+  "chain_reward": {
+    "resonance_duration": 60
+  },
+  "emergency_route": {
+    "low_hp_move": 0.08
+  },
+  "terrain_core": {
+    "field_reward": 0.1
+  },
+  "relic_appraiser": {
+    "contract_reward": 0.12
+  },
+  "safe_pocket": {
+    "death_reward": 0.08
+  },
+  "reroll_ticket": {
+    "rerolls": 1
+  },
+  "banish_mark": {
+    "banishes": 1
+  },
+  "reflect_prism": {
+    "projectile_damage": 0.07,
+    "pierce": 1
+  },
+  "poison_vessel": {
+    "poison_area": 0.12,
+    "poison_duration": 30
+  },
+  "crystal_wallet": {
+    "currency": 0.1
+  },
+  "resonance_magnet_core": {
+    "exp": 0.08,
+    "recall_frequency": 60
+  }
+}

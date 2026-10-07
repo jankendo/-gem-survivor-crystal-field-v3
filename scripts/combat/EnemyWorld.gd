@@ -24,6 +24,7 @@ var periodic := PackedInt32Array()
 var slow := PackedInt32Array()
 var action := PackedInt32Array()
 var warning := PackedInt32Array()
+var behaviors := PackedInt32Array()
 var attack_target := PackedVector2Array()
 var count := 0
 var capacity := 0
@@ -46,6 +47,7 @@ func reserve(size: int) -> void:
  damage.resize(capacity)
  xp.resize(capacity)
  types.resize(capacity)
+ behaviors.resize(capacity)
  flags.resize(capacity)
  generation.resize(capacity)
  sparse.resize(capacity)
@@ -80,6 +82,7 @@ func spawn(type_id: int, pos: Vector2, definition: Dictionary, health_scale: flo
  damage[i] = float(definition.get("damage", 8))
  xp[i] = int(definition.get("exp", 5))
  types[i] = type_id
+ behaviors[i] = ["", "charger", "shield", "healer", "reaper", "splitter"].find(str(definition.get("behavior", "")))
  flags[i] = (1 if boss else 0) | (2 if definition.get("elite", false) else 0)
  contact[i] = 0
  shock[i] = 0

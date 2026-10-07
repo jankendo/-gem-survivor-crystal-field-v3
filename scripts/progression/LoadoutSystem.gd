@@ -6,6 +6,7 @@ func candidates(state: RunState, db: GameDatabase, unlocked: Array) -> Array:
  for kind in ["weapons", "passives"]:
   var owned: Dictionary = state.progression.weapons if kind == "weapons" else state.progression.passives
   for id in db.table(kind):
+   if state.progression.banished.has(id): continue
    if not unlocked.has(id) and not owned.has(id): continue
    if not owned.has(id) and owned.size() >= CAP: continue
    if int(owned.get(id, 0)) < int(db.table(kind)[id].max_level): result.append([kind,id])
@@ -18,6 +19,6 @@ func apply(choice: Array, state: RunState, db: GameDatabase) -> bool:
  if int(owned.get(id,0)) >= int(db.table(choice[0])[id].max_level): return false
  owned[id] = int(owned.get(id,0)) + 1
  if id == "max_hp":
-  state.player.max_hp += 15
-  state.player.hp += 15
+  state.player.max_hp += float(db.table("v3_passives").max_hp.max_hp)
+  state.player.hp += float(db.table("v3_passives").max_hp.max_hp)
  return true
