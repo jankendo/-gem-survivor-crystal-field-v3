@@ -1,8 +1,8 @@
 {
-  "assertions": 1508,
+  "assertions": 1510,
   "failures": [],
   "godot": "4.7-stable (official)",
   "ok": true,
   "suites": 14,
-  "audited_runtime_commit": "0de06945182dd38674438680ad170f83ad93e753"
+  "audited_runtime_commit": "744e994597246cb7bb72c5c5e262f71992e81866"
 }

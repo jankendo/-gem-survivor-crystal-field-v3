@@ -82,8 +82,10 @@ progression modules, not an omitted directory.
 
 | U41 | High | Mobile setup focused the optional seed automatically; keyboard could cover actions and submission had no explicit close/focus behavior |
 
-All41 tracked findings are addressed by executable changes. Severity at discovery:
-Critical2, High18, Medium20, Low1. These counts include problems found while testing
+| U42 | Medium | Single-line equipment slots ellipsized level/max status even with short Japanese names |
+
+All42 tracked findings are addressed by executable changes. Severity at discovery:
+Critical2, High18, Medium21, Low1. These counts include problems found while testing
 repairs; they are not a count of unverified human/device limitations. No known
 fixable Critical/High remains in the audited supported UI flow. New source-code
 coverage is14 discovered suites; see committed evidence for exact assertions and CI.
