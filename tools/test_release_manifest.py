@@ -31,7 +31,7 @@ class PublicationTests(unittest.TestCase):
  def tearDown(self):self.env.stop();os.chdir(self.old);self.temp.cleanup()
  def release(self,draft,assets):return {'id':4321,'tag_name':'v3.0.0-alpha.3','draft':draft,'assets':assets,'html_url':'https://github.com/example/release'}
  def response(self,obj):return subprocess.CompletedProcess([],0,json.dumps(obj),'')
- def listing(self,draft,assets):return self.response([[self.release(draft,assets)]])
+ def listing(self,draft,assets):return self.response([self.release(draft,assets)])
  def success(self):return subprocess.CompletedProcess([],0,'','')
  def test_public_mismatch_never_overwrites(self):
   self.assets[0]['digest']='sha256:'+'0'*64
@@ -50,10 +50,15 @@ class PublicationTests(unittest.TestCase):
  def test_first_creation_reads_draft_by_id_not_published_tag_endpoint(self):
   # Real GitHub GET /releases/tags/:tag returns404 for a draft; authenticated list
   # includes it. Creation and recovery must never use that published-only endpoint.
-  responses=[self.response([[]]),self.success(),self.listing(True,[]),self.success(),self.response(self.release(True,self.assets)),self.success()]
+  responses=[self.response([]),self.success(),self.listing(True,[]),self.success(),self.response(self.release(True,self.assets)),self.success()]
   with patch('publish_release.call',side_effect=responses) as calls:
    publish();self.assertTrue(any(c.args[:2]==('release','create') for c in calls.call_args_list))
    self.assertFalse(any('/releases/tags/' in str(c.args) for c in calls.call_args_list))
+ def test_pagination_finds_draft_after_first_page_with_portable_cli(self):
+  first={'id':123,'tag_name':'another-tag','draft':False,'assets':[]}
+  listing=subprocess.CompletedProcess([],0,json.dumps([first])+"\n"+json.dumps([self.release(True,[])]),'')
+  with patch('publish_release.call',side_effect=[listing,self.success(),self.response(self.release(True,self.assets)),self.success()]) as calls:
+   publish();self.assertNotIn('--slurp',calls.call_args_list[0].args)
  def test_release_list_failure_never_creates_or_publishes(self):
   with patch('publish_release.call',return_value=subprocess.CompletedProcess([],1,'','HTTP403')) as calls:
    with self.assertRaises(AssertionError):publish()

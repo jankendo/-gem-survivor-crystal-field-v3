@@ -235,4 +235,4 @@ draw above decoration. No pixel-difference score is used as a fun or visibility
 certificate. Native OS keyboard raster/animation remains unverified.
 
 
-Release follow-up High: first-time draft lookup used published-only tag API; actual alpha.2 publication stopped safely before upload. Fixed authenticated paginated listing/Release-ID lookup and publication, with explicit creation/failure/state-change regression;11 Python checks. Empty draft removed;alpha.2 tag retained. New alpha.3 builds rerun from a new final main SHA.
+Release follow-up High: first-time draft lookup used published-only tag API; actual alpha.2 publication stopped safely before upload. Fixed authenticated paginated listing/Release-ID lookup and publication, with explicit creation/failure/state-change regression;12 Python checks. Empty draft removed;alpha.2 tag retained. New alpha.3 builds rerun from a new final main SHA.

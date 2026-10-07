@@ -68,7 +68,7 @@ lookup: GitHub's published-only `GET /releases/tags/:tag` returns404 for a draft
 No incomplete public Release was created. Empty draft406253234 was removed;
 alpha.2 tag still points to3cae956 and is not moved. Source now uses authenticated
 paginated release listing and stable Release ID for draft validation/publication.
-First-creation regression reproduces that API contract;11 Python checks PASS.
+First-creation regression reproduces that API contract;12 Python checks PASS.
 App build metadata is read from actual export presets instead of hardcoded values.
 New alpha.3 /iOS30003 /Windows3.0.0.3 is rebuilt on its new final source SHA;
 alpha.2 artifacts are never substituted. Gameplay source/1766 assertions are

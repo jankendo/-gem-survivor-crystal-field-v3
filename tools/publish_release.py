@@ -8,9 +8,16 @@ def call(*args, input_text=None):
 def find_release(repo, tag):
     # GET /releases/tags/:tag does not return unpublished drafts. List authenticated
     # releases, then use the stable release ID for all draft reads/publication.
-    result = call('api', 'repos/'+repo+'/releases?per_page=100', '--paginate', '--slurp')
+    result = call('api', 'repos/'+repo+'/releases?per_page=100', '--paginate')
     assert result.returncode == 0, 'release list failed'
-    rows = [r for page in json.loads(result.stdout) for r in page if r['tag_name'] == tag]
+    # --paginate emits consecutive JSON arrays; avoid newer CLI-only --slurp.
+    decoder = json.JSONDecoder()
+    remaining, rows = result.stdout.lstrip(), []
+    while remaining:
+        page, end = decoder.raw_decode(remaining)
+        assert isinstance(page, list), 'release list response is not an array'
+        rows.extend(r for r in page if r['tag_name'] == tag)
+        remaining = remaining[end:].lstrip()
     assert len(rows) <= 1, 'duplicate release tag'
     return rows[0] if rows else None
 
