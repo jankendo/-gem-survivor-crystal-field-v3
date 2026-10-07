@@ -2,30 +2,31 @@
   "allocation_proxy": {
     "enemy_capacity_growth": 0,
     "gem_capacity_growth": 0,
-    "projectile_query_buffer_growth": 1,
+    "projectile_query_buffer_growth": 0,
+    "projectile_query_buffer_reservations": 1,
     "spatial_capacity_growth": 0
   },
   "cpu_fixture_frame": {
-    "max_ms": 11.907,
-    "mean_ms": 7.02732272727273,
-    "p95_ms": 10.355,
-    "p99_ms": 11.09
+    "max_ms": 12.6,
+    "mean_ms": 7.08056363636364,
+    "p95_ms": 10.3,
+    "p99_ms": 10.938
   },
   "enemy_count": 600,
   "enemy_update": {
-    "max_ms": 3.951,
-    "mean_ms": 2.08128181818182,
-    "p95_ms": 2.57,
-    "p99_ms": 2.795
+    "max_ms": 4.688,
+    "mean_ms": 2.12680909090909,
+    "p95_ms": 2.746,
+    "p99_ms": 4.197
   },
   "engine_memory": {
     "final_objects": 1583,
-    "final_static_bytes": 35877038,
+    "final_static_bytes": 36016267,
     "limit": "Godot live objects/static memory monitors, not cumulative heap allocation count",
     "object_delta": 0,
     "static_bytes_delta": 42828,
     "warm_objects": 1583,
-    "warm_static_bytes": 35834210
+    "warm_static_bytes": 35973439
   },
   "fixture_minimum_start_counts": {
     "enemy": 600,
@@ -34,36 +35,37 @@
   },
   "gem_capacity": 1024,
   "gem_count": 1000,
+  "initial_projectile_count": 500,
   "late_boss": false,
   "maximum_enemy_radius": 18.0,
   "note": "Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured.",
   "ok": true,
-  "projectile_count": 500,
+  "projectile_count": 456,
   "real_generated_world": true,
   "render_preparation": {
-    "max_ms": 0.972,
-    "mean_ms": 0.283904545454545,
-    "p95_ms": 0.405,
-    "p99_ms": 0.579
+    "max_ms": 0.605,
+    "mean_ms": 0.27245,
+    "p95_ms": 0.327,
+    "p99_ms": 0.514
   },
   "samples": 220,
   "seed": 60606,
   "simulation": {
-    "max_ms": 11.592,
-    "mean_ms": 6.74341818181818,
-    "p95_ms": 10.067,
-    "p99_ms": 10.839
+    "max_ms": 12.347,
+    "mean_ms": 6.80811363636364,
+    "p95_ms": 10.003,
+    "p99_ms": 10.664
   },
   "spatial_update": {
-    "max_ms": 3.494,
-    "mean_ms": 1.92910454545455,
-    "p95_ms": 2.199,
-    "p99_ms": 2.73
+    "max_ms": 4.79,
+    "mean_ms": 1.97749545454545,
+    "p95_ms": 2.953,
+    "p99_ms": 4.301
   },
   "weapon_update": {
-    "max_ms": 6.599,
-    "mean_ms": 1.96533636363636,
-    "p95_ms": 5.127,
-    "p99_ms": 5.936
+    "max_ms": 5.542,
+    "mean_ms": 1.88848636363636,
+    "p95_ms": 5.013,
+    "p99_ms": 5.326
   }
 }

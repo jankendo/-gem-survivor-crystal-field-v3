@@ -26,3 +26,5 @@ Character HP, tag damage/area/cooldown, slow duration, bounce/chain count, incom
 Legacy save import retains the complete parsed source in `legacy_archive` and never modifies `user://chrono_merge_tactics.save`. New schema root is profile/progression/settings. Some old progression keys are preserved for future normalization rather than silently discarded.
 
 Bundle identifier remains `com.jankendo14.gemsurvivor`; there is no reason to make this a separate coinstalled app. Version is 3.0.0. Windows and iOS artifacts use v3 names. A dummy Team ID is export-only and is not a credential.
+
+Desktop read-only legacy import additionally checks the original sibling Godot product directory (`Gem Survivor Crystal Field`) when the new product directory contains no v3 save. iOS first checks the retained bundle container. No source save is overwritten; invalid imports produce an explicit parse error. Optional legacy-directory injection is used only for isolated tests.

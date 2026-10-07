@@ -66,14 +66,16 @@
       }
     }
   ],
-  "limitation": "Repeatable combat fixture; utility descriptors are not a numerical value judgment. Boss TTK uses measured stationary build DPS; mechanics and human fun require playtest.",
+  "limitation": "Repeatable combat and separate measured utility fixture; utility values are not an aggregate score. Boss TTK uses measured stationary build DPS; mechanics and human fun require playtest.",
   "ok": true,
   "seconds_per_scenario": 5,
   "seed": 60606,
+  "utility_gate": true,
   "weapon_results": [
     {
       "CC_uptime": 0.0,
       "DPS": 168.87922,
+      "bonus_currency": 0,
       "boss_DPS": 168.87922,
       "coverage_uptime": 0.07,
       "damage_per_target": 844.396100000001,
@@ -84,6 +86,13 @@
       "total_damage": 844.396100000001,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -91,6 +100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 259.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.18,
       "damage_per_target": 43.2528133333334,
@@ -101,6 +111,13 @@
       "total_damage": 1297.5844,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -108,6 +125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.3961,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.186666666666667,
       "damage_per_target": 13.419805,
@@ -118,6 +136,13 @@
       "total_damage": 1341.9805,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -125,6 +150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.3961,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.186666666666667,
       "damage_per_target": 4.47326833333334,
@@ -135,6 +161,13 @@
       "total_damage": 1341.9805,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -142,6 +175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.3961,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.186666666666667,
       "damage_per_target": 2.23663416666667,
@@ -152,6 +186,13 @@
       "total_damage": 1341.9805,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -159,6 +200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 266.63766,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0366666666666667,
       "damage_per_target": 13.331883,
@@ -169,6 +211,13 @@
       "total_damage": 1333.1883,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -176,6 +225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.3961,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.186666666666667,
       "damage_per_target": 13.419805,
@@ -186,6 +236,13 @@
       "total_damage": 1341.9805,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -193,6 +250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.3961,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.15,
       "damage_per_target": 13.419805,
@@ -203,6 +261,13 @@
       "total_damage": 1341.9805,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -210,6 +275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 274.315580000001,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.206666666666667,
       "damage_per_target": 13.715779,
@@ -220,6 +286,13 @@
       "total_damage": 1371.5779,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -227,6 +300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -237,6 +311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magic_bolt"
@@ -244,6 +325,7 @@
     {
       "CC_uptime": 0.9,
       "DPS": 40.59508496,
+      "bonus_currency": 0,
       "boss_DPS": 40.59508496,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 202.9754248,
@@ -254,6 +336,13 @@
       "total_damage": 202.9754248,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -261,6 +350,7 @@
     {
       "CC_uptime": 0.15,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 33.8292374666666,
@@ -271,6 +361,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -278,6 +375,7 @@
     {
       "CC_uptime": 0.045,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 10.14877124,
@@ -288,6 +386,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -295,6 +400,7 @@
     {
       "CC_uptime": 0.015,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 3.38292374666666,
@@ -305,6 +411,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -312,6 +425,7 @@
     {
       "CC_uptime": 0.0075,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 1.69146187333333,
@@ -322,6 +436,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -329,6 +450,7 @@
     {
       "CC_uptime": 0.045,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 10.14877124,
@@ -339,6 +461,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -346,6 +475,7 @@
     {
       "CC_uptime": 0.045,
       "DPS": 202.9754248,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 10.14877124,
@@ -356,6 +486,13 @@
       "total_damage": 1014.877124,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -363,6 +500,7 @@
     {
       "CC_uptime": 0.0765,
       "DPS": 208.9262744,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 10.44631372,
@@ -373,6 +511,13 @@
       "total_damage": 1044.631372,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -380,6 +525,7 @@
     {
       "CC_uptime": 0.046,
       "DPS": 204.52911108,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0666666666666667,
       "damage_per_target": 10.226455554,
@@ -390,6 +536,13 @@
       "total_damage": 1022.6455554,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -397,6 +550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -407,6 +561,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "ice_orbit"
@@ -414,6 +575,7 @@
     {
       "CC_uptime": 0.81,
       "DPS": 24.87922,
+      "bonus_currency": 0,
       "boss_DPS": 24.87922,
       "coverage_uptime": 0.02,
       "damage_per_target": 124.3961,
@@ -424,6 +586,13 @@
       "total_damage": 124.3961,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -431,6 +600,7 @@
     {
       "CC_uptime": 0.108,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 16.5861466666667,
@@ -441,6 +611,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -448,6 +625,7 @@
     {
       "CC_uptime": 0.0324,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.975844,
@@ -458,6 +636,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -465,6 +650,7 @@
     {
       "CC_uptime": 0.0108,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 1.65861466666667,
@@ -475,6 +661,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -482,6 +675,7 @@
     {
       "CC_uptime": 0.0054,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 0.829307333333334,
@@ -492,6 +686,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -499,6 +700,7 @@
     {
       "CC_uptime": 0.0324,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.975844,
@@ -509,6 +711,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -516,6 +725,7 @@
     {
       "CC_uptime": 0.0324,
       "DPS": 99.51688,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.975844,
@@ -526,6 +736,13 @@
       "total_damage": 497.5844,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -533,6 +750,7 @@
     {
       "CC_uptime": 0.052,
       "DPS": 106.55064,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 5.327532,
@@ -543,6 +761,13 @@
       "total_damage": 532.7532,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -550,6 +775,7 @@
     {
       "CC_uptime": 0.0343,
       "DPS": 101.27532,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 5.063766,
@@ -560,6 +786,13 @@
       "total_damage": 506.3766,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -567,6 +800,7 @@
     {
       "CC_uptime": 0.81,
       "DPS": 24.87922,
+      "bonus_currency": 0,
       "boss_DPS": 24.87922,
       "coverage_uptime": 0.02,
       "damage_per_target": 124.3961,
@@ -577,6 +811,13 @@
       "total_damage": 124.3961,
       "utility": {
         "archetype": "chain",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "shock"
       },
       "weapon": "thunder_chain"
@@ -584,6 +825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 21.91948,
+      "bonus_currency": 0,
       "boss_DPS": 21.91948,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 109.5974,
@@ -594,6 +836,13 @@
       "total_damage": 109.5974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -601,6 +850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 197.27532,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 32.87922,
@@ -611,6 +861,13 @@
       "total_damage": 986.3766,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -618,6 +875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 219.1948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 10.95974,
@@ -628,6 +886,13 @@
       "total_damage": 1095.974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -635,6 +900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 219.1948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 3.65324666666667,
@@ -645,6 +911,13 @@
       "total_damage": 1095.974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -652,6 +925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 219.1948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 1.82662333333333,
@@ -662,6 +936,13 @@
       "total_damage": 1095.974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -669,6 +950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 263.03376,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 13.151688,
@@ -679,6 +961,13 @@
       "total_damage": 1315.1688,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -686,6 +975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 219.1948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 10.95974,
@@ -696,6 +986,13 @@
       "total_damage": 1095.974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -703,6 +1000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 219.1948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 10.95974,
@@ -713,6 +1011,13 @@
       "total_damage": 1095.974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -720,6 +1025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 222.71168,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 11.135584,
@@ -730,6 +1036,13 @@
       "total_damage": 1113.5584,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -737,6 +1050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 21.91948,
+      "bonus_currency": 0,
       "boss_DPS": 21.91948,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 109.5974,
@@ -747,6 +1061,13 @@
       "total_damage": 109.5974,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "bomb_seed"
@@ -754,6 +1075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.0,
+      "bonus_currency": 0,
       "boss_DPS": 64.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 320.0,
@@ -764,6 +1086,13 @@
       "total_damage": 320.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -771,6 +1100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 53.3333333333333,
@@ -781,6 +1111,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -788,6 +1125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 16.0,
@@ -798,6 +1136,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -805,6 +1150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 5.33333333333333,
@@ -815,6 +1161,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -822,6 +1175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 2.66666666666667,
@@ -832,6 +1186,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -839,6 +1200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 16.0,
@@ -849,6 +1211,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -856,6 +1225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 16.0,
@@ -866,6 +1236,13 @@
       "total_damage": 1600.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -873,6 +1250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 321.6667648,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 16.08333824,
@@ -883,6 +1261,13 @@
       "total_damage": 1608.333824,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -890,6 +1275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 320.6250368,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 16.03125184,
@@ -900,6 +1286,13 @@
       "total_damage": 1603.125184,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -907,6 +1300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -917,6 +1311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 443.630666732788,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "blade_fan"
@@ -924,6 +1325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 20.538268,
+      "bonus_currency": 0,
       "boss_DPS": 20.538268,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 102.69134,
@@ -934,6 +1336,13 @@
       "total_damage": 102.69134,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -941,6 +1350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 61.614804,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 10.269134,
@@ -951,6 +1361,13 @@
       "total_damage": 308.07402,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -958,6 +1375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.229608,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.1614804,
@@ -968,6 +1386,13 @@
       "total_damage": 616.14804,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -975,6 +1400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 164.306144,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 2.73843573333333,
@@ -985,6 +1411,13 @@
       "total_damage": 821.53072,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -992,6 +1425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 164.306144,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 1.36921786666667,
@@ -1002,6 +1436,13 @@
       "total_damage": 821.53072,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -1009,6 +1450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 164.306144,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 8.2153072,
@@ -1019,6 +1461,13 @@
       "total_damage": 821.53072,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -1026,6 +1475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.229608,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.1614804,
@@ -1036,6 +1486,13 @@
       "total_damage": 616.14804,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -1043,6 +1500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.229608,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.1614804,
@@ -1053,6 +1511,13 @@
       "total_damage": 616.14804,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -1060,6 +1525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 127.535752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.3767876,
@@ -1070,6 +1536,13 @@
       "total_damage": 637.67876,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
@@ -1077,6 +1550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 20.538268,
+      "bonus_currency": 0,
       "boss_DPS": 20.538268,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 102.69134,
@@ -1087,159 +1561,238 @@
       "total_damage": 102.69134,
       "utility": {
         "archetype": "beam",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 34.03701,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "laser_lance"
     },
     {
-      "CC_uptime": 0.916666666666667,
-      "DPS": 24.287272,
-      "boss_DPS": 24.287272,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 121.43636,
+      "CC_uptime": 0.0,
+      "DPS": 28.35909,
+      "bonus_currency": 0,
+      "boss_DPS": 28.35909,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 141.79545,
       "kills_per_second": 0.2,
-      "overkill": 2.87272,
+      "overkill": 2.51363,
       "player_risk_exposure": 1.0,
       "scenario": "single_boss",
-      "total_damage": 121.43636,
+      "total_damage": 141.79545,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.244444444444444,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 32.3830293333334,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 37.81212,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.0666666666666667,
       "scenario": "30_enemies",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.0733333333333333,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 9.71490880000001,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 11.343636,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.02,
       "scenario": "100_enemies",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.0244444444444444,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 3.23830293333334,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 3.781212,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.00666666666666667,
       "scenario": "300_enemies",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.0122222222222222,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 1.61915146666667,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 1.890606,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.00333333333333333,
       "scenario": "600_enemies",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.0733333333333333,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 9.71490880000001,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 11.343636,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.49,
       "scenario": "narrow_corridor",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.0733333333333333,
-      "DPS": 194.298176,
+      "CC_uptime": 0.0,
+      "DPS": 226.87272,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 9.71490880000001,
+      "coverage_uptime": 0.0733333333333333,
+      "damage_per_target": 11.343636,
       "kills_per_second": 1.6,
-      "overkill": 22.98176,
+      "overkill": 20.10904,
       "player_risk_exposure": 0.02,
       "scenario": "open_field",
-      "total_damage": 971.490880000001,
+      "total_damage": 1134.3636,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.163166666666667,
-      "DPS": 198.894528,
+      "CC_uptime": 0.0,
+      "DPS": 268.494528,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 9.94472640000001,
+      "coverage_uptime": 0.206666666666667,
+      "damage_per_target": 13.4247264,
       "kills_per_second": 0.0,
       "overkill": 0.0,
       "player_risk_exposure": 0.02,
       "scenario": "moving_swarm",
-      "total_damage": 994.472640000001,
+      "total_damage": 1342.47264,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
     },
     {
-      "CC_uptime": 0.075,
-      "DPS": 195.447264,
+      "CC_uptime": 0.0,
+      "DPS": 227.878172,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.04,
-      "damage_per_target": 9.77236320000001,
+      "coverage_uptime": 0.09,
+      "damage_per_target": 11.3939086,
       "kills_per_second": 1.2,
-      "overkill": 17.23632,
+      "overkill": 15.08178,
       "player_risk_exposure": 0.02,
       "scenario": "elite_mix",
-      "total_damage": 977.236320000001,
+      "total_damage": 1139.39086,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
@@ -1247,6 +1800,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -1257,6 +1811,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "poison_mist"
@@ -1264,6 +1825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 107.542986,
+      "bonus_currency": 0,
       "boss_DPS": 107.542986,
       "coverage_uptime": 0.0433333333333333,
       "damage_per_target": 537.71493,
@@ -1274,6 +1836,13 @@
       "total_damage": 537.71493,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1281,6 +1850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 186.933634,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.1,
       "damage_per_target": 31.1556056666666,
@@ -1291,6 +1861,13 @@
       "total_damage": 934.668169999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1298,6 +1875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 206.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 10.3390648,
@@ -1308,6 +1886,13 @@
       "total_damage": 1033.90648,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1315,6 +1900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 206.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 3.44635493333333,
@@ -1325,6 +1911,13 @@
       "total_damage": 1033.90648,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1332,6 +1925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 206.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 1.72317746666666,
@@ -1342,6 +1936,13 @@
       "total_damage": 1033.90648,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1349,6 +1950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 213.257916,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 10.6628958,
@@ -1359,6 +1961,13 @@
       "total_damage": 1066.28958,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1366,6 +1975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 206.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 10.3390648,
@@ -1376,6 +1986,13 @@
       "total_damage": 1033.90648,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1383,6 +2000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 206.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.106666666666667,
       "damage_per_target": 10.3390648,
@@ -1393,6 +2011,13 @@
       "total_damage": 1033.90648,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1400,6 +2025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 218.324282,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.13,
       "damage_per_target": 10.9162141,
@@ -1410,6 +2036,13 @@
       "total_damage": 1091.62141,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1417,6 +2050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -1427,6 +2061,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drone_bit"
@@ -1434,6 +2075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 23.547337,
+      "bonus_currency": 0,
       "boss_DPS": 23.547337,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 117.736685,
@@ -1444,6 +2086,13 @@
       "total_damage": 117.736685,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1451,6 +2100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 11.7736685,
@@ -1461,6 +2111,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1468,6 +2125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 3.53210055,
@@ -1478,6 +2136,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1485,6 +2150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 1.17736685,
@@ -1495,6 +2161,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1502,6 +2175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 0.588683425,
@@ -1512,6 +2186,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1519,6 +2200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 3.53210055,
@@ -1529,6 +2211,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1536,6 +2225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.642011,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 3.53210055,
@@ -1546,6 +2236,13 @@
       "total_damage": 353.210055,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1553,6 +2250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 90.568044,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.5284022,
@@ -1563,6 +2261,13 @@
       "total_damage": 452.84022,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1570,6 +2275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 77.284022,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 3.8642011,
@@ -1580,6 +2286,13 @@
       "total_damage": 386.42011,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1587,6 +2300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -1597,6 +2311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "crystal_mine"
@@ -1604,6 +2325,7 @@
     {
       "CC_uptime": 0.996666666666667,
       "DPS": 4.2472269,
+      "bonus_currency": 0,
       "boss_DPS": 4.2472269,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 21.2361345,
@@ -1614,6 +2336,13 @@
       "total_damage": 21.2361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1621,6 +2350,7 @@
     {
       "CC_uptime": 0.332222222222222,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 7.07871150000001,
@@ -1631,6 +2361,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1638,6 +2375,7 @@
     {
       "CC_uptime": 0.0996666666666667,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.12361345,
@@ -1648,6 +2386,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1655,6 +2400,7 @@
     {
       "CC_uptime": 0.0332222222222222,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.707871150000001,
@@ -1665,6 +2411,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1672,6 +2425,7 @@
     {
       "CC_uptime": 0.0166111111111111,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.353935575,
@@ -1682,6 +2436,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1689,6 +2450,7 @@
     {
       "CC_uptime": 0.0996666666666667,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.12361345,
@@ -1699,6 +2461,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1706,6 +2475,7 @@
     {
       "CC_uptime": 0.0996666666666667,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.12361345,
@@ -1716,6 +2486,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1723,6 +2500,7 @@
     {
       "CC_uptime": 0.146533333333333,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.12361345,
@@ -1733,6 +2511,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1740,6 +2525,7 @@
     {
       "CC_uptime": 0.0996666666666667,
       "DPS": 42.472269,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.12361345,
@@ -1750,6 +2536,13 @@
       "total_damage": 212.361345,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1757,6 +2550,7 @@
     {
       "CC_uptime": 0.63,
       "DPS": 1.8202401,
+      "bonus_currency": 0,
       "boss_DPS": 1.8202401,
       "coverage_uptime": 0.01,
       "damage_per_target": 9.1012005,
@@ -1767,6 +2561,13 @@
       "total_damage": 9.1012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 892.946145057678,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "black_hole"
@@ -1774,6 +2575,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 21.5643112,
+      "bonus_currency": 0,
       "boss_DPS": 21.5643112,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 107.821556,
@@ -1784,6 +2586,13 @@
       "total_damage": 107.821556,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1791,6 +2600,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 10.7821556,
@@ -1801,6 +2611,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1808,6 +2625,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 3.23464668,
@@ -1818,6 +2636,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1825,6 +2650,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 1.07821556,
@@ -1835,6 +2661,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1842,6 +2675,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 0.53910778,
@@ -1852,6 +2686,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1859,6 +2700,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 3.23464668,
@@ -1869,6 +2711,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1876,6 +2725,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 64.6929336,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 3.23464668,
@@ -1886,6 +2736,13 @@
       "total_damage": 323.464668,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1893,6 +2750,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 66.7717344,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 3.33858672,
@@ -1903,6 +2761,13 @@
       "total_damage": 333.858672,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1910,6 +2775,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 65.3858672,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 3.26929336,
@@ -1920,6 +2786,13 @@
       "total_damage": 326.929336,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1927,6 +2800,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 8.3464668,
+      "bonus_currency": 0,
       "boss_DPS": 8.3464668,
       "coverage_uptime": 0.01,
       "damage_per_target": 41.732334,
@@ -1937,6 +2811,13 @@
       "total_damage": 41.732334,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "rune_gate"
@@ -1944,6 +2825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 16.0,
+      "bonus_currency": 0,
       "boss_DPS": 16.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 80.0,
@@ -1954,6 +2836,13 @@
       "total_damage": 80.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -1961,6 +2850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 144.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 24.0,
@@ -1971,6 +2861,13 @@
       "total_damage": 720.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -1978,6 +2875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 8.0,
@@ -1988,6 +2886,13 @@
       "total_damage": 800.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -1995,6 +2900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 2.66666666666667,
@@ -2005,6 +2911,13 @@
       "total_damage": 800.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2012,6 +2925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 1.33333333333333,
@@ -2022,6 +2936,13 @@
       "total_damage": 800.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2029,6 +2950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 192.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 9.6,
@@ -2039,6 +2961,13 @@
       "total_damage": 960.000000000001,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2046,6 +2975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 8.0,
@@ -2056,6 +2986,13 @@
       "total_damage": 800.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2063,6 +3000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 8.0,
@@ -2073,6 +3011,13 @@
       "total_damage": 800.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2080,6 +3025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 162.03701,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 8.1018505,
@@ -2090,6 +3036,13 @@
       "total_damage": 810.18505,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2097,6 +3050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 16.0,
+      "bonus_currency": 0,
       "boss_DPS": 16.0,
       "coverage_uptime": 0.01,
       "damage_per_target": 80.0,
@@ -2107,6 +3061,13 @@
       "total_damage": 80.0,
       "utility": {
         "archetype": "explosion",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "comet_staff"
@@ -2114,6 +3075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 41.1061334,
+      "bonus_currency": 0,
       "boss_DPS": 41.1061334,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 205.530667,
@@ -2124,6 +3086,13 @@
       "total_damage": 205.530667,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2131,6 +3100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 20.5530667,
@@ -2141,6 +3111,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2148,6 +3125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.16592001,
@@ -2158,6 +3136,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2165,6 +3150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 2.05530667,
@@ -2175,6 +3161,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2182,6 +3175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 1.027653335,
@@ -2192,6 +3186,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2199,6 +3200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.16592001,
@@ -2209,6 +3211,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2216,6 +3225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 123.3184002,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.16592001,
@@ -2226,6 +3236,13 @@
       "total_damage": 616.592001,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2233,6 +3250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 125.530667,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.27653335,
@@ -2243,6 +3261,13 @@
       "total_damage": 627.653335,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2250,6 +3275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 122.2122668,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 6.11061334,
@@ -2260,6 +3286,13 @@
       "total_damage": 611.061334,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2267,6 +3300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -2277,6 +3311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "soul_scythe"
@@ -2284,6 +3325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 108.430908,
+      "bonus_currency": 0,
       "boss_DPS": 108.430908,
       "coverage_uptime": 0.0433333333333333,
       "damage_per_target": 542.15454,
@@ -2294,6 +3336,13 @@
       "total_damage": 542.15454,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2301,6 +3350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 200.861816,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.113333333333333,
       "damage_per_target": 33.4769693333333,
@@ -2311,6 +3361,13 @@
       "total_damage": 1004.30908,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2318,6 +3375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 245.292724,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.136666666666667,
       "damage_per_target": 12.2646362,
@@ -2328,6 +3386,13 @@
       "total_damage": 1226.46362,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2335,6 +3400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 245.292724,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.136666666666667,
       "damage_per_target": 4.08821206666667,
@@ -2345,6 +3411,13 @@
       "total_damage": 1226.46362,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2352,6 +3425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 245.292724,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.136666666666667,
       "damage_per_target": 2.04410603333333,
@@ -2362,6 +3436,13 @@
       "total_damage": 1226.46362,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2369,6 +3450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 254.15454,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 12.707727,
@@ -2379,6 +3461,13 @@
       "total_damage": 1270.7727,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2386,6 +3475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 245.292724,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.136666666666667,
       "damage_per_target": 12.2646362,
@@ -2396,6 +3486,13 @@
       "total_damage": 1226.46362,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2403,6 +3500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 253.579996,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0966666666666667,
       "damage_per_target": 12.6789998,
@@ -2413,6 +3511,13 @@
       "total_damage": 1267.89998,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2420,6 +3525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 245.867268,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.13,
       "damage_per_target": 12.2933634,
@@ -2430,6 +3536,13 @@
       "total_damage": 1229.33634,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2437,6 +3550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -2447,6 +3561,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mirror_shard"
@@ -2454,6 +3575,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 16.0,
+      "bonus_currency": 0,
       "boss_DPS": 16.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 80.0,
@@ -2464,6 +3586,13 @@
       "total_damage": 80.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2471,6 +3600,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 21.3333333333333,
@@ -2481,6 +3611,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2488,6 +3625,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 6.4,
@@ -2498,6 +3636,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2505,6 +3650,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 2.13333333333333,
@@ -2515,6 +3661,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2522,6 +3675,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 1.06666666666667,
@@ -2532,6 +3686,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2539,6 +3700,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 6.4,
@@ -2549,6 +3711,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2556,6 +3725,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 128.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 6.4,
@@ -2566,6 +3736,13 @@
       "total_damage": 640.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2573,6 +3750,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 132.596352,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 6.6298176,
@@ -2583,6 +3761,13 @@
       "total_damage": 662.98176,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2590,6 +3775,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 129.149088,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 6.4574544,
@@ -2600,6 +3786,13 @@
       "total_damage": 645.74544,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2607,6 +3800,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -2617,6 +3811,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 782.219116210938,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "sonic_wave"
@@ -2624,6 +3825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 91.247012,
+      "bonus_currency": 0,
       "boss_DPS": 91.247012,
       "coverage_uptime": 0.0366666666666667,
       "damage_per_target": 456.23506,
@@ -2634,6 +3836,13 @@
       "total_damage": 456.23506,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2641,6 +3850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 154.243028,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0966666666666667,
       "damage_per_target": 25.7071713333333,
@@ -2651,6 +3861,13 @@
       "total_damage": 771.215139999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2658,6 +3875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 8.88705179999999,
@@ -2668,6 +3886,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2675,6 +3900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 2.9623506,
@@ -2685,6 +3911,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2692,6 +3925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 1.4811753,
@@ -2702,6 +3936,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2709,6 +3950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 8.88705179999999,
@@ -2719,6 +3961,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2726,6 +3975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 8.88705179999999,
@@ -2736,6 +3986,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2743,6 +4000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 177.741036,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0966666666666667,
       "damage_per_target": 8.88705179999999,
@@ -2753,6 +4011,13 @@
       "total_damage": 888.705179999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2760,6 +4025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 187.482072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 9.37410359999999,
@@ -2770,6 +4036,13 @@
       "total_damage": 937.410359999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2777,6 +4050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -2787,6 +4061,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 6,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "gem_turret"
@@ -2794,6 +4075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 39.1823024,
+      "bonus_currency": 0,
       "boss_DPS": 39.1823024,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 195.911512,
@@ -2804,6 +4086,13 @@
       "total_damage": 195.911512,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2811,6 +4100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 19.5911512,
@@ -2821,6 +4111,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2828,6 +4125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 5.87734536,
@@ -2838,6 +4136,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2845,6 +4150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 1.95911512,
@@ -2855,6 +4161,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2862,6 +4175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.97955756,
@@ -2872,6 +4186,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2879,6 +4200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 170.933634,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 8.5466817,
@@ -2889,6 +4211,13 @@
       "total_damage": 854.66817,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2896,6 +4225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 5.87734536,
@@ -2906,6 +4236,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2913,6 +4250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 134.1876288,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 6.70938144,
@@ -2923,6 +4261,13 @@
       "total_damage": 670.938144,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2930,6 +4275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 117.5469072,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 5.87734536,
@@ -2940,6 +4286,13 @@
       "total_damage": 587.734536,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2947,6 +4300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -2957,6 +4311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 201.1044672,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "corridor_blade"
@@ -2964,6 +4325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 109.614804,
+      "bonus_currency": 0,
       "boss_DPS": 109.614804,
       "coverage_uptime": 0.0433333333333333,
       "damage_per_target": 548.07402,
@@ -2974,6 +4336,13 @@
       "total_damage": 548.07402,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -2981,6 +4350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 207.767876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.116666666666667,
       "damage_per_target": 34.6279793333333,
@@ -2991,6 +4361,13 @@
       "total_damage": 1038.83938,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -2998,6 +4375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 255.767876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.143333333333333,
       "damage_per_target": 12.7883938,
@@ -3008,6 +4386,13 @@
       "total_damage": 1278.83938,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3015,6 +4400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 255.767876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.143333333333333,
       "damage_per_target": 4.26279793333333,
@@ -3025,6 +4411,13 @@
       "total_damage": 1278.83938,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3032,6 +4425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 255.767876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.143333333333333,
       "damage_per_target": 2.13139896666667,
@@ -3042,6 +4436,13 @@
       "total_damage": 1278.83938,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3049,6 +4450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 260.07402,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 13.003701,
@@ -3059,6 +4461,13 @@
       "total_damage": 1300.3701,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3066,6 +4475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 255.767876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.143333333333333,
       "damage_per_target": 12.7883938,
@@ -3076,6 +4486,13 @@
       "total_damage": 1278.83938,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3083,6 +4500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 257.920948,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0966666666666667,
       "damage_per_target": 12.8960474,
@@ -3093,6 +4511,13 @@
       "total_damage": 1289.60474,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3100,6 +4525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 268.306144,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.123333333333333,
       "damage_per_target": 13.4153072,
@@ -3110,6 +4536,13 @@
       "total_damage": 1341.53072,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3117,6 +4550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -3127,6 +4561,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "wall_bounce_blaster"
@@ -3134,6 +4575,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 29.31883,
+      "bonus_currency": 0,
       "boss_DPS": 29.31883,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 146.59415,
@@ -3144,6 +4586,13 @@
       "total_damage": 146.59415,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3151,6 +4600,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 14.659415,
@@ -3161,6 +4611,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3168,6 +4625,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 4.3978245,
@@ -3178,6 +4636,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3185,6 +4650,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 1.4659415,
@@ -3195,6 +4661,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3202,6 +4675,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 0.73297075,
@@ -3212,6 +4686,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3219,6 +4700,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 4.3978245,
@@ -3229,6 +4711,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3236,6 +4725,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 4.3978245,
@@ -3246,6 +4736,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3253,6 +4750,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 91.934735,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 4.59673675,
@@ -3263,6 +4761,13 @@
       "total_damage": 459.673675,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3270,6 +4775,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 87.95649,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 4.3978245,
@@ -3280,6 +4786,13 @@
       "total_damage": 439.78245,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3287,6 +4800,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -3297,6 +4811,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 249.7280625,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "drill_charge"
@@ -3304,6 +4825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 9.9447264,
+      "bonus_currency": 0,
       "boss_DPS": 9.9447264,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 49.723632,
@@ -3314,6 +4836,13 @@
       "total_damage": 49.723632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3321,6 +4850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 16.574544,
@@ -3331,6 +4861,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3338,6 +4875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.9723632,
@@ -3348,6 +4886,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3355,6 +4900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 1.6574544,
@@ -3365,6 +4911,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3372,6 +4925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 0.828727199999999,
@@ -3382,6 +4936,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3389,6 +4950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.9723632,
@@ -3399,6 +4961,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3406,6 +4975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.9723632,
@@ -3416,6 +4986,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3423,6 +5000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.9723632,
@@ -3433,6 +5011,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3440,6 +5025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 99.4472639999999,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 4.9723632,
@@ -3450,6 +5036,13 @@
       "total_damage": 497.23632,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3457,6 +5050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -3467,6 +5061,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 19.8894528,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "mine_lantern"
@@ -3474,6 +5075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 32.0,
+      "bonus_currency": 0,
       "boss_DPS": 32.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 160.0,
@@ -3484,6 +5086,13 @@
       "total_damage": 160.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3491,6 +5100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 16.0,
@@ -3501,6 +5111,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3508,6 +5125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.8,
@@ -3518,6 +5136,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3525,6 +5150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 1.6,
@@ -3535,6 +5161,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3542,6 +5175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 0.8,
@@ -3552,6 +5186,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3559,6 +5200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.8,
@@ -3569,6 +5211,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3576,6 +5225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.8,
@@ -3586,6 +5236,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3593,6 +5250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 122.8048232,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 6.14024116,
@@ -3603,6 +5261,13 @@
       "total_damage": 614.024116,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3610,6 +5275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 96.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 4.8,
@@ -3620,6 +5286,13 @@
       "total_damage": 480.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3627,6 +5300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -3637,6 +5311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "melee",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "relic_chain"
@@ -3644,6 +5325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 22.0378696,
+      "bonus_currency": 0,
       "boss_DPS": 22.0378696,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 110.189348,
@@ -3654,6 +5336,13 @@
       "total_damage": 110.189348,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3661,6 +5350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 66.1136088,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 11.0189348,
@@ -3671,6 +5361,13 @@
       "total_damage": 330.568044,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3678,6 +5375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 132.2272176,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 6.61136088000001,
@@ -3688,6 +5386,13 @@
       "total_damage": 661.136088000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3695,6 +5400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 176.3029568,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 2.93838261333334,
@@ -3705,6 +5411,13 @@
       "total_damage": 881.514784000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3712,6 +5425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 176.3029568,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 1.46919130666667,
@@ -3722,6 +5436,13 @@
       "total_damage": 881.514784000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3729,6 +5450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 176.3029568,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 8.81514784000001,
@@ -3739,6 +5461,13 @@
       "total_damage": 881.514784000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3746,6 +5475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 132.2272176,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 6.61136088000001,
@@ -3756,6 +5486,13 @@
       "total_damage": 661.136088000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3763,6 +5500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 144.9088704,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 7.24544352000001,
@@ -3773,6 +5511,13 @@
       "total_damage": 724.544352000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3780,6 +5525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 136.4544352,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0266666666666667,
       "damage_per_target": 6.82272176000001,
@@ -3790,6 +5536,13 @@
       "total_damage": 682.272176000001,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
@@ -3797,6 +5550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 9.0568044,
+      "bonus_currency": 0,
       "boss_DPS": 9.0568044,
       "coverage_uptime": 0.01,
       "damage_per_target": 45.284022,
@@ -3807,176 +5561,263 @@
       "total_damage": 45.284022,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "shrine_beam"
     },
     {
-      "CC_uptime": 0.61,
-      "DPS": 22.067467,
-      "boss_DPS": 22.067467,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 110.337335,
+      "CC_uptime": 0.0,
+      "DPS": 22.467467,
+      "bonus_currency": 0,
+      "boss_DPS": 22.467467,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 112.337335,
       "kills_per_second": 0.2,
-      "overkill": 11.012005,
+      "overkill": 23.012005,
       "player_risk_exposure": 1.0,
       "scenario": "single_boss",
-      "total_damage": 110.337335,
+      "total_damage": 112.337335,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.061,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 11.0337335,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 11.2337335,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.0666666666666667,
       "scenario": "30_enemies",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0183,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 3.31012005,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 3.37012005,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.02,
       "scenario": "100_enemies",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0061,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 1.10337335,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 1.12337335,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.00666666666666667,
       "scenario": "300_enemies",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.00305,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 0.551686675,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 0.561686675,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.00333333333333333,
       "scenario": "600_enemies",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0183,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 3.31012005,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 3.37012005,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.49,
       "scenario": "narrow_corridor",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0183,
-      "DPS": 66.202401,
+      "CC_uptime": 0.0,
+      "DPS": 67.402401,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 3.31012005,
+      "coverage_uptime": 0.0366666666666667,
+      "damage_per_target": 3.37012005,
       "kills_per_second": 0.6,
-      "overkill": 33.0360150000001,
+      "overkill": 69.0360150000001,
       "player_risk_exposure": 0.02,
       "scenario": "open_field",
-      "total_damage": 331.012005,
+      "total_damage": 337.012005,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0427,
-      "DPS": 72.809604,
+      "CC_uptime": 0.0,
+      "DPS": 91.209604,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 3.6404802,
+      "coverage_uptime": 0.0833333333333333,
+      "damage_per_target": 4.5604802,
       "kills_per_second": 0.0,
       "overkill": 0.0,
       "player_risk_exposure": 0.02,
       "scenario": "moving_swarm",
-      "total_damage": 364.04802,
+      "total_damage": 456.04802,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.0212,
-      "DPS": 68.404802,
+      "CC_uptime": 0.0,
+      "DPS": 72.804802,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
-      "coverage_uptime": 0.0133333333333333,
-      "damage_per_target": 3.4202401,
+      "coverage_uptime": 0.0466666666666667,
+      "damage_per_target": 3.6402401,
       "kills_per_second": 0.4,
-      "overkill": 22.02401,
+      "overkill": 46.02401,
       "player_risk_exposure": 0.02,
       "scenario": "elite_mix",
-      "total_damage": 342.02401,
+      "total_damage": 364.02401,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
     },
     {
-      "CC_uptime": 0.433333333333333,
-      "DPS": 12.134934,
-      "boss_DPS": 12.134934,
-      "coverage_uptime": 0.00666666666666667,
-      "damage_per_target": 60.67467,
+      "CC_uptime": 0.0,
+      "DPS": 14.134934,
+      "bonus_currency": 0,
+      "boss_DPS": 14.134934,
+      "coverage_uptime": 0.0233333333333333,
+      "damage_per_target": 70.67467,
       "kills_per_second": 0.0,
       "overkill": 0.0,
       "player_risk_exposure": 0.0,
       "scenario": "high_mobility_boss",
-      "total_damage": 60.67467,
+      "total_damage": 70.67467,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "poison"
       },
       "weapon": "thorn_seed"
@@ -3984,6 +5825,7 @@
     {
       "CC_uptime": 0.886666666666667,
       "DPS": 20.735584,
+      "bonus_currency": 0,
       "boss_DPS": 20.735584,
       "coverage_uptime": 0.03,
       "damage_per_target": 103.67792,
@@ -3994,6 +5836,13 @@
       "total_damage": 103.67792,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4001,6 +5850,7 @@
     {
       "CC_uptime": 0.0886666666666667,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 10.367792,
@@ -4011,6 +5861,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4018,6 +5875,7 @@
     {
       "CC_uptime": 0.0266,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 3.1103376,
@@ -4028,6 +5886,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4035,6 +5900,7 @@
     {
       "CC_uptime": 0.00886666666666667,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 1.0367792,
@@ -4045,6 +5911,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4052,6 +5925,7 @@
     {
       "CC_uptime": 0.00443333333333333,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 0.5183896,
@@ -4062,6 +5936,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4069,6 +5950,7 @@
     {
       "CC_uptime": 0.0266,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 3.1103376,
@@ -4079,6 +5961,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4086,6 +5975,7 @@
     {
       "CC_uptime": 0.0266,
       "DPS": 62.206752,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 3.1103376,
@@ -4096,6 +5986,13 @@
       "total_damage": 311.03376,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4103,6 +6000,7 @@
     {
       "CC_uptime": 0.0603333333333333,
       "DPS": 63.930384,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 3.1965192,
@@ -4113,6 +6011,13 @@
       "total_damage": 319.65192,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4120,6 +6025,7 @@
     {
       "CC_uptime": 0.0277,
       "DPS": 62.781296,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 3.1390648,
@@ -4130,6 +6036,13 @@
       "total_damage": 313.90648,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4137,6 +6050,7 @@
     {
       "CC_uptime": 0.966666666666667,
       "DPS": 9.471168,
+      "bonus_currency": 0,
       "boss_DPS": 9.471168,
       "coverage_uptime": 0.0133333333333333,
       "damage_per_target": 47.35584,
@@ -4147,6 +6061,13 @@
       "total_damage": 47.35584,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.08,
         "status": "slow"
       },
       "weapon": "frost_wall"
@@ -4154,6 +6075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 15.538635,
+      "bonus_currency": 0,
       "boss_DPS": 15.538635,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 77.693175,
@@ -4164,6 +6086,13 @@
       "total_damage": 77.693175,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4171,6 +6100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 15.538635,
@@ -4181,6 +6111,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4188,6 +6125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 4.6615905,
@@ -4198,6 +6136,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4205,6 +6150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 1.5538635,
@@ -4215,6 +6161,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4222,6 +6175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.77693175,
@@ -4232,6 +6186,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4239,6 +6200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 4.6615905,
@@ -4249,6 +6211,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4256,6 +6225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 4.6615905,
@@ -4266,6 +6236,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4273,6 +6250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 4.6615905,
@@ -4283,6 +6261,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4290,6 +6275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 93.23181,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 4.6615905,
@@ -4300,6 +6286,13 @@
       "total_damage": 466.15905,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4307,6 +6300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -4317,6 +6311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "orbit",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 1872.0,
+        "gems_collected": 8,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "coin_orbit"
@@ -4324,6 +6325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 11.34567,
+      "bonus_currency": 0,
       "boss_DPS": 11.34567,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 56.72835,
@@ -4334,6 +6336,13 @@
       "total_damage": 56.72835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4341,6 +6350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 18.90945,
@@ -4351,6 +6361,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4358,6 +6375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 5.672835,
@@ -4368,6 +6386,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4375,6 +6400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 1.890945,
@@ -4385,6 +6411,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4392,6 +6425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 0.9454725,
@@ -4402,6 +6436,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4409,6 +6450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 160.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 7.99999999999999,
@@ -4419,6 +6461,13 @@
       "total_damage": 799.999999999999,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4426,6 +6475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 5.672835,
@@ -4436,6 +6486,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4443,6 +6500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 5.672835,
@@ -4453,6 +6511,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4460,6 +6525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 113.4567,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0166666666666667,
       "damage_per_target": 5.672835,
@@ -4470,6 +6536,13 @@
       "total_damage": 567.2835,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4477,6 +6550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -4487,6 +6561,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "aura",
+        "enemy_displacement": 990.879987716675,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "echo_bell"
@@ -4494,6 +6575,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 94.7986999999999,
+      "bonus_currency": 0,
       "boss_DPS": 94.7986999999999,
       "coverage_uptime": 0.0366666666666667,
       "damage_per_target": 473.9935,
@@ -4504,6 +6586,13 @@
       "total_damage": 473.9935,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4511,6 +6600,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 178.5303,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.09,
       "damage_per_target": 29.75505,
@@ -4521,6 +6611,13 @@
       "total_damage": 892.651499999999,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4528,6 +6625,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 11.07987,
@@ -4538,6 +6636,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4545,6 +6650,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 3.69329,
@@ -4555,6 +6661,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4562,6 +6675,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 1.846645,
@@ -4572,6 +6686,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4579,6 +6700,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.02,
       "damage_per_target": 11.07987,
@@ -4589,6 +6711,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4596,6 +6725,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.12,
       "damage_per_target": 11.07987,
@@ -4606,6 +6736,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4613,6 +6750,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 221.5974,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0966666666666667,
       "damage_per_target": 11.07987,
@@ -4623,6 +6761,13 @@
       "total_damage": 1107.987,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4630,6 +6775,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 242.658,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.1,
       "damage_per_target": 12.1329,
@@ -4640,6 +6786,13 @@
       "total_damage": 1213.29,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4647,6 +6800,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -4657,6 +6811,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "void_mirror"
@@ -4664,6 +6825,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 13.581918,
+      "bonus_currency": 0,
       "boss_DPS": 13.581918,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 67.90959,
@@ -4674,6 +6836,13 @@
       "total_damage": 67.90959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4681,6 +6850,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 122.237262,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 20.372877,
@@ -4691,6 +6861,13 @@
       "total_damage": 611.18631,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4698,6 +6875,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 135.81918,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 6.790959,
@@ -4708,6 +6886,13 @@
       "total_damage": 679.0959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4715,6 +6900,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 135.81918,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.263653,
@@ -4725,6 +6911,13 @@
       "total_damage": 679.0959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4732,6 +6925,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 135.81918,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 1.1318265,
@@ -4742,6 +6936,13 @@
       "total_damage": 679.0959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4749,6 +6950,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 162.983016,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 8.1491508,
@@ -4759,6 +6961,13 @@
       "total_damage": 814.91508,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4766,6 +6975,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 135.81918,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 6.790959,
@@ -4776,6 +6986,13 @@
       "total_damage": 679.0959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4783,6 +7000,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 139.699728,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 6.9849864,
@@ -4793,6 +7011,13 @@
       "total_damage": 698.49864,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4800,6 +7025,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 135.81918,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 6.790959,
@@ -4810,6 +7036,13 @@
       "total_damage": 679.0959,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4817,6 +7050,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 5.820822,
+      "bonus_currency": 0,
       "boss_DPS": 5.820822,
       "coverage_uptime": 0.01,
       "damage_per_target": 29.10411,
@@ -4827,6 +7061,13 @@
       "total_damage": 29.10411,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "magma_core"
@@ -4834,6 +7075,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 125.022856,
+      "bonus_currency": 0,
       "boss_DPS": 125.022856,
       "coverage_uptime": 0.05,
       "damage_per_target": 625.11428,
@@ -4844,6 +7086,13 @@
       "total_damage": 625.11428,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4851,6 +7100,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 234.045712,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.133333333333333,
       "damage_per_target": 39.0076186666667,
@@ -4861,6 +7111,13 @@
       "total_damage": 1170.22856,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4868,6 +7125,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 290.727616,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.163333333333333,
       "damage_per_target": 14.5363808,
@@ -4878,6 +7136,13 @@
       "total_damage": 1453.63808,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4885,6 +7150,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 290.727616,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.163333333333333,
       "damage_per_target": 4.84546026666667,
@@ -4895,6 +7161,13 @@
       "total_damage": 1453.63808,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4902,6 +7175,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 290.727616,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.163333333333333,
       "damage_per_target": 2.42273013333333,
@@ -4912,6 +7186,13 @@
       "total_damage": 1453.63808,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4919,6 +7200,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 327.068568,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.03,
       "damage_per_target": 16.3534284,
@@ -4929,6 +7211,13 @@
       "total_damage": 1635.34284,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4936,6 +7225,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 290.727616,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.163333333333333,
       "damage_per_target": 14.5363808,
@@ -4946,6 +7236,13 @@
       "total_damage": 1453.63808,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4953,6 +7250,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 290.727616,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.11,
       "damage_per_target": 14.5363808,
@@ -4963,6 +7261,13 @@
       "total_damage": 1453.63808,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4970,6 +7275,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 293.455232,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.156666666666667,
       "damage_per_target": 14.6727616,
@@ -4980,6 +7286,13 @@
       "total_damage": 1467.27616,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -4987,6 +7300,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -4997,6 +7311,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "projectile",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": ""
       },
       "weapon": "compass_star"
@@ -5004,6 +7325,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 23.6361292,
+      "bonus_currency": 0,
       "boss_DPS": 23.6361292,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 118.180646,
@@ -5014,6 +7336,13 @@
       "total_damage": 118.180646,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5021,6 +7350,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 11.8180646,
@@ -5031,6 +7361,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5038,6 +7375,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 3.54541938,
@@ -5048,6 +7386,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5055,6 +7400,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 1.18180646,
@@ -5065,6 +7411,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5072,6 +7425,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 0.59090323,
@@ -5082,6 +7436,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5089,6 +7450,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 3.54541938,
@@ -5099,6 +7461,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5106,6 +7475,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 70.9083876,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 3.54541938,
@@ -5116,6 +7486,13 @@
       "total_damage": 354.541938,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5123,6 +7500,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 76.361292,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 3.8180646,
@@ -5133,6 +7511,13 @@
       "total_damage": 381.80646,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5140,6 +7525,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 72.7260224,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0333333333333333,
       "damage_per_target": 3.63630112,
@@ -5150,6 +7536,13 @@
       "total_damage": 363.630112,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5157,6 +7550,7 @@
     {
       "CC_uptime": 0.0,
       "DPS": 0.0,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0,
       "damage_per_target": 0.0,
@@ -5167,6 +7561,13 @@
       "total_damage": 0.0,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 0.0,
+        "fixture_seconds": 5,
+        "gem_displacement": 0.0,
+        "gems_collected": 0,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.16,
         "status": ""
       },
       "weapon": "guardian_wall"
@@ -5174,6 +7575,7 @@
     {
       "CC_uptime": 0.996666666666667,
       "DPS": 14.2955442,
+      "bonus_currency": 0,
       "boss_DPS": 14.2955442,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 71.477721,
@@ -5184,6 +7586,13 @@
       "total_damage": 71.477721,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5191,6 +7600,7 @@
     {
       "CC_uptime": 0.0996666666666667,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 7.1477721,
@@ -5201,6 +7611,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5208,6 +7625,7 @@
     {
       "CC_uptime": 0.0299,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.14433163,
@@ -5218,6 +7636,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5225,6 +7650,7 @@
     {
       "CC_uptime": 0.00996666666666667,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.71477721,
@@ -5235,6 +7661,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5242,6 +7675,7 @@
     {
       "CC_uptime": 0.00498333333333333,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 0.357388605,
@@ -5252,6 +7686,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5259,6 +7700,7 @@
     {
       "CC_uptime": 0.0299,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.14433163,
@@ -5269,6 +7711,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5276,6 +7725,7 @@
     {
       "CC_uptime": 0.0299,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.14433163,
@@ -5286,6 +7736,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5293,6 +7750,7 @@
     {
       "CC_uptime": 0.0474,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.14433163,
@@ -5303,6 +7761,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5310,6 +7775,7 @@
     {
       "CC_uptime": 0.0299,
       "DPS": 42.8866326,
+      "bonus_currency": 0,
       "boss_DPS": 0.0,
       "coverage_uptime": 0.0233333333333333,
       "damage_per_target": 2.14433163,
@@ -5320,6 +7786,13 @@
       "total_damage": 214.433163,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"
@@ -5327,6 +7800,7 @@
     {
       "CC_uptime": 0.676666666666667,
       "DPS": 6.1266618,
+      "bonus_currency": 0,
       "boss_DPS": 6.1266618,
       "coverage_uptime": 0.01,
       "damage_per_target": 30.633309,
@@ -5337,6 +7811,13 @@
       "total_damage": 30.633309,
       "utility": {
         "archetype": "deploy",
+        "enemy_displacement": 300.952754974365,
+        "fixture_seconds": 5,
+        "gem_displacement": 5160.0,
+        "gems_collected": 20,
+        "mining_damage": 0.0,
+        "net_gem_charge_spent": 0,
+        "protection_uptime": 0.0,
         "status": "slow"
       },
       "weapon": "gravity_anchor"

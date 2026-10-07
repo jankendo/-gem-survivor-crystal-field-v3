@@ -2,7 +2,7 @@
 
 Tuning is in `v3_balance.json`, `v3_weapons.json` and `v3_passives.json`. Definitions preserve original names/icons/recipes. Spawn uses target alive, refill tokens and threat cost; rate multiplier is applied once. Population is not balanced around the 600 safety ceiling.
 
-`tests/benchmark.gd -- --mode=balance` runs every weapon against single boss, 30/100/300/600 targets, narrow corridor, open field, moving swarm, elite mix and high-mobility boss. Recorded metrics include actual DPS, damage, kills/sec, boss DPS, damage/target, active-damage coverage, overkill, status coverage, utility descriptors and proximity risk. Five-second fixtures are deliberately short CI samples, not sustained build tests.
+`tests/benchmark.gd -- --mode=balance` runs every weapon against single boss, 30/100/300/600 targets, narrow corridor, open field, moving swarm, elite mix and high-mobility boss. Recorded metrics include actual DPS, damage, kills/sec, boss DPS, damage/target, active-damage coverage, overkill, status coverage, measured utility and proximity risk. Five-second fixtures are deliberately short CI samples, not sustained build tests.
 
 Initial analysis found excessive close-range target counts and weak single Projectile growth. Tuning added data-driven Projectile count/pierce progression, corrected Beam classification, reduced aura/orbit base damage, lowered melee target caps and raised deploy damage. These choices retain coverage/risk identities; no claim of final human-approved balance is made.
 
@@ -16,6 +16,8 @@ The initial single-weapon scenario average ranged from sonic_wave 40.23 to magic
 
 The first “close” replay still used Noah's starting Magic Bolt and kited outside much of its aura range. It was replaced with Mio and four actual close weapons, with normal HP. Crowd coverage of ice/poison/arc was adjusted after this build failed. The bot now prioritizes boss warnings over dash warnings and checks intermediate floor positions instead of only the escape endpoint. No health, spawn population or gameplay RNG was overridden to force a clear.
 
-Seed60606 final replay: ranged CLEAR at 943.73s, HP112; melee CLEAR at 974.38s, HP96.8. Actual final-boss TTK43.73s / 74.38s includes conservative dodging and differs from stationary estimates. Both clears are now required by Balance CI; failed runs return nonzero rather than reporting unconditional success. The moving/dodging TTK is slightly above the target guidance and remains a playtest tuning item.
+Seed60606 status-owner runtime: ranged CLEAR at 943.73s, HP112; body-aware melee replay CLEAR at 976.75s, HP93.25. Actual final-boss TTK43.73s / 76.75s includes conservative dodging and differs from stationary estimates. Both clears are now required by Balance CI; failed runs return nonzero rather than reporting unconditional success. The moving/dodging TTK is slightly above the target guidance and remains a playtest tuning item.
 
-Five-second scenarios, one autoplay seed and utility descriptors are limited evidence. Human weapon-choice diversity, risk/reward and enjoyment remain **NOT YET VERIFIED ON REAL DEVICE**. Source test references are not proof of full behavioral parity.
+A separate five-second utility fixture measures gem/enemy displacement, pickup count, mining damage, shield uptime and bonus currency. Black Hole measured892.95 enemy displacement,5160 gem displacement and20 pickups; Gravity measured300.95 enemy displacement and20 pickups. Laser mining damage34.04 and Guardian shield uptime0.16 were measured. These fixtures isolate utility and are not the normal-HP autoplay or the600-enemy performance fixture. Definitions promising utility must produce a positive measured effect. Poison is periodic damage, not crowd control.
+
+Five-second scenarios and one autoplay seed are limited evidence. Human weapon-choice diversity, risk/reward and enjoyment remain **NOT YET VERIFIED ON REAL DEVICE**. Source test references are not proof of full behavioral parity.

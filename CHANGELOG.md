@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 — working alpha, unreleased
+## 3.0.0-alpha.1 — preview (publish only after immutable CI gates)
 
 - Rebuilt simulation with fixed ticks, authoritative generation-checked enemy SoA, shared packed spatial index, central status/damage ownership and active archetype weapons.
 - Retained source definitions/assets and test references with SHA inventories.
@@ -16,4 +16,6 @@
 - Connected special weapon deployables, homing/reflection, gem pull, knockback, mining, named Overclocks and character utility traits.
 - Restored all six field-event objectives, quest metrics, source shop prerequisites and proven legacy purchase entitlements.
 - Calibrated boss HP from measured stationary and actual-run TTK; autoplay now fails CI if the either representative build cannot CLEAR.
-- No release tag is published while the exact repository-name and human/device gates remain unmet.
+- Alpha publishing requires successful Fast/Balance/Performance/native Release workflows on its immutable main commit. Repository rename permission and human/device gates remain explicitly unverified.
+- Centralized periodic status damage before AI, fixed authoritative deploy pull, imported the original desktop save directory read-only and clarified boss death causes.
+- Added measured weapon-utility gates,473 assertions and body-aware normal-HP close-build autoplay.

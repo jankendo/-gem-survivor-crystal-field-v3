@@ -24,7 +24,7 @@ EnemyWorld owns packed positions/velocities/HP/radii/type/behavior/flags/timers/
 
 SpatialWorld uses five shared layers with packed bucket heads, linked entry indices, positions and IDs. Touched heads are reset once at tick start; query buffers are reused. Query order is deterministic, nearest ties use entity ID. The bounded grid clamps outside ±4096; maps currently stay inside it. Growing maps must resize or redesign this bound.
 
-StatusSystem alone decrements enemy timers; integer ticks avoid repeated floating subtraction. Weapon cooldowns belong to active WeaponRuntime; combo cooldowns to ComboSystem. Their clocks are not enemy statuses. DamageSystem tracks actual HP removed, overkill and source totals. Dead HP cannot generate a second death. Presentation events are bounded and can be dropped without changing results.
+StatusSystem alone decrements enemy timers and applies/resets periodic poison; status deaths drain before enemy AI so dead bosses cannot attack. integer ticks avoid repeated floating subtraction. Weapon cooldowns belong to active WeaponRuntime; combo cooldowns to ComboSystem. Their clocks are not enemy statuses. DamageSystem tracks actual HP removed, overkill and source totals. Dead HP cannot generate a second death. Presentation events are bounded and can be dropped without changing results.
 
 GameDatabase reads JSON once, then validates and caches. DataValidator checks runtime recipes and asset paths; Python validation also rejects duplicate JSON keys and invalid probabilities. StatResolver's order is Base → level → character → passive → category → evolution → blessing/contracts → temporary → final; detailed breakdown is opt-in at resolve time.
 

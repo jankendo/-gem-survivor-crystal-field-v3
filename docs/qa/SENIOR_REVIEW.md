@@ -17,4 +17,6 @@ The original fac61d1 history is retained. This is a published working alpha; the
 | Rights | Medium | Upstream has no license; inherited code/assets do not gain a new license here. LICENSE is a rights-status notice. |
 | Presentation | Low | Friendly deployable decoration is simplified; real crowded-combat visibility still needs human review. Silence is intentional. |
 
-No known Critical remains. No release tag is created: exact repository-name and human quality gates remain unmet. The unverified High items above are not marked PASS.
+No known Critical or fixable High remains after current regressions. External repository-name and human/device High gates remain unverified and are not marked PASS. Per the continuation instruction, a clearly labeled alpha prerelease may be published only after all four required workflows succeed on its immutable main commit; this does not declare the full completion gate met.
+
+Additional review fixes: deploy pull now changes authoritative enemy impulses; periodic poison/reset is owned by StatusSystem and status deaths drain before AI, so a lethally poisoned boss cannot attack. Legacy desktop saves are read-only imported from the original product directory. Boss contact/telegraph death causes are distinct.473 assertions in10 suites cover these regressions.

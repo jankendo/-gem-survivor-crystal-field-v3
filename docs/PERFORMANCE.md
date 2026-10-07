@@ -20,13 +20,15 @@ The bound is now `min(85, lifetime maximum enemy radius + 5.01)`. The maximum is
 |---|---:|---:|---:|
 | Same baseline, before query change | 14.171ms | 18.065ms | 22.728ms |
 | Same runtime, after query change | 5.976ms | 6.782ms | 8.033ms |
-| Later content runtime, open-field stress | 6.045ms | 6.813ms | 9.035ms |
-| Generated 25-room / 40-corridor moving-enemy stress | 6.743ms | 10.067ms | 10.839ms |
+| Later content runtime, open-field stress | 6.137ms | 7.565ms | 9.987ms |
+| Generated 25-room / 40-corridor moving-enemy stress | 6.808ms | 10.003ms | 10.664ms |
 
 The late-game fixture adds the real 70-unit boss radius at the 30-minute schedule while retaining 600 total enemies, 500 projectiles and 1000 gems. It exposed p95 16.356ms before per-entity radius filtering. The spatial index now copies collision radii once per tick and applies the same conservative bound before returning projectile candidates, preserving true-hit ordering. Reference replay against the original 85-unit query includes a mixed boss/small-enemy population. After this additional change, identical late fixture mean = 7.098ms, p95 = 11.429ms, p99 = 12.050ms.
 
 Only the first two rows isolate the optimization; later rows include content/balance changes and are not an identical-game speedup comparison. Every stress fixture starts each tick with 600 enemies, at least 500 projectiles and 1000 gems; deaths, projectile expiry and collected gems are replenished between samples. Four weapons and a combo remain active. The generated-world fixture is now also executed by Performance CI.
 
-Engine live-object/static-memory monitors supplement capacity counters. The later open-field run measured object delta 0 and static-memory growth 91,512 bytes; the gem pool legitimately grew from 1024 to 2048 slots as enemies dropped gems. Query-buffer counters include initial reservation, not necessarily repeated allocation. These figures do not mean zero heap allocations. Cumulative native heap profiling remains unverified.
+Engine live-object/static-memory monitors supplement capacity counters. The later open-field run measured object delta 0 and static-memory growth 91,512 bytes; the gem pool legitimately grew from 1024 to 2048 slots as enemies dropped gems. Reusable query buffers measured zero capacity growth after warmup; initial reservations are counted separately. These figures do not mean zero heap allocations. Cumulative native heap profiling remains unverified.
 
 Linux CPU p95 is within a 16.67ms tick in these samples. Rendering heavy effects, sustained Windows GPU and actual iPhone thermal/Low Power Mode behavior remain **NOT YET VERIFIED ON REAL DEVICE**. See the real-device checklist.
+
+Latest status-owner runtime: late fixture mean7.247ms / p9511.486ms / p9912.091ms. Open/generated/late sample minima were actually observed at600 enemies,500 projectiles and1000 gems before each tick, not inferred from requested counts. Expired/hit projectiles can legitimately reduce post-tick counts. Shared GitHub Ubuntu runner timings differ from this local CPU and must not be mixed into a controlled before/after claim.
