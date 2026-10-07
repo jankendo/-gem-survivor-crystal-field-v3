@@ -80,8 +80,7 @@ func tick(enemies: EnemyWorld, spatial: SpatialWorld, damage_system: DamageSyste
     split_bounce[i]=0
     add(positions[i],velocities[i].rotated(.22),damage[i]*.5,sources[i],0,1,false,statuses[i])
   life[i] -= 1
-  var width := minf(85,enemies.maximum_radius+5.01)
-  spatial.query_segment(SpatialWorld.ENEMY, previous[i], positions[i], width, scratch)
+  query_candidates(enemies,spatial,i)
   var hit := false
   for query_index in range(scratch.count):
    var id := scratch.ids[query_index]
@@ -104,3 +103,5 @@ func tick(enemies: EnemyWorld, spatial: SpatialWorld, damage_system: DamageSyste
     hit = remaining_hits[i] == 0
     if hit: break
   if hit or life[i] <= 0: remove_at(n)
+func query_candidates(enemies: EnemyWorld,spatial: SpatialWorld,i: int) -> void:
+ spatial.query_projectile_segment(previous[i],positions[i],minf(85,enemies.maximum_radius+5.01),scratch)

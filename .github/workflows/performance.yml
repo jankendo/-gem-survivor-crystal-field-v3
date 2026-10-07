@@ -33,6 +33,7 @@ jobs:
         run: |
           python tools/run_godot.py --headless --path . --script res://tests/benchmark.gd -- --mode=performance
           python tools/run_godot.py --headless --path . --script res://tests/benchmark.gd -- --mode=performance_world
+          python tools/run_godot.py --headless --path . --script res://tests/benchmark.gd -- --mode=performance_late
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -157,6 +157,16 @@ jobs:
         run: |
           set -euo pipefail
           APP_PATH="$(find DerivedData/Build/Products -type d -name '*.app' -print -quit)"
+          # Inspect the actual Mach-O signing state. Linker ad-hoc hashing is allowed;
+          # an Apple authority/team or provisioning profile is not.
+          if codesign -dv --verbose=4 "${APP_PATH}" 2> /tmp/v3-signature.txt; then
+            if grep -q '^Authority=' /tmp/v3-signature.txt; then cat /tmp/v3-signature.txt; exit 1; fi
+            if grep '^TeamIdentifier=' /tmp/v3-signature.txt | grep -v 'not set'; then exit 1; fi
+          else
+            grep -q 'not signed at all' /tmp/v3-signature.txt
+          fi
+          cat /tmp/v3-signature.txt
+          test ! -e "${APP_PATH}/embedded.mobileprovision"
           mkdir -p builds/ios/Payload
           cp -R "${APP_PATH}" "builds/ios/Payload/Gem Survivor Crystal Field v3.app"
           (cd builds/ios && zip -qry GemSurvivorCrystalField-v3-unsigned.ipa Payload)

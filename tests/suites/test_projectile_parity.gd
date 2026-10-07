@@ -1,16 +1,21 @@
 extends RefCounted
+class OriginalBroadphase:
+ extends ProjectileWorld
+ func query_candidates(_enemies: EnemyWorld,spatial: SpatialWorld,i: int) -> void:
+  spatial.query_segment(SpatialWorld.ENEMY,previous[i],positions[i],85,scratch)
 func tags() -> Array: return ["unit","deterministic","performance"]
 func run(t: TestContext,_tree: SceneTree) -> void:
  var db := GameDatabase.new()
  var old := RunController.new(db,456)
  var optimized := RunController.new(db,456)
- old.enemies.maximum_radius=80 # conservative bound reproduces the original 85px broadphase
+ old.projectiles=OriginalBroadphase.new() # Immutable original query strategy.
  for controller in [old,optimized]:
   controller.state.player.hp=999999
   controller.state.player.max_hp=999999
   for n in range(100):
    controller.enemies.spawn(0,Vector2(50+n%10*25,n/10*25),{"hp":1000,"speed":0,"radius":18})
   controller.enemies.spawn(0,Vector2(60,23),{"hp":1000,"speed":0,"radius":18})
+  controller.enemies.spawn(0,Vector2(120,-50),{"hp":1000,"speed":0,"radius":70})
   for n in range(30): controller.projectiles.add(Vector2(0,n*8),Vector2.RIGHT*200,7,"weapon:magic_bolt",2)
  for tick in range(300):
   old.pipeline.tick(old,Vector2.ZERO)

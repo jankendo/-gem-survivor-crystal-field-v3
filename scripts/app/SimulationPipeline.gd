@@ -58,7 +58,7 @@ func tick(run, direction: Vector2) -> void:
  run.spatial.begin_tick()
  for n in range(run.enemies.count):
   var i: int = run.enemies.dense[n]
-  run.spatial.insert(SpatialWorld.ENEMY,run.enemies.entity_id(i),run.enemies.positions[i])
+  run.spatial.insert(SpatialWorld.ENEMY,run.enemies.entity_id(i),run.enemies.positions[i],run.enemies.radius[i])
  for i in range(run.gems.capacity):
   if run.gems.active[i]: run.spatial.insert(SpatialWorld.GEM,i,run.gems.positions[i])
  for i in range(run.map.portals.size()): run.spatial.insert(SpatialWorld.INTERACTABLE,i,run.map.portals[i])

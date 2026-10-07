@@ -7,7 +7,7 @@ func run_benchmark() -> void:
  var mode := "performance"
  for arg in OS.get_cmdline_user_args():
   if arg.begins_with("--mode="): mode = arg.get_slice("=",1)
- var report := balance() if mode == "balance" else {"ok":true,"boss_TTK":boss_benchmark()} if mode == "boss" else performance(mode=="performance_world")
+ var report := balance() if mode == "balance" else {"ok":true,"boss_TTK":boss_benchmark()} if mode == "boss" else performance(mode in ["performance_world","performance_late"],mode=="performance_late")
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://test-output"))
  FileAccess.open("res://test-output/"+mode+".json",FileAccess.WRITE).store_string(JSON.stringify(report,"  "))
  print(JSON.stringify(report))
@@ -42,7 +42,7 @@ func combat_tick(run: RunController, moving: bool = false, mobility: bool = fals
   var i := run.enemies.dense[n]
   if moving: run.enemies.positions[i] = run.enemies.positions[i].rotated(.008)
   if mobility: run.enemies.positions[i] = Vector2.RIGHT.rotated(run.state.tick*.035)*280
-  run.spatial.insert(SpatialWorld.ENEMY,run.enemies.entity_id(i),run.enemies.positions[i])
+  run.spatial.insert(SpatialWorld.ENEMY,run.enemies.entity_id(i),run.enemies.positions[i],run.enemies.radius[i])
  run.deployments.tick(run.enemies,run.spatial,run.damage)
  run.weapons.tick(run.state,run.enemies,run.spatial,run.projectiles,run.damage,run)
  run.projectiles.tick(run.enemies,run.spatial,run.damage,run.map)
@@ -81,7 +81,7 @@ func balance() -> Dictionary:
   var hi := 70 if row.build_strength<1 else 40 if row.build_strength==1 else 25
   boss_ok = boss_ok and row.TTK_seconds>=lo and row.TTK_seconds<=hi
  return {"ok":results.size()==db.table("weapons").size()*10 and boss_ok,"seed":60606,"seconds_per_scenario":5,"weapon_results":results,"boss_TTK":boss_results,"limitation":"Repeatable combat fixture; utility descriptors are not a numerical value judgment. Boss TTK uses measured stationary build DPS; mechanics and human fun require playtest."}
-func performance(real_world: bool = false) -> Dictionary:
+func performance(real_world: bool = false,late_boss: bool = false) -> Dictionary:
  var run := fixture("magic_bolt",600,"600_enemies")
  if real_world:
   run.map.generate(run.state.rng.stream_seed("map"))
@@ -91,6 +91,13 @@ func performance(real_world: bool = false) -> Dictionary:
    run.enemies.speed[i]=68
    run.enemies.hp[i]=1e9
    run.enemies.max_hp[i]=1e9
+ if late_boss:
+  var id:=run.enemies.entity_id(run.enemies.dense[0])
+  var position:=run.enemies.positions[run.enemies.slot(id)]
+  run.enemies.remove(id)
+  run.enemies.spawn(-6,position,{"hp":1e9,"radius":70,"speed":68},1,true)
+  run.state.field_tick=108000
+  run.state.boss_stage=6
  run.state.progression.weapons = {"magic_bolt":8,"bomb_seed":8,"ice_orbit":8,"thunder_chain":8}
  run.weapons.refresh(run.state,db)
  run.combos.refresh(run.state,db)
@@ -130,7 +137,7 @@ func performance(real_world: bool = false) -> Dictionary:
    enemy.append(run.pipeline.timings.get("enemy_us",0))
    spatial.append(run.pipeline.timings.get("spatial_us",0))
    weapons.append(run.pipeline.timings.get("weapon_us",0))
- return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":run.gems.count,"gem_capacity":run.gems.capacity,"fixture_minimum_start_counts":{"enemy":600,"projectile":500,"gem":1000},"engine_memory":{"warm_objects":warm_objects,"final_objects":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-warm_objects,"warm_static_bytes":warm_memory,"final_static_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"static_bytes_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"limit":"Godot live objects/static memory monitors, not cumulative heap allocation count"},"allocation_proxy":{"gem_capacity_growth":run.gems.allocations-gem_allocations,"projectile_query_buffer_growth":run.projectiles.scratch.allocations,"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"real_generated_world":real_world,"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
+ return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":run.gems.count,"gem_capacity":run.gems.capacity,"fixture_minimum_start_counts":{"enemy":600,"projectile":500,"gem":1000},"engine_memory":{"warm_objects":warm_objects,"final_objects":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-warm_objects,"warm_static_bytes":warm_memory,"final_static_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"static_bytes_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"limit":"Godot live objects/static memory monitors, not cumulative heap allocation count"},"allocation_proxy":{"gem_capacity_growth":run.gems.allocations-gem_allocations,"projectile_query_buffer_growth":run.projectiles.scratch.allocations,"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"real_generated_world":real_world,"late_boss":late_boss,"maximum_enemy_radius":run.enemies.maximum_radius,"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
 func stats(values: Array) -> Dictionary:
  values.sort()
  var sum := 0.0
