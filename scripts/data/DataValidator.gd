@@ -20,5 +20,5 @@ func validate(db: GameDatabase) -> Array[String]:
   for id in db.table(name):
    var d: Dictionary = db.table(name)[id]
    for key in d:
-    if key in ["generated_icon", "generated_sprite", "evolved_sprite"] and not FileAccess.file_exists(d[key]): errors.append("asset " + str(d[key]))
+    if key in ["generated_icon", "generated_sprite", "evolved_sprite"] and not ResourceLoader.exists(d[key]): errors.append("asset " + str(d[key]))
  return errors
