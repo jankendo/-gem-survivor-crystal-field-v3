@@ -65,6 +65,13 @@ jobs:
           New-Item -ItemType Directory -Force builds/windows | Out-Null
           & $godot --headless --path . --export-release "${env:WINDOWS_PRESET}" "builds/windows/${env:EXPORT_NAME}.exe"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+           $workspace = "$pwd"
+          $env:GODOT = "$workspace/$godot"
+          Push-Location $env:TEMP
+          python "$workspace/tools/run_godot.py" --headless --main-pack "$workspace/builds/windows/${env:EXPORT_NAME}.exe" --script "$workspace/tools/pack_smoke.gd"
+          $smokeExit = $LASTEXITCODE
+          Pop-Location
+          if ($smokeExit -ne 0) { exit $smokeExit }
           Copy-Item README.md builds/windows/README.md
           Compress-Archive builds/windows/* builds/GemSurvivorCrystalField-v3-Windows.zip -Force
           python tools/validate_artifacts.py windows builds/GemSurvivorCrystalField-v3-Windows.zip

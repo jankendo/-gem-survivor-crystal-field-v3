@@ -31,3 +31,11 @@ func run(t: TestContext, _tree: SceneTree) -> void:
  var signature := run.signature()
  effects.clear()
  t.equal(run.signature(),signature,"cosmetic events cannot mutate simulation")
+
+ for phase in ["RESULT","CLEAR"]:
+  run.state.phase = phase
+  run.state.progression.exp = 100000
+  run.state.progression.choices.clear()
+  run.pipeline.level.collect(50,run.state,db,run.unlocked)
+  t.equal(run.state.phase,phase,"pickup cannot override terminal "+phase)
+  t.check(run.state.progression.choices.is_empty(),"no terminal upgrade modal "+phase)

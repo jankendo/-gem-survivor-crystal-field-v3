@@ -11,6 +11,7 @@ func collect(value: int, state: RunState, db: GameDatabase, unlocked: Array) -> 
  state.progression.gems += 1
  offer(state, db, unlocked)
 func offer(state: RunState, db: GameDatabase, unlocked: Array) -> void:
+ if state.phase != "RUNNING": return
  var p := state.progression
  var required := int(db.config().exp_base) + p.level * int(db.config().exp_level)
  if p.exp < required or not p.choices.is_empty(): return
