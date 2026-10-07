@@ -144,7 +144,7 @@ func sync_phase() -> void:
   var choices: Array = app.run.state.progression.choices
   var detail := ""
   for choice in choices:
-   var def: Dictionary = app.db.table("weapons" if choice[0]=="overclock" else choice[0])[choice[1]]
+   var def: Dictionary = OverclockSystem.new().definition(choice,app.db) if choice[0]=="overclock" else app.db.table(choice[0])[choice[1]]
    detail += str(def.name_ja)+": "+str(def.get("description_ja",""))+"\n"
   panels.LevelUpPanel.get_node("Scroll/Body/Info").text = detail
   for i in range(3):
@@ -152,7 +152,7 @@ func sync_phase() -> void:
    button.visible = i < choices.size()
    if i < choices.size():
     var c: Array = choices[i]
-    var d: Dictionary = app.db.table("weapons" if c[0] == "overclock" else c[0])[c[1]]
+    var d: Dictionary = OverclockSystem.new().definition(c,app.db) if c[0]=="overclock" else app.db.table(c[0])[c[1]]
     button.text = str(d.name_ja)+" — "+("オーバークロック" if c[0]=="overclock" else "成長")
     button.tooltip_text = str(d.get("description_ja",""))
  elif phase == "CONTRACT" and current != "ContractPanel":

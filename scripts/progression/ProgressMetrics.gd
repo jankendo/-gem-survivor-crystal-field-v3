@@ -41,4 +41,6 @@ func settle(run: RunController,save: Dictionary) -> void:
  for id in p.weapons: save.progression.weapon_levels[id]=maxi(int(save.progression.weapon_levels.get(id,0)),p.weapons[id])
  for id in p.evolutions: save.progression.evolved_weapons[id]=true
  for id in p.boss_ids: save.progression.bosses[id]=true
+ if p.metrics.get("reaper",false): save.progression.secret_flags.reaper=true
+ if float(m.get("terrain_time",{}).get("relic_vault",0))>=300 and float(m.get("low_hp_time",0))>=60: save.progression.secret_flags.ghost=true
 func db_category(run: RunController,id: String) -> String: return str(run.db.table("weapons")[id].get("category",""))

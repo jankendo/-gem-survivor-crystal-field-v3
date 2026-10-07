@@ -15,6 +15,7 @@ func run_benchmark() -> void:
 func fixture(id: String, population: int, scenario: String) -> RunController:
  var run := RunController.new(db,60606)
  run.state.progression.weapons = {id:8}
+ run.state.progression.gem_turret_charge=99
  run.state.player.hp = 1e9
  run.state.player.max_hp = 1e9
  run.state.phase = "RUNNING"
@@ -22,7 +23,8 @@ func fixture(id: String, population: int, scenario: String) -> RunController:
  run.map.corridors.clear()
  run.map.kinds.clear()
  run.map.portals.clear()
- run.map.rooms.append(Rect2(-3000,-3000,6000,6000))
+ if scenario=="narrow_corridor": run.map.corridors.append(Rect2(-3000,-100,6000,200))
+ else: run.map.rooms.append(Rect2(-3000,-3000,6000,6000))
  run.map.kinds.append("safe")
  run.weapons.refresh(run.state,db)
  for n in range(population):
@@ -92,6 +94,7 @@ func performance() -> Dictionary:
  var enemy: Array = []
  var spatial: Array = []
  var weapons: Array = []
+ var gem_allocations:=run.gems.allocations
  var warm_objects := 0
  var warm_memory := 0
  var allocations := run.enemies.allocations
@@ -119,7 +122,7 @@ func performance() -> Dictionary:
    enemy.append(run.pipeline.timings.get("enemy_us",0))
    spatial.append(run.pipeline.timings.get("spatial_us",0))
    weapons.append(run.pipeline.timings.get("weapon_us",0))
- return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":1000,"engine_memory":{"warm_objects":warm_objects,"final_objects":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-warm_objects,"warm_static_bytes":warm_memory,"final_static_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"static_bytes_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"limit":"Godot live objects/static memory monitors, not cumulative heap allocation count"},"allocation_proxy":{"projectile_query_buffer_growth":run.projectiles.scratch.allocations,"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
+ return {"ok":run.enemies.allocations==allocations,"seed":60606,"samples":total.size(),"simulation":stats(total),"cpu_fixture_frame":stats(combine(total,render)),"render_preparation":stats(render),"enemy_update":stats(enemy),"spatial_update":stats(spatial),"weapon_update":stats(weapons),"enemy_count":run.enemies.count,"projectile_count":initial_projectiles,"gem_count":run.gems.count,"gem_capacity":run.gems.capacity,"fixture_minimum_start_counts":{"enemy":600,"projectile":500,"gem":1000},"engine_memory":{"warm_objects":warm_objects,"final_objects":int(Performance.get_monitor(Performance.OBJECT_COUNT)),"object_delta":int(Performance.get_monitor(Performance.OBJECT_COUNT))-warm_objects,"warm_static_bytes":warm_memory,"final_static_bytes":int(Performance.get_monitor(Performance.MEMORY_STATIC)),"static_bytes_delta":int(Performance.get_monitor(Performance.MEMORY_STATIC))-warm_memory,"limit":"Godot live objects/static memory monitors, not cumulative heap allocation count"},"allocation_proxy":{"gem_capacity_growth":run.gems.allocations-gem_allocations,"projectile_query_buffer_growth":run.projectiles.scratch.allocations,"enemy_capacity_growth":run.enemies.allocations-allocations,"spatial_capacity_growth":run.spatial.bucket_allocations-1},"note":"Headless Linux CPU only. Effects draw calls/GPU/Windows/iPhone frame time are not measured."}
 func stats(values: Array) -> Dictionary:
  values.sort()
  var sum := 0.0

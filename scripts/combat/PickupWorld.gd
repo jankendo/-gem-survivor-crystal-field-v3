@@ -5,12 +5,14 @@ var values := PackedInt32Array()
 var active := PackedInt32Array()
 var count := 0
 var capacity := 0
+var allocations := 0
 var magnetized := PackedInt32Array()
 var magnet_sparse := PackedInt32Array()
 var magnet_count := 0
 var free_slots: Array[int] = []
 func _init() -> void: reserve(1024)
 func reserve(size: int) -> void:
+ allocations+=1
  var old := capacity
  capacity = size
  positions.resize(size)

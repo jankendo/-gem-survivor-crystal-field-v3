@@ -185,14 +185,14 @@
     "secret_hint_ja": "虚無領域で“ある条件”を満たす",
     "initial_weapon": "poison_mist",
     "role_ja": "高難度特殊操作",
-    "trait_ja": "壁をすり抜けるが、HPが低い",
+    "trait_ja": "虚無の歩み: 移動速度+15%",
     "weakness_ja": "最大HP -40%",
     "modifiers": {
       "hp_mult": 0.6,
-      "phase_walls": true,
       "tag_damage": {
         "poison": 1.25
-      }
+      },
+      "move_mult": 1.15
     },
     "generated_sprite": "res://assets/generated/characters/ghost.svg"
   },

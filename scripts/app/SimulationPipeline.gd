@@ -4,6 +4,7 @@ var status := StatusSystem.new()
 var enemy_sim := EnemySimulation.new()
 var death := DeathSystem.new()
 var level := LevelSystem.new()
+var pickup_damage_scratch := QueryBuffer.new(600)
 var scratch := QueryBuffer.new(600)
 var timings: Dictionary = {}
 var profiling := false
@@ -78,6 +79,9 @@ func tick(run, direction: Vector2) -> void:
   if value > 0:
    level.collect(roundi(value*float(stat.get("char_gem_value",1))*run.field.events.gem_multiplier*(1+float(stat.get("exp",0)))*float(stat.get("contract_gem",1))),state,run.db,run.unlocked)
    player.hp = minf(player.max_hp,player.hp+float(stat.get("pickup_heal",0)))
+   if float(stat.get("char_gem_damage",0))>0:
+    run.spatial.query_circle(SpatialWorld.ENEMY,player.position,180,pickup_damage_scratch)
+    for n in range(pickup_damage_scratch.count): run.damage.apply(run.enemies,pickup_damage_scratch.ids[n],float(stat.char_gem_damage),"field:gem")
  if state.phase == "RUNNING": level.offer(state,run.db,run.unlocked)
  if int(stat.get("recall_frequency",0))>0 and state.tick % maxi(60,600-int(stat.get("recall_frequency",0))) == 0:
   run.spatial.query_circle(SpatialWorld.GEM,player.position,800,scratch)

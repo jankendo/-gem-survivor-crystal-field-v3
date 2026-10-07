@@ -3,6 +3,7 @@ class_name LevelSystem
 var loadout := LoadoutSystem.new()
 func collect(value: int, state: RunState, db: GameDatabase, unlocked: Array) -> void:
  state.progression.exp += value
+ state.progression.gem_turret_charge=mini(99,state.progression.gem_turret_charge+1)
  var p := state.progression
  if state.tick-p.last_pickup_tick > 300: p.gem_streak=0
  p.last_pickup_tick = state.tick
@@ -21,13 +22,12 @@ func offer(state: RunState, db: GameDatabase, unlocked: Array) -> void:
  options = state.rng.stream_rng("reward",str(p.level)+":"+str(p.reward_roll)).shuffled(options)
  p.choices = options.slice(0, mini(3, options.size()))
  if p.choices.is_empty():
-  for id in p.evolutions:
-   if int(p.overclocks.get(id, 0)) < 2: p.choices.append(["overclock", id])
+  p.choices=OverclockSystem.new().candidates(state,db).slice(0,3)
  if not p.choices.is_empty(): state.phase = "LEVEL_UP"
 func select(index: int, state: RunState, db: GameDatabase) -> void:
  if index < 0 or index >= state.progression.choices.size(): return
  var choice: Array = state.progression.choices[index]
- if choice[0] == "overclock": state.progression.overclocks[choice[1]] = int(state.progression.overclocks.get(choice[1], 0)) + 1
+ if choice[0] == "overclock": OverclockSystem.new().apply(choice,state,db)
  else: loadout.apply(choice, state, db)
  state.progression.choices.clear()
  EvolutionSystem.new().refresh(state, db)

@@ -21,4 +21,7 @@ func validate(db: GameDatabase) -> Array[String]:
    var d: Dictionary = db.table(name)[id]
    for key in d:
     if key in ["generated_icon", "generated_sprite", "evolved_sprite"] and not ResourceLoader.exists(d[key]): errors.append("asset " + str(d[key]))
+ for evolution in db.table("overclocks"):
+  for variant in db.table("overclocks")[evolution]:
+   if not db.table("v3_overclocks").has(variant.id): errors.append("missing overclock runtime "+str(variant.id))
  return errors

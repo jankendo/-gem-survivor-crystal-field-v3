@@ -15,6 +15,8 @@ func refresh(state: RunState, db: GameDatabase) -> void:
    "gems_collected": value = p.gems
    "rooms_discovered": value = p.rooms.size()
    "boss_defeats": value = p.bosses
+   "crystals_destroyed":
+    for count in p.terrain_crystals: value+=count
   if value >= int(condition.get("value", 0)):
    state.player.evolved = true
    state.player.max_hp += 12

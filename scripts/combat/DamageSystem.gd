@@ -12,12 +12,20 @@ var normal_damage := 0.0
 var field_damage := 0.0
 var overkill := 0.0
 var death_ids := PackedInt64Array()
+const EMPTY_EFFECTS := {}
+var source_effects: Dictionary = {}
+var death_burst_radius := PackedFloat32Array()
+var death_burst_damage := PackedFloat64Array()
+var death_slow_radius := PackedFloat32Array()
 var death_sources := PackedStringArray()
 var death_count := 0
 var event_count := 0
 func _init() -> void:
  death_ids.resize(600)
  death_sources.resize(600)
+ death_burst_radius.resize(600)
+ death_burst_damage.resize(600)
+ death_slow_radius.resize(600)
 func begin_tick() -> void:
  death_count = 0
  presentation.clear()
@@ -41,6 +49,10 @@ func apply(world: EnemyWorld, id: int, amount: float, source: String) -> float:
   if spatial!=null: spatial.deactivate_enemy(id)
   death_ids[death_count] = id
   death_sources[death_count] = source
+  var effects: Dictionary=source_effects.get(source,EMPTY_EFFECTS)
+  death_burst_radius[death_count]=float(effects.get("death_burst_radius",0))
+  death_burst_damage[death_count]=float(effects.get("death_burst_damage",0))
+  death_slow_radius[death_count]=float(effects.get("death_slow_radius",0))
   death_count += 1
  return actual
 func apply_player(state: RunState, amount: float, source: String) -> void:

@@ -1,6 +1,7 @@
 extends RefCounted
 class_name ProjectileWorld
 const CAPACITY := 4096
+var split_bounce := PackedByteArray()
 var bounces := PackedInt32Array()
 var homing := PackedByteArray()
 var statuses := PackedInt32Array()
@@ -19,6 +20,7 @@ var count := 0
 var free_count := CAPACITY
 var scratch := QueryBuffer.new(600)
 func _init() -> void:
+ split_bounce.resize(CAPACITY)
  bounces.resize(CAPACITY)
  homing.resize(CAPACITY)
  statuses.resize(CAPACITY)
@@ -34,10 +36,11 @@ func _init() -> void:
  dense.resize(CAPACITY)
  free_slots.resize(CAPACITY)
  for i in range(CAPACITY): free_slots[i] = CAPACITY - 1 - i
-func add(pos: Vector2, velocity: Vector2, amount: float, source: String, pierce: int = 0, bounce: int = 0, seeking: bool = false, status: int = 0) -> bool:
+func add(pos: Vector2, velocity: Vector2, amount: float, source: String, pierce: int = 0, bounce: int = 0, seeking: bool = false, status: int = 0,split: bool = false) -> bool:
  if free_count == 0: return false
  free_count -= 1
  var i := free_slots[free_count]
+ split_bounce[i]=int(split)
  bounces[i]=bounce
  homing[i]=int(seeking)
  statuses[i]=status
@@ -73,6 +76,9 @@ func tick(enemies: EnemyWorld, spatial: SpatialWorld, damage_system: DamageSyste
    if not map.walkable(dy,4): velocities[i].y *= -1
    positions[i]=previous[i]
    bounces[i]-=1
+   if split_bounce[i]:
+    split_bounce[i]=0
+    add(positions[i],velocities[i].rotated(.22),damage[i]*.5,sources[i],0,1,false,statuses[i])
   life[i] -= 1
   var width := minf(85,enemies.maximum_radius+5.01)
   spatial.query_segment(SpatialWorld.ENEMY, previous[i], positions[i], width, scratch)

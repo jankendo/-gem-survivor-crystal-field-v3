@@ -1,0 +1,176 @@
+{
+  "meteor_swarm": {
+    "id": "meteor_swarm",
+    "name_ja": "流星群",
+    "description_ja": "弾数+3。単発ダメージ-20%。",
+    "evolution": "starbreaker_bolt",
+    "targets": 3,
+    "damage": 0.8
+  },
+  "supernova": {
+    "id": "supernova",
+    "name_ja": "超新星",
+    "description_ja": "撃破爆発範囲+80%。攻撃間隔+15%。",
+    "evolution": "starbreaker_bolt",
+    "cooldown": 1.15,
+    "modifiers": {
+      "death_burst_radius": 160,
+      "death_burst_damage": 20
+    }
+  },
+  "comet_orbit": {
+    "id": "comet_orbit",
+    "name_ja": "彗星軌道",
+    "description_ja": "魔弾が近い敵へ軽く追尾する。",
+    "evolution": "starbreaker_bolt",
+    "modifiers": {
+      "homing": true
+    }
+  },
+  "absolute_zero": {
+    "id": "absolute_zero",
+    "name_ja": "絶対零度",
+    "description_ja": "凍結中の敵への氷ダメージ+100%。",
+    "evolution": "eternal_ice_ring",
+    "modifiers": {
+      "frozen_damage": 2
+    }
+  },
+  "glacier_expand": {
+    "id": "glacier_expand",
+    "name_ja": "氷河拡張",
+    "description_ja": "リング半径+60%。回転速度-20%。",
+    "evolution": "eternal_ice_ring",
+    "area": 1.6,
+    "cooldown": 1.25
+  },
+  "powder_chain": {
+    "id": "powder_chain",
+    "name_ja": "粉雪連鎖",
+    "description_ja": "凍結敵撃破で周囲を遅延させる。",
+    "evolution": "eternal_ice_ring",
+    "modifiers": {
+      "death_slow_radius": 180
+    }
+  },
+  "judgement_amp": {
+    "id": "judgement_amp",
+    "name_ja": "神罰増幅",
+    "description_ja": "連鎖数+5。クールダウン+10%。",
+    "evolution": "divine_chain",
+    "targets": 5,
+    "cooldown": 1.1
+  },
+  "thunder_field": {
+    "id": "thunder_field",
+    "name_ja": "落雷領域",
+    "description_ja": "一定間隔で周囲へ範囲雷を落とす。",
+    "evolution": "divine_chain",
+    "modifiers": {
+      "afterglow": true
+    }
+  },
+  "shock_burst": {
+    "id": "shock_burst",
+    "name_ja": "感電爆発",
+    "description_ja": "雷で倒した敵が小爆発する。",
+    "evolution": "divine_chain",
+    "modifiers": {
+      "death_burst_radius": 90,
+      "death_burst_damage": 12
+    }
+  },
+  "triple_bloom": {
+    "id": "triple_bloom",
+    "name_ja": "多段開花",
+    "description_ja": "爆発が3回に広がる。",
+    "evolution": "final_fireworks",
+    "modifiers": {
+      "bloom": true
+    }
+  },
+  "burning_afterglow": {
+    "id": "burning_afterglow",
+    "name_ja": "焼夷残火",
+    "description_ja": "爆発地点に短い炎床を残す。",
+    "evolution": "final_fireworks",
+    "modifiers": {
+      "afterglow": true
+    }
+  },
+  "overloaded_firework": {
+    "id": "overloaded_firework",
+    "name_ja": "花火過積載",
+    "description_ja": "爆発範囲+100%。低確率で自傷。",
+    "evolution": "final_fireworks",
+    "area": 2,
+    "modifiers": {
+      "self_chance": 0.08,
+      "self_damage": 4
+    }
+  },
+  "wide_gate": {
+    "id": "wide_gate",
+    "name_ja": "門拡張",
+    "description_ja": "門の判定+35%。",
+    "evolution": "eternal_gate",
+    "area": 1.35
+  },
+  "hot_rune": {
+    "id": "hot_rune",
+    "name_ja": "灼熱刻印",
+    "description_ja": "門の継続ダメージ+40%。",
+    "evolution": "eternal_gate",
+    "damage": 1.4
+  },
+  "double_impact": {
+    "id": "double_impact",
+    "name_ja": "二重落下",
+    "description_ja": "彗星が追加で落ちる。",
+    "evolution": "meteor_cluster",
+    "modifiers": {
+      "bloom": true
+    }
+  },
+  "crater_bonus": {
+    "id": "crater_bonus",
+    "name_ja": "クレーター",
+    "description_ja": "落下地点に短いダメージ領域を残す。",
+    "evolution": "meteor_cluster",
+    "modifiers": {
+      "afterglow": true
+    }
+  },
+  "life_reap": {
+    "id": "life_reap",
+    "name_ja": "生命刈り",
+    "description_ja": "撃破時の回復率UP。",
+    "evolution": "death_soul_scythe",
+    "modifiers": {
+      "lifesteal_evolved": 0.04
+    }
+  },
+  "wide_reap": {
+    "id": "wide_reap",
+    "name_ja": "大鎌化",
+    "description_ja": "斬撃範囲+45%。",
+    "evolution": "death_soul_scythe",
+    "area": 1.45
+  },
+  "split_reflect": {
+    "id": "split_reflect",
+    "name_ja": "分裂反射",
+    "description_ja": "反射時に弾が増える。",
+    "evolution": "kaleido_shard",
+    "modifiers": {
+      "split_bounce": true
+    }
+  },
+  "sharp_mirror": {
+    "id": "sharp_mirror",
+    "name_ja": "鋭鏡",
+    "description_ja": "反射弾ダメージ+35%。",
+    "evolution": "kaleido_shard",
+    "damage": 1.35
+  }
+}

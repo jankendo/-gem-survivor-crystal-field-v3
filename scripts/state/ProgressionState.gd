@@ -35,3 +35,7 @@ var metrics_settled := false
 
 var skips := 1
 var banishes_bonus := 0
+
+var gem_turret_charge := 0
+
+var named_overclocks: Dictionary = {}

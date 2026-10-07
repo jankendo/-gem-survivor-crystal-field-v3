@@ -10,7 +10,8 @@
     "status": "",
     "category": "ranged",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {}
   },
   "ice_orbit": {
     "archetype": "orbit",
@@ -23,7 +24,8 @@
     "status": "slow",
     "category": "area",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "thunder_chain": {
     "archetype": "chain",
@@ -36,7 +38,8 @@
     "status": "shock",
     "category": "lightning",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "bomb_seed": {
     "archetype": "explosion",
@@ -49,7 +52,8 @@
     "status": "",
     "category": "explosion",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "blade_fan": {
     "archetype": "melee",
@@ -94,7 +98,8 @@
     "status": "poison",
     "category": "poison",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "drone_bit": {
     "archetype": "projectile",
@@ -157,7 +162,8 @@
     "status": "",
     "category": "deploy",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "comet_staff": {
     "archetype": "explosion",
@@ -170,7 +176,8 @@
     "status": "",
     "category": "explosion",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "soul_scythe": {
     "archetype": "melee",
@@ -183,7 +190,10 @@
     "status": "",
     "category": "melee",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "lifesteal_evolved": 0.02
+    }
   },
   "mirror_shard": {
     "archetype": "projectile",
@@ -202,12 +212,12 @@
     }
   },
   "sonic_wave": {
-    "archetype": "melee",
+    "archetype": "aura",
     "damage": 7.56,
     "cooldown": 1.7,
     "range": 220,
     "radius": 220,
-    "targets": 3,
+    "targets": 8,
     "speed": 650,
     "status": "",
     "category": "knockback",
@@ -228,7 +238,10 @@
     "status": "",
     "category": "gem",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {
+      "gem_charge": true
+    }
   },
   "corridor_blade": {
     "archetype": "melee",
@@ -243,7 +256,8 @@
     "projectile_level_step": 3,
     "pierce": 0,
     "modifiers": {
-      "mining": 0.8
+      "mining": 0.8,
+      "corridor_damage": 1.25
     }
   },
   "wall_bounce_blaster": {
@@ -306,7 +320,10 @@
     "status": "",
     "category": "melee",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "contract_damage": 0.08
+    }
   },
   "shrine_beam": {
     "archetype": "beam",
@@ -319,7 +336,8 @@
     "status": "",
     "category": "deploy",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "thorn_seed": {
     "archetype": "deploy",
@@ -365,7 +383,11 @@
     "status": "",
     "category": "gem",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {
+      "currency_kill_bonus": 1,
+      "gem_pull": 250
+    }
   },
   "echo_bell": {
     "archetype": "aura",
@@ -411,7 +433,8 @@
     "status": "",
     "category": "explosion",
     "projectile_level_step": 3,
-    "pierce": 0
+    "pierce": 0,
+    "modifiers": {}
   },
   "compass_star": {
     "archetype": "projectile",
@@ -424,7 +447,8 @@
     "status": "",
     "category": "ranged",
     "projectile_level_step": 3,
-    "pierce": 2
+    "pierce": 2,
+    "modifiers": {}
   },
   "guardian_wall": {
     "archetype": "deploy",

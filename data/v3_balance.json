@@ -58,5 +58,7 @@
     "curse_reward": 0.1,
     "pickup_heal": 1
   },
-  "resonance_damage_mult": 1.1
+  "resonance_damage_mult": 1.1,
+  "rift_spawn_ticks": 180,
+  "gem_pickup_damage": 3
 }

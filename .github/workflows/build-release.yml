@@ -162,6 +162,26 @@ jobs:
           (cd builds/ios && zip -qry GemSurvivorCrystalField-v3-unsigned.ipa Payload)
           python3 tools/validate_artifacts.py ios builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa
 
+      - name: Prepare verification transfers
+        shell: bash
+        run: |
+          set -euo pipefail
+          split -b 20m builds/ios/GemSurvivorCrystalField-v3-unsigned.ipa builds/ios/ipa-part-
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iOS-verification-part-aa
+          path: builds/ios/ipa-part-aa
+          if-no-files-found: error
+          compression-level: 0
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iOS-verification-part-ab
+          path: builds/ios/ipa-part-ab
+          if-no-files-found: error
+          compression-level: 0
+
       - uses: actions/upload-artifact@v4
         with:
           name: GemSurvivor-iOS-unsigned-IPA
