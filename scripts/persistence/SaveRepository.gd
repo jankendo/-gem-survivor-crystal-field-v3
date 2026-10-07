@@ -9,7 +9,7 @@ var elapsed := 0.0
 var writes := 0
 var last_error := OK
 var migration := SaveMigration.new()
-func _init(target: String = PATH, legacy: String = LEGACY) -> void:
+func _init(target: String = PATH, legacy: String = LEGACY,legacy_directory: String = "") -> void:
  path = target
  for candidate in [path,path + ".bak",path + ".tmp"]:
   if not FileAccess.file_exists(candidate): continue
@@ -20,11 +20,18 @@ func _init(target: String = PATH, legacy: String = LEGACY) -> void:
    break
  if data.is_empty():
   data = migration.defaults()
-  if FileAccess.file_exists(legacy):
-   var old = JSON.parse_string(FileAccess.get_file_as_string(legacy))
+  var candidates: Array[String]=[legacy]
+  if not legacy_directory.is_empty(): candidates.append(legacy_directory.path_join("chrono_merge_tactics.save"))
+  elif path==PATH and legacy==LEGACY and not OS.has_feature("mobile"):
+   candidates.append(OS.get_user_data_dir().get_base_dir().path_join("Gem Survivor Crystal Field/chrono_merge_tactics.save"))
+  for candidate in candidates:
+   if not FileAccess.file_exists(candidate): continue
+   var old = parse_file(candidate)
    if old is Dictionary:
     data = migration.migrate(old)
     dirty = true
+    break
+   last_error=ERR_PARSE_ERROR
 func mark_dirty() -> void:
  dirty = true
  elapsed = 0

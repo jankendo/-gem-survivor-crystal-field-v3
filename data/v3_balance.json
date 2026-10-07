@@ -69,5 +69,9 @@
     "reflect_damage": 20,
     "reflect_shots": 4,
     "reflect_speed": 500
+  },
+  "status": {
+    "poison_period_ticks": 30,
+    "poison_damage": 2
   }
 }

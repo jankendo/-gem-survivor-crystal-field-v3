@@ -1,6 +1,8 @@
 extends RefCounted
 class_name DeployWorld
 const CAPACITY := 128
+var pulls := PackedFloat32Array()
+var knockbacks := PackedFloat32Array()
 var directions := PackedVector2Array()
 var lengths := PackedFloat32Array()
 var positions := PackedVector2Array()
@@ -20,6 +22,8 @@ var count := 0
 var free_count := CAPACITY
 var scratch := QueryBuffer.new(600)
 func _init() -> void:
+ pulls.resize(CAPACITY)
+ knockbacks.resize(CAPACITY)
  directions.resize(CAPACITY)
  lengths.resize(CAPACITY)
  positions.resize(CAPACITY)
@@ -41,6 +45,8 @@ func add(pos: Vector2,radius: float,damage: float,source: String,target_count: i
  free_count-=1
  var i:=free_slots[free_count]
  var modifiers: Dictionary=definition.get("modifiers",{})
+ pulls[i]=float(modifiers.get("pull",0))
+ knockbacks[i]=float(modifiers.get("knockback",0))*float(definition.get("knockback_scale",1))
  directions[i]=direction.normalized()
  lengths[i]=float(modifiers.get("beam_length",0))
  positions[i]=pos
@@ -79,6 +85,8 @@ func tick(enemies: EnemyWorld,spatial: SpatialWorld,damage: DamageSystem) -> voi
     if not enemies.alive(id) or enemies.hp[enemies.slot(id)]<=0: continue
     damage.apply(enemies,id,amounts[i],sources[i])
     var slot:=enemies.slot(id)
+    if pulls[i]>0: enemies.impulses[slot]+=(positions[i]-enemies.positions[slot]).normalized()*pulls[i]
+    if knockbacks[i]>0: enemies.impulses[slot]+=(enemies.positions[slot]-positions[i]).normalized()*knockbacks[i]
     if statuses[i]==1: enemies.slow[slot]=slow_ticks[i]
     elif statuses[i]==2: enemies.shock[slot]=90
     elif statuses[i]==3: enemies.poison[slot]=180

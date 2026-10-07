@@ -25,6 +25,7 @@ func refresh(state: RunState, db: GameDatabase) -> void:
  for id in state.progression.weapons:
   ids.append(id)
   definitions.append(OverclockSystem.new().runtime(id,state,db))
+  definitions.back()["knockback_scale"]=float(state.player.stats.get("char_knockback",1))
   definitions.back()["slow_ticks"]=roundi(90*float(state.player.stats.get("char_slow",1)))
   death_effects["weapon:"+id]=definitions.back().modifiers
   stats.append(resolver.resolve(id, state, db, false))

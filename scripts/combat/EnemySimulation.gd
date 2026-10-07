@@ -4,6 +4,7 @@ var scratch := QueryBuffer.new(600)
 func move(state: RunState, enemies: EnemyWorld, map: WorldGenerator, db: GameDatabase, damage: DamageSystem) -> void:
  for n in range(enemies.count):
   var i := enemies.dense[n]
+  if enemies.hp[i]<=0: continue
   var direction := (map.pursuit_target(enemies.positions[i],state.player.position) - enemies.positions[i]).normalized()
   var speed: float = enemies.speed[i] * (.52 if enemies.slow[i] > 0 else 1)
   if enemies.shock[i]>0: speed=0
@@ -31,9 +32,6 @@ func move(state: RunState, enemies: EnemyWorld, map: WorldGenerator, db: GameDat
   enemies.velocities[i] = direction * speed+enemies.impulses[i]
   enemies.impulses[i]*=.85
   enemies.positions[i] = map.move(enemies.positions[i], enemies.velocities[i] / 60, minf(18,enemies.radius[i]))
-  if enemies.poison[i] > 0 and enemies.periodic[i] == 0:
-   damage.apply(enemies,enemies.entity_id(i),2,"status:poison")
-   enemies.periodic[i] = 30
 func contact(state: RunState, enemies: EnemyWorld, spatial: SpatialWorld, damage: DamageSystem, db: GameDatabase) -> void:
  spatial.query_circle(SpatialWorld.ENEMY, state.player.position, 100, scratch)
  for query_index in range(scratch.count):

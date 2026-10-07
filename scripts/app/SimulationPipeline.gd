@@ -15,11 +15,15 @@ func tick(run, direction: Vector2) -> void:
  state.tick += 1
  if not run.warp.active: state.field_tick += 1
  death.tick(state,run.enemies,run.gems,run.damage,run.map)
+ if state.phase!="RUNNING": return
  run.damage.begin_tick()
  run.damage.elite_multiplier = (1+float(state.player.stats.get("elite_damage",0)))*float(state.player.stats.get("contract_elite",1))
  run.damage.boss_multiplier=float(state.player.stats.get("char_boss_damage",1))
  run.damage.normal_multiplier = float(state.player.stats.get("contract_normal",1))
- status.tick(run.enemies,state.player,state.tick)
+ var status_cfg: Dictionary=run.db.config().status
+ status.tick(run.enemies,state.player,state.tick,run.damage,int(status_cfg.poison_period_ticks),float(status_cfg.poison_damage))
+ death.tick(state,run.enemies,run.gems,run.damage,run.map)
+ if state.phase!="RUNNING": return
  var player := state.player
  var context_room: int = run.map.room_at(player.position)
  if not run.warp.active:

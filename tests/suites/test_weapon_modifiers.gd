@@ -53,3 +53,33 @@ func run(t: TestContext,_tree: SceneTree) -> void:
  t.equal(beam_damage.total(),30.0,"stationary shrine beam pulses sum to cast damage")
  t.check(beam_world.count>0,"beam persists between pulses")
  t.equal(db.table("v3_weapons").magma_core.archetype,"deploy","magma leaves persistent floor")
+ var gravity := DeployWorld.new()
+ run.enemies.impulses[run.enemies.slot(id)]=Vector2.ZERO
+ gravity.add(Vector2.ZERO,100,3,"weapon:black_hole",3,db.table("v3_weapons").black_hole)
+ gravity.tick(run.enemies,run.spatial,run.damage)
+ t.check(run.enemies.impulses[run.enemies.slot(id)].x<0,"deployed singularity applies actual pull")
+ var poisoned := RunController.new(db,457)
+ var boss:=poisoned.enemies.spawn(-3,Vector2.ZERO,{"hp":1,"damage":100,"radius":55},1,true)
+ var slot:=poisoned.enemies.slot(boss)
+ poisoned.enemies.poison[slot]=10
+ poisoned.enemies.periodic[slot]=1
+ poisoned.enemies.warning[slot]=2
+ poisoned.enemies.action[slot]=100
+ var hp:=poisoned.state.player.hp
+ poisoned.pipeline.tick(poisoned,Vector2.ZERO)
+ t.equal(poisoned.state.phase,"CLEAR","lethal status resolves final-boss clear before AI")
+ t.equal(poisoned.state.player.hp,hp,"dead poisoned boss cannot attack")
+ t.equal(poisoned.damage.totals["status:poison"],1.0,"status attribution clamps to actual HP")
+ var world:=EnemyWorld.new()
+ var entity:=world.spawn(0,Vector2.ZERO,{"hp":100})
+ var index:=world.slot(entity)
+ world.poison[index]=90
+ world.periodic[index]=1
+ var timers:=StatusSystem.new()
+ var attribution:=DamageSystem.new()
+ timers.tick(world,PlayerState.new(),1,attribution)
+ t.equal(world.periodic[index],30,"status owner arms periodic timer")
+ for tick in range(2,31): timers.tick(world,PlayerState.new(),tick,attribution)
+ t.equal(attribution.total(),2.0,"poison fires once in thirty fixed ticks")
+ timers.tick(world,PlayerState.new(),31,attribution)
+ t.equal(attribution.total(),4.0,"poison period follows fixed ticks")
