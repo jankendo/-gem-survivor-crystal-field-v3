@@ -1,4 +1,4 @@
-# Gem Survivor Crystal Field v3 — alpha.3
+# Gem Survivor Crystal Field v3 — alpha.4
 
 前回の42件の修正と今回のGameplay UX・図鑑検索／Quest・装備詳細・進化タイミング・重要視覚の修正を含む新しいpreviewです。旧alpha.1のタグ／成果物は変更していません。
 
@@ -11,3 +11,5 @@ IPAはunsigned / arm64 / Releaseです。通常のiPhoneへ直接インストー
 English: A new preview built from the immutable source SHA in RELEASE_MANIFEST.json, with validated Windows and unsigned arm64 IPA assets. Your own signing is required; it is not an App Store/TestFlight package. Physical device behavior and human enjoyment are explicitly unverified. No online telemetry or audio was added.
 
 alpha.2の未公開試行はdraft検索APIの不整合で停止しました。空draftだけを取り除き、alpha.2タグは移動していません。draftをRelease IDで取得・検証・公開する修正を含め、alpha.3の同一最終SHAからCIとWindows/iOSを再ビルドします。
+
+alpha.3も作成直後の一覧取得で停止し、未公開のままです。alpha.4は作成REST応答のRelease IDとupload URLを直接使い、タグ／一覧への即時反映を前提にしません。完成した5ファイルの検査後だけ公開します。alpha.1–3のタグは変更していません。

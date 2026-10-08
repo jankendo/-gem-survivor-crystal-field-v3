@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.0.0-alpha.4
+
+- Remove post-creation draft index dependency: use authoritative REST creation response, stream uploads to its exact Release ID, verify and publish by ID. Partial draft retries skip already matching assets; public releases stay immutable.
+-15 release-tool checks cover an indefinitely stale draft index, exact source tag, partial upload recovery and credential-safe upload host. Opt-in Actions live transport probe refuses public releases and cleans its private test asset.
+- iOS30004/Windows3.0.0.4; alpha.2/alpha.3 were never published and their tags remain unmoved.
+
+
 ## v3.0.0-alpha.3
 
 - Fix first-time draft Release lookup: authenticated paginated listing and stable Release ID reads/publication; published-only tag lookup is never used for drafts.

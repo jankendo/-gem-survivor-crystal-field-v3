@@ -1,0 +1,22 @@
+name: Release transport probe
+on:
+  workflow_dispatch:
+    inputs:
+      draft_release_id:
+        description: Existing unpublished draft ID; public releases are refused
+        required: true
+        type: string
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify actual draft upload by stable Release ID
+        env:
+          DRAFT_RELEASE_ID: ${{ inputs.draft_release_id }}
+        run: python tools/test_release_protocol_live.py "$DRAFT_RELEASE_ID"

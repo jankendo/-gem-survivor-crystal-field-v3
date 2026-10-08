@@ -50,3 +50,19 @@ New alpha.3 /iOS30003 /Windows3.0.0.3 is rebuilt on its new final source SHA;
 alpha.2 artifacts are never substituted. Gameplay source/1766 assertions are
 unchanged by this release-only repair. Final required CI/public verification must
 be executed again at the new SHA; evidence is reported at delivery/manifest.
+
+## alpha.4 authoritative creation/transport recovery
+
+Actual alpha.3 tag37705013424 again built/validated both platforms, but the
+new draft was absent from the immediate authenticated list. It stopped before
+upload/publication; draft406260273 remains private for the controlled live probe.
+Tagsalpha.1/2/3 are never moved. The final publisher no longer re-queries an index
+after creation: REST POST returns the authoritative ID/upload URL, files stream
+directly to that ID, and ID-based metadata/asset hashes guard publication.
+Partial retries skip matching assets; public releases cannot be overwritten.
+15 Python checks include an index that never updates, tag/source mismatch,
+partial resume and upload-host/public-release protection. Workspace direct upload
+received401 (not successful); the same small, automatically cleaned probe runs
+under actual Actions token against an unpublished draft via release-protocol.yml.
+Probe success must be read from the actual run, never assumed. New alpha.4 builds
+with iOS30004/Windows3.0.0.4 and new final SHA; prior binaries are not substituted.

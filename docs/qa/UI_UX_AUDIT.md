@@ -236,3 +236,19 @@ certificate. Native OS keyboard raster/animation remains unverified.
 
 
 Release follow-up High: first-time draft lookup used published-only tag API; actual alpha.2 publication stopped safely before upload. Fixed authenticated paginated listing/Release-ID lookup and publication, with explicit creation/failure/state-change regression;12 Python checks. Empty draft removed;alpha.2 tag retained. New alpha.3 builds rerun from a new final main SHA.
+
+## alpha.4 authoritative creation/transport recovery
+
+Actual alpha.3 tag37705013424 again built/validated both platforms, but the
+new draft was absent from the immediate authenticated list. It stopped before
+upload/publication; draft406260273 remains private for the controlled live probe.
+Tagsalpha.1/2/3 are never moved. The final publisher no longer re-queries an index
+after creation: REST POST returns the authoritative ID/upload URL, files stream
+directly to that ID, and ID-based metadata/asset hashes guard publication.
+Partial retries skip matching assets; public releases cannot be overwritten.
+15 Python checks include an index that never updates, tag/source mismatch,
+partial resume and upload-host/public-release protection. Workspace direct upload
+received401 (not successful); the same small, automatically cleaned probe runs
+under actual Actions token against an unpublished draft via release-protocol.yml.
+Probe success must be read from the actual run, never assumed. New alpha.4 builds
+with iOS30004/Windows3.0.0.4 and new final SHA; prior binaries are not substituted.

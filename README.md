@@ -8,7 +8,7 @@
 
 **公開alphaです。人間実機の品質ゲートは未達です。** 全履歴を維持してGitHubへpushし、Fast CI・Balance・Performance・Windows/iOS Release buildを実行しています。実際のWindows ZIPとunsigned arm64 IPAを生成・検証済みです。
 
-[alpha.2 Release](https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.3) を今回の配布先とします。Windows ZIP、unsigned IPA、SHA256SUMS、source commit入りRELEASE_MANIFESTと署名READMEを同じSHAから生成します。公開は同じSHAの全必須CI成功後に限定します。alpha.1は以前の不変タグで、今回の変更を含みません。配布前は最新版として扱わないでください。
+[alpha.2 Release](https://github.com/jankendo/-gem-survivor-crystal-field-v3/releases/tag/v3.0.0-alpha.4) を今回の配布先とします。Windows ZIP、unsigned IPA、SHA256SUMS、source commit入りRELEASE_MANIFESTと署名READMEを同じSHAから生成します。公開は同じSHAの全必須CI成功後に限定します。alpha.1は以前の不変タグで、今回の変更を含みません。配布前は最新版として扱わないでください。
 
 正本のPUBLIC repositoryは [jankendo/-gem-survivor-crystal-field-v3](https://github.com/jankendo/-gem-survivor-crystal-field-v3) です。先頭のハイフンは正式名称です。v2へwriteしていません。
 
